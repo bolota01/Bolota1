@@ -19,18 +19,22 @@ html, body {
 /* menu */
 
 .menu{
-  background-color: rgba(35, 40, 46, 0.5);
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  width: 250px;
-  height: 50%;
+  font-family: 'Roboto', sans-serif; 
+  color: white;
+  width: 226px;
+  height: 375px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 250px;
   position: absolute;
   float: left;
-  font-weight: bold;
-  border-radius: 7px 7px 7px 7px;
- -moz-border-radius: 7px 7px 7px 7px;
- -webkit-border-radius: 7px 7px 7px 7px;
-  border: 0px solid #000000;
+  background-image: url(https://image.prntscr.com/image/vw6hjIk3TbumDqX2o7O-BA.jpg); /* URL DE FUNDO MAXIMO DE 400*266PX /*/
+  background-size: cover;
+  border-style: solid;
+  border-image: url(https://image.prntscr.com/image/ybmFwStQQuyLZjG381G8sQ.png) 30 9 30 9;
+  border-width: 30px 9px 30px 9px; 
+  border-radius: 32px;
 }
 
 .menu_description{
@@ -49,18 +53,18 @@ html, body {
 }
 
 .menu h1{
-  background-color: rgba(255,0,0,0.75);
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 1.6em;
-  padding: 6px;
-  font-weight: bold;
+  background-color: rgba(255,255,255,0)!important;
+  font-family: 'Roboto', sans-serif!important; 
+  color: white!important;
+  text-align: center!important;
+  font-size: 1.6em!important;
+  font-weight: bold!important;
 }
 
 .choices{
   overflow-y: scroll;
   overflow-x: hidden;
+  max-height: 374px;
 }
 
 .choices::-webkit-scrollbar{ 

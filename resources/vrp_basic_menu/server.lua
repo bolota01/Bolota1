@@ -123,89 +123,13 @@ local ch_srun = {function(player,choice)
 end, "Ativar função do servidor."}
 
 --police weapons // comment out the weapons if you dont want to give weapons.
-
--- ARMAS DO CORONEL
-local police_weapons_coronel = {}
-police_weapons_coronel["Armas do Coronel"] = {function(player,choice)
+-- Colete pra geral
+local police_weapons_colete = {}
+police_weapons_colete["Kit Colete"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-	  ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	  ["WEAPON_PUMPSHOTGUN"] = {ammo=200},
-	  ["WEAPON_NIGHTSTICK"] = {ammo=200},
-	  ["WEAPON_STUNGUN"] = {ammo=200}
+      ["WEAPON_COMBATPISTOL"] = {ammo=200},
 	}, true})
 	BMclient.setArmour(player,{100,true})
-end}
-
-police_weapons_coronel["Colete"] = {function(player,choice)
-    BMclient.setArmour(player,{100,true})
-end}
--- ARMAS DA POLICIA MILITAR
-local police_weapons = {}
-police_weapons["Armas da PM"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-	  ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	  ["WEAPON_PUMPSHOTGUN"] = {ammo=20},
-	  ["WEAPON_NIGHTSTICK"] = {ammo=200},
-	  ["WEAPON_SMG"] = {ammo=200},
-	  ["WEAPON_STUNGUN"] = {ammo=200}
-	}, true})
-	BMclient.setArmour(player,{100,true})
-end}
-
-police_weapons["Colete"] = {function(player,choice)
-    BMclient.setArmour(player,{100,true})
-end}
-
--- ARMAS DA ROTA
-local police_weapons_rota = {}
-police_weapons_rota["Armas da ROTA"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-	  ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	  ["WEAPON_PUMPSHOTGUN"] = {ammo=20},
-	  ["WEAPON_NIGHTSTICK"] = {ammo=200},
-	  ["WEAPON_SPECIALCARBINE"] = {ammo=200},
-	  ["WEAPON_STUNGUN"] = {ammo=200}
-	}, true})
-	BMclient.setArmour(player,{100,true})
-end}
-
-police_weapons_rota["Colete"] = {function(player,choice)
-    BMclient.setArmour(player,{100,true})
-end}
-
--- ARMAS DA FEDERAL
-local police_weapons_federal = {}
-police_weapons_federal["Armas da Federal"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-	  ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	  ["WEAPON_PUMPSHOTGUN"] = {ammo=20},
-	  ["WEAPON_NIGHTSTICK"] = {ammo=200},
-	  ["WEAPON_SPECIALCARBINE"] = {ammo=200},
-	  ["WEAPON_STUNGUN"] = {ammo=200},
-	  ["WEAPON_SMG"] = {ammo=200}
-	}, true})
-	BMclient.setArmour(player,{100,true})
-end}
-
-police_weapons_federal["Colete"] = {function(player,choice)
-    BMclient.setArmour(player,{100,true})
-end}
-
--- ARMAS ÁGUIA
-local police_weapons_aguia = {}
-police_weapons_aguia["Armas do Águia"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-	  ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	  ["WEAPON_PUMPSHOTGUN"] = {ammo=20},
-	  ["WEAPON_NIGHTSTICK"] = {ammo=200},
-	  ["WEAPON_SMG"] = {ammo=200},
-	  ["WEAPON_STUNGUN"] = {ammo=200}
-	}, true})
-	BMclient.setArmour(player,{100,true})
-end}
-
-police_weapons_aguia["Colete"] = {function(player,choice)
-    BMclient.setArmour(player,{100,true})
 end}
 
 --store money
@@ -273,15 +197,15 @@ local choice_loot = {function(player,choice)
         vRPclient.notify(player,{lang.common.no_player_near()})
       end
     end)
-
   end
-  
   local user_id = vRP.getUserId({player})
   if user_id ~= nil then
     vRPclient.getNearestPlayer(player, {5}, function(nplayer)
-	SetTimeout(15000, function()
+    SetTimeout(15000, function()
       local nuser_id = vRP.getUserId({nplayer})
       if nuser_id ~= nil then
+	  vRPclient.isInComa(nplayer,{}, function(in_coma)
+          if in_coma then
             vRPclient.getWeapons(nplayer,{},function(weapons)
               for k,v in pairs(weapons) do -- display seized weapons
                 -- vRPclient.notify(player,{lang.police.menu.seize.seized({k,v.ammo})})
@@ -295,11 +219,13 @@ local choice_loot = {function(player,choice)
               -- clear all weapons
               vRPclient.giveWeapons(nplayer,{{},true})
             end)
+			end
+			end)
           end
         end)
-		end)
-      end
-end,"Saquear corpo mais próximo"}
+      end)
+    end
+end,"Saquear corpo próximo"}
 
 -- hack player
 local ch_hack = {function(player,choice)
@@ -972,11 +898,7 @@ end,
 5.00})
 
 -- ADD STATIC MENU CHOICES // STATIC MENUS NEED TO BE ADDED AT vRP/cfg/gui.lua
-vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- police gear
-vRP.addStaticMenuChoices({"police_weapons_coronel", police_weapons_coronel}) -- police gear
-vRP.addStaticMenuChoices({"police_weapons_federal", police_weapons_federal}) -- police gear
-vRP.addStaticMenuChoices({"police_weapons_rota", police_weapons_rota}) -- police gear
-vRP.addStaticMenuChoices({"police_weapons_aguia", police_weapons_aguia}) -- police gear
+vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
 vRP.addStaticMenuChoices({"emergency_medkit", emergency_medkit}) -- pills and medkits
 vRP.addStaticMenuChoices({"emergency_heal", emergency_heal}) -- heal button
 

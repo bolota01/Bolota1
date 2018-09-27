@@ -44,7 +44,9 @@ cfg.garage_types = {
     _config = {vtype="bike",blipid=43,blipcolor=5},
     ["luxor"] = {"Luxor",500000, ""},
     ["shamal"] = {"Shamal",650000, ""},
-    ["volatus"] = {"Volatus",400000, ""}
+    ["volatus"] = {"Volatus",400000, ""},
+    ["alpha"] = {"Alpha",150000, ""},
+    ["banshee"] = {"Banshee",105000, ""},
   },  
   
   ["hospital"] = {

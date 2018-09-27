@@ -63,7 +63,16 @@ cfg.emotes = {
   ["Examinar corpo"] = {false, {task="CODE_HUMAN_MEDIC_KNEEL"}, false},
   ["Controlar Multidão"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},
   ["Investigar"] = {false, {task="CODE_HUMAN_POLICE_INVESTIGATE"}, false},
-  ["Fazer Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false}
+  ["Fazer Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false},
+  ["Chupeta H Carro"] = {false,{{"oddjobs@towing","m_blow_job_loop",1}},false},
+  ["Chupeta M Carro"] = {false,{{"oddjobs@towing","f_blow_job_loop",1}},false},
+  ["Sexo H"] = {false,{{"mini@prostitutes@sexlow_veh","low_car_sex_loop_player",1}},false},
+  ["Sexo M"] = {false,{{"mini@prostitutes@sexlow_veh","low_car_sex_loop_female",1}},false},
+  ["Punheta"] = {true,{{"mp_player_int_upperwank","mp_player_int_wank_01",1}},false},
+  ["Dar o cu"] = {false,{{"rcmpaparazzo_2","shag_loop_poppy",2}},true},
+  ["Come o cu"] = {false,{{"rcmpaparazzo_2","shag_loop_a",2}},true},
+  ["Beijo Boca"] = {true,{{"mp_ped_interaction","kisses_guy_a",1}},false},
+  ["Balança peito"] = {false,{{"mini@strip_club@backroom@","stripper_b_backroom_idle_b",1}},false}
 }
 
 return cfg

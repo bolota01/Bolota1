@@ -53,7 +53,7 @@ Menu.prototype.open = function(name,choices) //menu name and choices as [name,de
   //build dom
   this.div_header.innerHTML = name;
 
-  this.div_choices.style.height = (this.div.offsetHeight-this.div_choices.offsetTop)+"px";
+  this.div_choices.style.height = "400px";
 
   this.setSelected(0);
 }
