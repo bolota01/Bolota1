@@ -174,9 +174,9 @@ end)
 
 ---- revive
 local revive_seq = {
-  {"amb@medic@standing@kneel@enter","enter",1},
-  {"amb@medic@standing@kneel@idle_a","idle_a",1},
-  {"amb@medic@standing@kneel@exit","exit",1}
+  {"amb@medic@standing@tendtodead@enter","enter",1},
+  {"amb@medic@standing@tendtodead@idle_a","idle_a",1},
+  {"amb@medic@standing@tendtodead@exit","exit",1}
 }
 
 local choice_revive = {function(player,choice)

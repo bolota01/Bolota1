@@ -168,9 +168,9 @@ local choice_loot = {function(player,choice)
         vRPclient.isInComa(nplayer,{}, function(in_coma)
           if in_coma then
 			local revive_seq = {
-			  {"amb@medic@standing@kneel@enter","enter",1},
-			  {"amb@medic@standing@kneel@idle_a","idle_a",1},
-			  {"amb@medic@standing@kneel@exit","exit",1}
+        {"amb@medic@standing@tendtodead@enter","enter",1},
+        {"amb@medic@standing@tendtodead@idle_a","idle_a",1},
+        {"amb@medic@standing@tendtodead@exit","exit",1}
 			}
   			vRPclient.playAnim(player,{false,revive_seq,false}) -- anim
             SetTimeout(15000, function()
