@@ -19,7 +19,7 @@ cfg.gaptitudes = {
   ["science"] = {
     _title = "Ciencia",
     ["produtos químicos"] = {"Estudo de produtos químicos", 0, -1}, -- example
-    ["matematica"] = {"Estudo de Matematica", 0, -1} -- example
+    ["matematica"] = {"Estudo de Matemática", 0, -1} -- example
   }
 }
 
