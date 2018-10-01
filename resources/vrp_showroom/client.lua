@@ -355,7 +355,7 @@ function vehSR_ShowVehshopBlips(bool)
 				local inrange = false
 				for i,b in ipairs(vehshop_blips) do
 					if IsPlayerWantedLevelGreater(GetPlayerIndex(),0) == false and vehshop.opened == false and IsPedInAnyVehicle(vehSR_LocalPed(), true) == false and  GetDistanceBetweenCoords(b.pos.entering[1],b.pos.entering[2],b.pos.entering[3],GetEntityCoords(vehSR_LocalPed())) < 5 then
-						DrawMarker(1,b.pos.entering[1],b.pos.entering[2],b.pos.entering[3],0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
+						DrawMarker(25,b.pos.entering[1],b.pos.entering[2],b.pos.entering[3],0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
 						vehSR_drawTxt("Aperte ~g~ENTER~s~ para comprar um ~b~Carro",0,1,0.5,0.8,0.6,255,255,255,255)
 						currentlocation = b
 						inrange = true

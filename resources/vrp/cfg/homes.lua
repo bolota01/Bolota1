@@ -10,8 +10,8 @@ local itemtr_study = {
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
-    	["Livro de metanfetamina"] = { -- action name
-      		description = "Leia o livro de metanfetamina", -- action description
+    	["Livro de Quimica"] = { -- action name
+      		description = "Leia o livro de Quimica", -- action description
       		in_money=0, -- money taken per unit
       		out_money=0, -- money earned per unit
       		reagents={}, -- items taken per unit
@@ -469,7 +469,7 @@ cfg.homes = {
     sell_price = 40000,
     max = 5,
     blipid=475,
-    blipcolor=4
+    blipcolor=2
   },
   ["Apartamento Basico #02"] = {
     slot = "basic_flat",
@@ -478,7 +478,7 @@ cfg.homes = {
     sell_price = 550000,
     max = 5,
     blipid=475,
-    blipcolor=4
+    blipcolor=2
   },
   ["Apartamento de Luxo #01"] = {
     slot = "other_flat",

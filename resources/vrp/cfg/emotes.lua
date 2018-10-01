@@ -76,7 +76,8 @@ cfg.emotes = {
   ["Dar o cu"] = {false,{{"rcmpaparazzo_2","shag_loop_poppy",2}},true},
   ["Comer o cu"] = {false,{{"rcmpaparazzo_2","shag_loop_a",2}},true},
   ["Beijo Boca"] = {true,{{"mp_ped_interaction","kisses_guy_a",1}},false},
-  ["Balançar peito"] = {false,{{"mini@strip_club@backroom@","stripper_b_backroom_idle_b",1}},false}
+  ["Balançar peito"] = {false,{{"mini@strip_club@backroom@","stripper_b_backroom_idle_b",1}},false},
+  ["teste"] = {false,{{"cellphone@cellphone_up",1}},false}
 }
 
 return cfg
