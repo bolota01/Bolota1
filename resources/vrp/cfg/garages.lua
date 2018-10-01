@@ -47,8 +47,14 @@ cfg.garage_types = {
     ["volatus"] = {"Volatus",400000, ""},
     ["alpha"] = {"Alpha",150000, ""},
     ["banshee"] = {"Banshee",105000, ""},
-  },  
-  
+  },
+
+  ["Barco de Pesca"] = {  
+    _config = {vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"}},
+    ["Dinghy"] = {"Barco de Pesca",100, ""},
+    ["Dinghy2"] = {"Barco de Pesca 2",100, ""}
+  },
+
   ["hospital"] = {
     _config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"}},
 	["sw4samu"] = {"SW4 Samu",0, ""},
@@ -82,6 +88,7 @@ cfg.garages = {
   {"Veículos Federal",452.83148193359,-1011.642578125,28.47452545166},
   {"heliponto PM",449.32727050781,-981.21728515625,43.691673278809},
   {"heliponto SAMU",313.24923706055,-1465.1434326172,46.509502410889},
+  {"Barco de Pesca",3846.2712402344,4446.5131835938,0.11954033374786},
   {"Taxi",-339.02719116211,-1023.7808837891,30.380908966064},
   {"Delivery",141.74586486816,-1458.0601806641,29.141620635986},
   {"Mecanico",401.42602539063,-1631.7053222656,29.291942596436},

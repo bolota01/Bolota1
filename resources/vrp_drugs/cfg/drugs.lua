@@ -71,8 +71,8 @@ cfg.drugs= {
 	weight = 1.0
   },
   ["smirnoff"] = {
-    name = "Smirnoff",
-    desc = "Vodka extremamente forte.",
+    name = "Cachaça",
+    desc = "Cachaça pra esquentar o peito.",
     choices = function(args)
 	  local menu = {}
       menu["Beber"] = {function(player,choice)
@@ -82,7 +82,7 @@ cfg.drugs= {
             vRP.varyHunger({user_id,30})
             vRP.varyThirst({user_id,-70})
 
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:MediumPurple'>Bebendo Smirnoff</b> ", type = "info", timeout = (3000),layout = "centerLeft"})
+            TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:MediumPurple'>Bebendo Cachaça</b> ", type = "info", timeout = (3000),layout = "centerLeft"})
             local seq = {
               {"mp_player_intdrink","intro_bottle",1},
               {"mp_player_intdrink","loop_bottle",1},

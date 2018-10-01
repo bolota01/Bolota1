@@ -363,6 +363,7 @@ cfg.groups = {
   ["Traficante de Tartaruga"] = {
     _config = { gtype = "job" },
     "harvest.tartaruga",
+    "tartaruga.garagem",
 	"process.Tartaruga"
   },
   ["Traficante de Armas"] = {
