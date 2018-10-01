@@ -66,15 +66,15 @@ end
 
 items["water"] = {"Garrafa de água","", gen("drink",0,-25),0.5}
 items["milk"] = {"Leite","", gen("drink",0,-5),0.5}
-items["coffee"] = {"Café","", gen("drink",0,-10),0.2}
+items["coffee"] = {"Cafezin","", gen("drink",0,-10),0.2}
 items["tea"] = {"Chá","", gen("drink",0,-15),0.2}
 items["icetea"] = {"Chá Gelado","", gen("drink",0,-20), 0.5}
-items["orangejuice"] = {"Suco de laranja.","", gen("drink",0,-25),0.5}
-items["gocagola"] = {"Coca Cola","", gen("drink",0,-35),0.3}
+items["orangejuice"] = {"Suco de laranja","Que delícia caraaa !", gen("drink",0,-25),0.5}
+items["gocagola"] = {"Coca-Cola","", gen("drink",0,-35),0.3}
 items["redgull"] = {"RedBull","", gen("drink",0,-40),0.3}
 items["lemonlimonad"] = {"Limonada","", gen("drink",0,-45),0.3}
 items["vodka"] = {"Vodka","", gen("drink",15,-65),0.5}
-items["smirnoff"] = {"Smirnoff","", gen("drink",15,-65),0.5}
+items["smirnoff"] = {"Cachaça","", gen("drink",15,-65),0.5}
 
 --FOOD
 
@@ -83,12 +83,12 @@ items["melao"] = {"Melão","", gen("eat",-10,0),0.2}
 items["maca"] = {"Maça","", gen("eat",-10,0),0.2}
 items["banana"] = {"Banana","", gen("eat",-10,0),0.2}
 items["pessegos"] = {"Pêssegos","", gen("eat",-10,0),0.2}
-items["bread"] = {"Pão","", gen("eat",-10,0),0.5}
-items["donut"] = {"Donut","", gen("eat",-15,0),0.2}
+items["bread"] = {"Pão de Queijo","", gen("eat",-10,0),0.5}
+items["donut"] = {"Sonho","", gen("eat",-15,0),0.2}
 items["pizza"] = {"Pizza","", gen("eat",-20,0),0.2}
-items["tacos"] = {"Tacos","", gen("eat",-20,0),0.2}
+items["tacos"] = {"Feijão Tropeiro","", gen("eat",-20,0),0.2}
 items["sandwich"] = {"Sanduíche","A tasty snack.", gen("eat",-25,0),0.5}
-items["kebab"] = {"Churrasco","", gen("eat",-45,0),0.85}
-items["pdonut"] = {"Premium Donut","", gen("eat",-25,0),0.5}
+items["kebab"] = {"Queijo Minas","", gen("eat",-45,0),0.85}
+items["pdonut"] = {"Doce de Leite","", gen("eat",-25,0),0.5}
 
 return items

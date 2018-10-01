@@ -389,14 +389,6 @@ cfg.slot_types = {
       {"gametable",670.20166015625,-704.70776367188,37.341278076172},
     }
   },
-  ["Apartamento01"] = {
-    {
-      {"entry",151.29153442383,-1006.9392700195,-99.000015258789},
-      {"chest",151.61085510254,-1003.258972168,-99.0, _config = {weight=500}},
-      {"wardrobe",152.41361999512,-1000.6278076172,-99.0},
-      {"gametable",729.17388916016,-242.02665710449,70.045913696289},
-    }
-  },
   ["plantation_flat_2"] = {
     {
       {"entry",2453.3798828125,4970.5024414063,46.810581207275},
@@ -424,16 +416,7 @@ cfg.homes = {
     sell_price = 360000,
     max = 1,
     blipid=374,
-    blipcolor=2
-  },
-  ["Apartamento"] = {
-    slot = "Apartamento01",
-    entry_point = {254.62347412109,-1013.1732788086,29.269725799561},
-    buy_price = 75000,
-    sell_price = 50000,
-    max = 7,
-    blipid=475,
-    blipcolor=4
+    blipcolor=11
   },
   ["Casa #06"] = {
     slot = "franklin_house",
@@ -442,7 +425,7 @@ cfg.homes = {
     sell_price = 150000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Sitio"] = {
     slot = "beach_bungalo",
@@ -451,7 +434,7 @@ cfg.homes = {
     sell_price = 30000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Casa #05"] = {
     slot = "Beach_Home",
@@ -460,7 +443,7 @@ cfg.homes = {
     sell_price = 100000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Apartamento Basico #01"] = {
     slot = "basic_flat",
@@ -468,8 +451,8 @@ cfg.homes = {
     buy_price = 500000,
     sell_price = 40000,
     max = 5,
-    blipid=475,
-    blipcolor=4
+    blipid=374,
+    blipcolor=11
   },
   ["Apartamento Basico #02"] = {
     slot = "basic_flat",
@@ -477,8 +460,8 @@ cfg.homes = {
     buy_price = 650000,
     sell_price = 550000,
     max = 5,
-    blipid=475,
-    blipcolor=4
+    blipid=374,
+    blipcolor=11
   },
   ["Apartamento de Luxo #01"] = {
     slot = "other_flat",
@@ -486,8 +469,8 @@ cfg.homes = {
     buy_price = 800000,
     sell_price = 700000,
     max = 4,
-    blipid=475,
-    blipcolor=4
+    blipid=374,
+    blipcolor=11
   },
   ["Fazenda"] = {
     slot = "plantation_flat_2",
@@ -495,8 +478,8 @@ cfg.homes = {
     buy_price = 500000,
     sell_price = 400000,
     max = 1,
-    blipid=492,
-    blipcolor=83
+    blipid=374,
+    blipcolor=11
   },
   ["Casa #02"] = {
     slot = "Normal_flat",
@@ -505,7 +488,7 @@ cfg.homes = {
     sell_price = 400000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Casa #01"] = {
     slot = "Rich_flat",
@@ -514,7 +497,7 @@ cfg.homes = {
     sell_price = 300000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Casa #03"] = {
     slot = "Expensive_flat",
@@ -523,7 +506,7 @@ cfg.homes = {
     sell_price = 300000,
     max = 1,
     blipid=374,
-    blipcolor=2
+    blipcolor=11
   },
   ["Fazenda da Mafia"] = {
     slot = "Rich_Home",
@@ -531,8 +514,8 @@ cfg.homes = {
     buy_price = 750000,
     sell_price = 650000,
     max = 1,
-    blipid=492,
-    blipcolor=83
+    blipid=374,
+    blipcolor=11
   },
   ["Galpao 01"] = { --Metafetamina
     slot = "galpao01",
@@ -625,7 +608,7 @@ cfg.homes = {
     sell_price = 1000000,
     max = 1,
     blipid=374,
-    blipcolor=5
+    blipcolor=11
   },
   ["Casa Na Praia 01"] = {
     slot = "luxo3",
@@ -634,7 +617,7 @@ cfg.homes = {
     sell_price = 1000000,
     max = 1,
     blipid=374,
-    blipcolor=5
+    blipcolor=11
   },
   ["Casa Na Praia 02"] = {
     slot = "luxo4",
@@ -643,7 +626,7 @@ cfg.homes = {
     sell_price = 1000000,
     max = 1,
     blipid=374,
-    blipcolor=5
+    blipcolor=11
   },
   ["Apartamento De Luxo"] = {
     slot = "luxo",
@@ -651,8 +634,8 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 1000000,
     max = 5,
-    blipid=475,
-    blipcolor=4
+    blipid=374,
+    blipcolor=11
   },
   ["Mansão #02"] = {
     slot = "mansion2",
@@ -661,7 +644,7 @@ cfg.homes = {
     sell_price = 400000,
     max = 1,
     blipid=374,
-    blipcolor=5
+    blipcolor=11
   },
   ["Mansão #01"] = {
     slot = "mansion",
@@ -670,7 +653,7 @@ cfg.homes = {
     sell_price = 380000,
     max = 1,
     blipid=374,
-    blipcolor=5
+    blipcolor=11
   }
 }
 

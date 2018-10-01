@@ -157,7 +157,6 @@ local function build_client_desbugskins(source)
         vRP.closeMenu(source)
       end
 
-      vRPclient.addBlip(source,{x,y,z,73,47,lang.desbugskins.title()})
       vRPclient.addMarker(source,{x,y,z-1,0.7,0.7,0.5,0,255,125,125,150})
 
       vRP.setArea(source,"vRP:desbugskins"..k,x,y,z,1,1.5,desbugskins_enter,desbugskins_leave)
