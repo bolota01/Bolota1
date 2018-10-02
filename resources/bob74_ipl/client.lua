@@ -118,15 +118,23 @@ Citizen.CreateThread(function()
 			RequestIpl("hei_carrier_lodlights")
 			RequestIpl("hei_carrier_slod")
 		
-		-- Heist Yatch: -2043.974,-1031.582, 11.981
-			RequestIpl("hei_yacht_heist")
-			RequestIpl("hei_yacht_heist_Bar")
-			RequestIpl("hei_yacht_heist_Bedrm")
-			RequestIpl("hei_yacht_heist_Bridge")
-			RequestIpl("hei_yacht_heist_DistantLights")
-			RequestIpl("hei_yacht_heist_enginrm")
-			RequestIpl("hei_yacht_heist_LODLights")
-			RequestIpl("hei_yacht_heist_Lounge")
+		-- Heist Yatch: -1363.724, 6734.108, 2.44598
+            RequestIpl("gr_grdlc_yacht_lod")
+            RequestIpl("gr_grdlc_yacht_placement")
+            RequestIpl("gr_heist_yacht2")
+            RequestIpl("gr_heist_yacht2_bar")
+            RequestIpl("gr_heist_yacht2_bar_lod")
+            RequestIpl("gr_heist_yacht2_bedrm")
+            RequestIpl("gr_heist_yacht2_bedrm_lod")
+            RequestIpl("gr_heist_yacht2_bridge")
+            RequestIpl("gr_heist_yacht2_bridge_lod")
+            RequestIpl("gr_heist_yacht2_enginrm")
+            RequestIpl("gr_heist_yacht2_enginrm_lod")
+            RequestIpl("gr_heist_yacht2_lod")
+            RequestIpl("gr_heist_yacht2_lounge")
+            RequestIpl("gr_heist_yacht2_lounge_lod")
+            RequestIpl("gr_heist_yacht2_slod")
+
 			
 		-- Bunkers - Exteriors
 			RequestIpl("gr_case0_bunkerclosed")
