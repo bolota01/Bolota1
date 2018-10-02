@@ -27,38 +27,31 @@ body{
 -- static menus are menu with choices defined by vRP.addStaticMenuChoices(name, choices)
 cfg.static_menu_types = {
    ["police_weapons"] = {
-      title = "Arsenal da PM", 
+      title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
 	    "pm.weapons"
 	  }
 	},
+	["police_weapons_capitao"] = {
+      title = "Arsenal", 
+      blipcolor = 0,
+	  permissions = {
+	    "capitao.weapons"
+	  }
+	},
 	["police_weapons_coronel"] = {
-      title = "Arsenal do Coronel", 
+      title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
 	    "coronel.weapons"
 	  }
 	},
-	["police_weapons_rota"] = {
-      title = "Arsenal da ROTA", 
-      blipcolor = 0,
-	  permissions = {
-	    "rota.weapons"
-	  }
-	},
 	["police_weapons_federal"] = {
-      title = "Arsenal da PF", 
+      title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
 	    "policiafederal.weapons"
-	  }
-	},
-	["police_weapons_tatica"] = {
-      title = "Arsenal Força Tática", 
-      blipcolor = 0,
-	  permissions = {
-	    "tatica.weapons"
 	  }
 	},
 	["police_weapons_aguia"] = {
@@ -81,17 +74,32 @@ cfg.static_menu_types = {
 	  permissions = {
 	    "emergency.medkit"
 	  }
+	},
+	["samu_emergency_medkit"] = {
+      title = "Emergência", 
+      blipcolor = 0,
+	  permissions = {
+	    "samuemergency.medkit"
+	  }
+	},
+	["medico_emergency_medkit"] = {
+      title = "Emergência", 
+      blipcolor = 0,
+	  permissions = {
+	    "medicoemergency.medkit"
+	  }
 	}
 }
 
 -- list of static menu points
 cfg.static_menus = {
-  {"police_weapons", 461.31414794922,-981.15582275391,30.689588546753},
-  {"police_weapons_coronel", 458.30532836914,-979.34185791016,30.689588546753},
-  {"police_weapons_rota", 456.82055664063,-983.04901123047,30.689588546753},
-  {"police_weapons_tatica", 461.53909301758,-983.06707763672,30.689588546753},
-  {"police_weapons_federal", 460.24624633789,-979.08660888672,30.689588546753},
+  {"police_weapons", 461.46166992188,-981.07891845703,30.689590454102},
+  {"police_weapons_coronel", 461.46166992188,-981.07891845703,30.689590454102},
+  {"police_weapons_capitao", 461.46166992188,-981.07891845703,30.689590454102},
+  {"police_weapons_federal", 461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons_aguia", 459.12884521484,-983.08721923828,30.689588546753},
+  {"samu_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
+  {"medico_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
   {"emergency_medkit", 268.22784423828,-1364.8872070313,24.537782669067},
   {"emergency_heal", 260.49597167969,-1358.4555664063,24.537788391113}
 }

@@ -20,13 +20,13 @@ cfg.garage_types = {
   ["Veículos PM"] = {
     _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"}},
     ["police2"] = {"Lexus",0, ""},
-	["sheriff"] = {"Evoque",0, ""},
+	  ["sheriff"] = {"Evoque",0, ""},
   },    
   
-  ["Veículos ROTA"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"rota.garagem"}},
-    ["TRAILBLAZERrota"] = {"Trailblazer",0, ""},
-  },    
+  --["Veículos ROTA"] = {
+  --  _config = {vtype="car",blipcolor=4,permissions={"rota.garagem"}},
+  --  ["TRAILBLAZERrota"] = {"Trailblazer",0, ""},
+  --},    
   
   ["Veículos Federal"] = {
     _config = {vtype="car",blipcolor=4,permissions={"federal.garagem"}},
@@ -35,18 +35,18 @@ cfg.garage_types = {
   },     
   
   ["heliponto PM"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"aguia.garagem"}},
+    _config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"}},
     ["as350"] = {"Águia PMESP",0, ""},
 
   },    
   
   ["Veículos Aéreos"] = {
     _config = {vtype="bike",blipid=43,blipcolor=5},
-    ["luxor"] = {"Luxor",500000, ""},
-    ["shamal"] = {"Shamal",650000, ""},
-    ["volatus"] = {"Volatus",400000, ""},
-    ["alpha"] = {"Alpha",150000, ""},
-    ["banshee"] = {"Banshee",105000, ""},
+    ["luxor"] = {"Luxor",5000000, ""},
+    ["shamal"] = {"Shamal",6500000, ""},
+    ["volatus"] = {"Volatus",4000000, ""},
+    ["alpha"] = {"Alpha",1500000, ""},
+    ["banshee"] = {"Banshee",1050000, ""},
   },
 
   ["Barco de Pesca"] = {  
@@ -57,11 +57,11 @@ cfg.garage_types = {
 
   ["hospital"] = {
     _config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"}},
-	["sw4samu"] = {"SW4 Samu",0, ""},
+	  ["sw4samu"] = {"SW4 Samu",0, ""},
     ["ambulance"] = {"Ambulancia",0, ""}
   },
   ["heliponto SAMU"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"}},
+    _config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"}},
     ["samumav"] = {"Helicóptero Samu",0, ""},
 
   },   
@@ -84,7 +84,7 @@ cfg.garage_types = {
 -- {garage_type,x,y,z}
 cfg.garages = {
   {"Veículos PM",453.24819946289,-1019.3926391602,28.396326065063},
-  {"Veículos ROTA",452.79330444336,-1015.3021240234,28.460147857666},
+  --{"Veículos ROTA",452.79330444336,-1015.3021240234,28.460147857666},
   {"Veículos Federal",452.83148193359,-1011.642578125,28.47452545166},
   {"heliponto PM",449.32727050781,-981.21728515625,43.691673278809},
   {"heliponto SAMU",313.24923706055,-1465.1434326172,46.509502410889},

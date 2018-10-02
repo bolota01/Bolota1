@@ -131,6 +131,67 @@ police_weapons_colete["Kit Colete"] = {function(player,choice)
 	}, true})
 	BMclient.setArmour(player,{100,true})
 end}
+-- Soldado/Cabo/Sargento/Subtenente
+local police_weapons = {}
+police_weapons["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SMG"] = {ammo=200},
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Tenente/Capitão/Major
+local police_weapons_capitao = {}
+police_weapons_capitao["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SMG"] = {ammo=200},
+    ["WEAPON_CARBINERIFLE"] = {ammo=200},
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Tenente-Coronel/Coronel/Comandante Geral
+local police_weapons_coronel = {}
+police_weapons_coronel["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SMG"] = {ammo=200},
+    ["WEAPON_SPECIALCARBINE"] = {ammo=200},
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Polícia Federal
+local police_weapons_federal = {}
+police_weapons_federal["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SPECIALCARBINE"] = {ammo=200},
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Polícia Militar Águia
+local police_weapons_aguia = {}
+police_weapons_aguia["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SNIPERRIFLE"] = {ammo=200},
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
 
 --store money
 local choice_store_money = {function(player, choice)
@@ -156,6 +217,26 @@ local emergency_heal = {}
 emergency_heal["Heal"] = {function(player,choice)
 	local user_id = vRP.getUserId({player}) 
 	vRPclient.setHealth(player,{1000})
+end}
+
+-- Socorrista/Paramédico/Médico
+local samu_emergency_medkit = {}
+samu_emergency_medkit["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_FLASHLIGHT"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Médico Chefe/Doutor/Samu Chefe
+local medico_emergency_medkit = {}
+medico_emergency_medkit["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_FLARE"] = {ammo=200},
+    ["WEAPON_FLASHLIGHT"] = {ammo=200},
+    ["WEAPON_FLAREGUN"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
 end}
 
 --loot corpse
@@ -899,6 +980,13 @@ end,
 
 -- ADD STATIC MENU CHOICES // STATIC MENUS NEED TO BE ADDED AT vRP/cfg/gui.lua
 vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
+vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_capitao", police_weapons_capitao}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_coronel", police_weapons_coronel}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_federal", police_weapons_federal}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_aguia", police_weapons_aguia}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"samu_emergency_medkit", samu_emergency_medkit}) -- equipamentos do samu
+vRP.addStaticMenuChoices({"medico_emergency_medkit", medico_emergency_medkit}) -- equipamentos do samu
 vRP.addStaticMenuChoices({"emergency_medkit", emergency_medkit}) -- pills and medkits
 vRP.addStaticMenuChoices({"emergency_heal", emergency_heal}) -- heal button
 

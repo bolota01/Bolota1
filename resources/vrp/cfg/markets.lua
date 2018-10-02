@@ -33,7 +33,7 @@ cfg.market_types = {
   },
   
   ["máquinas"] = {
-    _config = {blipid=52, blipcolor=2},
+    _config = {blipid=0, blipcolor=0},
     -- list itemid => price
     -- Drinks
     ["milk"] = 2,
@@ -51,7 +51,7 @@ cfg.market_types = {
     ["pills"] = 10
   },
   ["redes"] = {
-    _config = {blipid=371, blipcolor=1},
+    _config = {blipid=371, blipcolor=1, permissions={"shop.tartaruga"}},
     ["rede"] = 50
   },
   ["Feira"] = {
@@ -69,7 +69,7 @@ cfg.market_types = {
     ["vodka"] = 35
   },
   ["tools"] = {
-    _config = {blipid=402, blipcolor=2},
+    _config = {blipid=402, blipcolor=2, permissions={"shop.mecanico"}},
     ["repairkit"] = 5
   }
 }
