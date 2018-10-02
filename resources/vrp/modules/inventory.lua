@@ -524,6 +524,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
         end)
       else
         TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Este Baú já foi Aberto por outra pessoa.</span>", type = "info", timeout = (3000),layout = "centerLeft"})
+    TriggerClientEvent("DropSystem:drop", player, idname, amount)
       end
     end
   end
