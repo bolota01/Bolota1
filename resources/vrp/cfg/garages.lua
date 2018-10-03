@@ -73,6 +73,7 @@ cfg.garage_types = {
     ["Mecanico"] = {
     _config = {vtype="car",blipid=85,blipcolor=31,permissions={"repair.garagem"}},
     ["towtruck2"] = {"towtruck2",0, ""},
+    ["flatbed"] = {"Teste 01",0, ""},
   },
     
   ["Delivery"] = {
