@@ -58,7 +58,10 @@ cfg.garage_types = {
   ["hospital"] = {
     _config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"}},
 	  ["sw4samu"] = {"SW4 Samu",0, ""},
-    ["ambulance"] = {"Ambulancia",0, ""}
+    ["ur"] = {"Ambulancia",0, ""},
+    ["Samu2"] = {"L200 Samu",0, ""},
+    ["motosamu"] = {"Moto Samu",0, ""}
+
   },
   ["heliponto SAMU"] = {
     _config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"}},
