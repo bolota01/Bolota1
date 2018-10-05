@@ -173,7 +173,24 @@ cfg.garage_types = {
 		_config = {blipid=371,blipcolor=47,vtype="airplane"},
 		["seashark"] = {"Speedophile Seashark <br/>JetSki",55000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
 		["jetmax"] = {"Shitzu Jetmax",230000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
-	},
+  	},
+  	["heliponto SAMU"] = {
+        _config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"}},
+    	["samumav"] = {"Helicóptero Samu",0, ""},
+  	},   
+  	["Taxi"] = {
+   	 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"}},
+    	["taxi"] = {"Taxi",0, ""},
+  	},  
+  	["Mecanico"] = {
+   		 _config = {vtype="car",blipid=85,blipcolor=31,permissions={"repair.garagem"}},
+    	["towtruck2"] = {"towtruck2",0, ""},
+    	["flatbed"] = {"Teste 01",0, ""},
+  	},   
+  	["Delivery"] = {
+    	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"}},
+    	["enduro"] = {"Enduro",8000, ""},
+  }
 }
 
 cfg.garages = {

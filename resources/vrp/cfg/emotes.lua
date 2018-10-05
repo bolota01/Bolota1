@@ -63,6 +63,7 @@ cfg.emotes = {
   ["Dançar 2"] = {false, {task="WORLD_HUMAN_STRIP_WATCH_STAND"}, false},
   ["Deitar 1"] = {false, {task="WORLD_HUMAN_SUNBATHE_BACK"}, false},
   ["Deitar 2"] = {false, {task="WORLD_HUMAN_SUNBATHE"}, false},
+  ["Escutar coracao"] = {false,{{"mini@safe_cracking","idle_base",1}},false},
   ["Soldar"] = {false, {task="WORLD_HUMAN_WELDING"}, false},
   ["Examinar corpo"] = {false, {task="CODE_HUMAN_MEDIC_KNEEL"}, false},
   ["Controlar Multidão"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},

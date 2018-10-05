@@ -484,7 +484,7 @@ local function ch_repair(player,choice)
   if user_id ~= nil then
     -- anim and repair
     if vRP.tryGetInventoryItem(user_id,"repairkit",1,true) then
-      vRPclient.playAnim(player,{false,{task="WORLD_HUMAN_WELDING"},false})
+      vRPclient.playAnim(player,{false,{task="PROP_HUMAN_BUM_BIN"},false})
       SetTimeout(15000, function()
         vRPclient.fixeNearestVehicle(player,{7})
         vRPclient.stopAnim(player,{false})
