@@ -304,91 +304,108 @@ cfg.item_transformers = {
       }
     }
   },
-  
-  -- CAMPO DE MINERIO
-  {
-    name="Campo de Minerio", -- Nome do menu
-    permissions = {"campodeminerio"}, -- you can add permissions
-    r=0,g=200,b=0, -- cor
+   {
+    name="Cofre", -- menu name
+    permissions = {"bankdriver.money"}, -- you can add permissions
+    r=0,g=200,b=0, -- color
     max_units=200,
-    units_per_minute=2,
-    x=1534.5666503906,y=6327.1376953125,z=24.215845108032, -- Localização    
+    units_per_minute=200,
+    x=1.7533090114594, y = -672.1826171875, z = 16.130626678467, -- pos
+    radius=3, height=1.5, -- area
+    recipes = {
+      ["Coletar Malote"] = { -- action name
+        description="Coletar Malote.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["bank_money"] = 1
+        }
+      }
+    }
+  },
+  --MINERADOR COMEÇO--   
+  {
+    name="Mina", -- Nome do menu
+    permissions = {"minerar"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=500,
+    units_per_minute=50,
+    x=-596.43072509766,y=2090.7236328125,z=131.4126739502, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
-      ["Colher"] = { -- Nome da ação
-        description="Colher pedras para lavagem.", -- Descrição do produto a se colher
+      ["Minerar"] = { -- Nome da ação
+        description="Minerar", -- Descrição do produto a se colher
         in_money=0, -- Dinheiro dado por unidade
         out_money=0, -- Dinheiro ganho por unidade
         reagents={}, -- Itens colhidos por unidade
         products={ -- Nome do produto fornecido por unidade
-          ["Pedra"] = 1
+          ["diamante_bruto"] = 1
         }
       }
     }
-  },
--- Carro Forte
+  },  
   {
-    name="Cofre", -- menu name
-	permissions = {"bankdriver.money"}, -- you can add permissions
-    r=255,g=125,b=0, -- color
-    max_units=1,
-    units_per_minute=1,
-    x=253.90089416504,y=225.21408081055,z=101.87578582764,
-    radius=2, height=1.0, -- area
+    name="Lapidação", -- Nome do menu
+    permissions = {"minerar"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=500,
+    units_per_minute=50,
+    x=-1035.3331298828,y=-1146.3178710938,z=2.1585986614227, -- Localização
+    radius=3.5, height=1.5, -- area
     recipes = {
-      ["Dinheiro do Banco"] = { -- action name
-       description="Pegar dinheiro do banco.", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={}, -- items taken per unit
-        products={
-		["bank_money"] = 500000
-		}, -- items given per unit
-        aptitudes={} -- optional
+      ["Lapidar Diamante Bruto"] = { -- Nome da ação
+        description="Lapidando Diamante", -- Descrição do produto a se colher
+        in_money=0, -- Dinheiro dado por unidade
+        out_money=0, -- Dinheiro ganho por unidade
+        reagents={
+          ["diamante_bruto"] = 1
+        }, -- Itens colhidos por unidade
+        products={ -- Nome do produto fornecido por unidade
+        ["diamante"] = 1
+        }
       }
     }
-  },
-  -- PROCESSADOR DE MINERIO
+  }, 
   {
-    name="Lavagem de Minerio", -- menu name
-    permissions = {"lavagemdeminerio"}, -- you can add permissions
+    name="Venda de Diamante", -- Nome do menu
+    --permissions = {"minerar"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=500,
+    units_per_minute=50,
+    x=-630.34429931641,y=-229.12178039551,z=38.057052612305, -- Localização
+    radius=3.5, height=1.5, -- area
+    recipes = {
+      ["Vender Diamante"] = { -- Nome da ação
+        description="Lapidando Diamante", -- Descrição do produto a se colher
+        in_money=0, -- Dinheiro dado por unidade
+        out_money=300, -- Dinheiro ganho por unidade
+        reagents={
+         ["diamante"] = 1
+        }, -- Itens colhidos por unidade
+        products={ -- Nome do produto fornecido por unidade
+        }
+      }
+    }
+  }, 
+  {
+    name="OAB", -- menu name
+    permissions = {"carteira.oab"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=2, -- unidades que o transformador ganha de volta por minuto
-    x=-554.48089599609,y=5324.0986328125,z=73.599700927734, -- pos
-    radius=7.5, height=1.5, -- area
+    units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
+    x=-1910.6088867188,y=-571.90643310547,z=19.097219467163, -- pos
+    radius=5.5, height=1.5, -- area
     recipes = { -- items do menu
-      ["Lavagem de Pedra"] = { -- action name
-        description="Produzir minerio...", -- action description
+      ["Pegar Carteira OAB"] = { -- action name
+        description="Carteira OAB.", -- action description
         in_money=0, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
-          ["Pedra"] = 1
-        },
+    },
         products={ -- items given per unit
-          ["Minerio"] = 1
+      ["oab"] = 1
         }
-      }
-    }
-  },
-  {
-    name="OAB", -- menu name
-	permissions = {"advogado.oab"},
-    r=255,g=125,b=0, -- color
-    max_units=1,
-    units_per_minute=1,
-    x=-77.134468078613,y=-802.86267089844,z=243.40579223633,
-    radius=2, height=1.0, -- area
-    recipes = {
-      ["OAB"] = { -- action name
-       description="Carteira de Advogado.", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={}, -- items taken per unit
-        products={
-		["oab"] = 1
-		}, -- items given per unit
-        aptitudes={} -- optional
       }
     }
   },  
@@ -413,7 +430,7 @@ cfg.item_transformers = {
         }
       }
     }
-  },
+  }
 }
 
 

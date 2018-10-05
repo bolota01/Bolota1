@@ -765,35 +765,7 @@ cfg.groups = {
     "repair.service",
     "shop.mecanico",
 	"repair.garagem"
-  },
-  ["Taxi"] = {
-    _config = { gtype = "job" },
-    "taxi.service",
-	"taxi.paycheck",
-	"mission.taxi.passenger",
-	"taxi.garagem"
-  },
-  ["Entregador"] = {
-    _config = { gtype = "job" },
-	"delivery.paycheck",
-	"delivery.service",
-    "mission.delivery.food",
-	"delivery.garagem"
-  },
-    ["Advogado"] = {
-    _config = { gtype = "job" },
-  "advogado.oab",
   },  
-  ["Transportador de Valores"] = {
-    _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"Você é um piloto de carro forte."}) end
-  },
-  "mission.bankdriver.moneybank",
-  "mission.bankdriver.moneybank2",
-  "bankdriver.vehicle",
-  "bankdriver.paycheck",
-  "bankdriver.money"
-  },
   -- Empregos Ilegais
   ["Ladrão de Carros"] = {
     _config = { gtype = "job" },
@@ -859,6 +831,80 @@ cfg.groups = {
   ["Desempregado"] = {
     _config = { gtype = "job" },
 	"player.paycheck"
+  },
+  ["vipdima"] = {
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~b~VIP Dima."}) end},
+  "garagem.vipdima",
+  },
+  ["vipgold"] = {
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~y~VIP Gold."}) end},
+  "garagem.vipgold",
+  },   
+  ["vipprata"] = {
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~h~VIP Prata."}) end},
+  "garagem.vipprata",
+  },   
+  ["vipbronze"] = {
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~o~VIP Bronze."}) end},
+  "garagem.vipbronze",
+  },
+--Minerador de Diamante  
+["Minerador de Diamante"] = {
+    _config = { gtype = "job"},
+    "veiculo.minerador",
+  "minerar",
+  "minerador.uniforme",
+  "processar.diamante",
+  "vender.diamante",
+  },
+--GARI
+["Gari"] = {
+    _config = { 
+      gtype = "job",
+    },
+    "missao.gari.coleta",
+  "gari.veiculo",
+  "gari.paycheck",
+  "gari.uniforme",
+  "gari.coleta",
+  "gari.reciclagem",
+},
+--CORREIOS
+["Correios"] = {
+    _config = { 
+      gtype = "job",
+    },
+    "missao.correios.coleta",
+  "correios.veiculo",
+  "sedex.permissao",
+  "correios.paycheck",
+  "delivery.gopostal",
+  "correios.pacote",
+  "correios.uniforme",
+},
+--UBER
+["UBER"] = {
+    _config = { gtype = "job" },
+    "UBER.service",
+  "UBER.paycheck",
+  "uber.uniforme",
+  "mission.UBER.passenger",
+  "UBER.garagem",
+  "UBER.paycheck",
+  },
+--Advogado  
+  ["Advogado"] = {
+    _config = { gtype = "job" },
+  "carteira.oab",
+  },
+--Transporte de Valores  
+    ["Transportador de Valores"] = {
+    _config = { gtype = "job" },
+  "mission.bankdriver.moneybank",
+  "bankdriver.vehicle",
+  "bankdriver.paycheck",
+  "tvalores.uniforme",
+  "bankdriver.money",
   }
 }
 

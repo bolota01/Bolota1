@@ -11,16 +11,29 @@ cfg.items = {
   ["cocaina"] = {"Cocaina", "Cocaina em po.", nil, 1.00}, -- no choices
   ["crystalmelamine"] = {"Crystal Melamine", "Crystal Melamine.", nil, 1.00}, -- no choices
   ["metanfetamina"] = {"Metanfetamina", "Cristal de Metanfetamina.", nil, 1.00}, -- no choices  
-  ["Pedra"] = {"Pedra", "Pedra bruta.", nil, 0.01}, -- no choices
-  ["Minerio"] = {"Minerio", "Minerio refinado.", nil, 0.01}, -- no choices
   ["toclonecards"] = {"Cartão Clonável", "Para clonar.", nil, 0.01}, -- no choices
   ["clonedcards"] = {"Cartão clonado", "Para vender.", nil, 0.01}, -- no choices
-  ["oab"] = {"OAB", "Carteira de Advogado.", nil, 0.01}, -- no choices
   ["cannabis"] = {"Maconha", "Processada.", nil, 1.00}, -- no choices
-  ["bank_money"] = {"Dinheiro do Banco", "$.", nil, 0}, -- no choices
   ["rede"] = {"Rede", "Para pescar Tartaruga", nil, 0.50},
   ["Tartaruga"] = {"Tartaruga", ".", nil, 5.00},
+  --ITENS USADOS NA MINERAÇÃO
+  ["pedra"] = {"Pedra", "Pedra bruta.", nil, 1.000}, -- no choices
+  ["diamante_bruto"] = {"Diamante Bruto", "Diamante para ser lapidado.", nil, 1.000}, -- no choices
+  ["diamante"] = {"Diamante", "Diamante pronto para a venda.", nil, 1.000}, -- no choices
+  --ITENS GARI
+  ["papelao"] = {"Pedaço de Papelão", "Papelão velho para reciclagem.", nil, 10.000}, -- no choices
+  ["latinha_vazia"] = {"Latinha de Alumínio", "Lata de alumínio para reciclagem.", nil, 0.0145}, -- no choices
+  ["pet_vazia"] = {"Garrafa PET 2L", "Garrafa pet vazia para reciclagem.", nil, 0.047}, -- no choices
+  ["saco_lixo"] = {"Saco de Lixo", "Saco para embalar lixo.", nil, 0.000}, -- no choices
+  ["oab"] = {"OAB", "Carteira de Advogado.", nil, 0.01}, -- no choices
+  ["bank_money"] = {"Malote de Dinheiro", "$.", nil, 1.000}, -- no choices
+--CORREIOS
+  ["pacote"] = {"Sedex", "Sedex que alguém pagou caro pra entregar, mas você não tá nem aí pra isso.", nil, 10.000}, -- no choices 
+  --TRAFICANTE DE ÓRGÃOS
+  ["orgaos"] = {"Órgãos Humanos","Órgão para transplante ilegal", nil, 1.000}, -- no choices 
+  
 }
+
 
 -- load more items function
 local function load_item_pack(name)

@@ -5,7 +5,7 @@ settings = {}
 settings["en"] = {
 	openMenu = "Pressione ~g~E~w~ para abrir o menu..",
 	electricError = "~r~ Você está em um carro Elétrico..",
-	fuelError = "~r~ Você está no local errado.",
+	fuelError = "~r~ Você está num carro a cobustão.",
 	buyFuel = "Comprar Gasolina",
 	liters = "Litros",
 	percent = "Porcentagem",
@@ -42,4 +42,4 @@ text_x = 0.2100
 text_y = 0.825
 
 
-electricityPrice = 15 -- NOT RANDOMED !!!
+electricityPrice = 1 -- NOT RANDOMED !!!

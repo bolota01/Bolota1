@@ -78,7 +78,7 @@ function task_mission()
             local step = {
               text = v.title.."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
-                if vRP.tryGetInventoryItem({user_id,"bank_money",500000,true}) then
+                if vRP.tryGetInventoryItem({user_id,"bank_money",1,true}) then
                   vRPclient.playAnim(player,{false,{task="CODE_HUMAN_POLICE_INVESTIGATE"},false})
                   SetTimeout(15000, function()
                     vRP.nextMissionStep({player})
@@ -104,7 +104,52 @@ function task_mission()
     end
   end
  
- 
+  --GARI
+  for k,v in pairs(cfg.gari) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player})  then
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Coletando o lixo, aguarde alguns segundos."})
+                  SetTimeout(5000, function()
+                    vRP.nextMissionStep({player})
+					Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Acabou o lixo por aqui! ~n~Já, já terá mais, aguarde um minutinho"})
+					else
+                      vRPclient.notify(player,{"Recolha o lixo."})
+                    end
+                  end)
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
   -- DELIVERY
   for k,v in pairs(cfg.delivery) do -- each repair perm def
     -- add missions to users
@@ -136,7 +181,74 @@ function task_mission()
                 if amount > 0 then -- check if not done
                   if vRP.tryGetInventoryItem({user_id,idname,amount,true}) then
                     local reward = v.items[idname][3]*amount
-	                 if k == "mission.delivery.pot" or k=="mission.delivery.pot2" or k=="mission.delivery.pot3" then
+	                 if k == "mission.delivery.pot" or k == "vender.orgao" or k=="vender.cigarro" or k=="mission.delivery.pot2" or k=="mission.delivery.pot3" or k == "mission.delivery.card" or k=="vender.drogas.maconha" or k=="vender.drogas.cocaina" or k=="vender.drogas.metanfetamina" then
+					  vRP.giveInventoryItem({user_id,"dirty_money",reward,true})
+                      vRPclient.notify(player,{"Você recebeu ~r~$ ".. reward .."~w~ de dinheiro sujo pelo seu trabalho."})
+                      vRPclient.notify(player,{"~h~Aguarde um minuto para um novo serviço."})
+					else
+                      vRP.giveMoney({user_id,reward})
+                      vRPclient.notify(player,{glang.money.received({reward})})
+                      vRPclient.notify(player,{"~h~Aguarde um minuto para um novo serviço."})
+					end
+                    todo = todo-1
+                    delivery_items[idname] = 0
+                    if todo == 0 then -- all received, finish mission
+                      vRP.nextMissionStep({player})
+                    end
+                  end
+                end
+              end
+            end,
+            position = v.positions[math.random(1,#v.positions)]
+          }
+
+          -- mission display
+          for idname,amount in pairs(delivery_items) do
+            local name = vRP.getItemName({idname})
+            step.text = step.text..lang.delivery.item({name,amount}).."<br />"
+          end
+
+          mdata.steps = {step}
+
+          if todo > 0 then
+            vRP.startMission({player,mdata})
+          end
+        end
+      end
+    end
+  end
+  
+  for k,v in pairs(cfg.hacker) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = lang.hacker.title()
+
+          -- generate items
+          local todo = 0
+          local delivery_items = {}
+          for idname,data in pairs(v.items) do
+           local amount = math.random(data[1],data[2])
+            if amount > 0 then
+              delivery_items[idname] = amount
+              todo = todo+1
+            end
+          end
+
+          local step = {
+            text = "",
+            onenter = function(player, area)
+              for idname,amount in pairs(delivery_items) do
+                if amount > 0 then -- check if not done
+                  if vRP.tryGetInventoryItem({user_id,idname,amount,true}) then
+                    local reward = v.items[idname][3]*amount
+	                 if k == "mission.delivery.card" or k=="vender.drogas.maconha" or k=="vender.drogas.cocaina" or k=="vender.drogas.metanfetamina" then
 					  vRP.giveInventoryItem({user_id,"dirty_money",reward,true})
 					else
                       vRP.giveMoney({user_id,reward})
@@ -199,8 +311,9 @@ function task_mission()
                         vRPclient.notify(player,{lang.own_veh()})
 				      else
                         Mclient.freezePedVehicle(player,{true})
-				        vRPclient.deleteVehiclePedIsIn(player,{})
 					    vRP.giveInventoryItem({user_id,"dirty_money",reward,true})
+						vRPclient.notify(player,{"~r~~h~Saia do local com o dinheiro e aguarde um novo chamado, obrigado!"})
+				        vRPclient.deleteVehiclePedIsIn(player,{})
                         vRP.nextMissionStep({player})
 					  end
                     end})
@@ -271,67 +384,105 @@ function task_mission()
     end
   end
   
-      -- Medical Delivery
-  for k,v in pairs(cfg.medical_driver) do -- each repair perm def
+  -- EMERGENCY
+  for k,v in pairs(cfg.emergency) do -- each repair perm def
     -- add missions to users
     local users = vRP.getUsersByPermission({k})
     for l,w in pairs(users) do
       local user_id = w
       local player = vRP.getUserSource({user_id})
       if not vRP.hasMission({player}) then
-        -- build mission
-        local mdata = {}
-        mdata.name = lang.medical.title()
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
 
-        -- generate items
-        local todo = 0
-        local medical_driver_items = {}
-        for idname,data in pairs(v.items) do
-          local amount = math.random(data[1],data[2]+1)
-          if amount > 0 then
-            medical_driver_items[idname] = amount
-            todo = todo+1
-          end
-        end
-
-        local step = {
-          text = "",
-          onenter = function(player, area)
-            for idname,amount in pairs(medical_driver_items) do
-              if amount > 0 then -- check if not done
-                if vRP.tryGetInventoryItem({user_id,idname,amount,true}) then
-                  local reward = v.items[idname][3]*amount
-                  vRP.giveMoney({user_id,reward})
-                  vRPclient.notify(player,{glang.money.received({reward})})
-                  todo = todo-1
-                  medical_driver_items[idname] = 0
-                  if todo == 0 then -- all received, finish mission
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = lang.transfer().."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                if vRP.tryGetInventoryItem({user_id,"medkit",1,false}) then
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Aguarde até que o paciente entre."})
+                  SetTimeout(10000, function()
                     vRP.nextMissionStep({player})
-                  end
+					vRP.giveInventoryItem({user_id,"medkit",1,false})
+                    Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveBankMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Por enquanto é isso!"})
+					else
+                      vRPclient.notify(player,{"Ele está dentro! Leve-o para o próximo hospital!"})
+                    end
+                  end)
                 end
-              end
-            end
-          end,
-          position = v.positions[math.random(1,#v.positions)]
-        }
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
 
-        -- mission display
-        for idname,amount in pairs(medical_driver_items) do
-          local name = vRP.getItemName({idname})
-          step.text = step.text..lang.medical.item({name,amount}).."<br />"
-        end
+            table.insert(mdata.steps, step)
+          end
 
-        mdata.steps = {step}
-
-        if todo > 0 then
           vRP.startMission({player,mdata})
         end
       end
     end
   end
   
-  -- TAXI
-  for k,v in pairs(cfg.taxi) do -- each repair perm def
+  -- POLICE
+  for k,v in pairs(cfg.police) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Aguarde alguns segundos."})
+                  SetTimeout(5000, function()
+                    vRP.nextMissionStep({player})
+					Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveBankMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Por enquanto é isso!"})
+					else
+                      vRPclient.notify(player,{"Tudo bom! Vá para o próximo local!"})
+                    end
+                  end)
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
+  
+  -- UBER
+  for k,v in pairs(cfg.UBER) do -- each repair perm def
     -- add missions to users
     local users = vRP.getUsersByPermission({k})
     for l,w in pairs(users) do
@@ -350,7 +501,7 @@ function task_mission()
               text = v.text.."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
                   Mclient.freezePedVehicle(player,{true})
-                  vRPclient.notify(player,{"Aguarde o passageiro."})
+                  vRPclient.notify(player,{"~b~~h~Aguarde o passageiro..."})
                   SetTimeout(5000, function()
                     vRP.nextMissionStep({player})
 					Mclient.freezePedVehicle(player,{false})
@@ -359,9 +510,9 @@ function task_mission()
                     if i == v.steps then
                       vRP.giveMoney({user_id,v.reward})
                       vRPclient.notify(player,{glang.money.received({v.reward})})
-                      vRPclient.notify(player,{"Por enquanto é isso!"})
+                      vRPclient.notify(player,{"~g~Por enquanto é isso!~n~~h~Aguarde um minuto para o próximo chamado"})
 					else
-                      vRPclient.notify(player,{"Pegue o passageiro e leve para o destino."})
+                      vRPclient.notify(player,{"~h~~y~Leve ao local indicado no GPS."})
                     end
                   end)
               end,

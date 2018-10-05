@@ -137,7 +137,7 @@ end
 function renderPrice()
     for i=0,34 do
         if(randomPrice) then
-            StationsPrice[i] = round(math.random(),2) + math.random(2,3) + .009
+            StationsPrice[i] = round(math.random(),2) + math.random(4,5) + .009
         else
         	StationsPrice[i] = price
         end

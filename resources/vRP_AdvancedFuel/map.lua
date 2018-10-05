@@ -63,7 +63,7 @@ station = {
     {x=-62.760,y=-1760.176,z=29.133,s=1},
     {x=-61.468,y=-1768.718,z=29.077,s=1},
     {x=-59.106,y=-1761.805,z=29.078,s=1},
-
+    {x=442.73794555664,y=-1014.3247680664,z=28.625051498413,s=1},
 
 
     {x=1214.171,y=-1405.432,z=35.224,s=2},
@@ -418,7 +418,7 @@ Citizen.CreateThread(function()
                	 	local z = stationsText[item.s].z
               	  	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
                		DrawText3D(x,y,z, "~g~ "..settings[lang].fuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-               		DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : $"..StationsPrice[item.s].."/gallon")
+               		DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." R$ "..StationsPrice[item.s].." por litro")
                	end
             end
         end
@@ -440,7 +440,7 @@ Citizen.CreateThread(function()
                 	local z = stationsText[item.s].z
                 	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
                 	DrawText3D(x,y,z, "~g~ "..settings[lang].boatFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : $"..StationsPrice[item.s].."/gallon")
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." R$ "..StationsPrice[item.s].." por litro")
                 end
             end
         end
@@ -456,7 +456,7 @@ Citizen.CreateThread(function()
                 	local z = stationsText[item.s].z
                 	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
                 	DrawText3D(x,y,z, "~g~ "..settings[lang].avionFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : $"..StationsPrice[item.s].."/gallon")
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." R$ "..StationsPrice[item.s].." por litro")
                 end
             end
         end
@@ -472,7 +472,7 @@ Citizen.CreateThread(function()
                 	local z = stationsText[item.s].z
                 	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
                 	DrawText3D(x,y,z, "~g~ "..settings[lang].heliFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : $"..StationsPrice[item.s].."/gallon")
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." R$ "..StationsPrice[item.s].." por litro")
                 end
             end
         end

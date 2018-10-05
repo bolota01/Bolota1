@@ -77,7 +77,12 @@ cfg.emotes = {
   ["Comer o cu"] = {false,{{"rcmpaparazzo_2","shag_loop_a",2}},true},
   ["Beijo Boca"] = {true,{{"mp_ped_interaction","kisses_guy_a",1}},false},
   ["Balançar peito"] = {false,{{"mini@strip_club@backroom@","stripper_b_backroom_idle_b",1}},false},
-  ["teste"] = {false,{{"cellphone@cellphone_up",1}},false}
+  ["Mecânico motor"] = {false,{task="PROP_HUMAN_BUM_BIN"},false},
+  ["Mecanico abaixo"] = {false,{task="WORLD_HUMAN_VEHICLE_MECHANIC"},false},
+  ["ADULTO | Strip de esquina"] = {false,{{"mini@strip_club@idles@stripper","stripper_idle_02",1}},false},
+  ["Escutar coracao"] = {false,{{"mini@safe_cracking","idle_base",1}},false},
+  ["BLZ"] = {true,{{"mp_action","thanks_male_06",1}},false},
+  ["DJ"] = {false,{{"anim@mp_player_intcelebrationmale@dj","dj",1}},true}
 }
 
 return cfg

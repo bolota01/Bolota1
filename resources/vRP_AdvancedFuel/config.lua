@@ -7,20 +7,20 @@ settings = {}
 settings["en"] = {
 	openMenu = "Pressione ~g~E~w~ para abrir o menu.",
 	electricError = "~r~Você está em um carro Elétrico.",
-	fuelError = "~r~Você está no local errado.",
-	buyFuel = "Comprar Gasolina",
+	fuelError = "~r~ Você está num carro a cobustão.",
+	buyFuel = "Abastercer",
 	liters = "litros",
-	percent = "porcento",
+	percent = "Porcentagem",
 	confirm = "Confirmar",
 	fuelStation = "Posto de Gasolina",
 	boatFuelStation = "Posto de Gasolina | Barco",
 	avionFuelStation = "Posto de Gasolina | Avião ",
 	heliFuelStation = "Posto de Gasolina | Helicoptero",
-	getJerryCan = "Pressione ~g~E~w~ para comprar um galão de gasolina ("..petrolCanPrice.."$)",
+	getJerryCan = "Pressione ~g~E~w~ para comprar um galão de gasolina (R$ "..petrolCanPrice..")",
 	refeel = "Pressione ~g~E~w~ para reabastecer o carro.",
 	YouHaveBought = "Você comprou ",
-	fuel = " litros de gasolina",
-	price = "preço"
+	fuel = " % de recarga",
+	price = "Preço"
 }
 
 settings["fr"] = {
@@ -35,7 +35,7 @@ settings["fr"] = {
 	boatFuelStation = "Station d'essence | Bateau",
 	avionFuelStation = "Station d'essence | Avions",
 	heliFuelStation = "Station d'essence | Hélicoptères",
-	getJerryCan = "Appuyez sur ~g~E~w~ pour acheter un bidon d'essence ("..petrolCanPrice.."$)",
+	getJerryCan = "Appuyez sur ~g~E~w~ pour acheter un bidon d'essence (R$ "..petrolCanPrice..")",
 	refeel = "Appuyez sur ~g~E~w~ pour remplir votre voiture d'essence.",
 	YouHaveBought = "Vous avez acheté ",
 	fuel = " litres d'essence",
@@ -55,7 +55,7 @@ text_x = 0.2125
 text_y = 0.825
 
 
-electricityPrice = 15 -- NOT RANOMED !!
+electricityPrice = 1 -- NOT RANOMED !!
 petrolCanPrice = 250
-randomPrice = false --Random the price of each stations
+randomPrice = true --Random the price of each stations
 price = 25 --If random price is on False, set the price here for 1 liter
