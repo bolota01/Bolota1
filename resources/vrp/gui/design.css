@@ -16,15 +16,21 @@ html, body {
   font-weight: bold;
 }
 
+.player-status{
+  position: absolute;
+  bottom: 1%;
+  left: 16.25%;
+  opacity: 0.8;
+}
+
 /* menu */
 .menu{
-  background-image: url(img/red.jpg);
-  /* background-color: #2B2E36; */
+  background-image: url(img/fundo_3.png);
   background-size: 100% 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   width: 210px;
-  height: 45%;
+  height: 400px;
   font-weight: bold;
   border: 0px solid #000000;
   -moz-border-radius: 40px;
@@ -32,10 +38,10 @@ html, body {
   border-radius: 31px;
   margin: 0;
   position: absolute;
-  top: 47%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-left: 80px;
+  top: 48%;
+  margin-left: 9%;
 }
 
 .menu-content{
@@ -145,6 +151,7 @@ html, body {
   transform: translateX(-50%);
 }
 
+/* request */
 .request-message {
   background: #2B2E36;
   min-width: 200px;
@@ -185,23 +192,6 @@ html, body {
   color: #fff;
 }
 
-/*.progressbar{
-  border: solid 4px black;
-  display: fixed;
-  position: absolute;
-}
-
-.progressbar .inner{
-}
-
-.progressbar .label{
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 2px 2px black;
-}*/
-
 /* dynamic class progress bar */
 .dprogressbar{
   position: relative;
@@ -228,54 +218,6 @@ html, body {
   text-align: center;
   text-shadow: 2px 2px black;
 }
-
-/* wprompt */
-/*.wprompt{
-  position: absolute;
-  background-color: rgba(35, 40, 46, 0.5);
-  color: white;
-  width: 500px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-   border-radius: 7px 7px 7px 7px;
- -moz-border-radius: 7px 7px 7px 7px;
- -webkit-border-radius: 7px 7px 7px 7px;
-  border: 0px solid #000000;
-}
-
-.wprompt h1{
-  font-size: 1.2em;
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
-  font-family: Roboto;
- }
-
-.wprompt textarea{
-  outline: none !important;
-  background-color: rgba(35, 40, 47, 0.39);
-  font-family: 'Roboto', sans-serif;
-  flex: 1;
-  color: white;
-  width: 100%;
-  resize: none;
-  border-radius: 7px 7px 7px 7px;
- -moz-border-radius: 7px 7px 7px 7px;
- -webkit-border-radius: 7px 7px 7px 7px;
-  border: 0px solid #000000;
-}
-
-.wprompt textarea:focus{
-  outline: none !important;
-}
-
-.wprompt .help{
-  font-size: 1.2em;
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
-  font-family: Roboto;
- }*/
 
 .prompt-back {
   background: rgba(0,0,0,0.3);
@@ -328,37 +270,6 @@ html, body {
   text-transform: lowercase;
 }
 
-/* request manager */
-.request_manager{
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  text-align: right;
-}
-
-.request_manager div{
-  margin-top: 10px;
-}
-
-.request_manager div > span{
-  font-size: 1.2em;
-  color: white;
-  font-weight: bold;
-  background-color: rgba(0,0,0,0.50);
-  padding: 4px;
-}
-
-.request_manager .yes{
-  padding-left: 15px;
-  color: rgb(0,255,0);
-  font-size: 1em;
-}
-
-.request_manager .no{
-  color: rgb(255,0,0);
-  font-size: 1em;
-}
-
 /* announce */
 
 .announce{
@@ -378,3 +289,9 @@ html, body {
   opacity: 0.90;
 }
 
+@media only screen and (min-width: 1800px){
+  .player-status {
+    left: 17.5%;
+    bottom: 1%;
+  }
+}

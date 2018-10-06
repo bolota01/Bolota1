@@ -52,42 +52,43 @@ ProgressBar.prototype.frame = function(time)
         var width = cfg.anchor_minimap_width/anchor.length; //divide horizontal map space by number of pbars
 
         //set size
-        this.div.style.width = this.div_label.style.width = (150)+"px";
-        this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (15)+"px";
-        this.div_label.style.lineHeight = this.div_label.style.height;
+        //this.div.style.width = this.div_label.style.width = (150)+"px";
+        //this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (15)+"px";
+        //this.div_label.style.lineHeight = this.div_label.style.height;
 
         //set label font size
         this.div_label.style.fontSize = "0.5em";
 
         //set position
-        this.div.style.left = Math.round(document.body.offsetWidth/1.1-this.div.offsetWidth/1.1)+"px";
-        this.div.style.top = Math.round(document.body.offsetHeight-90-anchor_index*20)+"px";
+        this.div.style.left = (document.body.offsetWidth-this.div.offsetWidth-anchor_index*210)+"px";
+        //this.div.style.left = Math.round(document.body.offsetWidth/1.1-this.div.offsetWidth/1.1)+"px";
+        this.div.style.top = Math.round(document.body.offsetHeight-135)+"px";
       }
       else if(anchor_name == "botright"){ //BOTRIGHT
         //set size
-        this.div.style.width = this.div_label.style.width = (180)+"px";
-        this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (17)+"px";
-        this.div_label.style.lineHeight = this.div_label.style.height;
+        //this.div.style.width = this.div_label.style.width = (180)+"px";
+        //this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (17)+"px";
+        //this.div_label.style.lineHeight = this.div_label.style.height;
 
         //set label font size
         this.div_label.style.fontSize = "0.8em";
 
         //set position
-        this.div.style.left = (document.body.offsetWidth-this.div.offsetWidth-100)+"px";
-        this.div.style.top = (document.body.offsetHeight-135-anchor_index*22)+"px";
+        this.div.style.left = (document.body.offsetWidth-this.div.offsetWidth-anchor_index*210)+"px";
+        this.div.style.top = (document.body.offsetHeight-135)+"px";
       }
       else if(anchor_name == "center"){ //CENTER
         //set size
-        this.div.style.width = this.div_label.style.width = (300)+"px";
-        this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (17)+"px";
-        this.div_label.style.lineHeight = this.div_label.style.height;
+        //this.div.style.width = this.div_label.style.width = (300)+"px";
+        //this.div_inner.style.height = this.div.style.height = this.div_label.style.height = (17)+"px";
+        //this.div_label.style.lineHeight = this.div_label.style.height;
 
         //set label font size
         this.div_label.style.fontSize = "0.8em";
 
         //set position
         this.div.style.left = Math.round(document.body.offsetWidth/2-this.div.offsetWidth/2)+"px";
-        this.div.style.top = (document.body.offsetHeight-30-anchor_index*22)+"px";
+        this.div.style.top = (document.body.offsetHeight-135)+"px";
       }
     }
   }
@@ -96,7 +97,7 @@ ProgressBar.prototype.frame = function(time)
   this.disp_value += (this.value - this.disp_value)*0.2;
 
   //update inner bar
-  this.div_inner.style.width = Math.round(this.div.offsetWidth*this.disp_value/100.0)+"px";
+  this.div_inner.style.marginTop = Math.round(this.disp_value*100)+"%";
 }
 
 ProgressBar.prototype.addDom = function()
@@ -112,7 +113,7 @@ ProgressBar.prototype.addDom = function()
 ProgressBar.prototype.removeDom = function()
 {
   document.body.removeChild(this.div);
-
+ 
   //remove from anchors
   var anchor = anchors[this.data.anchor];
   if(anchor){
@@ -146,5 +147,5 @@ defineDynamicClass("dprogressbar", function(el){
   //set label font size
   label.style.fontSize = "1em";
 
-  inner.style.width = Math.round(value*100)+"%";
+  inner.style.marginTop = Math.round(value*100)+"%";
 });

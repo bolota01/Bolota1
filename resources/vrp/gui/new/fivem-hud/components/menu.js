@@ -95,6 +95,25 @@ export default class Menu extends React.Component {
                 case "SELECT":
                     this.select();
                     break;
+                case "LEFT":
+                    this.valid(-1);
+                    break;
+                case "RIGHT":
+                    this.valid(1);
+                    break;
+            }
+        }
+    }
+
+    valid(mod){
+        var choices = this.state.choices;
+        if (this.state.position < choices.length){
+            if (this.state.opened){
+                axios.post("http://vrp/menu",JSON.stringify({
+                    act: "valid",
+                    id: this.state.id,
+                    choice: choices[this.state.position][0],
+                    mod: mod}));
             }
         }
     }
@@ -106,9 +125,9 @@ export default class Menu extends React.Component {
         position += direction;
 
         if (position < 0){
-            position = 0;
+            position = choices.length - 1;
         }else if(position >= choices.length){
-            position = choices.length-1;
+            position = 0;
         }
 
         var scrollto = document.getElementsByClassName("choice")[this.state.position];

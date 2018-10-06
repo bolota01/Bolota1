@@ -8,6 +8,7 @@ import configurations from './messages';
 
 import Menu from './components/menu';
 import Prompt from './components/prompt';
+import FabricComponent from './components/custom_div';
 import FabricProgressBar from './components/progressbar';
 import FabricRequestMessage from './components/requests';
 
@@ -16,19 +17,16 @@ class Application extends React.Component {
     render(){
         return (
             <div className="container">
+                <FabricComponent />
                 <Menu />
                 <Prompt />
                 <div style={{
                     position: "absolute",
-                    top: "20px",
-                    right: "20px"}}>
+                    top: "3%",
+                    right: "2.5%"}}>
                     <FabricRequestMessage />
                 </div>
-                <div style={{
-                        position: "absolute",
-                        bottom: "10px",
-                        left: "260px",
-                        opacity: 0.8}}>
+                <div className="player-status">
                     <FabricProgressBar anchor="minimap" />
                 </div>
             </div>
