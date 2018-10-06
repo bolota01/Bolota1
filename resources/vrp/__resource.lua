@@ -59,14 +59,16 @@ client_scripts{
 -- client files
 files{
   "cfg/client.lua",
+
   "gui/index.html",
   "gui/design.css",
-  "gui/main.js",
-  "gui/Menu.js",
-  "gui/ProgressBar.js",
-  "gui/WPrompt.js",
-  "gui/RequestManager.js",
-  "gui/AnnounceManager.js",
-  "gui/Div.js",
-  "gui/dynamic_classes.js",
+
+  -- js
+  "gui/new/dist/bundle.js",
+
+  -- images
+  "gui/img/background.png",
+  "gui/img/red.jpg",
+  "gui/img/queijo.png",
+  "gui/img/copo.png"
 }

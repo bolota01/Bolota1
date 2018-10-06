@@ -1,11 +1,9 @@
-/* creditos sigh ou shadow
-   KoRinGa */
-
 *{
   margin: 0;
   padding: 0;
 }
 
+/* make body full page */
 html, body {
   margin: 0;
   height: 100%;
@@ -19,43 +17,80 @@ html, body {
 }
 
 /* menu */
-@font-face {
-    font-family: bankgothic;
-    src: url(nui://vrp/gui/font/bankgothic.ttf);
+.menu{
+  background-image: url(img/red.jpg);
+  /* background-color: #2B2E36; */
+  background-size: 100% 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  width: 210px;
+  height: 45%;
+  font-weight: bold;
+  border: 0px solid #000000;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 31px;
+  margin: 0;
+  position: absolute;
+  top: 47%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 80px;
 }
 
-.menu{
-   background-color: rgba(35, 40, 46, 0.5);  /*uma cor bem clara escura uso bastante nos menus*/
-   font-family: 'Bankgothic', sans-serif;
-   color:#ffffff;
-   border-radius: 10px;
-   width: 250px;
-   height: 45%;
-   line-height: 0.7;
-   left:6px;
-   top: 5px;
-   position: absolute;
-   float: left;
-   text-align: left;
-   /*-webkit-box-shadow:0px 0px 37px 13px #837c7c inset; /* inset bordas para dentro da imagem 
-   -moz-box-shadow:0px 0px 37px 13px #837c7c inset;
-   box-shadow:0px 0px 37px 13px #837c7c inset;*/
+.menu-content{
+  background-image: url(img/background.png);
+  background-size: 100% 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 2px;
+}
+
+.menu .choices {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 300px;
+  overflow: scroll;
+  padding-top: 0;
+  margin-top: 50px;
+  padding: 7px;
+}
+
+.menu .choice {
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+  border-bottom: 1px solid #fff;
+}
+
+.menu .choice.current {
+  background: rgba(255,255,255,0.4);
 }
 
 .menu_description{
-	background-color: #ffffff;
-	font-family: 'Bankgothic', sans-serif;
-	max-width: 300px;
-	font-size: 1.1em;
-	padding: 9px;
-	position: absolute;
-    border: 1px solid black;
+  background-color: rgba(35, 40, 46, 0.5);
+  border-radius: 0px 10px 10px 0px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ -webkit-border-radius: 0px 10px 10px 0px;
+  border: 0px solid #000000;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  position: absolute;
+  font-weight: bold;
+  padding: 9px;
+  font-size: 1.0em;
+  max-width: 500px;
 }
 
 .menu h1{
-   content: url(https://i.imgur.com/YjtmtFl.png); /* adicionar imagem no topo do menu */ 
-   text-align: center;
-   border-radius: 10px;
+  background-color: rgba(255,0,0,0.75);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 6px;
+  font-weight: bold;
 }
 
 .choices{
@@ -68,25 +103,90 @@ html, body {
 }
 
 .choices div{
- padding: 6px;
- font-size: 1.1em;
+  padding: 6px;
+  font-size: 1.2em;
 }
 
 .choices .selected{
-		 border-top: 0px solid #2eb9;
-		 border-right: 0px solid #2eb9;
-		 border-bottom: 0px solid #2eb9;
-		 border-left: 10px solid #2eb9;
-		 /*--------------------------*/
-		 border-width: 0px 0px 0px 3px;
-		 border-style: solid solid solid solid;
-		 border-color: #2eb9 #2eb9 #2eb9 #2eb9;
-		 color: #2eb9;
-		 background-color:rgba(35, 40, 46, 0.5)
+  background-color: rgba(255,255,255,0.90);
+  color: black;
 }
 
 /* progress bar */
+
 .progressbar{
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid rgba(0,0,0, 0.6);
+  box-shadow: 2px 1px 3px rgba(0,0,0,0.3);
+  background: #373435;
+  margin: 10px 10px 0 0;
+  border: 4px solid #373435;
+}
+
+.progressbar .inner{
+  width: 100%;
+  background: #e02a2a;
+  height: 100%;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.progressbar .icon-bar{
+  position: absolute;
+  bottom: 5px;
+  margin: 0 auto;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+}
+
+.request-message {
+  background: #2B2E36;
+  min-width: 200px;
+  border-radius: 10px;
+}
+
+.request-message .message{
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 5px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.request-message .options{
+  text-align: right;
+  display: inline-block;
+}
+.request-message .yes,
+.request-message .no,
+.request-message .time{
+  display: inline-block;
+  padding: 10px;
+  box-shadow: inset 3px 0 3px rgba(0,0,0, 0.3);
+}
+
+.request-message .yes{
+  color: #fff;
+  background-color: #64918e;
+}
+
+.request-message .no{
+  color: #fff;
+  background-color: #df4646;
+}
+
+.request-message .time{
+  color: #fff;
+}
+
+/*.progressbar{
+  border: solid 4px black;
   display: fixed;
   position: absolute;
 }
@@ -100,7 +200,7 @@ html, body {
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px black;
-}
+}*/
 
 /* dynamic class progress bar */
 .dprogressbar{
@@ -130,7 +230,7 @@ html, body {
 }
 
 /* wprompt */
-.wprompt{
+/*.wprompt{
   position: absolute;
   background-color: rgba(35, 40, 46, 0.5);
   color: white;
@@ -146,16 +246,16 @@ html, body {
 }
 
 .wprompt h1{
-  font-size: 1.1em;
-  font-family: 'Bankgothic', sans-serif;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
-  font-family: Bankgothic;
+  font-family: Roboto;
  }
 
 .wprompt textarea{
   outline: none !important;
   background-color: rgba(35, 40, 47, 0.39);
-  font-family: 'Bankgothic', sans-serif;
+  font-family: 'Roboto', sans-serif;
   flex: 1;
   color: white;
   width: 100%;
@@ -171,11 +271,62 @@ html, body {
 }
 
 .wprompt .help{
-  font-size: 1.1em;
-  font-family: 'Bankgothic', sans-serif;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
-  font-family: Bankgothic;
- }
+  font-family: Roboto;
+ }*/
+
+.prompt-back {
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  /* filter: blur(100px); */
+  position: absolute;
+}
+
+.prompt .content{
+  position: absolute;
+  z-index: 100;
+  margin: 0;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  padding: 20px;
+  background: #2B2E36;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+  min-width: 400px;
+  border-radius: 10px;
+}
+
+.prompt .content input[type="text"] {
+  background: #2B2E36;
+  border: 0;
+  border-bottom: 2px solid #64918e;
+  color: #fff;
+  padding: 20px 0 10px 5px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.prompt .content input[type="text"]:focus{
+  outline: 0;
+}
+
+.prompt .title {
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.prompt .help{
+  color: #fff;
+  padding: 10px 0 10px 3px;
+  text-transform: lowercase;
+}
 
 /* request manager */
 .request_manager{
@@ -190,7 +341,7 @@ html, body {
 }
 
 .request_manager div > span{
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: white;
   font-weight: bold;
   background-color: rgba(0,0,0,0.50);
@@ -200,12 +351,12 @@ html, body {
 .request_manager .yes{
   padding-left: 15px;
   color: rgb(0,255,0);
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .request_manager .no{
   color: rgb(255,0,0);
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 /* announce */
@@ -219,10 +370,11 @@ html, body {
   padding: 10px;
   margin-left: -400px;
   font-weight: bold;
-  font-family: 'Bankgothic', sans-serif;
-  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
   text-shadow: 2px 2px black;
   color: white;
   display: none;
   opacity: 0.90;
 }
+
