@@ -68,7 +68,7 @@ files{
 
   -- images
   "gui/img/background.png",
-  "gui/img/red.jpg",
+  "gui/img/fundo_3.png",
   "gui/img/queijo.png",
   "gui/img/copo.png"
 }
