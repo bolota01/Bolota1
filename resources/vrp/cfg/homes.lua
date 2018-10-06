@@ -32,6 +32,27 @@ local itemtr_study = {
     }
 	}
 }
+
+local itemtr_laboratory = {
+	name="Laboratório", -- menu name
+	r=0,g=255,b=0, -- color
+	max_units=20,
+	units_per_minute=10,
+	x=0,y=0,z=0, -- pos (doesn't matter as home component)
+	radius=1.1, height=1.5, -- area
+	recipes = {}
+}
+
+local itemtr_hacker = {
+	name="Hacker", -- menu name
+	r=0,g=255,b=0, -- color
+	max_units=20,
+	units_per_minute=10,
+	x=0,y=0,z=0, -- pos (doesn't matter as home component)
+	radius=1.1, height=1.5, -- area
+	recipes = {}
+}
+
 -- default flats positions from https://github.com/Nadochima/HomeGTAV/blob/master/List
 
 -- define the home slots (each entry coordinate should be unique for ALL types)
@@ -189,8 +210,8 @@ cfg.slot_types = {
       {"entry",1247.0024414063,-2683.8708496094,2.8763480186462},
       {"chest",1243.6141357422,-2668.6169433594,2.8671708106995, _config = {weight=2000}},
       {"wardrobe",1252.1770019531,-2678.8491210938,2.8671703338623},
-      {"gametable",1240.0080566406,-2679.7204589844,2.8671700954437}
-      --{"itemtr", _config = itemtr_study, -1156.6875,-1517.3475341797,10.632729530334}
+      {"gametable",1240.0080566406,-2679.7204589844,2.8671700954437},
+      {"itemtr", _config = itemtr_study, -1156.6875,-1517.3475341797,10.632729530334}
     }
   },
   ["trevor_trailer"] = {
@@ -242,16 +263,15 @@ cfg.slot_types = {
 	  }
     },
 	["Rich_Home"] = {
-	{
+	  {
       {"entry",1400.6745605469,1159.5922851563,114.33366394043},
       {"chest",1399.9816894531,1139.6080322266,114.33364868164, _config = {weight=2000}},
-      {"wardrobe",1402.2535400391,1135.0444335938,114.33364868164		},
+      {"wardrobe",1402.2535400391,1135.0444335938,114.33364868164},
       {"gametable",329.27224731445,424.77600097656,148.99256896973},
       {"itemtr", _config = itemtr_study, 336.78369140625,431.45687866211,141.77076721191},
-	  {"itemtr", _config = itemtr_laboratory, 1399.5760498047,1147.2416992188,114.33366394043}
+	    {"itemtr", _config = itemtr_laboratory, 1399.5760498047,1147.2416992188,114.33366394043}
 	  }
-    },
-	
+  },
   ["basic_flat"] = {
     {
       {"entry",-782.171,324.589,223.258},
@@ -386,7 +406,7 @@ cfg.slot_types = {
       {"entry",658.84442138672,-709.59503173828,38.257362365723},
       {"chest",658.15179443359,-727.44494628906,37.337562561035, _config = {weight=2500}},
       {"wardrobe",664.96478271484,-726.07250976563,37.351558685303},
-      {"gametable",670.20166015625,-704.70776367188,37.341278076172},
+      {"gametable",670.20166015625,-704.70776367188,37.341278076172}
     }
   },
   ["plantation_flat_2"] = {

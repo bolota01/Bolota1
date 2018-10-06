@@ -115,10 +115,10 @@ cfg.item_transformers = {
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
           ["crystalmelamine"] = 1
-	    },
+	      },
         products={ -- items given per unit
           ["metanfetamina"] = 2,
-		  ["dirty_money"] = 10
+		      ["dirty_money"] = 10
         }
       }
     }
@@ -183,7 +183,7 @@ cfg.item_transformers = {
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
           ["rede"] = 1
-      },
+        },
         products={ -- items given per unit
           ["Tartaruga"] = 2
         }
@@ -206,7 +206,7 @@ cfg.item_transformers = {
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
           ["Tartaruga"] = 1
-      },
+        },
         products={ -- items given per unit
           ["dirty_money"] = 2500
         }
@@ -216,21 +216,21 @@ cfg.item_transformers = {
   
   -- Lavagem de dinheiro
  {
-      name="Lavagem de Dinheiro",
-      r=0,g=200,b=0, ---cores
-      max_units=1000,
-      units_per_minute=1000,
-      x=-1056.4289550781,y=-242.60389709473,z=44.021060943604, -- coordenas mudas aqui
-      radius=2.5, height=1.5, -- area
-      recipes = {
-        ["Lavar Dinheiro"] = { -- action name
-          description="Lavagem de Dinheiro", -- action description
-          in_money=0, -- money taken per unit
-          out_money=350, -- money earned per unit
-          reagents={
-            ["dirty_money"] = 500
-          }, -- items taken per unit
-          products={}, -- items given per unit
+    name="Lavagem de Dinheiro",
+    r=0,g=200,b=0, ---cores
+    max_units=1000,
+    units_per_minute=1000,
+    x=-1056.4289550781,y=-242.60389709473,z=44.021060943604, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Lavar Dinheiro"] = { -- action name
+        description="Lavagem de Dinheiro", -- action description
+        in_money=0, -- money taken per unit
+        out_money=350, -- money earned per unit
+        reagents={
+          ["dirty_money"] = 500
+        }, -- items taken per unit
+        products={}, -- items given per unit
       }
     }
   },
@@ -273,7 +273,7 @@ cfg.item_transformers = {
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
           ["toclonecards"] = 1
-      },
+        },
         products={ -- items given per unit
           ["clonedcards"] = 1
         }
@@ -402,9 +402,9 @@ cfg.item_transformers = {
         in_money=2000, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
-    },
+        },
         products={ -- items given per unit
-      ["oab"] = 1
+          ["oab"] = 1
         }
       }
     }
@@ -489,8 +489,8 @@ for k,v in pairs(warehouses) do
         in_money=1500, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
-		  ["pistol_parts"] = 1
-		}, -- items taken per unit
+          ["pistol_parts"] = 1
+        }, -- items taken per unit
         products={ -- items given per unit
           ["wbody|WEAPON_PISTOL"] = 1
         }
@@ -500,8 +500,8 @@ for k,v in pairs(warehouses) do
         in_money=3000, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
-		  ["shotgun_parts"] = 1
-		}, -- items taken per unit
+          ["shotgun_parts"] = 1
+        }, -- items taken per unit
         products={ -- items given per unit
           ["wbody|WEAPON_PUMPSHOTGUN"] = 1
         }
@@ -511,8 +511,8 @@ for k,v in pairs(warehouses) do
         in_money=5000, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
-		  ["smg_parts"] = 1
-		}, -- items taken per unit
+          ["smg_parts"] = 1
+        }, -- items taken per unit
         products={ -- items given per unit
           ["wbody|WEAPON_SMG"] = 1
         }
@@ -532,8 +532,7 @@ cfg.hidden_transformers = {
       units_per_minute=0,
       x=0,y=0,z=0, -- pos
       radius=0, height=0, -- area
-      recipes = {
-      }
+      recipes = {}
     },
     positions = weedplants
   },
@@ -545,8 +544,7 @@ cfg.hidden_transformers = {
       units_per_minute=0,
       x=0,y=0,z=0, -- pos
       radius=0, height=0, -- area
-      recipes = {
-      }
+      recipes = {}
     },
     positions = warehouses
   }
