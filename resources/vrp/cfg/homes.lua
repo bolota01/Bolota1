@@ -10,26 +10,26 @@ local itemtr_study = {
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
-    	["Livro de Quimica"] = { -- action name
-      		description = "Leia o livro de Quimica", -- action description
-      		in_money=0, -- money taken per unit
-      		out_money=0, -- money earned per unit
-      		reagents={}, -- items taken per unit
-      		products={}, -- items given per unit
-      		aptitudes={ -- optional
-        		["science.chemicals"] = 1 -- "group.aptitude", give 1 exp per unit
-    		}
-    	},
-    	["Livro de matemática"] = { -- action name
-      		description="Leia o livro de matemática", -- action description
-      		in_money=0, -- money taken per unit
-      		out_money=0, -- money earned per unit
-      		reagents={}, -- items taken per unit
-      		products={}, -- items given per unit
-      		aptitudes={ -- optional
-        		["science.mathematics"] = 1 -- "group.aptitude", give 1 exp per unit
-    		}
-		}
+    ["Livro de Quimica"] = { -- action name
+        description = "Leia o livro de Quimica", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={}, -- items given per unit
+        aptitudes={ -- optional
+          ["science.chemicals"] = 1 -- "group.aptitude", give 1 exp per unit
+        }
+    },
+    ["Livro de matemática"] = { -- action name
+        description="Leia o livro de matemática", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={}, -- items given per unit
+        aptitudes={ -- optional
+          ["science.mathematics"] = 1 -- "group.aptitude", give 1 exp per unit
+        }
+    }
 	}
 }
 -- default flats positions from https://github.com/Nadochima/HomeGTAV/blob/master/List
@@ -407,7 +407,7 @@ cfg.homes = {
     entry_point = {1980.0181884766,3816.54296875,32.275169372559},
     buy_price = 35000,
     sell_price = 26250,
-    max = 1,
+    max = 1
   },
   ["Casa Deposito"] = {
     slot = "rail_flat",
