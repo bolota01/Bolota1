@@ -7,8 +7,8 @@ local lang = vRP.lang
 MySQL.createCommand("vRP/money_tables", [[
 CREATE TABLE IF NOT EXISTS vrp_user_moneys(
   user_id INTEGER,
-  wallet INTEGER,
-  bank INTEGER,
+  wallet BIGINT,
+  bank BIGINT,
   CONSTRAINT pk_user_moneys PRIMARY KEY(user_id),
   CONSTRAINT fk_user_moneys_users FOREIGN KEY(user_id) REFERENCES vrp_users(id) ON DELETE CASCADE
 );
