@@ -55,7 +55,7 @@ end)
 RegisterNetEvent('es_bank:toofarlocal')
 AddEventHandler('es_bank:toofarlocal', function(robb)
 	robbing = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto ao Banco foi cancelado, voce não receberá nada.")
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto ao Banco foi cancelado, você não receberá nada.")
 	robbingName = ""
 	secondsRemaining = 0
 	incircle = false
@@ -64,7 +64,7 @@ end)
 RegisterNetEvent('es_bank:playerdiedlocal')
 AddEventHandler('es_bank:playerdiedlocal', function(robb)
 	robbing = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto ao Banco foi cancelado, Voce Morreu!")
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto ao Banco foi cancelado, Você Morreu!")
 	robbingName = ""
 	secondsRemaining = 0
 	incircle = false
@@ -74,7 +74,7 @@ end)
 RegisterNetEvent('es_bank:robberycomplete')
 AddEventHandler('es_bank:robberycomplete', function(reward)
 	robbing = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Roubo terminado, Voce Recebeu:^2" .. reward)
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Roubo terminado, Você Recebeu:^2" .. reward)
 	bank = ""
 	secondsRemaining = 0
 	incircle = false
@@ -142,7 +142,7 @@ Citizen.CreateThread(function()
 					
 					if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 2)then
 						if (incircle == false) then
-							bank_DisplayHelpText("Pressione ~INPUT_CONTEXT~ para iniciar um assalto ao Banco ~b~" .. v.nameofbank .. "~w~ Cuidado, a Policia Militar será Alertada!")
+							bank_DisplayHelpText("Pressione ~INPUT_CONTEXT~ para iniciar um assalto ao Banco ~b~" .. v.nameofbank .. "~w~ Cuidado, a Polícia Militar será Alertada!")
 						end
 						incircle = true
 						if(IsControlJustReleased(1, 51))then

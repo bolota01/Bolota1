@@ -65,8 +65,8 @@ AddEventHandler('es_bank:rob', function(robb)
 			  return
 		  end
 		  TriggerClientEvent('chatMessage', -1, 'AVISO', {255, 0, 0}, "Assalto a Banco em Andamento em ^2" .. bank.nameofbank)
-		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Voce iniciou um Assalto ao Banco: ^2" .. bank.nameofbank .. "^0, Não se afaste muito deste ponto!")
-		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Segure o Banco por ^15 ^0minutos, e escape da Policia Vivo, e o Dinheiro é Seu!")
+		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Você iniciou um Assalto ao Banco: ^2" .. bank.nameofbank .. "^0, Não se afaste muito deste ponto!")
+		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Segure o Banco por ^15 ^0minutos, e escape da Polícia Vivo, e o Dinheiro é Seu!")
 		  TriggerClientEvent('es_bank:currentlyrobbing', player, robb)
 		  banks[robb].lastrobbed = os.time()
 		  robbers[player] = robb
@@ -75,7 +75,7 @@ AddEventHandler('es_bank:rob', function(robb)
 			  if(robbers[savedSource])then
 				  if(user_id)then
 					  vRP.giveInventoryItem({user_id,"dirty_money",bank.reward,true})
-					  TriggerClientEvent('chatMessage', -1, 'AVISO', {255, 0, 0}, "O Roubo de ^2" .. bank.nameofbank .. "^0! foi concluido, Policiais deixaram os Bandidos Escaparem.")	
+					  TriggerClientEvent('chatMessage', -1, 'AVISO', {255, 0, 0}, "O Roubo de ^2" .. bank.nameofbank .. "^0! foi concluído, Policiais deixaram os Bandidos Escaparem.")	
 					  TriggerClientEvent('es_bank:robberycomplete', savedSource, bank.reward)
 				  end
 			  end

@@ -26,13 +26,13 @@ local lang = {
     not_enough = "~r~Dinheiro Insuficiente.",
     paid = "Pago ~r~{1}$.",
     give = {
-      title = "💲Enviar dinheiro",
+      title = "Enviar dinheiro",
       description = "Enviar dinheiro ao jogador mais proximo de voce.",
       prompt = "Quantidade para enviar:"
     }
   },
   inventory = {
-    title = "🎒Inventário",
+    title = "Inventário",
     description = "Abrir o inventário.",
     iteminfo = "({1})<br /><br />{2}<br /><em>{3} kg</em>",
     info_weight = "Peso no Inventario {1}/{2} kg",
@@ -44,7 +44,7 @@ local lang = {
       received = "Recebido ~g~{1} ~s~{2}.",
     },
     trash = {
-      title = "🗑Lixo",
+      title = "Lixo",
       description = "Destruir items.",
       prompt = "Quantidade que você quer destruir (max {1}):",
       done = "Destruido ~r~{1} ~s~{2}."
@@ -131,12 +131,12 @@ local lang = {
       prompt_age = "Coloque sua idade:",
     },
     menu = {
-      title = "🆔 Identidade",
+      title = "Identidade",
       info = "<em>Nome: </em>{1}<br /><em>Sobrenome: </em>{2}<br /><em>Idade: </em>{3}<br /><em>RG n°: </em>{4}<br /><em>Telefone: </em>{5}<br /><em>Endereço: </em>{7}, {6}"
     }
   },
   police = {
-    title = "👮 Policia",
+    title = "Policia",
     wanted = "Nivel de Procurado {1}",
     not_handcuffed = "~r~Não Algemado",
     cloakroom = {
@@ -147,7 +147,7 @@ local lang = {
       }
     },
     pc = {
-      title = "💻PC",
+      title = "PC",
       searchreg = {
         title = "Pesquisar (RGs)",
         description = "Procurar identidades pelo numero do (RG)",
@@ -194,7 +194,7 @@ local lang = {
         description = "Tire o suspeito dentro do veiculo."
       },
       askid = {
-        title = "💳Pedir RG",
+        title = "Pedir RG",
         description = "Peça o Numero do RG ao suspeito.",
         request = "Cidadão, por gentileza, Preciso do numero do seu RG",
         request_hide = "Pegar Numero do RG",
@@ -245,7 +245,7 @@ local lang = {
         record = "[Multas] {2} $ para {1}"
       },
       store_weapons = {
-        title = "🔫Enviar armas para o inventario",
+        title = "Enviar armas para o inventario",
         description = "Todas as armas disponiveis no seu inventário."
       }
     },
@@ -256,16 +256,16 @@ local lang = {
   emergency = {
     menu = {
       revive = {
-        title = "💊Reanimar",
+        title = "Reanimar",
         description = "Reanimar o jogador mais próximo.",
         not_in_coma = "~r~Não está em coma."
       }
     }
   },
   phone = {
-    title = "📱Telefone",
+    title = "Telefone",
     directory = {
-      title = "📘Meus Contatos",
+      title = "Meus Contatos",
       description = "Abra a Lista de Contatos no seu Telefone.",
       add = {
         title = "> Add",
@@ -287,7 +287,7 @@ local lang = {
       }
     },
     sms = {
-      title = "📨Histórico de SMS",
+      title = "Histórico de SMS",
       description = "Ver o seu históricos de SMS.",
       info = "<em>{1}</em><br /><br />{2}",
       notify = "SMS~b~ {1}:~s~ ~n~{2}"
@@ -296,7 +296,7 @@ local lang = {
       notify = "SMS-Localização ~b~ {1}"
     },
     service = {
-      title = "💼Serviços",
+      title = "Serviços",
       description = "Ligue para um serviço ou um número de emergência.",
       prompt = "Se necessário, insira uma mensagem para os serviço:",
       ask_call = "Chamada Recebida de {1} você deseja aceitar? <em>{2}</em>",
@@ -310,7 +310,7 @@ local lang = {
     }
   },
   emotes = {
-    title = "😺Animações",
+    title = "Animações",
     clear = {
       title = "> Parar",
       description = "Parar todas as ações do personagem."
@@ -393,7 +393,7 @@ local lang = {
     }
   },
   vehicle = {
-    title = "🔑Veiculo",
+    title = "Veiculo",
     no_owned_near = "~r~Nenhum veiculo seu perto de voce.",
     trunk = {
       title = "Porta Malas",
@@ -420,7 +420,7 @@ local lang = {
       description = "Ligue ou Desligue o Motor do Carro."
     },
     asktrunk = {
-      title = "🔐Solicitar Porta Malas",
+      title = "Solicitar Porta Malas",
       asked = "~g~Solicitando...",
       request = "Você quer aceitar o pedido de acesso ?"
     },
@@ -470,11 +470,11 @@ local lang = {
     blip = "Missão ({1}) {2}/{3}",
     display = "<span class=\"name\">{1}</span> <span class=\"step\">{2}/{3}</span><br /><br />{4}",
     cancel = {
-      title = "✖️Cancelar Missão"
+      title = "Cancelar Missão"
     }
   },
   aptitude = {
-    title = "📤Capacidades, XP e Level",
+    title = "Capacidades, XP e Level",
     description = "Mostra suas Capacidades seu XP e Level.  <- Atenção para fechar Display so clickar Novamente",
     lose_exp = "XP ~b~{1}/{2} ~r~-{3} ~s~exp.",
     earn_exp = "XP ~b~{1}/{2} ~g~+{3} ~s~exp.",

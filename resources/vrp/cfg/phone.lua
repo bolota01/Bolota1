@@ -17,50 +17,50 @@ cfg.smspos_duration = 300
 -- alert_notify (notification received when an alert is sent)
 -- notify (notification when sending an alert)
 cfg.services = {
-  ["🚓Policia Militar"] = {
+  ["Policia Militar"] = {
     blipid = 304,
     blipcolor = 38,
     alert_time = 300, -- 5 minutes
     alert_permission = "police.service",
-    alert_notify = "~r~[COPOM] Chamado de Ocorrencia:~n~~s~",
-    notify = "~b~Você chamou a polícia, Aguarde no Local a chegada da Policia",
-    answer_notify = "~b~A Policia está a caminho."
+    alert_notify = "~r~[COPOM] Chamado de Ocorrência:~n~~s~",
+    notify = "~b~Você chamou a polícia, Aguarde no Local a chegada da Polícia",
+    answer_notify = "~b~A Polícia está a caminho."
   },
-  ["🚑SAMU"] = {
+  ["SAMU"] = {
     blipid = 153,
     blipcolor = 1,
     alert_time = 300, -- 5 minutes
     alert_permission = "emergency.service",
     alert_notify = "~r~[SAMU] Chamado de emergência:~n~~s~",
-    notify = "~b~Você chamou um samu.",
-    answer_notify = "~b~O samu está a caminho."
+    notify = "~b~Você chamou o samu.",
+    answer_notify = "~b~O Samu está a caminho."
   },
-  ["💼Advogado"] = {
+  ["Advogado"] = {
     blipid = 269,
     blipcolor = 68,
     alert_time = 300, -- 5 minutes
     alert_permission = "advogado.service",
-    alert_notify = "~r~[Advogado] Alguem ligou para voce solicitando serviço:~n~~s~",
+    alert_notify = "~r~[Advogado] Alguém ligou para você solicitando serviço:~n~~s~",
     notify = "~b~Você chamou um advogado.",
     answer_notify = "~b~O advogado está a caminho."
   },  
-  ["🚕Taxi"] = {
+  ["Taxi"] = {
     blipid = 198,
     blipcolor = 5,
     alert_time = 300,
     alert_permission = "taxi.service",
-    alert_notify = "~y~[TAXI] Voce tem um Chamado para corrida:~n~~s~",
+    alert_notify = "~y~[TAXI] Você tem um chamado para corrida:~n~~s~",
     notify = "~y~Você chamou um táxi.",
     answer_notify = "~y~Um Taxi está a caminho."
   },
-  ["🔧Mecanico"] = {
+  ["Mecânico"] = {
     blipid = 446,
     blipcolor = 5,
     alert_time = 300,
     alert_permission = "repair.service",
-    alert_notify = "~y~[Mecanico] Alguem ligou para voce solicitando serviço:~n~~s~",
+    alert_notify = "~y~[Mecanico] Alguem ligou para você solicitando serviço:~n~~s~",
     notify = "~y~Você chamou um mecanico.",
-    answer_notify = "~y~Mecanico está a caminho."
+    answer_notify = "~y~Mecânico está a caminho."
   }
 }
 
