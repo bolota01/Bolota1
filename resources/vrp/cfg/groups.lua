@@ -871,16 +871,14 @@ cfg.groups = {
 },
 --CORREIOS
 ["Correios"] = {
-    _config = { 
-      gtype = "job",
-    },
+    _config = { gtype = "job" },
     "missao.correios.coleta",
   "correios.veiculo",
-  "sedex.permissao",
   "correios.paycheck",
-  "delivery.gopostal",
   "correios.pacote",
   "correios.uniforme",
+  "mission.entrega.casa2",
+  "mission.entrega.casa1",
 },
 --UBER
 ["UBER"] = {
