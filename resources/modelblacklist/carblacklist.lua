@@ -3,6 +3,7 @@
 -- Blacklisted vehicle models
 carblacklist = {
 	"RHINO",
+	"HYDRA"
 }
 
 -- CODE --
