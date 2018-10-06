@@ -399,7 +399,7 @@ cfg.item_transformers = {
     recipes = { -- items do menu
       ["Pegar Carteira OAB"] = { -- action name
         description="Carteira OAB.", -- action description
-        in_money=0, -- money taken per unit
+        in_money=2000, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
     },

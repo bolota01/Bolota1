@@ -1012,7 +1012,7 @@ local ch_player_menu = {function(player,choice)
     end
 	
     if vRP.hasPermission({user_id,"player.store_weapons"}) then
-      menu["🔫Armas para inventário"] = choice_store_weapons -- store player weapons, like police store weapons from vrp
+      menu["Armas para inventário"] = choice_store_weapons -- store player weapons, like police store weapons from vrp
     end
 	
     if vRP.hasPermission({user_id,"player.store_armor"}) then
@@ -1033,7 +1033,7 @@ vRP.registerMenuBuilder({"main", function(add, data)
     local choices = {}
 	
     if vRP.hasPermission({user_id,"player.player_menu"}) then
-      choices["🤴Player"] = ch_player_menu -- opens player submenu
+      choices["Player"] = ch_player_menu -- opens player submenu
     end
 	
     if vRP.hasPermission({user_id,"toggle.service"}) then
@@ -1041,7 +1041,7 @@ vRP.registerMenuBuilder({"main", function(add, data)
     end
 	
     if vRP.hasPermission({user_id,"player.loot"}) then
-      choices["💰Loot"] = choice_loot -- take the items of nearest player in coma
+      choices["Loot"] = choice_loot -- take the items of nearest player in coma
     end
 	
     if vRP.hasPermission({user_id,"mugger.mug"}) then
@@ -1161,8 +1161,8 @@ end})
 vRP.registerMenuBuilder({"phone", function(add) -- phone menu is created on server start, so it has no permissions.
     local choices = {} -- Comment the choices you want to disable by adding -- in front of them.
 	
-    choices["📲MPagar p/Telefone"] = ch_mobilepay -- transfer money through phone
-    choices["📲MCobrar p/Telefone"] = ch_mobilecharge -- charge money through phone
+    choices["MPagar p/Telefone"] = ch_mobilepay -- transfer money through phone
+    choices["MCobrar p/Telefone"] = ch_mobilecharge -- charge money through phone
 	
     add(choices)
 end})
