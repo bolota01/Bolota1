@@ -764,7 +764,7 @@ cfg.groups = {
 	"mission.repair.wind_turbines",
     "repair.service",
     "shop.mecanico",
-	"repair.garagem"
+	"repair.garagem",
   }, 
   --Minerador de Diamante  
   ["Minerador de Diamante"] = {

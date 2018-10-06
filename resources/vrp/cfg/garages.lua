@@ -106,6 +106,7 @@ cfg.garage_types = {
     _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"}},
     	["police2"] = {"Lexus",0, ""},
 		["sheriff"] = {"Evoque",0, ""},
+		["tigerrocam"] = {"Moto Polícia",0, ""},
 	},
 	["Bicicletário"] = {
     _config = {vtype="bike",blipid=455,blipcolor=6},
@@ -155,13 +156,7 @@ cfg.garage_types = {
 		_config = {vtype="car",permissions={"correios.veiculo"}},
 		["boxville2"] = {"Caminhão Correios 01", 0, ""},
 		["boxville4"] = {"Caminhão Correios 02", 0, ""},
-	},
-	  
-	["MECANICO"] = {
-		_config = {vtype="car",permissions={"repair.garagem"}},
-		["flatbed"] = {"Prancha",0, ""},
-	},
-		
+	},  	
 	["~b~UberEATS"] = {
 		_config = {blipid=493,blipcolor=3,vtype="bike",permissions={"delivery.garagem"}},
 		["enduro"] = {"Moto Enduro",0, ""},
@@ -192,10 +187,10 @@ cfg.garage_types = {
    	 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"}},
     	["taxi"] = {"Taxi",0, ""},
   	},  
-  	["Mecanico"] = {
-   		 _config = {vtype="car",blipid=85,blipcolor=31,permissions={"repair.garagem"}},
-    	["towtruck2"] = {"towtruck2",0, ""},
-    	["flatbed"] = {"Teste 01",0, ""},
+  	["Mecânico"] = {
+   		 _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"repair.garagem"}},
+    	["flatbed2"] = {"Reboque",0, ""},
+		["towtruck2"] = {"Guincho",0, ""},
   	},   
   	["Delivery"] = {
     	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"}},
@@ -239,7 +234,7 @@ cfg.garages = {
 	{"MADEIRA & CIA",-805.62573242188,5409.2807617188,33.991455078125},
 	{"UBER",-339.94155883789,-1023.3903198242,30.400903244019},
 	{"~b~UberEATS",-337.74453735352,-1014.83984375,30.384658813477},
-	{"MECANICO",407.83251953125,-1634.0269775391,29.291940689087},
+	{"Mecânico",407.83251953125,-1634.0269775391,29.291940689087},
 	{"~b~Transportador de Valores",-5.2033176422119,-670.98248291016,32.338073730469},
 	{"FAZENDEIRO",1432.5661621094,1107.0783691406,114.24201965332},
 	{"MOTO CLUBE",970.89477539063,-122.97027587891,74.353141784668},
