@@ -351,6 +351,7 @@ cfg.groups = {
     "police.drag",
     "police.menu_interaction",
     "police.door",
+    "coronel.door",
     "police.menu",
     "pm.cloakroom",
     "police.pc",
@@ -393,6 +394,7 @@ cfg.groups = {
     "police.drag",
     "police.menu_interaction",
     "police.door",
+    "coronel.door",
     "police.menu",
     "pm.cloakroom",
     "police.pc",
@@ -435,6 +437,7 @@ cfg.groups = {
     "police.drag",
     "police.menu_interaction",
     "police.door",
+    "coronel.door",
     "police.menu",
     "pm.cloakroom",
     "police.pc",
@@ -477,6 +480,7 @@ cfg.groups = {
     "police.drag",
     "police.menu_interaction",
     "police.door",
+    "coronel.door",
     "police.menu",
     "pm.cloakroom",
     "police.pc",
@@ -687,7 +691,7 @@ cfg.groups = {
     "emergency.medkit",
     "samuchefe.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "chefe.cloakroom"
   },
     ["Doutor"] = {
     _config = { gtype = "job" },
@@ -700,7 +704,7 @@ cfg.groups = {
     "emergency.medkit",
     "doutor.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "chefe.cloakroom"
   },
   ["Médico Chefe"] = {
     _config = { gtype = "job" },
@@ -713,7 +717,7 @@ cfg.groups = {
     "emergency.medkit",
     "medicochefe.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "chefe.cloakroom"
   },
   ["Médico"] = {
     _config = { gtype = "job" },
@@ -726,7 +730,7 @@ cfg.groups = {
     "emergency.medkit",
     "medico.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "medico.cloakroom"
   },
   ["Paramédico"] = {
     _config = { gtype = "job" },
@@ -739,7 +743,7 @@ cfg.groups = {
     "emergency.medkit",
     "paramedico.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "medico.cloakroom"
   },
   ["Socorrista"] = {
     _config = { gtype = "job" },
@@ -752,7 +756,7 @@ cfg.groups = {
     "emergency.medkit",
     "socorrista.paycheck",
     "radar.pass",
-    "samu.cloakroom"
+    "medico.cloakroom"
   },
   -- Empregos Legais
   ["Mecânico"] = {
