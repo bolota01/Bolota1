@@ -7,6 +7,7 @@ class Request extends React.Component {
     constructor(props){
         super(props);
         this.state = {time: parseInt(props.time)};
+
         this.onKeyboard = this.onKeyboard.bind(this);
         this.onTick = this.onTick.bind(this);
         this.interval = setTimeout(this.onTick, 1000);
@@ -46,9 +47,7 @@ class Request extends React.Component {
 
     sendResponse(state){
         this.onStop();
-    
         axios.post("http://vrp/request", JSON.stringify({act: "response", id: this.props.id,  ok: state}));
-    
         events.emit("request-remove");
     }
 

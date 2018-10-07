@@ -32,7 +32,7 @@ export default class Prompt extends React.Component {
     }
 
     onOpenPrompt(data){
-        this.setState({title: data.title, message: data.message, value: "", opened: true});
+        this.setState({title: data.title, value: data.text, opened: true});
     }
 
     onChangeValue(e){
@@ -52,7 +52,6 @@ export default class Prompt extends React.Component {
                 <div className="prompt-back"></div>
                 <div className="content">
                     <div className="title">{this.state.title}</div>
-                    <div className="message">{this.state.message}</div>
                     <div className="input">
                         <input type="text"
                             onChange={this.onChangeValue}

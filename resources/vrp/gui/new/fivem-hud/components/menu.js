@@ -19,8 +19,7 @@ class Choice extends React.Component {
 
     render() {
         return (
-            <li
-                className={"choice" + this.isCurrent()}
+            <li className={"choice" + this.isCurrent()}
                 dangerouslySetInnerHTML={this.createText()}></li>
         );
     }
