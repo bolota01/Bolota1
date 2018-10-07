@@ -78,7 +78,7 @@ cfg.garage_types = {
 		["ttrs"] = {"Audi TT",89000,""},
 		["zx10r"] = {"Kawasaki zx10r",56500,""},
 	},
-		["~b~Transportador de Valores"] = {
+		["Transportador de Valores"] = {
 		_config = {blipid=67,blipcolor=3,vtype="car",permissions={"bankdriver.vehicle"}},
 		["stockade"] = {"Carro Forte",0, ""}
 	},
@@ -87,19 +87,19 @@ cfg.garage_types = {
 		["mule"] = {"Mercedes-Benz Actros",500000, "<img src='https://i.imgur.com/AaSTXRK.jpg' <br/>CAPACIDADE: 120KG>"}
 	},
 	["VIP BRONZE"] = {
-		_config = {blipid=490,blipcolor=21,vtype="car",permissions={"garagem.vipbronze"}},
+		_config = {vtype="car",permissions={"garagem.vipbronze"}},
 		["italia458"] = {"Ferrari Italia 458",1399000,"<img src='https://i.imgur.com/5apchYI.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"},
 	},
 	["VIP PRATA"] = {
-		_config = {blipid=490,blipcolor=4,vtype="car",permissions={"garagem.vipprata"}},
+		_config = {vtype="car",permissions={"garagem.vipprata"}},
 		["fc15"] = {"Ferrari California T 2015",1680000,"<img src='https://i.imgur.com/3Q7Qlfc.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:310+ km/h"},
 	},
 	["VIP GOLD"] = {
-		_config = {blipid=490,blipcolor=5,vtype="car",permissions={"garagem.vipgold"}},
+		_config = {vtype="car",permissions={"garagem.vipgold"}},
 		["aventadors"] = {"Lamborghini Aventador S",0, "<img src='blob:https://imgur.com/55ab981e-3f16-465c-a39f-e54d70a5707b' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"},
 	},
 	["VIP DIAMANTE"] = {
-		_config = {blipid=490,blipcolor=29,vtype="car",permissions={"garagem.vipdima"}},
+		_config = {vtype="car",permissions={"garagem.vipdima"}},
 		["aperta"] = {"La Ferrari",10000000,"<img src='https://i.imgur.com/0CDv4Ex.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"},
 	}, 
 	["Veículos PM"] = {
@@ -128,7 +128,7 @@ cfg.garage_types = {
     	["as350"] = {"Águia PMESP",0, ""},			
 	}, 
   	["Barco de Pesca"] = {  
-    _config = {vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"}},
+    _config = {blipid=427,blipcolor=59,vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"}},
     	["Dinghy"] = {"Barco de Pesca",100, ""},
     	["Dinghy2"] = {"Barco de Pesca 2",100, ""}
 	},
@@ -157,7 +157,7 @@ cfg.garage_types = {
 		["boxville2"] = {"Caminhão Correios 01", 0, ""},
 		["boxville4"] = {"Caminhão Correios 02", 0, ""},
 	},  	
-	["~b~UberEATS"] = {
+	["UberEATS"] = {
 		_config = {blipid=493,blipcolor=3,vtype="bike",permissions={"delivery.garagem"}},
 		["enduro"] = {"Moto Enduro",0, ""},
 	},
@@ -233,9 +233,9 @@ cfg.garages = {
 	{"CORREIOS S/A",-289.3962097168,-890.03399658203,31.080615997314},
 	{"MADEIRA & CIA",-805.62573242188,5409.2807617188,33.991455078125},
 	{"UBER",-339.94155883789,-1023.3903198242,30.400903244019},
-	{"~b~UberEATS",-337.74453735352,-1014.83984375,30.384658813477},
+	{"UberEATS",-337.74453735352,-1014.83984375,30.384658813477},
 	{"Mecânico",407.83251953125,-1634.0269775391,29.291940689087},
-	{"~b~Transportador de Valores",-5.2033176422119,-670.98248291016,32.338073730469},
+	{"Transportador de Valores",-5.2033176422119,-670.98248291016,32.338073730469},
 	{"FAZENDEIRO",1432.5661621094,1107.0783691406,114.24201965332},
 	{"MOTO CLUBE",970.89477539063,-122.97027587891,74.353141784668},
 	--{"EMPRESARIO",-44.977939605713,-1113.3082275391,26.435800552368},
