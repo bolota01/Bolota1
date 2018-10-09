@@ -16,6 +16,9 @@ cfg.items = {
   ["cannabis"] = {"Maconha", "Processada.", nil, 1.00}, -- no choices
   ["rede"] = {"Rede", "Para pescar Tartaruga", nil, 0.50},
   ["Tartaruga"] = {"Tartaruga", ".", nil, 5.00},
+  --Chave da Polícia
+  ["key_pd_boss"] = {"🔑 Captain room", "", nil, 0.01},
+  ["key_lspd"] = {"🔑 LSPD", "", nil, 0.01},
   --ITENS USADOS NA MINERAÇÃO
   ["pedra"] = {"Pedra", "Pedra bruta.", nil, 1.000}, -- no choices
   ["diamante_bruto"] = {"Diamante Bruto", "Diamante para ser lapidado.", nil, 1.000}, -- no choices
