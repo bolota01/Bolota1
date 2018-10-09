@@ -13,12 +13,15 @@ cfg.gunshop_types = {
     _config = {blipid=110,blipcolor=75},
     ["WEAPON_BOTTLE"] = {"Garrafa",600,0,""},
     ["WEAPON_BAT"] = {"Taco de beisebol",1500,0,""},
+    ["WEAPON_HAMMER"] = {"Martelo",1500,0,""},
+    ["WEAPON_GOLFCLUB"] = {"Taco de Golf",1500,0,""},
+    ["WEAPON_POOLCUE"] = {"Taco de Sinuca",1500,0,""},
+    ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Ingles",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_SNSPISTOL"] = {"Pistola Fajuta",6500,15,""},
-    ["WEAPON_PISTOL"] = {"Pistola",10000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_ASSAULTRIFLE"] = {"Ak-47",150000,50,""},
+    ["WEAPON_ASSAULTRIFLE"] = {"Ak-47",150000,50,""}
   },
   ["Loja da Biqueira"] = {
     _config = {blipid=110,blipcolor=75},
