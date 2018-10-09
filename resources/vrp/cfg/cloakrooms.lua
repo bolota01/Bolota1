@@ -12,6 +12,9 @@ local uniforme_samu = { model = "s_m_m_paramedic_01" }
 local surgery_fcop = { model = "s_f_y_scrubs_01" }
 local uniforme_pm01 = { model = "S_M_Y_Cop_01" }
 local uniforme_pm02 = { model = "S_M_M_SnowCop_01" }
+local uniforme_pm02 = { model = "S_M_M_SnowCop_01" }
+
+
 
 -- cloakroom types (_config, map of name => customization)
 --- _config:
@@ -42,7 +45,7 @@ cfg.cloakroom_types = {
     },
     ["Enfermeira"] = surgery_fcop,
     ["Paramédico Padrão"] = uniforme_samu
-  },
+    },
   ["Hospital 2"] = {
     _config = { permissions = {"chefe.cloakroom"} },
     ["Uniforme"] = surgery_mcop
