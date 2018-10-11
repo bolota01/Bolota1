@@ -792,7 +792,7 @@ cfg.groups = {
 	"mission.repair.wind_turbines",
     "repair.service",
     "shop.mecanico",
-	"repair.garagem",
+	"repair.garagem"
   }, 
   --Minerador de Diamante  
   ["Minerador de Diamante"] = {
@@ -801,7 +801,7 @@ cfg.groups = {
     "minerar",
     "minerador.uniforme",
     "processar.diamante",
-    "vender.diamante",
+    "vender.diamante"
   },
   --GARI
   ["Gari"] = {
@@ -811,7 +811,7 @@ cfg.groups = {
     "gari.paycheck",
     "gari.uniforme",
     "gari.coleta",
-    "gari.reciclagem",
+    "gari.reciclagem"
   },
   --CORREIOS
   ["Correios"] = {
@@ -822,7 +822,7 @@ cfg.groups = {
     "correios.paycheck",
     "delivery.gopostal",
     "correios.pacote",
-    "correios.uniforme",
+    "correios.uniforme"
   },
   --UBER
   ["UBER"] = {
@@ -832,12 +832,12 @@ cfg.groups = {
     "uber.uniforme",
     "mission.UBER.passenger",
     "UBER.garagem",
-    "UBER.paycheck",
+    "UBER.paycheck"
   },
   --Advogado  
   ["Advogado"] = {
     _config = { gtype = "job" },
-    "carteira.oab",
+    "carteira.oab"
   },
   --Transporte de Valores  
   ["Transportador de Valores"] = {
@@ -846,7 +846,7 @@ cfg.groups = {
     "bankdriver.vehicle",
     "bankdriver.paycheck",
     "tvalores.uniforme",
-    "bankdriver.money",
+    "bankdriver.money"
   },
   -- Empregos Ilegais
   ["Ladrão de Carros"] = {
