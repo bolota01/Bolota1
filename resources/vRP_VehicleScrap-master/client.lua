@@ -15,10 +15,6 @@ scrapyards = {
 	{-128.37242126465,6214.96484375,30.209449249268}
 }
 
-
-
-
-
 --------------------------------------------------------------------
       -- >> DRAWMARKER AND THINGS LIKE THAT FUNCTION
 --------------------------------------------------------------------
@@ -32,12 +28,12 @@ Citizen.CreateThread(function()
 	   			if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then
 					DrawMarker(27, scrapCoords2[1], scrapCoords2[2], scrapCoords2[3], 0, 0, 0, 0, 0, 0, 5.75, 5.75, 5.75, 53, 146, 0, 100, 0, 0, 0, 1)
 					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), scrapCoords2[1], scrapCoords2[2], scrapCoords2[3], true ) < 3 then
-						vehSR_drawTxt("Press ~g~E~s~ to scratch your vehicle",0,1,0.5,0.95,0.6,255,255,255,255)
+						vehSR_drawTxt("Pressione ~g~E~s~ socatear seu veículo",0,1,0.5,0.95,0.6,255,255,255,255)
 						if IsControlJustPressed(1, key) then
 							local vehicle1 = GetVehiclePedIsIn(GetPlayerPed(-1), false)
 							local plate1 = GetVehicleNumberPlateText(vehicle1)
 							if string.sub(plate1, 1, 8) == "P " .. vRP.getRegistrationNumber({}) then
-								TriggerEvent("pNotify:SendNotification",{text = "You can not scratch your own vehicle!",type = "error",timeout = (1500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+								TriggerEvent("pNotify:SendNotification",{text = "Você não pode socatear seu proprio veículo!",type = "error",timeout = (1500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 							else
 								if vehPrice ~= nil then
 									local health = GetEntityHealth(GetVehiclePedIsIn(GetPlayerPed(-1)))
@@ -77,7 +73,7 @@ end)
 
 RegisterNetEvent("scrap:SuccessNPC")
 AddEventHandler("scrap:SuccessNPC", function() -- NPC VEHICLE
-	TriggerEvent("pNotify:SendNotification",{text = "You have scrapped the vehicle for 1000$",type = "success",timeout = (3500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+	TriggerEvent("pNotify:SendNotification",{text = "Você socateou o veículo por 1000$",type = "success",timeout = (3500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 	TriggerServerEvent("scrap:SellVehicle", 1000, vehicleModelName)
 	local vehicle = SetEntityAsMissionEntity(GetVehiclePedIsIn(GetPlayerPed(-1)), true, true)
 	DeleteVehicle(vehicle)
@@ -86,13 +82,13 @@ end)
 RegisterNetEvent("scrap:Success")
 AddEventHandler("scrap:Success", function() -- PLAYER VEHICLE
 	if vehPrice == nil then
-		TriggerEvent("pNotify:SendNotification",{text = "You can not sell this vehicle",type = "success",timeout = (3000),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+		TriggerEvent("pNotify:SendNotification",{text = "Você não pode vender este veículo",type = "success",timeout = (3000),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 	else
 		local ped = GetPlayerPed(-1)
 		local veh = GetVehiclePedIsIn(ped, false)
 		local model = GetEntityModel(veh)
 		local vehicleModelName = GetDisplayNameFromVehicleModel(model)
-		TriggerEvent("pNotify:SendNotification",{text = "You have scrapped the vehicle for "..modPrice.."$",type = "success",timeout = (3500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+		TriggerEvent("pNotify:SendNotification",{text = "Você socateou o veiculo por "..modPrice.."$",type = "success",timeout = (3500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
 		TriggerServerEvent("scrap:SellVehicle", modPrice, vehicleModelName)
 		local vehicle = SetEntityAsMissionEntity(GetVehiclePedIsIn(GetPlayerPed(-1)), true, true)
 		DeleteVehicle(vehicle)

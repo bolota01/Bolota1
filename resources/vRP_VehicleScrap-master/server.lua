@@ -32,8 +32,7 @@ local scrapprices = {
 
 -- GROUPS
 -- WHO HAVE ACCESS TO SCRAP VEHICLES
-local groups = {"Mechanic"};
-
+local groups = {"Mechanic"}
 
 
 RegisterServerEvent("scrap:getVehPrice")
@@ -55,14 +54,11 @@ end)
 
 RegisterServerEvent('scrap:Mechanic')
 AddEventHandler('scrap:Mechanic', function(triggerevent)
-	local source = source
     local user_id = vRP.getUserId({source})
     local player = vRP.getUserSource({user_id})
-    for k,v in ipairs(groups) do
-		if vRP.hasGroup({user_id,v}) then
-      		TriggerClientEvent(triggerevent, source)
-    	else
-     		TriggerClientEvent("pNotify:SendNotification", player,{text = "You are not a Mechanic", type = "error", queue = "global", timeout = 2000, layout = "centerRight",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"},killer = true})
-     	end
-    end
+    if vRP.hasPermission({user_id,"vehicle.repair"}) then
+		TriggerClientEvent(triggerevent, source)
+	else
+		TriggerClientEvent("pNotify:SendNotification", player,{text = "Você não é um mecânico!", type = "error", queue = "global", timeout = 2000, layout = "centerRight",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"},killer = true})
+	end
 end)
