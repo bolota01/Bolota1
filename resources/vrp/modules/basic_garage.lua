@@ -196,7 +196,7 @@ for group,vehicles in pairs(vehicle_groups) do
     end
   end,lang.garage.sell.description()}
 
-  menu[lang.garage.rent.title()] = {function(player,choice)
+  --[=====[menu[lang.garage.rent.title()] = {function(player,choice)
     local user_id = vRP.getUserId(player)
     if user_id ~= nil then
       -- init tmpdata for rents
@@ -256,7 +256,7 @@ for group,vehicles in pairs(vehicle_groups) do
         vRP.openMenu(player,submenu)
       end)
     end
-  end,lang.garage.rent.description()}
+  end,lang.garage.rent.description()}--]=====]
 
   menu[lang.garage.store.title()] = {function(player,choice)
     vRPclient.despawnGarageVehicle(player,{veh_type,15}) 
@@ -272,6 +272,7 @@ local function build_client_garages(source)
       local group = vehicle_groups[gtype]
       if group then
         local gcfg = group._config
+        local buy_veh = gcfg.buy or false
 
         -- enter
         local garage_enter = function(player,area)
@@ -279,7 +280,14 @@ local function build_client_garages(source)
           if user_id ~= nil and vRP.hasPermissions(user_id,gcfg.permissions or {}) then
             local menu = garage_menus[gtype]
             if menu then
-              vRP.openMenu(player,menu)
+              if buy_veh then 
+                vRP.openMenu(player,menu)
+              else
+                local menu_edit = {name=menu.name, css=menu.css}
+                menu_edit[lang.garage.owned.title()] = menu[lang.garage.owned.title()]
+                menu_edit[lang.garage.store.title()] = menu[lang.garage.store.title()]
+                vRP.openMenu(player, menu_edit)
+              end
             end
           end
         end
