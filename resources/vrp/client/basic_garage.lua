@@ -273,15 +273,15 @@ end
 
 function tvRP.setMod(veh, myveh)
   for key, value in pairs(myveh) do
-    if key == "mod" then
-      for _key, _value in pairs(myveh) do
-        if _value.mod ~= -1 then
+    if key == "mods" then
+      for _key, _value in pairs(value) do
+        if _value["mod"] ~= -1 then
           if _key == "23" or _key == "24" then
             if IsThisModelABike(GetEntityModel(veh)) then
               SetVehicleModKit(veh,0)
             end
           end
-          SetVehicleMod(veh,tonumber(_key),_value.mod, _value.variation or true)
+          SetVehicleMod(veh, tonumber(_key), _value["mod"], _value["variation"] or true)
         end
       end
     elseif key == "wheeltype" then
