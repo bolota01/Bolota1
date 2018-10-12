@@ -23,6 +23,7 @@ cfg.groups = {
     "player.giveitem"
   },
   ["admin"] = {
+    "player.group.add",
     "admin.tickets",
     "admin.announce",
     "player.list",
