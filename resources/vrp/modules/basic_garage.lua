@@ -22,6 +22,8 @@ MySQL.execute("vRP/vehicles_table")
 
 -- load config
 
+local json = module("lib/dkjson")
+
 local cfg = module("cfg/garages")
 local cfg_inventory = module("cfg/inventory")
 local vehicle_groups = cfg.garage_types
@@ -50,7 +52,6 @@ for group,vehicles in pairs(vehicle_groups) do
       if tmpdata.rent_vehicles == nil then
         tmpdata.rent_vehicles = {}
       end
-
 
       -- build nested menu
       local kitems = {}
@@ -532,11 +533,12 @@ end)
 RegisterServerEvent("garage:requestMods")
 AddEventHandler("garage:requestMods", function(vname)
 	local user_id = vRP.getUserId(source)
-	local src = vRP.getUserSource(user_id)
+  local src = vRP.getUserSource(user_id)
+
 	MySQL.query("vRP/get_vehicleups", {user_id = user_id, vehicle = vname}, function(rows, affected)
-		if #rows > 0 then -- has vehicle
-			vRPclient.garage_setmods(src, {rows[1].upgrades})
+    if #rows > 0 then -- has vehicle
+      local mods = json.decode(rows[1].upgrades, 1, nil)
+			vRPclient.garage_setmods(src, {mods})
 		end
 	end)
-		
 end)

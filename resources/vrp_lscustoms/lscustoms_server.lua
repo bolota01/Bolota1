@@ -4,14 +4,24 @@ Credits - MythicalBro
 /////License/////
 Do not reupload/re release any part of this script without my permission
 ]]
+MySQL = module("vrp_mysql", "MySQL")
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+local json = module("vrp", "lib/dkjson")
+
+vRP = Proxy.getInterface("vRP")
+
+MySQL.createCommand("vRP/ls_sveh", "UPDATE vrp_user_vehicles SET upgrades=@upgrades WHERE user_id=@id AND vehicle=@veh")
+
 local tbl = {
-[1] = {locked = false, player = nil},
-[2] = {locked = false, player = nil},
-[3] = {locked = false, player = nil},
-[4] = {locked = false, player = nil},
-[5] = {locked = false, player = nil},
-[6] = {locked = false, player = nil},
+	[1] = {locked = false, player = nil},
+	[2] = {locked = false, player = nil},
+	[3] = {locked = false, player = nil},
+	[4] = {locked = false, player = nil},
+	[5] = {locked = false, player = nil},
+	[6] = {locked = false, player = nil},
 }
+
 RegisterServerEvent('lockGarage')
 AddEventHandler('lockGarage', function(b,garage)
 	tbl[tonumber(garage)].locked = b
@@ -23,11 +33,13 @@ AddEventHandler('lockGarage', function(b,garage)
 	TriggerClientEvent('lockGarage',-1,tbl)
 	--print(json.encode(tbl))
 end)
+
 RegisterServerEvent('getGarageInfo')
 AddEventHandler('getGarageInfo', function()
 	TriggerClientEvent('lockGarage',-1,tbl)
 	--print(json.encode(tbl))
 end)
+
 AddEventHandler('playerDropped', function()
 	for i,g in pairs(tbl) do
 		if g.player then
@@ -54,7 +66,7 @@ AddEventHandler("LSC:buttonSelected", function(name, button)
 end)
 
 RegisterServerEvent("LSC:finished")
-AddEventHandler("LSC:finished", function(veh)
+AddEventHandler("LSC:finished", function(veh, playerId)
 	local model = veh.model --Display name from vehicle model(comet2, entityxf)
 	local mods = veh.mods
 	--[[
@@ -116,5 +128,14 @@ AddEventHandler("LSC:finished", function(veh)
 	local windowtint = veh.windowtint
 	local wheeltype = veh.wheeltype
 	local bulletProofTyres = veh.bulletProofTyres
+
+	local user_id = vRP.getUserId({source})
+
+	print(veh.model)
+	print(user_id)
+
+	MySQL.query(
+		"vRP/ls_sveh",
+		{id = user_id, upgrades=json.encode(veh), veh=veh.model})
 	--Do w/e u need with all this stuff when vehicle drives out of lsc
 end)

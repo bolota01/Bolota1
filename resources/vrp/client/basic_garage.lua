@@ -267,91 +267,45 @@ end
 
 function tvRP.garage_setmods(mods)
 	local ped = GetPlayerPed(-1)
-	local veh = GetVehiclePedIsUsing(ped)
-	local a = string.find(mods, ":")
-	local ct = 0
-	SetVehicleModKit(veh,0)
-	while mods ~= nil do
-		local b
-		if a ~= nil then
-			b = mods:sub(0,a-1)
-			mods = mods:sub(a+1)
-			a = string.find(mods, ":")
-		else
-			b = mods
-			mods = nil
-		end
-		local u = string.find(b, ",")
-		if ct == 0 then
-			local u1 = b:sub(0,u-1)
-			local u2 = b:sub(u+1)
-			SetVehicleColours(veh,tonumber(u1),tonumber(u2))
-		elseif ct == 1 then
-			local u1 = b:sub(0,u-1)
-			local u2 = b:sub(u+1)
-			SetVehicleExtraColours(veh,tonumber(u1),tonumber(u2))
-		elseif ct == 2 then
-			local u1 = b:sub(0,u-1)
-			local u2 = b:sub(u+1)
-			local spl = string.find(u2, ",")
-			local u3 = u2:sub(spl+1)
-			u2 = u2:sub(0,spl-1)
-			SetVehicleNeonLightsColour(veh,tonumber(u1),tonumber(u2),tonumber(u3))
-		elseif ct == 3 then
-			local bl = false
-			if tostring(b) == "true" then bl = true end
-			SetVehicleNeonLightEnabled(veh,0,bl)
-			SetVehicleNeonLightEnabled(veh,1,bl)
-			SetVehicleNeonLightEnabled(veh,2,bl)
-			SetVehicleNeonLightEnabled(veh,3,bl)
-		elseif ct == 4 then
-			local u1 = b:sub(0,u-1)
-			local u2 = b:sub(u+1)
-			local spl = string.find(u2, ",")
-			local u3 = u2:sub(spl+1)
-			u2 = u2:sub(0,spl-1)
-			SetVehicleTyreSmokeColor(veh,tonumber(u1),tonumber(u2),tonumber(u3))
-		elseif ct == 5 then
-			SetVehicleNumberPlateTextIndex(veh,tonumber(b))
-		elseif ct == 6 then
-			SetVehicleWindowTint(veh,tonumber(b))
-		elseif ct == 7 then
-			SetVehicleWheelType(veh,tonumber(b))
-		elseif ct == 8 then
-			local bl = false
-			if tostring(b) == "true" then bl = true end
-			SetVehicleTyresCanBurst(veh,bl)
-		elseif ct == 9 then
-			local c = string.find(b, ";")
-			while b ~= nil do
-				local d
-				if c ~= nil then
-					d = b:sub(0,c-1)
-					b = b:sub(c+1)
-					c = string.find(b, ";")
-				else
-					d = b
-					b = nil
-				end
-				
-				if d ~= nil then
-					local u = string.find(d, ",")
-					local u1 = d:sub(0,u-1)
-					local u2 = d:sub(u+1)
-					local spl = string.find(u2, ",")
-					local u3 = u2:sub(spl+1)
-					u2 = u2:sub(0,spl-1)
-					local bl = false
-					if tostring(u3) == "true" then bl = true end
-					if tonumber(u1) == 18 or tonumber(u1) == 22  or tonumber(u1) == 20 then
-						ToggleVehicleMod(veh,tonumber(u1),bl)
-						SetVehicleMod(veh,tonumber(u1),tonumber(u2),bl)
-					else
-						SetVehicleMod(veh,tonumber(u1),tonumber(u2),bl)
-					end
-				end
-			end
-		end
-		ct = ct+1
-	end
+  local veh = GetVehiclePedIsUsing(ped)
+  tvRP.setMod(veh, mods)
+end
+
+function tvRP.setMod(veh, myveh)
+  for key, value in pairs(myveh) do
+    if key == "mod" then
+      for _key, _value in pairs(myveh) do
+        if _value.mod ~= -1 then
+          if _key == "23" or _key == "24" then
+            if IsThisModelABike(GetEntityModel(veh)) then
+              SetVehicleModKit(veh,0)
+            end
+          end
+          SetVehicleMod(veh,tonumber(_key),_value.mod, _value.variation or true)
+        end
+      end
+    elseif key == "wheeltype" then
+      SetVehicleWheelType(veh, value)
+    elseif key == "neoncolor" then
+      SetVehicleNeonLightEnabled(veh,0,true)
+			SetVehicleNeonLightEnabled(veh,1,true)
+			SetVehicleNeonLightEnabled(veh,2,true)
+			SetVehicleNeonLightEnabled(veh,3,true)
+      SetVehicleNeonLightsColour(veh, value[1], value[2], value[3])
+    elseif key == "extracolor" then
+      SetVehicleExtraColours(veh, value[1], value[2])
+    elseif key == "windowtint" then
+      SetVehicleWindowTint(veh, value)
+    elseif key == "smokecolor" then
+      SetVehicleModKit(veh,0)
+      ToggleVehicleMod(veh,20,true)
+      SetVehicleTyreSmokeColor(veh, value[1], value[2], value[3])
+    elseif key == "color" then
+      SetVehicleColours(veh, value[1], value[2])
+    elseif key == "bulletProofTyres" then
+      SetVehicleTyresCanBurst(veh, value)
+    elseif key == "plateindex" then
+      SetVehicleNumberPlateTextIndex(veh, value)
+    end
+  end
 end

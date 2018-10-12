@@ -553,7 +553,7 @@ local function DriveOutOfGarage(pos)
 		pos = currentpos.driveout
 		
 		--The vehicle customization is finished, so we send to server our vehicle data
-		TriggerServerEvent("LSC:finished", myveh)
+		TriggerServerEvent("LSC:finished", myveh, PlayerId())
 		
 		StartFade()
 		Citizen.Wait(500)
