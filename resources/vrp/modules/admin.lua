@@ -326,7 +326,7 @@ vRP.registerMenuBuilder("main", function(add, data)
     local choices = {}
 
     -- build admin menu
-    choices["👑Admin"] = {function(player,choice)
+    choices["Admin"] = {function(player,choice)
       vRP.buildMenu("admin", {player = player}, function(menu)
         menu.name = "Admin"
         menu.css={top="75px",header_color="rgba(200,0,0,0.75)"}
