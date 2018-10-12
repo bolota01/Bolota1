@@ -85,7 +85,7 @@ cfg.garage_types = {
 		["zentorno"] = {"zentorno", 0}
 	},
 	["REVENDA"] = {
-		_config = {vtype="car",blipid=431,blipcolor=47,radius=5.1, permissions={"empresarioC.revenda"}},
+		_config = {vtype="car",blipid=431,blipcolor=47,radius=5.1, permissions={"empresarioC.revenda"},buy=true},
 		["rocoto"] = {"Fiat Toro",75000,""},
 		["dune"] = {"Kart",200000,""},
 		["hondacivictr"] = {"Honda Civic Type R",100000,""},
@@ -115,37 +115,37 @@ cfg.garage_types = {
 		["zx10r"] = {"Kawasaki zx10r",56500,""}
 	},
 	["Transportador de Valores"] = {
-		_config = {blipid=67,blipcolor=3,vtype="car",permissions={"bankdriver.vehicle"}},
+		_config = {blipid=67,blipcolor=3,vtype="car",permissions={"bankdriver.vehicle"},buy=true},
 		["stockade"] = {"Carro Forte",0, ""}
 	},
 	["Caminhoneiro"] = {
-		_config = {blipid=318,blipcolor=47,vtype="car",},
+		_config = {blipid=318,blipcolor=47,vtype="car",buy=true},
 		["mule"] = {"Mercedes-Benz Actros",500000, "<img src='https://i.imgur.com/AaSTXRK.jpg' <br/>CAPACIDADE: 120KG>"}
 	},
 	["VIP BRONZE"] = {
-		_config = {vtype="car",permissions={"garagem.vipbronze"}},
+		_config = {vtype="car",permissions={"garagem.vipbronze"},buy=true},
 		["italia458"] = {"Ferrari Italia 458",1399000,"<img src='https://i.imgur.com/5apchYI.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"}
 	},
 	["VIP PRATA"] = {
-		_config = {vtype="car",permissions={"garagem.vipprata"}},
+		_config = {vtype="car",permissions={"garagem.vipprata"},buy=true},
 		["fc15"] = {"Ferrari California T 2015",1680000,"<img src='https://i.imgur.com/3Q7Qlfc.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:310+ km/h"}
 	},
 	["VIP GOLD"] = {
-		_config = {vtype="car",permissions={"garagem.vipgold"}},
+		_config = {vtype="car",permissions={"garagem.vipgold"},buy=true},
 		["aventadors"] = {"Lamborghini Aventador S",0, "<img src='blob:https://imgur.com/55ab981e-3f16-465c-a39f-e54d70a5707b' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"}
 	},
 	["VIP DIAMANTE"] = {
-		_config = {vtype="car",permissions={"garagem.vipdima"}},
+		_config = {vtype="car",permissions={"garagem.vipdima"},buy=true},
 		["aperta"] = {"La Ferrari",10000000,"<img src='https://i.imgur.com/0CDv4Ex.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"}
 	}, 
 	["Veículos PM"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"}},
+    _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"},buy=true},
     	["police2"] = {"Lexus",0, ""},
 		["sheriff"] = {"Evoque",0, ""},
 		["tigerrocam"] = {"Moto Polícia",0, ""}
 	},
 	["Bicicletário"] = {
-    _config = {vtype="bike",blipid=455,blipcolor=6},
+    _config = {vtype="bike",blipid=455,blipcolor=6,buy=true},
     	["bmx"] = {"Bmx",0, ""},
 		["cruiser"] = {"Cruiser",0, ""},
 		["fixter"] = {"Fixter",0, ""},
@@ -155,80 +155,80 @@ cfg.garage_types = {
 		["triBike3"] = {"TriBike Azul",0, ""}
 	},  
 	["Veículos Federal"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"federal.garagem"}},
+    _config = {vtype="car",blipcolor=4,permissions={"federal.garagem"},buy=true},
     	["sheriff2"] = {"Porsche",0, ""},
     	["CHARGERPF"] = {"Charger",0, ""}
 	},
   	["heliponto PM"] = {
-    	_config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"}},
+    	_config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"},buy=true},
     	["as350"] = {"Águia PMESP",0, ""}
 	}, 
   	["Barco de Pesca"] = {  
-    	_config = {blipid=427,blipcolor=59,vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"}},
+    	_config = {blipid=427,blipcolor=59,vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"},buy=true},
     	["Dinghy"] = {"Barco de Pesca",100, ""},
     	["Dinghy2"] = {"Barco de Pesca 2",100, ""}
 	},
 	["UBER"] = {
-		_config = {vtype="car",permissions={"UBER.garagem"}},
+		_config = {vtype="car",permissions={"UBER.garagem"},buy=true},
 		["felon"] = {"C4 Pallas|UBER",2785, ""}
 	},
 	["RECICLAGEM S/A"] = {
-		_config = {vtype="car",permissions={"gari.veiculo"}},
+		_config = {vtype="car",permissions={"gari.veiculo"},buy=true},
 		["trash"] = {"Caminhão de Lixo",15000, ""}
 	},
 	["heliponto SAMU"] = {
-    	_config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"}},
+    	_config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"},buy=true},
     	["samumav"] = {"Helicóptero Samu",0, ""}
 	},
 	["hospital"] = {
-    	_config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"}},
+    	_config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"},buy=true},
 	  	["sw4samu"] = {"SW4 Samu",0, ""},
 		["ur"] = {"Ambulancia",0, ""},
 		["Samu2"] = {"L200 Samu",0, ""},
 		["motosamu"] = {"Moto Samu",0, ""}
 	},
 	["CORREIOS S/A"] = {
-		_config = {vtype="car",permissions={"correios.veiculo"}},
+		_config = {vtype="car",permissions={"correios.veiculo"},buy=true},
 		["boxville2"] = {"Caminhão Correios 01", 0, ""},
 		["boxville4"] = {"Caminhão Correios 02", 0, ""}
 	},  	
 	["UberEATS"] = {
-		_config = {blipid=493,blipcolor=3,vtype="bike",permissions={"delivery.garagem"}},
+		_config = {blipid=493,blipcolor=3,vtype="bike",permissions={"delivery.garagem"},buy=true},
 		["enduro"] = {"Moto Enduro",0, ""}
 	},
 	["HELIPORTO"] = {
-		_config = {blipid=370,blipcolor=47,vtype="helicopters"},
+		_config = {blipid=370,blipcolor=47,vtype="helicopters",buy=true},
 		["havok"] = {"Nagasaki Havok",2300900, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: APENAS O PILOTO"},
 		["volatus"] = {"Buckingham Volatus",19106603, "<img src='' /><br/>CAPACIDADE: 1000kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"},
 		["supervolito"] = {"Buckingham SuperVolito",11362333, "<img src='' /><br/>CAPACIDADE: 750kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"}
 	},
 	["AEROPORTO"] = {
-		_config = {blipid=372,blipcolor=47,vtype="airplane"},
+		_config = {blipid=372,blipcolor=47,vtype="airplane",buy=true},
 		["luxor"] = {"Buckingham Luxor",50000000, "<img src='' /><br/>CAPACIDADE: 3000kg|LOTAÇÃO: PILOTO + 9 PASSAGEIROS"},
 		["mammatus"] = {"JoBuilt Mammatus",15000000, "<img src='' /><br/>CAPACIDADE: 1000kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"},
 		["microlight"] = {"Nagasaki Ultralight",750000, "<img src='' /><br/>CAPACIDADE: 100kg|LOTAÇÃO: PILOTO APENAS"},
 		["cuban800"] = {"Western Cuban 800 ",5000000, "<img src='' /><br/>CAPACIDADE: 500kg|LOTAÇÃO: PILOTO + 1 PASSAGEIRO"}
 	},
 	["MARINA"] = {
-		_config = {blipid=371,blipcolor=47,vtype="airplane"},
+		_config = {blipid=371,blipcolor=47,vtype="airplane",buy=true},
 		["seashark"] = {"Speedophile Seashark <br/>JetSki",55000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
 		["jetmax"] = {"Shitzu Jetmax",230000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
   	},
   	["heliponto SAMU"] = {
-        _config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"}},
+        _config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"},buy=true},
     	["samumav"] = {"Helicóptero Samu",0, ""}
   	},   
   	["Taxi"] = {
-   	 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"}},
+   	 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"},buy=true},
     	["taxi"] = {"Taxi",0, ""}
   	},  
   	["Mecânico"] = {
-   		 _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"repair.garagem"}},
+   		 _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"repair.garagem"},buy=true},
     	["flatbed2"] = {"Reboque",0, ""},
 		["towtruck2"] = {"Guincho",0, ""}
   	},   
   	["Delivery"] = {
-    	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"}},
+    	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"},buy=true},
     	["enduro"] = {"Enduro",8000, ""}
   }
 }
