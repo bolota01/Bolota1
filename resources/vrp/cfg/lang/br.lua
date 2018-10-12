@@ -3,7 +3,7 @@
 
 local lang = {
   common = {
-    welcome = "Bem vindo. Use a tecla K para usar o menu de Interação de Jogador.",
+    welcome = "Bem-vindo. Use a tecla K para usar o menu de Interação de Jogador.",
     no_player_near = "~r~Nenhum jogador perto de você.",
     invalid_value = "~r~Valor inválido.",
     invalid_name = "~r~Nome inválido.",
@@ -16,8 +16,8 @@ local lang = {
     pistol = "Pistol"
   },
   survival = {
-    starving = "Atenção,Voce está Morrendo de Fome",
-    thirsty = "Atenção,Voce está Morrendo de Sede"
+    starving = "Atenção,Você está Morrendo de Fome",
+    thirsty = "Atenção,Você está Morrendo de Sede"
   },
   money = {
     display = "<span class=\"symbol\">R$</span> {1} ",
@@ -27,7 +27,7 @@ local lang = {
     paid = "Pago ~r~{1}$.",
     give = {
       title = "Enviar dinheiro",
-      description = "Enviar dinheiro ao jogador mais proximo de voce.",
+      description = "Enviar dinheiro ao jogador mais proximo de você.",
       prompt = "Quantidade para enviar:"
     }
   },
@@ -35,7 +35,7 @@ local lang = {
     title = "Inventário",
     description = "Abrir o inventário.",
     iteminfo = "({1})<br /><br />{2}<br /><em>{3} kg</em>",
-    info_weight = "Peso no Inventario {1}/{2} kg",
+    info_weight = "Peso no Inventário {1}/{2} kg",
     give = {
       title = "Enviar",
       description = "Enviar itens ao jogador mais próximo.",
@@ -52,9 +52,9 @@ local lang = {
     missing = "~r~Falta {2} {1}.",
     full = "~r~Inventário Cheio.",
     chest = {
-      title = "Bau",
-      already_opened = "~r~Este Bau já foi Aberto por outra pessoa.",
-      full = "~r~Bau Cheio.",
+      title = "Báu",
+      already_opened = "~r~Este Báu já foi Aberto por outra pessoa.",
+      full = "~r~Báu Cheio.",
       take = {
         title = "Pegar",
         prompt = "Quantidade para pegar (max {1}):"
@@ -67,7 +67,7 @@ local lang = {
   },
   atm = {
     display = "<span class=\"symbol\">ß</span> {1}",
-	title = "Caixa Eletronico",
+	title = "Caixa Eletrônico",
     info = {
       title = "Saldo",
       bank = "banco: {1} $"
@@ -114,8 +114,8 @@ local lang = {
     },
     open = {
       title = "Abrir Negócios",
-      description = "Abra seu negocio, capital minima é {1} $.",
-      prompt_name = "Nome da Empresa (não é possivel mudar novamente o nome da empresa depois de criado, máximo {1} chars):",
+      description = "Abra seu negócio, capital mínima é {1} $.",
+      prompt_name = "Nome da Empresa (não é possível mudar novamente o nome da empresa depois de criado, máximo {1} chars):",
       prompt_capital = "Capital Inicial (min {1})",
       created = "~g~Negócios Criados."
       
@@ -136,8 +136,8 @@ local lang = {
     }
   },
   police = {
-    title = "Policia",
-    wanted = "Nivel de Procurado {1}",
+    title = "Polícia",
+    wanted = "Nível de Procurado {1}",
     not_handcuffed = "~r~Não Algemado",
     cloakroom = {
       title = "Cloakroom",
@@ -161,8 +161,8 @@ local lang = {
       },
       trackveh = {
         title = "Rastrear veiculo",
-        description = "Rastreie um veiculo pelo numero de Identificação.",
-        prompt_reg = "Insira o Numero de Registro:",
+        description = "Rastreie um veículo pelo número de Identificação.",
+        prompt_reg = "Insira o Número de Registro:",
         prompt_note = "Insira uma nota de Rastreamento nota/rasão:",
         tracking = "~b~Rastreando....",
         track_failed = "~b~Rastreamento de {1}~s~ ({2}) ~n~~r~Falhou.",
@@ -175,37 +175,37 @@ local lang = {
         },
         delete = {
           title = "Limpar ficha criminal",
-          description = "Apagar ficha criminal por numero do RG",
-          deleted = "~b~Registro excluido"
+          description = "Apagar ficha criminal por número do RG",
+          deleted = "~b~Registro excluído"
         }
       }
     },
     menu = {
       handcuff = {
         title = "Algemar suspeito",
-        description = "Algemar/Desalgemar o jogador mais proximo de você."
+        description = "Algemar/Desalgemar o jogador mais próximo de você."
       },
       putinveh = {
-        title = "Colocar suspeito dentro do veiculo",
-        description = "Coloque o suspeito dentro de um veiculo. Lembrete: Opcionalmente é possivel voce Colocar o(s) suspeito(s) Algemado(s) dentro do Veiculo"
+        title = "Colocar suspeito dentro do veículo",
+        description = "Coloque o suspeito dentro de um veículo. Lembrete: Opcionalmente é possível você Colocar o(s) suspeito(s) Algemado(s) dentro do Veículo"
       },
       getoutveh = {
-        title = "Tirar o suspeito dentro do veiculo",
-        description = "Tire o suspeito dentro do veiculo."
+        title = "Tirar o suspeito dentro do veículo",
+        description = "Tire o suspeito dentro do veículo."
       },
       askid = {
         title = "Pedir RG",
-        description = "Peça o Numero do RG ao suspeito.",
-        request = "Cidadão, por gentileza, Preciso do numero do seu RG",
-        request_hide = "Pegar Numero do RG",
+        description = "Peça o Número do RG ao suspeito.",
+        request = "Cidadão, por gentileza, Preciso do número do seu RG",
+        request_hide = "Pegar Número do RG",
         asked = "Solicitando RG..."
       },
       check = {
         title = "Revistar Jogador",
-        description = "checar dinheiro, inventario e armas do jogador mais perto de voce.",
+        description = "checar dinheiro, inventário e armas do jogador mais perto de você.",
         request_hide = "Fechar Relatório de checagem.",
-        info = "<em>Dinheiro: </em>{1} $<br /><br /><em>inventario: </em>{2}<br /><br /><em>Armas: </em>{3}",
-        checked = "Voce está sendo Revistado por um jogador."
+        info = "<em>Dinheiro: </em>{1} $<br /><br /><em>inventário: </em>{2}<br /><br /><em>Armas: </em>{3}",
+        checked = "Você está sendo Revistado por um jogador."
       },
 	  license = {
         title = "Remover CNH",
@@ -219,7 +219,7 @@ local lang = {
         seized = "Apreendido {2} ~r~{1}",
         weapons = {
           title = "Confiscar Armas do Suspeito",
-          description = "Confiscar armas do jogador mais perto de Voce",
+          description = "Confiscar armas do jogador mais perto de Você",
           seized = "~b~Suas Armas foram Apreendidas."
         },
         items = {
@@ -230,7 +230,7 @@ local lang = {
       },
       jail = {
         title = "Prender Vagabundo",
-        description = "(Colocar na prisão/Tirar da prisão) o jogador mais perto de voce (Na Penitenciária mais próxima)",
+        description = "(Colocar na prisão/Tirar da prisão) o jogador mais perto de você (Na Penitenciária mais próxima)",
         not_found = "~r~Nenhuma Cadeia Encontrada.",
         jailed = "~b~Preso.",
         unjailed = "~b~Tirado da Prisão.",
@@ -245,8 +245,8 @@ local lang = {
         record = "[Multas] {2} $ para {1}"
       },
       store_weapons = {
-        title = "Enviar armas para o inventario",
-        description = "Todas as armas disponiveis no seu inventário."
+        title = "Enviar armas para o inventário",
+        description = "Todas as armas disponíveis no seu inventário."
       }
     },
     identity = {
@@ -321,7 +321,7 @@ local lang = {
     buy = {
       title = "Comprar",
       description = "Compra uma propriedade nesse local, O preço é {1} $.",
-      bought = "~g~Compra realizada com sucesso. Parabens pela Sua Nova Conquista (Propriedade Particular)",
+      bought = "~g~Compra realizada com sucesso. Parabéns pela Sua Nova Conquista (Propriedade Particular)",
       full = "~r~O Lugar está cheio.",
       have_home = "~r~Você já possui uma propriedade."
     },
@@ -329,17 +329,17 @@ local lang = {
       title = "Vender",
       description = "Vende suas propriedade por {1} $",
       sold = "~g~Vendido.",
-      no_home = "~r~Voce não tem uma propriedade aqui."
+      no_home = "~r~Você não tem uma propriedade aqui."
     },
     intercom = {
       title = "Interfone",
       description = "Use o interfone visitar a casa de outro jogador.",
-      prompt = "Numero:",
-      not_available = "~r~Não Disponivel.",
+      prompt = "Número:",
+      not_available = "~r~Não Disponível.",
       refused = "~r~Sua Entrada foi recusada.",
       prompt_who = "Diga quem você é:",
       asked = "Solicitando Entrada...",
-      request = "Alguem está Tocando seu Interfone: <em>{1}</em>"
+      request = "Alguém está Tocando seu Interfone: <em>{1}</em>"
     },
     slot = {
       leave = {
@@ -371,17 +371,17 @@ local lang = {
   garage = {
     title = " {1}",
     owned = {
-      title = "Veiculos Possuidos",
-      description = "Veiculos que voce Possui."
+      title = "Veículos Possuidos",
+      description = "Veículos que você Possui."
     },
     buy = {
       title = "Comprar",
-      description = "Comprar Veiculos.",
+      description = "Comprar Veículos.",
       info = "{1} $<br /><br />{2}"
     },
     sell = {
       title = "Vender",
-      description = "Vender veiculos."
+      description = "Vender veículos."
     },
     rent = {
       title = "Aluguel",
@@ -389,15 +389,15 @@ local lang = {
     },
     store = {
       title = "Guardar",
-      description = "Coloque seu veiculo atual na garagem."
+      description = "Coloque seu veículo atual na garagem."
     }
   },
   vehicle = {
-    title = "Veiculo",
-    no_owned_near = "~r~Nenhum veiculo seu perto de voce.",
+    title = "Veículo",
+    no_owned_near = "~r~Nenhum veículo seu perto de você.",
     trunk = {
       title = "Porta Malas",
-      description = "Abra o porta malas do veiculo."
+      description = "Abra o porta malas do veículo."
     },
     detach_trailer = {
       title = "Desencaixar trailer",
@@ -413,7 +413,7 @@ local lang = {
     },
     lock = {
       title = "Travar/Destravar",
-      description = "Travar e Destravar o veiculo."
+      description = "Travar e Destravar o veículo."
     },
     engine = {
       title = "Motor Ligar/Desligar",
@@ -425,16 +425,16 @@ local lang = {
       request = "Você quer aceitar o pedido de acesso ?"
     },
     replace = {
-      title = "Trocar veiculo",
-      description = "Substituir o veiculo mais proximo de você."
+      title = "Trocar veículo",
+      description = "Substituir o veículo mais proximo de você."
     },
        repair = {
-      title = ":wrench: Consertar Veiculo",
-      description = "Consertar o veiculo mais perto de voce."
+      title = "Consertar Veículo",
+      description = "Consertar o veículo mais perto de você."
     },
     sellTP = {
-      title = ":red_car: Vender veiculo",
-      description = "Vende seu veiculo para um jogador proximo."
+      title = "Vender veículo",
+      description = "Vende seu veículo para um jogador proximo."
     }
   },
   gunshop = {
@@ -478,8 +478,8 @@ local lang = {
     description = "Mostra suas Capacidades seu XP e Level.  <- Atenção para fechar Display so clickar Novamente",
     lose_exp = "XP ~b~{1}/{2} ~r~-{3} ~s~exp.",
     earn_exp = "XP ~b~{1}/{2} ~g~+{3} ~s~exp.",
-    level_down = "XP ~b~{1}/{2} ~r~Level perdido ({3}). Atenção Voce perdeu Level :(",
-    level_up = "XP ~b~{1}/{2} ~g~Level Upado ({3}). Parabens Voce Alcançõu um novo Level",
+    level_down = "XP ~b~{1}/{2} ~r~Level perdido ({3}). Atenção Você perdeu Level :(",
+    level_up = "XP ~b~{1}/{2} ~g~Level Upado ({3}). Parabéns Voce Alcançou um novo Level",
     display = {
       group = "{1}: ",
       aptitude = "{1} LVL {3} EXP {2}"
