@@ -23,7 +23,7 @@ cfg.random_first_names = {
 }
 
 cfg.random_last_names = {
-  "Identidade"
+  "Registro"
 }
 
 return cfg

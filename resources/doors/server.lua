@@ -26,8 +26,8 @@ AddEventHandler('vrpdoorsystem:open', function(id)
   local user_id = vRP.getUserId({source})
   local player = vRP.getUserSource({user_id})
   if vRP.hasPermission({user_id, "#"..cfg.list[id].key..".>0"}) or vRP.hasPermission({user_id,cfg.list[id].permission}) then
-    vRPclient.playAnim(player, {false,{{"misscommon@locked_door", "lockeddoor_tryopen", 1}},false})
-    SetTimeout(4000, function()
+    --vRPclient.playAnim(player, {false,{{"misscommon@locked_door", "lockeddoor_tryopen", 1}},false})
+    SetTimeout(1000, function()
       cfg.list[id].locked = not cfg.list[id].locked
       TriggerClientEvent('vrpdoorsystem:statusSend', (-1), id,cfg.list[id].locked)
       if cfg.list[id].pair ~= nil then
