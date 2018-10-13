@@ -26,6 +26,13 @@ body{
 -- list of static menu types (map of name => {.title,.blipid,.blipcolor,.permissions (optional)})
 -- static menus are menu with choices defined by vRP.addStaticMenuChoices(name, choices)
 cfg.static_menu_types = {
+   ["recruta_weapons"] = {
+      title = "Arsenal", 
+      blipcolor = 0,
+	  permissions = {
+	    "recruta.weapons"
+	  }
+	},
    ["police_weapons"] = {
       title = "Arsenal", 
       blipcolor = 0,
@@ -93,6 +100,7 @@ cfg.static_menu_types = {
 
 -- list of static menu points
 cfg.static_menus = {
+  {"recruta_weapons",461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons", 461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons_coronel", 461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons_capitao", 461.46166992188,-981.07891845703,30.689590454102},

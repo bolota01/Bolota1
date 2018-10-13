@@ -131,6 +131,17 @@ police_weapons_colete["Kit Colete"] = {function(player,choice)
 	}, true})
 	BMclient.setArmour(player,{100,true})
 end}
+-- Recruta
+local recruta_weapons = {}
+recruta_weapons["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["WEAPON_STUNGUN"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["ARMOR"] = {ammo=200}
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
 -- Soldado/Cabo/Sargento/Subtenente
 local police_weapons = {}
 police_weapons["Equip"] = {function(player,choice)
@@ -980,6 +991,7 @@ end,
 
 -- ADD STATIC MENU CHOICES // STATIC MENUS NEED TO BE ADDED AT vRP/cfg/gui.lua
 vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
+vRP.addStaticMenuChoices({"recruta_weapons", recruta_weapons}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons_capitao", police_weapons_capitao}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons_coronel", police_weapons_coronel}) -- equipamentos da polícia

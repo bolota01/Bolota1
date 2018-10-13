@@ -224,8 +224,7 @@ cfg.garage_types = {
   	},  
   	["Mecânico"] = {
    		 _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"repair.garagem"},buy=true},
-    	["flatbed3"] = {"Reboque",0, ""},
-    	["flatbed"] = {"Reboque 2",0, ""},
+    	["flatbed"] = {"Reboque",0, ""},
 		["towtruck2"] = {"Guincho",0, ""}
   	},   
   	["Delivery"] = {
