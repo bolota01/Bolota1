@@ -20,6 +20,12 @@ class Application extends React.Component {
                 <FabricComponent />
                 <Menu />
                 <Prompt />
+                <div className="center">
+                    <FabricProgressBar anchor="center" layout="horizontal" />
+                </div>
+                <div className="botright">
+                    <FabricProgressBar anchor="botright" layout="horizontal" />
+                </div>
                 <div style={{
                     position: "absolute",
                     top: "3%",
@@ -27,7 +33,7 @@ class Application extends React.Component {
                     <FabricRequestMessage />
                 </div>
                 <div className="player-status">
-                    <FabricProgressBar anchor="minimap" />
+                    <FabricProgressBar anchor="minimap" layout="vertical" />
                 </div>
             </div>
         );

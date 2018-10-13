@@ -129,7 +129,7 @@ export default class Menu extends React.Component {
             position = 0;
         }
 
-        var scrollto = document.getElementsByClassName("choice")[this.state.position];
+        var scrollto = document.getElementsByClassName("choice")[position];
         var container = document.getElementsByClassName("choices")[0];
     
         if(scrollto.offsetTop < container.offsetTop || scrollto.offsetTop + scrollto.offsetHeight >= container.offsetTop+container.offsetHeight)

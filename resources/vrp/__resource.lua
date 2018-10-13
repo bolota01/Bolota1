@@ -68,7 +68,9 @@ files{
 
   -- images
   "gui/img/background.png",
-  "gui/img/fundo.jpg",
+  "gui/img/fundo.png",
   "gui/img/queijo.png",
-  "gui/img/copo.png"
+  "gui/img/copo.png",
+
+  "gui/fonts/bankgothic.ttf"
 }

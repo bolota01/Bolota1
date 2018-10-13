@@ -37,16 +37,30 @@ class ProgressBar extends React.Component {
         this.eventSetBarText.remove();
     }
 
+    getBarWidth(){
+        if (this.props.layout == "horizontal"){
+            return 250;
+        }
+        return 150;
+    }
+
     getPercent(){
-        return ((100 - parseFloat(this.state.value)) /100) * 150 + "px";
+        return (100 - parseFloat(this.state.value)) + "%";
     }
 
     renderStyle(){
         var style = this.props;
-        return {
-            marginTop: this.getPercent(),
+        var data = {
             backgroundColor: "rgb("+style.r+","+style.g+","+style.b+")"
         };
+
+        if (this.props.layout == "horizontal"){
+            data["right"] = this.getPercent();
+        }else{
+            data["top"] = this.getPercent();
+        }
+
+        return data;
     }
 
     renderIcon(){
@@ -63,10 +77,10 @@ class ProgressBar extends React.Component {
 
     render(){
         return (
-            <div className="progressbar">
-                <div className="inner" style={this.renderStyle()}>
-                    {this.renderIcon()}
-                </div>
+            <div className={"progressbar " + this.props.layout}>
+                <div className="inner" style={this.renderStyle()}></div>
+                {this.renderIcon()}
+                <span className="text">{this.state.text}</span>
             </div>
         )
     }
@@ -111,7 +125,10 @@ export default class FabricProgressBar extends React.Component {
         var index = 0;
 
         for(var key in bars){
-            render_bars.push(<ProgressBar {...bars[key]} key={index}/>);
+            render_bars.push(
+                <ProgressBar {...bars[key]}
+                            key={index}
+                            layout={this.props.layout} />);
             index++;
         }
 
