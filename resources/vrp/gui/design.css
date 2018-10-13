@@ -240,13 +240,15 @@ html, body {
 /* dynamic class progress bar */
 .dprogressbar{
   position: relative;
-  padding: 0;
+  padding: 0 !important;
   margin: 0;
+  height: 25px;
+  border: 3px solid black;
+  overflow: hidden;
 }
 
 .dprogressbar .inner{
   height: 100%;
-  padding: 0;
   margin: 0;
 }
 

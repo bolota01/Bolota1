@@ -305,7 +305,7 @@ function vRP.openInventory(source)
       local weight = vRP.getInventoryWeight(user_id)
       local max_weight = vRP.getInventoryMaxWeight(user_id)
       local hue = math.floor(math.max(125*(1-weight/max_weight), 0))
-      menudata["<div class=\"dprogressbar\" data-value=\""..string.format("%.2f",weight/max_weight).."\" data-color=\"hsl("..hue..",100%,50%)\" data-bgcolor=\"hsl("..hue..",100%,25%)\" style=\"height: 12px; border: 3px solid black;\"></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
+      menudata["<div class=\"dprogressbar\"><div class=\"inner\" style=\"width: "..string.format("%.2f",(weight/max_weight) * 100).."%; background: hsl("..hue..",100%,25%);\"></div></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
       local kitems = {}
 
       -- choose callback, nested menu, create the item menu
@@ -448,7 +448,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
             -- add weight info
             local weight = vRP.computeItemsWeight(chest.items)
             local hue = math.floor(math.max(125*(1-weight/max_weight), 0))
-            submenu["<div class=\"dprogressbar\" data-value=\""..string.format("%.2f",weight/max_weight).."\" data-color=\"hsl("..hue..",100%,50%)\" data-bgcolor=\"hsl("..hue..",100%,25%)\" style=\"height: 12px; border: 3px solid black;\"></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
+            submenu["<div class=\"dprogressbar\"><div class=\"inner\" style=\"width: "..string.format("%.2f",(weight/max_weight) * 100).."%; background: hsl("..hue..",100%,25%);\"></div></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
 
 
             submenu.onclose = function()
@@ -495,7 +495,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
             local weight = vRP.computeItemsWeight(data.inventory)
             local max_weight = vRP.getInventoryMaxWeight(user_id)
             local hue = math.floor(math.max(125*(1-weight/max_weight), 0))
-            submenu["<div class=\"dprogressbar\" data-value=\""..string.format("%.2f",weight/max_weight).."\" data-color=\"hsl("..hue..",100%,50%)\" data-bgcolor=\"hsl("..hue..",100%,25%)\" style=\"height: 12px; border: 3px solid black;\"></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
+            submenu["<div class=\"dprogressbar\"><div class=\"inner\" style=\"width: "..string.format("%.2f",(weight/max_weight) * 100).."%; background: hsl("..hue..",100%,25%);\"></div></div>"] = {function()end, lang.inventory.info_weight({string.format("%.2f",weight),max_weight})}
 
             submenu.onclose = function() 
               close_count = close_count-1
@@ -523,8 +523,8 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
           vRP.openMenu(source, menu)
         end)
       else
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Este Baú já foi Aberto por outra pessoa.</span>", type = "info", timeout = (3000),layout = "centerLeft"})
-    TriggerClientEvent("DropSystem:drop", player, idname, amount)
+        TriggerClientEvent("pNotify:SendNotification", player, {text = "<span color='red'>Este Baú já foi Aberto por outra pessoa.</span>", type = "info", timeout = (3000), layout = "centerLeft"})
+        TriggerClientEvent("DropSystem:drop", player, idname, amount)
       end
     end
   end
