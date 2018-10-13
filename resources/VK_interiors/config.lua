@@ -7,9 +7,9 @@ INTERIORS = {
     [3] = {id = 3, x = 452.13629150391, y = -984.14849853516, z = 26.67423248291,  name = "Sair da Sala de Reuniões", destination = {4}},
     [4] = {id = 4, x = 136.36924743652, y = -749.36987304688, z = 258.15179443359,  name = "Entrar na Sala de Reuniões", destination = {3}},
 
-    -- FIB GARAGE
-    --[6] = {id = 6, x = 142.06883239746, y = -768.97241210938, z = 45.752010345459, h = 72.884956359863, name = "Predio FBI", destination = {7}},
-    --[7] = {id = 7, x = 176.67442321777, y = -728.77349853516, z = 39.403667449951, h = 248.2452545166, name = "Garagem", destination = {6}},
+    -- Cofre Banco Central
+    [6] = {id = 6, x = 253.90010070801, y = 225.1960144043, z = 101.87580108643, name = "Sair do cofre", destination = {7}},
+    [7] = {id = 7, x = 253.31288146973, y = 223.3512878418, z = 101.68347167969, name = "Entrar no cofre", destination = {6}},
 
     -- BAHMAS MAMAS
     [8] = {id = 8, x = -1388.9272460938, y = -586.08123779297, z = 30.219741821289, h = 35.407787322998, name = "Sair", destination = {9}},

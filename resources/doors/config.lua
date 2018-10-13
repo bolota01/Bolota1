@@ -35,7 +35,7 @@ cfg.list = {
   --[30] = { offset = -1.2, mystatus = false, hash = -222270721, x = 256.711, y = 220.4395, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true, pair = 31},
   --[31] = { offset = -1.2, mystatus = false, hash = 746855201, x = 261.95, y = 221.916, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true, pair = 30},
   --[32] = { offset = -1.2, mystatus = false, hash = 1956494919, x = 237.95, y = 227.916, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},
-  --[33] = { offset = -1.2, mystatus = false, hash = 1956494919, x = 237.95, y = 227.916, z = 110.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},
+  --[33] = { offset = -1.2, mystatus = false, hash = 1956494919, x = 253.5636138916, y = 224.0645904541, z = 101.9020690918, locked = true, key = "key_central_cofre", permission="cofre.key", name = "Sala do Cofre"},
   --[34] = { offset = -1.2, mystatus = false, hash = 1956494919, x = 256.95, y = 206.916, z = 110.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},
   --[35] = { offset = -1.2, mystatus = false, hash = 964838196, x = 260.45, y = 209.916, z = 110.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},
   --[36] = { offset = -1.2, mystatus = false, hash = 964838196, x = 262.45, y = 214.916, z = 110.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},

@@ -27,7 +27,7 @@ end)
   local vehicle = GetVehiclePedIsIn(pP, false)
   local driver = GetPedInVehicleSeat(vehicle, -1)
   local plate = GetVehicleNumberPlateText(vehicle)
-  local maxspeed = 100
+  local maxspeed = 80
 	local kmhspeed = math.ceil(speed*3.6)
 		if kmhspeed > maxspeed and driver == pP then
 			Citizen.Wait(250)
