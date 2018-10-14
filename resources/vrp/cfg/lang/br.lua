@@ -456,7 +456,7 @@ local lang = {
   cloakroom = {
     title = "Vestiário ({1})",
     undress = {
-      title = "> s/ farda Homem"
+      title = ">Retirar Uniforme"
     }
   },
   itemtr = {

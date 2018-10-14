@@ -145,7 +145,7 @@ cfg.garage_types = {
 		["tigerrocam"] = {"Moto Polícia",0, ""}
 	},
 	["Bicicletário"] = {
-    _config = {vtype="bike",blipid=455,blipcolor=6,buy=true},
+    _config = {vtype="bike",blipid=226,blipcolor=24,radius=5.1,buy=true},
     	["bmx"] = {"Bmx",0, ""},
 		["cruiser"] = {"Cruiser",0, ""},
 		["fixter"] = {"Fixter",0, ""},
@@ -274,7 +274,7 @@ cfg.garages = {
 	{"FAZENDEIRO",1432.5661621094,1107.0783691406,114.24201965332},
 	{"MOTO CLUBE",970.89477539063,-122.97027587891,74.353141784668},
 	--{"EMPRESARIO",-44.977939605713,-1113.3082275391,26.435800552368},
-	--{"Bicicletário",1640, 3236, 40.4},
+	{"Bicicletário",-1188.5541992188,-1572.1044921875,4.3242697715759},
 	--{"planes",2123, 4805, 41.19},
 	--{"planes",-1348, -2230, 13.9},
 	--{"helicopters",1750, 3260, 41.37},
