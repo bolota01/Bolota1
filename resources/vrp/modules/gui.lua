@@ -8,6 +8,16 @@ local menu_ids = Tools.newIDGenerator()
 local client_menus = {}
 local rclient_menus = {}
 
+-- cell na mao
+local seq_in = {
+  {"cellphone@","cellphone_text_in",1},
+  {"cellphone@","cellphone_text_read_base",1}
+}
+local seq_out = {
+  {"cellphone@","cellphone_text_out",1}
+}
+
+
 -- open dynamic menu to client
 -- menudef: .name and choices as key/{callback,description} (optional element html description) 
 -- menudef optional: .css{ .top, .header_color }
@@ -152,6 +162,8 @@ function vRP.openMainMenu(source)
     menudata.css = {top="75px",header_color="rgba(0,125,255,0.75)"}
     vRP.openMenu(source,menudata) -- open the generated menu
   end)
+  TriggerClientEvent("createPhone", source)
+  vRPclient.playAnim(source,{true,seq_in,true})
 end
 
 -- SERVER TUNNEL API
@@ -168,6 +180,10 @@ function tvRP.closeMenu(id)
     menu_ids:free(id)
     client_menus[id] = nil
     rclient_menus[source] = nil
+    if menu.def.name == "Main menu" then
+      TriggerClientEvent("deletePhone", source)
+      vRPclient.playAnim(source,{true,seq_out,false})
+    end
   end
 end
 
