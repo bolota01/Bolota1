@@ -20,6 +20,9 @@ class Application extends React.Component {
                 <FabricComponent />
                 <Menu />
                 <Prompt />
+                <div style={{position: "absolute", top: "2%", left: "1.5%"}}>
+                    <img src="img/logo.png" />
+                </div>
                 <div className="center">
                     <FabricProgressBar anchor="center" layout="horizontal" />
                 </div>

@@ -36,7 +36,7 @@ export default class Menu extends React.Component {
     }
 
     getInitialState(){
-        return {opened: false, choices: [], id: null, position: 0};
+        return {opened: false, choices: [], id: null, position: 0, name: ""};
     }
 
     componentWillMount(){
@@ -54,7 +54,11 @@ export default class Menu extends React.Component {
     onMenuOpen(data){
         this.setState(this.getInitialState(), () => {
             var menudata = data.menudata;
-            this.setState({opened: true, choices: menudata.choices, id: menudata.id});
+            this.setState({
+                opened: true,
+                choices: menudata.choices,
+                id: menudata.id,
+                name: menudata.name});
         });
     }
 
@@ -152,8 +156,8 @@ export default class Menu extends React.Component {
 
         return (
             <div className="menu">
-                <div class="menu-content">
-                    <div className="title">{this.props.title}</div>
+                <div className="menu-content">
+                    <div className="title">{this.state.name}</div>
                     <div className="choices">
                         {this.renderChoices()}
                     </div>
