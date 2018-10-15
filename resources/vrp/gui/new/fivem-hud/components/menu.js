@@ -71,7 +71,8 @@ export default class Menu extends React.Component {
     }
 
     close(){
-        axios.post("http://vrp/menu", JSON.stringify({act: "close", id: this.state.id }));
+        axios.post("http://vrp/menu", JSON.stringify(
+            {act: "close", id: this.state.id }));
 
         if (this.state.opened){
             this.setState(this.getInitialState());
@@ -80,7 +81,8 @@ export default class Menu extends React.Component {
 
     select(){
         var current = this.state.choices[this.state.position];
-        axios.post("http://vrp/menu", JSON.stringify({act: "valid", id: this.state.id, choice: current[0], mod: 0}));
+        axios.post("http://vrp/menu", JSON.stringify(
+            {act: "valid", id: this.state.id, choice: current[0], mod: 0}));
     }
 
     onKeyboard(data){
@@ -151,12 +153,28 @@ export default class Menu extends React.Component {
         })
     }
 
+    renderDesc(){
+        var position = (this.state.position < this.state.choices.length ? this.state.position: 0);
+        var choice = this.state.choices[position];
+
+        if (choice.length > 1){
+            return (
+                <div
+                    className="desc"
+                    dangerouslySetInnerHTML={{__html: choice[1]}}></div>
+            )
+        }
+
+        return null;
+    }
+
     render(){
         if (!this.state.opened) {return null}
 
         return (
             <div className="menu">
                 <div className="menu-content">
+                    {this.renderDesc()}
                     <div className="title">{this.state.name}</div>
                     <div className="choices">
                         {this.renderChoices()}
