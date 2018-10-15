@@ -26,10 +26,7 @@ class Application extends React.Component {
                 <div className="botright">
                     <FabricProgressBar anchor="botright" layout="horizontal" />
                 </div>
-                <div style={{
-                    position: "absolute",
-                    top: "3%",
-                    right: "2.5%"}}>
+                <div className="topright">
                     <FabricRequestMessage />
                 </div>
                 <div className="player-status">

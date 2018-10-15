@@ -169,9 +169,12 @@ end
 -- SERVER TUNNEL API
 
 function tvRP.closeMenu(id)
+  if id == nil then
+    id = rclient_menus[source]
+  end
   local menu = client_menus[id]
-  if menu and menu.source == source then
 
+  if menu and menu.source == source then
     -- call callback
     if menu.def.onclose then
       menu.def.onclose(source)
@@ -180,6 +183,7 @@ function tvRP.closeMenu(id)
     menu_ids:free(id)
     client_menus[id] = nil
     rclient_menus[source] = nil
+
     if menu.def.name == "Main menu" then
       TriggerClientEvent("deletePhone", source)
       vRPclient.playAnim(source,{true,seq_out,false})

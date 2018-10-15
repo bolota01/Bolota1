@@ -67,11 +67,11 @@ export default class Menu extends React.Component {
     }
 
     close(){
+        axios.post("http://vrp/menu", JSON.stringify({act: "close", id: this.state.id }));
+
         if (this.state.opened){
             this.setState(this.getInitialState());
         }
-
-        axios.post("http://vrp/menu", JSON.stringify({act: "close", id: this.state.id }));
     }
 
     select(){
