@@ -157,7 +157,7 @@ export default class Menu extends React.Component {
         var position = (this.state.position < this.state.choices.length ? this.state.position: 0);
         var choice = this.state.choices[position];
 
-        if (choice.length > 1){
+        if (choice && choice.length > 1){
             return (
                 <div
                     className="desc"
