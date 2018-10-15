@@ -72,27 +72,40 @@ cfg.services = {
 cfg.announces = {
   ["admin"] = {
     --image = "nui://vrp_mod/announce_admin.png",
-    image = "http://i.imgur.com/HnM1D8w.png",
+    image = "https://i.imgur.com/mv5Vd2Q.jpg",
     price = 0,
     description = "Somente admin.",
     permission = "admin.announce"
   },
   ["police"] = {
     --image = "nui://vrp_mod/announce_police.png",
-    image = "http://i.imgur.com/cvzroo4.png",
+    image = "https://i.imgur.com/xopuWGX.jpg",
     price = 0,
     description = "Somente para policiais, ex: anúncio para procurado.",
     permission = "police.announce"
   },
+  ["paramedico"] = {
+    --image = "nui://vrp_mod/announce_police.png",
+    image = "https://i.imgur.com/wXJAsUQ.jpg",
+    price = 0,
+    description = "Somente para profissionais da saúde.",
+    permission = "paramedico.announce"
+  },
   ["commercial"] = {
     --image = "nui://vrp_mod/announce_commercial.png",
-    image = "http://i.imgur.com/QTDgtjF.png",
+    image = "https://i.imgur.com/nUVexaU.jpg",
     description = "Anuncio comercial (comprar, vender, trabalhar).",
     price = 5000
   },
-  ["party"] = {
+  ["evento"] = {
+    --image = "nui://vrp_mod/announce_commercial.png",
+    image = "https://i.imgur.com/JgHSa4s.jpg",
+    description = "Anuncio para eventos.",
+    price = 5000
+  },
+  ["festa"] = {
     --image = "nui://vrp_mod/announce_party.png",
-    image = "http://i.imgur.com/mpsZ8SD.png",
+    image = "https://i.imgur.com/h2AbQY9.jpg",
     description = "Organizando uma festa? Convide todos para ir.",
     price = 5000
   }
