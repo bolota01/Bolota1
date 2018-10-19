@@ -20,7 +20,7 @@ local lang = {
     thirsty = "Atenção,Você está Morrendo de Sede"
   },
   money = {
-    display = "<span class=\"symbol\">R$</span> {1} ",
+    display = "<span class=\"symbol\" style=\"color: 002200;\"><i class=\"fa fa-money\"></i></span> R${1} ",
     given = "Enviar ~r~{1}$.",
     received = "Recebido ~g~{1}$.",
     not_enough = "~r~Dinheiro Insuficiente.",

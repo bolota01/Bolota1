@@ -61,8 +61,8 @@ files{
   "cfg/client.lua",
 
   "gui/index.html",
-  "gui/design.css",
 
+  "gui/css/design.css",
   -- js
   "gui/new/dist/bundle.js",
 

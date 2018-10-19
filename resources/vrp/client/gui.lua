@@ -89,6 +89,7 @@ end)
 -- content: announce html content
 function tvRP.announce(background,content)
   SendNUIMessage({act="announce",background=background,content=content})
+  tvRP.playSound("HUD_MINI_GAME_SOUNDSET","5_SEC_WARNING")
 end
 
 -- cfg

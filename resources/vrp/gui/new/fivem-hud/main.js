@@ -9,6 +9,7 @@ import configurations from './messages';
 import Menu from './components/menu';
 import Prompt from './components/prompt';
 import FabricComponent from './components/custom_div';
+import FabricAnnounce from "./components/announce";
 import FabricProgressBar from './components/progressbar';
 import FabricRequestMessage from './components/requests';
 
@@ -27,6 +28,7 @@ class Application extends React.Component {
                     <FabricProgressBar anchor="center" layout="horizontal" />
                 </div>
                 <div className="botright">
+                    <FabricAnnounce />
                     <FabricProgressBar anchor="botright" layout="horizontal" />
                 </div>
                 <div className="topright">

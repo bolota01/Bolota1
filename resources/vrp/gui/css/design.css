@@ -37,14 +37,20 @@ html, body {
   bottom: 1.5%;
 }
 
+.topright{
+  position: absolute;
+  top: 2%;
+  right: 1.5%;
+}
+
 @font-face {
   font-family: bankgothic;
-  src: url(fonts/bankgothic.ttf);
+  src: url(../fonts/bankgothic.ttf);
 }
 
 /* menu */
 .menu{
-  background-image: url(img/fundo.png);
+  background-image: url(../img/fundo.png);
   background-size: 100% 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
@@ -64,7 +70,7 @@ html, body {
 }
 
 .menu-content{
-  background-image: url(img/background.png);
+  background-image: url(../img/background.png);
   background-size: 100% 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -306,16 +312,16 @@ html, body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%) translateX(-50%);
   padding: 20px;
-  background: #2B2E36;
+  background: #373435;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
   min-width: 500px;
   border-radius: 10px;
 }
 
 .prompt .content input[type="text"] {
-  background: #2B2E36;
+  background: #373435;
   border: 0;
-  border-bottom: 2px solid #64918e;
+  border-bottom: 1px solid #64918e;
   color: #fff;
   padding: 20px 0 10px 5px;
   width: 100%;
@@ -342,20 +348,24 @@ html, body {
 /* announce */
 
 .announce{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 780px;
-  height: 130px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 400px;
+  height: 94px;
   padding: 10px;
   margin-left: -400px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  font-size: 60px;
+  font-size: 21px;
   text-shadow: 2px 2px black;
   color: white;
-  display: none;
   opacity: 0.90;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.announce .message{
+  width: 275px;
 }
 
 @media only screen and (min-width: 1800px){
