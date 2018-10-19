@@ -123,7 +123,7 @@ Citizen.CreateThread(function()
 		  for i = 1, #scrapyards do
 			garageCoords = scrapyards[i]
 			stationBlip = AddBlipForCoord(garageCoords[1], garageCoords[2], garageCoords[3])
-			SetBlipSprite(stationBlip, 467)
+			SetBlipSprite(stationBlip, 446)
 			SetBlipDisplay(stationBlip, 2)
 			SetBlipScale(stationBlip, 1.0)
 			SetBlipColour(stationBlip, 69)

@@ -310,7 +310,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=200,
-    x=1.7533090114594, y = -672.1826171875, z = 16.130626678467, -- pos
+    x=250.2346496582, y = 219.19931030273, z = 101.68336486816, -- pos
     radius=3, height=1.5, -- area
     recipes = {
       ["Coletar Malote"] = { -- action name

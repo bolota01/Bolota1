@@ -32,6 +32,7 @@ cfg.list = {
   [28] = { offset = 1.2, mystatus = false, hash = 1415151278, x = 253.955, y = -1359.8079, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Operações"},
   [29] = { offset = -1.2, mystatus = false, hash = 1859711902, x = 236.8063, y = -1368.1375, z = 39.5434, locked = true, key = "key_medic_boss", permission="bossemergency.service", name = "Escritório do Médico Chefe"},
   -- Banco
+  [30] = { offset = -1.2, mystatus = false, hash = 961976194, x = 253.5241394043, y = 224.21315002441, z = 101.90362548828, locked = true, key = "key_bank_cofre", permission="grove.doors", name = "Cofre Banco Central"},
   --[30] = { offset = -1.2, mystatus = false, hash = -222270721, x = 256.711, y = 220.4395, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true, pair = 31},
   --[31] = { offset = -1.2, mystatus = false, hash = 746855201, x = 261.95, y = 221.916, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true, pair = 30},
   --[32] = { offset = -1.2, mystatus = false, hash = 1956494919, x = 237.95, y = 227.916, z = 106.2853, locked = true, key = "key_medic_boss123", permission="bank.key", name = "Банка", swarka = true},

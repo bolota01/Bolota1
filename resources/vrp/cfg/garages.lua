@@ -13,7 +13,7 @@ cfg.sell_factor = 0.5 -- sell for 75% of the original price //70% DO VALOR DE CO
 
 cfg.garage_types = {
 	["GARAGEM"] = {
-		_config = {vtype="car",blipid=369,blipcolor=47,radius=5.1},
+		_config = {vtype="car",blipid=357,blipcolor=67,radius=5.1},
 		["Blista"] = {"Blista",0,"<img src='https://i.imgur.com/wUW0wkG.png'/><br/>CAPACIDADE:60kg<br/>VEL MÁX:135 km/h"},
         ["Brioso"] = {"Brioso",0,"<img src='https://i.imgur.com/XnS2Fxn.png'/><br/>CAPACIDADE:30kg<br/>VEL MÁX:135 km/h"},
         ["Issi3"] = {"Issi3",0,"<img src='https://i.imgur.com/V4qmekr.jpg'/><br/>CAPACIDADE:30kg<br/>VEL MÁX:135 km/h"},
@@ -73,7 +73,7 @@ cfg.garage_types = {
         ["Stretch"] = {"Stretch",0,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>VEL MÁX:130 km/h"}
 	},
 	["VENDA CARROS"] = {
-		_config = {vtype="car",blipid=369,blipcolor=47,radius=5.1,buy=true},
+		_config = {vtype="car",blipid=225,blipcolor=47,radius=5.1,buy=true},
 		["Blista"] = {"Blista",0,"<img src='https://i.imgur.com/wUW0wkG.png'/><br/>CAPACIDADE:60kg<br/>VEL MÁX:135 km/h"},
         ["Brioso"] = {"Brioso",0,"<img src='https://i.imgur.com/XnS2Fxn.png'/><br/>CAPACIDADE:30kg<br/>VEL MÁX:135 km/h"},
         ["Issi3"] = {"Issi3",0,"<img src='https://i.imgur.com/V4qmekr.jpg'/><br/>CAPACIDADE:30kg<br/>VEL MÁX:135 km/h"},
@@ -110,8 +110,6 @@ cfg.garage_types = {
         ["SultanRS"] = {"SultanRS",0,"<img src='https://i.imgur.com/mnHPeUv.png'/<br/>CAPACIDADE:30kg<br/>VEL MÁX:148 km/h"},
         ["Italigtb"] = {"Ialigtb",0,"<img src='https://i.imgur.com/tmj7h1z.png'/<br/>CAPACIDADE:30kg<br/>VEL MÁX:159 km/h"},
         ["Bifta"] = {"Bifta",0,"<img src='https://i.imgur.com/7I5jXvp.png'/<br/>CAPACIDADE:30kg<br/>VEL MÁX:218 km/h"},
-        ["Blazer"] = {"Blazer",0,"<img src='https://i.imgur.com/yPJxBsW.png'/<br/>CAPACIDADE:10kg<br/>VEL MÁX:193 km/h"},
-        ["Blazer4"] = {"Blazer4",0,"<img src='https://i.imgur.com/e53F7nP.png'/<br/>CAPACIDADE:10kg<br/>VEL MÁX:177 km/h"},
         ["Kamacho"] = {"Kamacho",0,"<img src='https://i.imgur.com/TlZaofn.png'/<br/>CAPACIDADE:150kg<br/>VEL MÁX:134 km/h"},
         ["Mesa"] = {"Mesa",0,"<img src='https://i.imgur.com/mYkP17K.png'/<br/>CAPACIDADE:80kg<br/>VEL MÁX:209 km/h"},
         ["Sandking"] = {"Sandking",0,"<img src='https://i.imgur.com/3b6MTw3.png'/<br/>CAPACIDADE:180kg<br/>VEL MÁX:209 km/h"},
@@ -123,10 +121,12 @@ cfg.garage_types = {
         ["Stretch"] = {"Stretch",0,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>VEL MÁX:130 km/h"}
 	},
 	["VENDA MOTOS"] = {
-		_config = {vtype="car",blipid=369,blipcolor=47,radius=5.1,buy=true},
+		_config = {vtype="car",blipid=226,blipcolor=47,radius=5.1,buy=true},
 		["Sanctus"] = {"Sanctus",0,"<img src='https://i.imgur.com/khAWYVh.jpg'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:144 km/h"},
 		["Avarus"] = {"Avarus",0,"<img src='https://i.imgur.com/1IYaVHy.png'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:135 km/h"},
 		["Daemon"] = {"Daemon",0,"<img src='https://i.imgur.com/a3S2uy2.png'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:135 km/h"},
+        ["Blazer"] = {"Blazer",0,"<img src='https://i.imgur.com/yPJxBsW.png'/<br/>CAPACIDADE:10kg<br/>VEL MÁX:193 km/h"},
+        ["Blazer4"] = {"Blazer4",0,"<img src='https://i.imgur.com/e53F7nP.png'/<br/>CAPACIDADE:10kg<br/>VEL MÁX:177 km/h"},
 		["Faggio2"] = {"Faggio2",0,"<img src='https://i.imgur.com/XI42R6F.png'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:90 km/h"},
 		["Esskey"] = {"Esskey",0,"<img src='https://i.imgur.com/HoYJjFf.png'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:145 km/h"},
 		["Wolfsbane"] = {"Wolfsbane",0,"<img src='https://i.imgur.com/1wfkCsn.jpg'/><br/>CAPACIDADE:10kg<br/>VEL MÁX:130 km/h"},
@@ -185,14 +185,8 @@ cfg.garage_types = {
 		_config = {vtype="car",permissions={"garagem.vipdima"},buy=true},
 		["aperta"] = {"La Ferrari",10000000,"<img src='https://i.imgur.com/0CDv4Ex.jpg' /><br/>CAPACIDADE:100kg<br/>VEL MÁX:300+ km/h"}
 	}, 
-	["Veículos PM"] = {
-    _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"},buy=true},
-    	["police2"] = {"Lexus",0, ""},
-		["sheriff"] = {"Evoque",0, ""},
-		["tigerrocam"] = {"Moto Polícia",0, ""}
-	},
 	["Bicicletário"] = {
-    _config = {vtype="bike",blipid=226,blipcolor=24,radius=5.1,buy=true},
+    _config = {vtype="bike",blipid=376,blipcolor=24,radius=5.1,buy=true},
     	["bmx"] = {"Bmx",0, ""},
 		["cruiser"] = {"Cruiser",0, ""},
 		["fixter"] = {"Fixter",0, ""},
@@ -200,30 +194,36 @@ cfg.garage_types = {
 		["triBike"] = {"TriBike Verde",0, ""},
 		["triBike2"] = {"TriBike Vermelha",0, ""},
 		["triBike3"] = {"TriBike Azul",0, ""}
+	},
+	["Veículos FAE"] = {
+    _config = {vtype="car",blipcolor=4,permissions={"pm.garagem"},buy=true},
+    	["RS03"] = {"Audi",0, "<img src='https://i.imgur.com/awpgZ64.png'/><br/"},
+		["police2"] = {"Charger",0, "<img src='https://i.imgur.com/d77pILO.png'/><br/"},
+		["police3"] = {"Ford",0, "<img src='https://i.imgur.com/ShDFECx.png'/><br/"},
+		["sheriff2"] = {"Tahoe",0, "<img src='https://i.imgur.com/BTiIm8i.png'/><br/"},
+		["policeb"] = {"Moto FAE",0, "<img src='https://i.imgur.com/jouWJyn.png'/><br/"}
 	},  
-  	["heliponto PM"] = {
+  	["Heliponto FAE"] = {
     	_config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"},buy=true},
-    	["as350"] = {"Águia PMESP",0, ""}
+    	["polmav"] = {"Águia FAE",0, "<img src='https://i.imgur.com/faxY7BN.png'/><br/"}
 	}, 
   	["Barco de Pesca"] = {  
-    	_config = {blipid=427,blipcolor=59,vtype="boats",blipid=455,blipcolor=6,permissions={"tartaruga.garagem"},buy=true},
-    	["Dinghy"] = {"Barco de Pesca",100,"<img src='https://i.imgur.com/Wc1yIRb.png'/><br/"},
-    	["Dinghy2"] = {"Barco de Pesca 2",100,"<img src='https://i.imgur.com/fpT0DWB.png'/><br/"}
+    	_config = {blipid=427,blipcolor=59,vtype="boats",permissions={"tartaruga.garagem"},buy=true},
+    	["Dinghy"] = {"Barco de Pesca",100, "<img src='https://i.imgur.com/Wc1yIRb.png'/><br/"},
+    	["Dinghy2"] = {"Barco de Pesca 2",100, "<img src='https://i.imgur.com/fpT0DWB.png'/><br/"}
 	},
 	["RECICLAGEM S/A"] = {
 		_config = {vtype="car",permissions={"gari.veiculo"},buy=true},
-		["trash"] = {"Caminhão de Lixo",15000, ""}
+		["trash"] = {"Caminhão de Lixo",150, "<img src=''/><br/"}
 	},
-	["heliponto SAMU"] = {
+	["Heliponto Hospital"] = {
     	_config = {vtype="helicopters",blipcolor=4,permissions={"hospital.garagem"},buy=true},
-    	["samumav"] = {"Helicóptero Samu",0, ""}
+    	["supervolito2"] = {"Helicóptero Emergência",0, "<img src='https://i.imgur.com/XJ1SbP6.png'/><br/"}
 	},
-	["hospital"] = {
+	["Hospital"] = {
     	_config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"},buy=true},
-	  	["sw4samu"] = {"SW4 Samu",0, ""},
-		["ur"] = {"Ambulancia",0, ""},
-		["Samu2"] = {"L200 Samu",0, ""},
-		["motosamu"] = {"Moto Samu",0, ""}
+	  	["sheriff"] = {"SUV Emergência",0, "<img src='https://i.imgur.com/u3gXrKH.png'/><br/"},
+		["ambulance"] = {"Ambulância",0, "<img src='https://i.imgur.com/OFCBAtJ.png'/><br/"}
 	},
 	["CORREIOS S/A"] = {
 		_config = {vtype="car",permissions={"correios.veiculo"},buy=true},
@@ -248,18 +248,18 @@ cfg.garage_types = {
 		["seashark"] = {"Speedophile Seashark <br/>JetSki",55000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
 		["jetmax"] = {"Shitzu Jetmax",230000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
   	},  
-  	["Taxi"] = {
+  	["Táxi"] = {
    	 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"},buy=true},
-    	["taxi"] = {"Taxi",0, ""}
+    	["taxi"] = {"Táxi",100, "<img src='https://i.imgur.com/xre8r75.png'/><br/"}
   	},  
   	["Mecânico"] = {
    		 _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"repair.garagem"},buy=true},
-    	["flatbed"] = {"Reboque",0,"<img src='https://i.imgur.com/5kybacN.png'/><br/"},
-		["towtruck2"] = {"Guincho",0,"<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
+    	["flatbed"] = {"Reboque",100, "<img src='https://i.imgur.com/5kybacN.png'/><br/"},
+		["towtruck2"] = {"Guincho",100, "<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
   	},   
   	["Delivery"] = {
     	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"},buy=true},
-    	["enduro"] = {"Enduro",8000, ""}
+    	["enduro"] = {"Enduro",100, ""}
   }
 }
 
@@ -297,13 +297,13 @@ cfg.garages = {
 	{"GARAGEM",11.120021820068,548.63977050781,175.96977233887}, -- Garagem Mansão Franklin
 	{"RECICLAGEM S/A",179.07063293457,-2210.9807128906,5.9991369247437},
 	{"CORREIOS S/A",-289.3962097168,-890.03399658203,31.080615997314},
-	{"MADEIRA & CIA",-805.62573242188,5409.2807617188,33.991455078125},
-	{"UBER",-339.94155883789,-1023.3903198242,30.400903244019},
-	{"UberEATS",-337.74453735352,-1014.83984375,30.384658813477},
+	--{"MADEIRA & CIA",-805.62573242188,5409.2807617188,33.991455078125},
+	{"Táxi",-339.94155883789,-1023.3903198242,30.400903244019},
+	--{"UberEATS",-337.74453735352,-1014.83984375,30.384658813477},
 	{"Mecânico",407.83251953125,-1634.0269775391,29.291940689087},
 	{"Transportador de Valores",-5.2033176422119,-670.98248291016,32.338073730469},
-	{"FAZENDEIRO",1432.5661621094,1107.0783691406,114.24201965332},
-	{"MOTO CLUBE",970.89477539063,-122.97027587891,74.353141784668},
+	--{"FAZENDEIRO",1432.5661621094,1107.0783691406,114.24201965332},
+	--{"MOTO CLUBE",970.89477539063,-122.97027587891,74.353141784668},
 	--{"EMPRESARIO",-44.977939605713,-1113.3082275391,26.435800552368},
 	{"Bicicletário",-1188.5541992188,-1572.1044921875,4.3242697715759},
 	--{"planes",2123, 4805, 41.19},
@@ -313,13 +313,13 @@ cfg.garages = {
 	--{"helicopters",-745, -1468, 5},
 	--{"boats",-849.5, -1368.64, 1.6},
 	--{"boats",1538, 3902, 30.35}
-	{"Veículos PM",453.24819946289,-1019.3926391602,28.396326065063},
-  --{"Veículos ROTA",452.79330444336,-1015.3021240234,28.460147857666},
-  	{"Veículos Federal",452.83148193359,-1011.642578125,28.47452545166},
- 	{"heliponto PM",449.32727050781,-981.21728515625,43.691673278809},
-  	{"heliponto SAMU",313.24923706055,-1465.1434326172,46.509502410889},
+	{"Veículos FAE",453.24819946289,-1019.3926391602,28.396326065063},
+    --{"Veículos ROTA",452.79330444336,-1015.3021240234,28.460147857666},
+  	--{"Veículos Federal",452.83148193359,-1011.642578125,28.47452545166},
+ 	{"Heliponto FAE",449.32727050781,-981.21728515625,43.691673278809},
+  	{"Heliponto Hospital",313.24923706055,-1465.1434326172,46.509502410889},
   	{"Barco de Pesca",3846.2712402344,4446.5131835938,0.11954033374786},
-	{"hospital",299.75296020508,-1442.3692626953,29.79154586792}
+	{"Hospital",299.75296020508,-1442.3692626953,29.79154586792}
 }
 
 return cfg
