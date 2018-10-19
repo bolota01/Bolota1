@@ -45,6 +45,18 @@ cfg.market_types = {
     ["redgull"] = 12,
     ["lemonlimonad"] = 14
   },
+
+  ["Sorveteria"] = {
+    _config = {blipid=0, blipcolor=0},
+    ["sorvetem"] = 10,
+    ["sorvetec"] = 10,
+    ["sorvetef"] = 10,
+    ["sorveten"] = 10,
+    ["sorvetepa"] = 10,
+    ["sorveteplc"] = 10,
+    ["sorvetepl"] = 10,
+    ["sorvetepu"] = 10
+  },    
   ["drugstore"] = {
     _config = {blipid=51, blipcolor=2},
     ["medkit"] = 75,
@@ -79,6 +91,7 @@ cfg.market_types = {
 cfg.markets = {
   {"Feira",1042.3732910156,698.3154296875,158.85466003418},
   {"máquinas",436.37149047852,-986.49005126953,30.689599990845},
+  {"Sorveteria",218.52868652344,-955.46838378906,30.086919784546},
   {"food",128.1410369873, -1286.1120605469, 29.281036376953},
   {"redes",840.18249511719,-1028.2701416016,28.194843292236},
   {"Bar",-1377.556640625, -626.4072265625, 30.819574356079},

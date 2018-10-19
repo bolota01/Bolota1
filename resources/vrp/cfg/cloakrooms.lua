@@ -14,6 +14,31 @@ local uniforme_pm01 = { model = "S_M_Y_Cop_01" }
 local uniforme_pm02 = { model = "S_M_M_SnowCop_01" }
 local uniforme_pm02 = { model = "S_M_M_SnowCop_01" }
 
+local uniforme_random1 = { model = "a_m_m_tranvest_01" }
+local uniforme_random2 = { model = "g_f_y_vagos_01" }
+local uniforme_random3 = { model = "g_f_y_ballas_01" }
+local uniforme_random4 = { model = "a_f_y_vinewood_02" }
+local uniforme_random5 = { model = "s_m_y_winclean_01" }
+local uniforme_random6 = { model = "a_f_y_topless_01" }
+local uniforme_random7 = { model = "a_m_m_tourist_01" }
+local uniforme_random8 = { model = "csb_stripper_02" }
+local uniforme_random9 = { model = "cs_priest" }
+local uniforme_random10 = { model = "ig_priest" }
+local uniforme_random11 = { model = "a_m_y_musclbeac_01" }
+local uniforme_random12 = { model = "a_m_y_musclbeac_02" }
+local uniforme_random13 = { model = "s_m_y_mime" }
+local uniforme_random14 = { model = "u_m_y_mani" }
+local uniforme_random15 = { model = "a_m_y_juggalo_01" }
+local uniforme_random16 = { model = "a_m_y_hipster_01" }
+local uniforme_random17 = { model = "a_m_m_hillbilly_01" }
+local uniforme_random18 = { model = "a_m_o_genstreet_01" }
+local uniforme_random19 = { model = "s_m_y_dealer_01" }
+local uniforme_random20 = { model = "s_m_y_clown_01" }
+local uniforme_random21 = { model = "a_f_m_bodybuild_01" }
+local uniforme_random22 = { model = "a_m_m_acult_01" }
+local uniforme_random23 = { model = "a_f_m_downtown_01" }
+local uniforme_random24 = { model = "StrPerf01SMM" }
+
 
 
 -- cloakroom types (_config, map of name => customization)
@@ -21,6 +46,33 @@ local uniforme_pm02 = { model = "S_M_M_SnowCop_01" }
 ---- permissions (optional)
 ---- not_uniform (optional): if true, the cloakroom will take effect directly on the player, not as a uniform you can remove
 cfg.cloakroom_types = {
+  ["Skins"] = {
+    _config = { not_uniform = false },
+    ["Skin 1"] = uniforme_random1,
+    ["Skin 2"] = uniforme_random2,
+    ["Skin 3"] = uniforme_random3,
+    ["Skin 4"] = uniforme_random4,
+    ["Skin 5"] = uniforme_random5,
+    ["Skin 6"] = uniforme_random6,
+    ["Skin 7"] = uniforme_random7,
+    ["Skin 8"] = uniforme_random8,
+    ["Skin 9"] = uniforme_random9,
+    ["Skin 10"] = uniforme_random10,
+    ["Skin 11"] = uniforme_random11,
+    ["Skin 12"] = uniforme_random12,
+    ["Skin 13"] = uniforme_random13,
+    ["Skin 14"] = uniforme_random14,
+    ["Skin 15"] = uniforme_random15,
+    ["Skin 16"] = uniforme_random16,
+    ["Skin 17"] = uniforme_random17,
+    ["Skin 18"] = uniforme_random18,
+    ["Skin 19"] = uniforme_random19,
+    ["Skin 20"] = uniforme_random20,
+    ["Skin 21"] = uniforme_random21,
+    ["Skin 22"] = uniforme_random22,
+    ["Skin 23"] = uniforme_random23,
+    ["Skin 24"] = uniforme_random24
+  },
   ["Hospital"] = {
     _config = { permissions = {"medico.cloakroom"} },
     ["Paramédico"] = {
@@ -223,7 +275,7 @@ cfg.cloakrooms = {
   {"Uniformes Feminino",456.07196044922,-988.55352783203,30.689605712891},
   {"Tartaruga",4327.6328125,4528.4877929688,-0.22433114051819},
   --{"Águia",455.47723388672,-993.35894775391,30.689599990845},
-  --{"Coronel ROTA",455.29699707031,-988.36389160156,30.689599990845},
+  {"Skins",423.07284545898,-799.64221191406,29.502632141113},
   --{"ROTA",459.47399902344,-993.30609130859,30.689599990845},
   {"Hospital 2",269.77987670898,-1363.4407958984,24.537780761719},
   {"Escolher Sexo",-1042.0029296875,-2735.2404785156,20.169273376465},
