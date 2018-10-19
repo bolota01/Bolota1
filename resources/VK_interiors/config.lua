@@ -3,9 +3,9 @@ INTERIORS = {
     [1] = {id = 1, x = 253.95764160156, y = -1372.2917480469, z = 24.537784576416,  name = "Entrar no Hospital", destination = {2}},
 	[2] = {id = 2, x = 343.51895141602, y = -1398.6724853516, z = 32.509265899658,  name = "Sair do Hospital", destination = {1}},
     
-    -- FIB
-    [3] = {id = 3, x = 452.13629150391, y = -984.14849853516, z = 26.67423248291,  name = "Sair da Sala de Reuniões", destination = {4}},
-    [4] = {id = 4, x = 136.36924743652, y = -749.36987304688, z = 258.15179443359,  name = "Entrar na Sala de Reuniões", destination = {3}},
+    -- SALA DE INTERROGATÓRIO FAE
+    [3] = {id = 3, x = 452.13629150391, y = -984.14849853516, z = 26.67423248291,  name = "Sair da Sala", destination = {4}},
+    [4] = {id = 4, x = 2047.9940185547, y = 2969.8229980469, z = -67.30184173584,  name = "Entrar na Sala", destination = {3}},
 
     -- Cofre Banco Central
     [6] = {id = 6, x = 253.90010070801, y = 225.1960144043, z = 101.87580108643, name = "Sair do cofre", destination = {7}},
