@@ -225,6 +225,28 @@ html, body {
   transform: translateX(-50%);
 }
 
+.icon-work{
+  background: url(../img/work.png);
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icon-money{
+  background: url(../img/money.png);
+  width: 25px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-inline{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* request */
 .request-message {
   background: #2B2E36;
@@ -372,5 +394,17 @@ html, body {
   .player-status {
     left: 17.5%;
     bottom: 1%;
+  }
+
+  .player-status .progressbar{
+    height: 180px;
+  }
+
+  .div_job{
+    left: 22% !important;
+  }
+
+  .div_money{
+    left: 22% !important;
   }
 }

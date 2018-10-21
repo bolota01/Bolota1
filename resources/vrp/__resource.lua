@@ -72,6 +72,8 @@ files{
   "gui/img/queijo.png",
   "gui/img/copo.png",
   "gui/img/logo.png",
+  "gui/img/work.png",
+  "gui/img/money.png",
 
   "gui/fonts/bankgothic.ttf"
 }

@@ -101,7 +101,7 @@ export default class FabricComponent extends React.Component {
         var elements = [];
 
         for (var key in this.state.components){
-            elements.push(<ComponentCustom {...this.state.components[key]}/>);
+            elements.push(<ComponentCustom {...this.state.components[key]} key={this.state.components[key].name}/>);
         }
 
         return elements;
