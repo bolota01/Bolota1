@@ -63,7 +63,7 @@ cfg.item_transformers = {
     permissions = {"harvest.weed"}, -- you can add permissions
     r=0,g=200,b=0, -- color
     max_units=200,
-    units_per_minute=5,
+    units_per_minute=50,
     x=1060.5489501953,y=-3201.4318847656,z=-39.161098480225, -- pos
     radius=7.5, height=1.5, -- area
     recipes = {
@@ -84,7 +84,7 @@ cfg.item_transformers = {
     permissions = {"harvest.metanfetamina"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=5,
+    units_per_minute=50,
     x=1005.6223754883,y=-3195.7946777344,z=-38.9931640625, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
@@ -105,7 +105,7 @@ cfg.item_transformers = {
     permissions = {"process.metanfetamina"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
     x=1005.7634887695,y=-3200.1235351563,z=-38.519580841064, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
@@ -128,7 +128,7 @@ cfg.item_transformers = {
     permissions = {"harvest.cocaina"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=5,
+    units_per_minute=50,
     x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
@@ -149,7 +149,7 @@ cfg.item_transformers = {
     permissions = {"process.cocaina"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
     x=510.53283691406,y=-1823.2603759766,z=28.502973556519, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
@@ -220,15 +220,15 @@ cfg.item_transformers = {
     r=0,g=200,b=0, ---cores
     max_units=1000,
     units_per_minute=1000,
-    x=-1056.4289550781,y=-242.60389709473,z=44.021060943604, -- coordenas mudas aqui
+    x=461.22024536133,y=-1573.7008056641,z=32.792259216309, -- coordenas mudas aqui
     radius=2.5, height=1.5, -- area
     recipes = {
       ["Lavar Dinheiro"] = { -- action name
         description="Lavagem de Dinheiro", -- action description
         in_money=0, -- money taken per unit
-        out_money=350, -- money earned per unit
+        out_money=600, -- money earned per unit
         reagents={
-          ["dirty_money"] = 500
+          ["dirty_money"] = 1000
         }, -- items taken per unit
         products={}, -- items given per unit
       }
@@ -241,7 +241,7 @@ cfg.item_transformers = {
     permissions = {"pick.toclonecards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=2,
+    units_per_minute=45,
     x=261.61892700195,y=204.29025268555,z=110.28720855713, -- Localização    
     radius=2.5, height=1.5, -- area
     recipes = {
@@ -262,7 +262,7 @@ cfg.item_transformers = {
     permissions = {"clone.cards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=45, -- unidades que o transformador ganha de volta por minuto
     x=-1054.0205078125,y=-230.26893615723,z=44.020957946777, -- pos -119.17678833008,-1486.1040039063,36.98205947876
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
@@ -371,8 +371,8 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=1, -- unidades maximas do item
     units_per_minute=1, -- unidades que o transformador ganha de volta por minuto
-    x=-1905.5899658203,y=-573.38714599609,z=19.097213745117, -- pos
-    radius=5.5, height=1.5, -- area
+    x=-1911.6207275391,y=-573.35174560547,z=19.097230911255, -- pos
+    radius=1.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Pegar Carteira OAB"] = { -- action name
         description="Carteira OAB.", -- action description
@@ -391,7 +391,7 @@ cfg.item_transformers = {
     permissions = {"process.weed"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
     x=443.82019042969,y=-1737.138671875,z=29.220277786255, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu

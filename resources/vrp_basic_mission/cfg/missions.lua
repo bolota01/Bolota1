@@ -359,15 +359,15 @@ cfg.delivery = {
     chance = 1,
     positions = vendapeixe_position,
     items = {
-      ["carne_tartaruga"] = {5,9,14},
-      ["casco_tartaruga"] = {0,5,10}
+      ["carne_tartaruga"] = {10,20,150},
+      ["casco_tartaruga"] = {10,20,150}
     }
   },
   ["mission.delivery.cartoes"] = {
     chance = 1,
     positions = common_delivery_positions,
     items = {
-      ["clonedcards"] = {10,20,35}
+      ["clonedcards"] = {10,20,200}
     }
   },
   ["mission.delivery.smg"] = {
