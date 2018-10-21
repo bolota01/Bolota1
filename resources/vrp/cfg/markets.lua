@@ -57,7 +57,7 @@ cfg.market_types = {
     ["sorvetepl"] = 10,
     ["sorvetepu"] = 10
   },
-  ["Mercado Entregador"]
+  ["Mercado Entregador"] = {
     _config = {blipid=0, blipcolor=0, permissions={"delivery.shop"}},
     ["gocagola"] = 10,
     ["pizza"] = 5 
