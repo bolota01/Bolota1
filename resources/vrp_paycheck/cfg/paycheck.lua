@@ -8,7 +8,7 @@ cfg.post = "." -- message that will show after payment
 
 cfg.bank = true -- if true money goes to bank, false goes to wallet
 
-cfg.minutes_paycheck = 60 -- minutes between payment for paycheck
+cfg.minutes_paycheck = 30 -- minutes between payment for paycheck
 cfg.minutes_bill = 60 -- minutes between withdrawal for bill
 
 cfg.paycheck_title_picture = "Banco do Brasil" -- define title for paycheck notification picture
@@ -17,35 +17,44 @@ cfg.bill_title_picture = "Compania de Seguro" -- define title for bill notificat
 cfg.bill_picture = "CHAR_MP_MORS_MUTUAL" -- define bill notification picture want's to display
 
 cfg.paycheck = { -- ["permission"] = paycheck
-  ["soldado.paycheck"] = 2000,
-  ["cabo.paycheck"] = 2000,
-  ["sargento.paycheck"] = 2000,
-  ["subtenente.paycheck"] = 2000,
-  ["tenente.paycheck"] = 2000,
-  ["capitao.paycheck"] = 2000,
-  ["major.paycheck"] = 2000,
-  ["tenentecoronel.paycheck"] = 2000,
-  ["coronel.paycheck"] = 2000,
-  ["comandantegeral.paycheck"] = 2000,
-  ["coronelrota.paycheck"] = 2000,
+  --pm
+  ["recruta.paycheck"] = 3000,
+  ["soldado.paycheck"] = 4000,
+  ["cabo.paycheck"] = 5000,
+  ["sargento.paycheck"] = 6000,
+  --["subtenente.paycheck"] = 2000,
+  ["tenente.paycheck"] = 7000,
+  ["capitao.paycheck"] = 8000,
+  --["major.paycheck"] = 2000,
+  --["tenentecoronel.paycheck"] = 2000,
+  ["coronel.paycheck"] = 9000,
+  ["comandantegeral.paycheck"] = 11000,
+  --["coronelrota.paycheck"] = 2000,
   ["soldadorota.paycheck"] = 2000,
   ["policiafederal.paycheck"] = 15000,
-  ["aguia.paycheck"] = 6000,
-  ["samuchefe.paycheck"] = 2000,
-  ["doutor.paycheck"] = 2000,
-  ["medicochefe.paycheck"] = 2000,
-  ["medico.paycheck"] = 2000,
-  ["paramedico.paycheck"] = 2000,
-  ["socorrista.paycheck"] = 2000,
---[""] = 0,
-  ["taxi.paycheck"] = 800,
-  ["repair.paycheck"] = 800,
-  ["bankdriver.paycheck"] = 1200,
-  ["diretorchefe.paycheck"] = 15000,
-  ["delivery.paycheck"] = 500
+  ["aguia.paycheck"] = 10000,
+  --samu
+  --["samuchefe.paycheck"] = 2000,
+  ["doutor.paycheck"] = 11000,
+  ["medicochefe.paycheck"] = 8000,
+  ["medico.paycheck"] = 6000,
+  ["paramedico.paycheck"] = 5000,
+  ["socorrista.paycheck"] = 3000,
+  --legal
+  ["minerar.paycheck"] = 1000,
+  ["delivery.paycheck"] = 1000,
+  ["gari.paycheck"] = 1000,
+  ["advogado.paycheck"] = 1000,
+  ["taxi.paycheck"] = 1000,
+  ["repair.paycheck"] = 1000,
+  ["bankdriver.paycheck"] = 1000,
+  ["diretorchefe.paycheck"] = 1000,
+  ["delivery.paycheck"] = 1000
 }
 
 cfg.bill = { -- ["permission"] = withdrawal
+  --pm
+  ["recruta.paycheck"] = 200,
   ["soldado.paycheck"] = 200,
   ["cabo.paycheck"] = 200,
   ["sargento.paycheck"] = 200,
@@ -58,20 +67,25 @@ cfg.bill = { -- ["permission"] = withdrawal
   ["comandantegeral.paycheck"] = 200,
   ["coronelrota.paycheck"] = 200,
   ["soldadorota.paycheck"] = 200,
-  ["policiafederal.paycheck"] = 1500,
-  ["aguia.paycheck"] = 600,
-  ["samuchefe.paycheck"] = 2000,
-  ["doutor.paycheck"] = 2000,
-  ["medicochefe.paycheck"] = 2000,
-  ["medico.paycheck"] = 2000,
-  ["paramedico.paycheck"] = 2000,
-  ["socorrista.paycheck"] = 2000,
---[""] = 0,
-  ["taxi.paycheck"] = 800,
-  ["repair.paycheck"] = 800,
-  ["bankdriver.paycheck"] = 120,
-  ["diretorchefe.paycheck"] = 150,
-  ["delivery.paycheck"] = 500
+  ["policiafederal.paycheck"] = 200,
+  ["aguia.paycheck"] = 200,
+  --samu
+  --["samuchefe.paycheck"] = 2000,
+  ["doutor.paycheck"] = 200,
+  ["medicochefe.paycheck"] = 200,
+  ["medico.paycheck"] = 200,
+  ["paramedico.paycheck"] = 200,
+  ["socorrista.paycheck"] = 200,
+  --legal
+  ["minerar.paycheck"] = 200,
+  ["delivery.paycheck"] = 200,
+  ["gari.paycheck"] = 200,
+  ["advogado.paycheck"] = 200,
+  ["taxi.paycheck"] = 200,
+  ["repair.paycheck"] = 200,
+  ["bankdriver.paycheck"] = 200,
+  ["diretorchefe.paycheck"] = 200,
+  ["delivery.paycheck"] = 200
 }
 
 return cfg

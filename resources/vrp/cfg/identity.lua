@@ -19,11 +19,11 @@ cfg.phone_format = "D8D-DDD"
 -- (I know, it's a lot of names for a little feature)
 -- (cf: http://names.mongabay.com/most_common_surnames.htm)
 cfg.random_first_names = {
-  "Sem"
+  "Registro"
 }
 
 cfg.random_last_names = {
-  "Registro"
+  "Inválido"
 }
 
 return cfg

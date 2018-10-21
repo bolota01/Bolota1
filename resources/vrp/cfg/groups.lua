@@ -262,7 +262,7 @@ cfg.groups = {
     "police.fine",
     "police.announce",
     "police.askid",
-    "soldado.paycheck",
+    "recruta.paycheck",
     "recruta.weapons",
     "-police.store_weapons",
     "-police.seizable" -- negative permission, police can't seize itself, even if another group add the permission 
@@ -864,6 +864,7 @@ cfg.groups = {
     "vehicle.replace",
 	"repair.paycheck",
 	"mission.repair.satellite_dishes",
+    "mission.repair.wind_turbines",
     "repair.service",
     "shop.mecanico",
 	"repair.garagem"
@@ -872,11 +873,20 @@ cfg.groups = {
   ["Minerador de Diamante"] = {
     _config = { gtype = "job" },
     "minerar.diamante",
+    "minerar.paycheck",
     "lapidar.diamante",
     "vender.diamante",
     "shop.diamante"
   },
-  --GARI
+  -- Motoboy
+  ["Motoboy"] = {
+    _config = { gtype = "job" },
+    "mission.delivery.food",
+    "delivery.paycheck",
+    "delivery.garagem",
+    "delivery.shop"
+  },
+  -- GARI
   ["Lixeiro"] = {
     _config = { gtype = "job" },
     "missao.gari.coleta",
@@ -909,7 +919,8 @@ cfg.groups = {
   --Advogado  
   ["Advogado"] = {
     _config = { gtype = "job" },
-    "carteira.oab"
+    "carteira.oab",
+    "advogado.paycheck",
   },
   --Transporte de Valores  
   ["Transportador de Valores"] = {
@@ -1024,6 +1035,7 @@ cfg.selectors = {
   ["Agencia de Empregos"] = {
     _config = {x = -268.363739013672, y = -957.255126953125, z = 31.22313880920410, blipid = 351, blipcolor = 47},
 	 "Mecânico",
+     "Motoboy",
      "Minerador de Diamante",
      "Lixeiro",
      --"Correios",

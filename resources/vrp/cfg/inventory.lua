@@ -42,7 +42,7 @@ cfg.vehicle_chest_weights = {
   ["sultanRS"] = 30,
   ["italigtb"] = 30,
   ["burrito3"] = 100,
-  ["surfer"] = 100,
+  ["surfer"] = 60,
   ["sanctus"] = 10,
   ["avarus"] = 10,
   ["daemon"] = 10,
@@ -52,7 +52,17 @@ cfg.vehicle_chest_weights = {
   ["wolfsbane"] = 10,
   ["zombiea"] = 10,
   ["zombieb"] = 10,
-  ["chimera"] = 10
+  ["chimera"] = 10,
+  ["dinghy"] = 50,
+  ["dinghy2"] = 50,
+  ["supervolito"] = 750,
+  ["volatus"] = 1000,
+  ["havok"] = 300,
+  ["luxor"] = 3000,
+  ["mammatus"] = 1000,
+  ["microlight"] = 100,
+  ["cuban800"] = 500,
+  ["enduro"] = 10
 }
 
 return cfg

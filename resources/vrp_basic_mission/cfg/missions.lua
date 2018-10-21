@@ -15,8 +15,8 @@ cfg.lang = "en"
 cfg.repair = {
   ["mission.repair.satellite_dishes"] = { -- permissao
     chance = 1, -- quantidade de lados do dado 1
-    title = "Missão de reparo", -- nome
-    steps = 2,
+    title = "Antenas parabólicas", -- nome
+    steps = 3,
     positions = {
       {1985.55017089844,2929.42211914063,46.5480003356934},
       {1965.38012695313,2917.47241210938,56.1684608459473},
@@ -40,7 +40,15 @@ cfg.repair = {
       {2127.35888671875,2918.94116210938,47.7327079772949},
       {2137.28881835938,2900.53442382813,57.263298034668},
       {2137.61767578125,2906.61645507813,59.770336151123},
-      {2144.6728515625,2900.85595703125,59.7593727111816},
+      {2144.6728515625,2900.85595703125,59.7593727111816}
+    },
+    reward = 2250
+  },
+  ["mission.repair.wind_turbines"] = {
+    chance = 1,
+    steps = 2,
+    title = "Turbinas eólicas",
+    positions = {
       {2363.77880859375,2288.63891601563,94.252693176269},
       {2347.873046875,2237.5771484375,99.3171691894531},
       {2330.4150390625,2114.89965820313,108.288673400879},
@@ -50,9 +58,9 @@ cfg.repair = {
       {2307.3681640625,1972.44323730469,131.318496704102},
       {2267.27758789063,1917.859375,123.269912719727},
       {2299.90209960938,1857.3779296875,106.976081848145},
-      {2356.48413085938,1836.69982910156,102.337211608887}      
+      {2356.48413085938,1836.69982910156,102.337211608887}
     },
-    reward = 350
+    reward = 1500
   }
 }
 cfg.bankdriver = {
@@ -82,10 +90,10 @@ cfg.bankdriver = {
       {-660.727661132813,-853.970336914063,24.484073638916},
       {-1109.6724853516,-1690.8194580078,4.3749823570251}
     },
-    reward = 500
+    reward = 1875
   },
   ["mission.bankdriver.moneybank2"] = {
-    chance = 5,
+    chance = 2,
     title = "Transferencia de Dinheiro",
     steps = 1,
     positions = {
@@ -97,7 +105,7 @@ cfg.bankdriver = {
     {-351.534,-49.529,49.042},
     {241.727,220.706,106.286}
     },
-    reward = 550
+    reward = 1875
   }
   
 }
@@ -297,14 +305,14 @@ cfg.delivery = {
     positions = common_delivery_positions,
     chance = 1,
     items = {
-      ["pizza"] = {0,5,60},
-      ["gocagola"] = {0,5,30}
+      ["pizza"] = {7,20,60},
+      ["gocagola"] = {7,20,30}
     }
   },
   ["mission.delivery.weed"] = {
-    chance = 5,
+    chance = 3,
     items = {
-      ["cannabis"] = {10,20,200}
+      ["cannabis"] = {10,20,400}
     },
     positions = {
 	    {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -313,9 +321,9 @@ cfg.delivery = {
 	  }
   },
   ["mission.delivery.cocaina"] = {
-    chance = 5,
+    chance = 3,
     items = {
-      ["cocaina"] = {10,20,200}
+      ["cocaina"] = {10,20,400}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -324,9 +332,9 @@ cfg.delivery = {
     }
   },
   ["mission.delivery.metanfetamina"] = {
-    chance = 5,
+    chance = 3,
     items = {
-      ["metanfetamina"] = {10,20,250}
+      ["metanfetamina"] = {10,20,400}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -335,39 +343,39 @@ cfg.delivery = {
     }
   },  
   ["mission.delivery.pot"] = {
-    chance = 5,
+    chance = 1,
     positions = common_delivery_positions,
     items = {
       ["cannabis"] = {10,20,200}
     }
   },
   ["mission.delivery.pot2"] = {
-    chance = 5,
+    chance = 1,
     positions = common_delivery_positions,
     items = {
       ["cocaina"] = {10,20,200}
     }
   },
   ["mission.delivery.pot3"] = {
-    chance = 5,
+    chance = 1,
     positions = common_delivery_positions,
     items = {
-      ["metanfetamina"] = {10,20,250}
+      ["metanfetamina"] = {10,20,200}
     }
   },  
   ["entrega.tartaruga"] = {
     chance = 1,
     positions = vendapeixe_position,
     items = {
-      ["carne_tartaruga"] = {10,20,15},
-      ["casco_tartaruga"] = {1,12,15}
+      ["carne_tartaruga"] = {3,20,700},
+      ["casco_tartaruga"] = {1,13,700}
     }
   },
   ["mission.delivery.cartoes"] = {
     chance = 1,
     positions = common_delivery_positions,
     items = {
-      ["clonedcards"] = {10,20,20}
+      ["clonedcards"] = {10,20,400}
     }
   },
   ["mission.delivery.smg"] = {
@@ -418,7 +426,7 @@ cfg.carjack = {
 -- EMERGENCY
   cfg.emergency = {
   ["mission.emergency.transfer"] = {
-    chance = 10,
+    chance = 5,
     title = "Transferência de Paciente",
     steps = 2,
     positions = {
@@ -429,7 +437,7 @@ cfg.carjack = {
   {-868.521179199219,-297.945251464844,39.3625373840332},
   {-681.840637207031,292.777496337891,81.8317031860352}
     },
-    reward = 450
+    reward = 1000
   }
 }
 
@@ -504,7 +512,7 @@ cfg.UBER = {
     {-1033.44,-2730.24,19.6868},
     {-1018.67,-2732,13.2687}
   },
-    reward = 400
+    reward = 1875
   }
 }
 
@@ -562,7 +570,7 @@ cfg.gari = {
     text = "Vá para a lixeira.",
     positions = gari_localizacoes,
     steps = 1,
-    reward = 400
+    reward = 1875
     }
   
 }
@@ -570,7 +578,7 @@ cfg.gari = {
 -- POLICE 
 cfg.police = {
   ["mission.police.transfer"] = {
-    chance = 10,
+    chance = 5,
     title = "Transferência de prisioneiro",
     text = "Transfira o prisioneiro.",
     steps = 2,
@@ -578,7 +586,7 @@ cfg.police = {
   {854.080261230469,-1280.93505859375,26.1412010192871},
   {452.274810791016,-996.933715820313,25.4266204833984}
     },
-    reward = 600
+    reward = 1000
   },
   ["mission.police.patrol"] = {
     chance = 5,
@@ -593,7 +601,7 @@ cfg.police = {
   {219.737426757813,205.291076660156,105.063316345215},
   {152.946182250977,-1029.80944824219,28.8697566986084}
     },
-    reward = 650 
+    reward = 1000 
   }
 }
 

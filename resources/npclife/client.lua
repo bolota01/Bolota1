@@ -11,24 +11,24 @@ local PlayingAnim = false
 
 local ShopClerk = {
   -- ID: id of NPC | name: Name of Blip | BlipID: Icone of Blip | VoiceName: NPC Talk When near it | Ambiance: Ambiance of Shop | Weapon: Hash of Weapon | modelHash: Model | X: Position x | Y: Position Y | Z: Position Z | heading: Where Npc look
-	{id = 1, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "mp_m_shopkeep_01", x = -2511.16479492188, y = 3616.90478515625, z = 13.6422147750854, heading = 245.000457763672}, 
-	{id = 2, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "mp_m_shopkeep_01", x = 24.392505645752, y = -1345.41369628906, z = 29.4970207214355, heading = 264.900115966797},
-	{id = 3, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "mp_m_shopkeep_01", x = -47.3110542297363, y = -1758.62475585938, z = 29.4209995269775, heading = 48.1558074951172},
-	{id = 4, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = 841.843566894531, y = -1035.70556640625, z = 28.1948642730713, heading = 3.31448912620544},
+	{id = 1, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", modelHash = "mp_m_shopkeep_01", x = -2511.16479492188, y = 3616.90478515625, z = 13.6422147750854, heading = 245.000457763672}, 
+	{id = 2, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", modelHash = "mp_m_shopkeep_01", x = 24.392505645752, y = -1345.41369628906, z = 29.4970207214355, heading = 264.900115966797},
+	{id = 3, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", modelHash = "mp_m_shopkeep_01", x = -47.3110542297363, y = -1758.62475585938, z = 29.4209995269775, heading = 48.1558074951172},
+	{id = 4, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "s_m_y_ammucity_01", x = 841.843566894531, y = -1035.70556640625, z = 28.1948642730713, heading = 3.31448912620544},
 	-- npc para pegar cartões clonáveis
-	{id = 5, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "g_m_m_armboss_01", x = 261.61892700195, y = 204.29025268555, z = 110.28720855713, heading = 3.31448912620544},
+	{id = 5, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "g_m_m_armboss_01", x = 261.61892700195, y = 204.29025268555, z = 110.28720855713, heading = 3.31448912620544},
 	-- npc para clonar cartões
-	{id = 6, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "g_m_m_armgoon_01", x = -1054.0205078125, y = -230.26893615723, z = 44.020957946777, heading = 220.000457763672},
-	-- npc para vender cartões clonados
-	{id = 7, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "a_m_y_vindouche_01", x = -621.35168457031, y = 36.309566497803, z = 43.566032409668, heading = 245.000457763672},
-    -- npc para lavagem de dinheiro
-	{id = 8, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "ig_lazlow", x = -1056.4289550781, y = -242.60389709473, z = 44.021060943604, heading = 3.31448912620544},
-	-- npc processamento de maconha
-	{id = 9, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "ig_claypain", x = -785.97308349609, y = 580.78576660156, z = 126.80484771729, heading = 48.1558074951172},
-	-- npc processamento de cocaina
-	{id = 10, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "g_m_y_famfor_01", x = 473.24905395508, y = -1686.6027832031, z = 29.381669998169, heading = 48.1558074951172},
+	{id = 6, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "g_m_m_armgoon_01", x = -1054.0205078125, y = -230.26893615723, z = 44.020957946777, heading = 220.000457763672},
+	-- npc cocaina
+	{id = 7, modelHash = "mp_f_cocaine_01", x = 1099.6342773438, y = -3194.3330078125, z = -38.993465423584, heading = 90.000457763672},
+    -- npc para ammunation
+	{id = 8, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "s_m_y_ammucity_01", x = 22.947477340698, y = -1105.4387207031, z = 29.797031402588, heading = 167.900115966797},
+	-- npc sorveteria
+	{id = 9, VoiceName = "GENERIC_HI", modelHash = "mp_m_shopkeep_01", x = 216.77665710449, y = -953.86437988281, z = 30.086933135986, heading = 245.000457763672},
+	-- npc cocaina
+	{id = 10, modelHash = "mp_f_cocaine_01", x = 1090.2777099609, y = -3196.6728515625, z = -38.993423461914, heading = 19.1558074951172},
 	-- npc processamento de metanfetamina
-	{id = 11, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x5EF9FEC4, modelHash = "ig_rashcosvki", x = 1208.3706054688, y = -3116.1745605469, z = 5.5403265953064, heading = 48.1558074951172},
+	{id = 11, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "ig_rashcosvki", x = 1208.3706054688, y = -3116.1745605469, z = 5.5403265953064, heading = 48.1558074951172},
 }
 
 -------------------------------------------------------------------------------------------------
