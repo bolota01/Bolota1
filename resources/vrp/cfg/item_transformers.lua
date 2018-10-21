@@ -220,7 +220,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, ---cores
     max_units=1000,
     units_per_minute=1000,
-    x=1122.6433105469,y=,-3195.1062011719,z=-40.402393341064, -- coordenas mudas aqui
+    x=1122.6433105469,y=-3195.1062011719,z=-40.402393341064, -- coordenas mudas aqui
     radius=2.5, height=1.5, -- area
     recipes = {
       ["Lavar Dinheiro"] = { -- action name
