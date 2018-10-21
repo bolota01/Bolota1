@@ -10,7 +10,13 @@ local cfg = module("vrp_job_display", "cfg/display")
 AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
   if first_spawn then
     -- add job display
-    vRPclient.setDiv(source,{"job",cfg.display_css,vRP.getUserGroupByType({user_id,"job"})})
+    local job_name = vRP.getUserGroupByType({user_id,"job"})
+
+    if job_name == nil or job_name == "" then
+      job_name = "Nenhum"
+    end
+
+    vRPclient.setDiv(source,{"job",cfg.display_css,"<div class=\"icon-work\"> </div><div class=\"icon-inline\">  " ..job_name.. "</div>"})
   end
 end)
 
@@ -18,6 +24,6 @@ end)
 AddEventHandler("vRP:playerJoinGroup", function(user_id, group, gtype)
   local player = vRP.getUserSource({user_id})
   if gtype == "job" then 
-	vRPclient.setDivContent(player,{"job",group})
+	vRPclient.setDivContent(player,{"job","<div class=\"icon-work\"> </div><div class=\"icon-inline\">  " ..group.. "</div>"})
   end
 end)
