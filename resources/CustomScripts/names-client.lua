@@ -31,7 +31,7 @@ function DrawText3D(x,y,z, text, r,g,b) -- some useful function, use it if you w
     end
 end
  
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
     while true do
         for i=0,99 do
             N_0x31698aa80e0223f8(i)
@@ -67,3 +67,4 @@ Citizen.CreateThread(function()
         Citizen.Wait(0)
     end
 end)
+]]--
