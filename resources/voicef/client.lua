@@ -54,13 +54,7 @@ Citizen.CreateThread(function()
 						green = 0
 						blue = 0
 						DrawMarker(25,x2,y2,z2 - takeaway , 0, 0, 0, 0, 0, 0, 1.0, 1.0, 10.3, 0, 519, 0, 105, 0, 0, 2, 0, 0, 0, 0)
-					else
-						red = 255
-						green = 255
-						blue = 255
-						DrawMarker(25,x2,y2,z2 - takeaway, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 10.3, 0, 519, 0, 0, 95, 0, 2, 0, 0, 0, 0)
-						DrawMarker(25, x2,y2,z2 - takeaway, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 0.5, 55, 160, 205, 150, 0, 0, 2, 0, 0, 0, 0)
-					end
+                    end
                 end
 
                 if ((distance < playerNamesDist)) then
@@ -70,11 +64,6 @@ Citizen.CreateThread(function()
 							green = 0
 							blue = 0
 							DrawMarker(25,x2,y2,z2 - takeaway, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 10.3, 0, 519, 0, 105, 0, 0, 2, 0, 0, 0, 0)
-						else
-							red = 255
-							green = 255
-							blue = 255
-							DrawMarker(25, x2,y2,z2 - takeaway, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 0.5, 55, 160, 205, 150, 0, 0, 2, 0, 0, 0, 0)
 						end
                     end
                 end  
