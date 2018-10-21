@@ -26,5 +26,21 @@ INTERIORS = {
 	-- Veículos Emergenciais SAMU
 	[22] = {id = 22, x = 275.24313354492, y = -1361.2371826172, z = 24.537805557251,  name = "Voltar para o Hospital", destination = {23}},
 	[23] = {id = 23, x = 307.41171264648, y = -1433.6192626953, z = 29.932350158691,  name = "Ir para Veículos SAMU", destination = {22}},
+
+    -- Lavagem de Dinheiro
+    [24] = {id = 24, x =  461.22024536133, y = -1573.7008056641, z = 32.792259216309,  name = "Entrar na Lavagem", destination = {25}},
+    [25] = {id = 25, x = 1138.3663330078, y = -3198.2087402344, z = -39.665725708008,  name = "Sair da Lavagem", destination = {24}},
+
+    -- Maconha
+    [26] = {id = 26, x = 648.59875488281, y = 2720.3842773438, z = 41.850166320801,  name = "Entrar", destination = {27}},
+    [27] = {id = 27, x = 1065.1346435547, y = -3183.9592285156, z = -39.163822174072,  name = "Sair", destination = {26}},
+
+    -- Meta
+    [28] = {id = 28, x = 675.01324462891, y = -2726.5373535156, z = 7.1710538864136,  name = "Entrar", destination = {29}},
+    [29] = {id = 29, x = 997.65112304688, y = -3200.8054199219, z = -36.393646240234,  name = "Sair", destination = {28}},
+
+    -- Coca
+    [30] = {id = 30, x = 1195.9567871094, y = -3254.3439941406, z = 7.0951871871948,  name = "Entrar", destination = {31}},
+    [31] = {id = 31, x = 1089.02734375, y = -3188.8713378906, z = -38.993465423584,  name = "Sair", destination = {30}},
 	
 }

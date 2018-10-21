@@ -107,6 +107,7 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
     "police.door",
     "police.menu",
     "coronel.cloakroom",
@@ -149,6 +150,7 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
     "police.door",
     "police.menu",
     "rota.cloakroom",
@@ -191,6 +193,7 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
     "police.door",
     "boss_lspd.pc",
     "police.menu",
@@ -234,6 +237,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "police.menu",
     "pm.cloakroom",
@@ -276,6 +281,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "police.menu",
     "pm.cloakroom",
@@ -318,6 +325,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "police.menu",
     "pm.cloakroom",
@@ -360,6 +369,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "police.menu",
     "pm.cloakroom",
@@ -402,6 +413,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "coronel.door",
     "police.menu",
@@ -445,6 +458,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "coronel.door",
     "police.menu",
@@ -488,6 +503,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "coronel.door",
     "boss_lspd.pc",
@@ -532,6 +549,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "boss_lspd.pc",
     "coronel.door",
@@ -576,6 +595,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "coronel.door",
     "boss_lspd.pc",
@@ -621,6 +642,8 @@ cfg.groups = {
     "police.drag",
     "coronel.door",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "boss_lspd.pc",
     "police.menu",
@@ -665,6 +688,8 @@ cfg.groups = {
     "police.drag",
     "coronel.door",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "boss_lspd.pc",
     "police.menu",
@@ -708,6 +733,8 @@ cfg.groups = {
     "police.easy_cuff",
     "police.drag",
     "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
     "police.door",
     "police.menu",
     "aguia.cloakroom",
@@ -740,6 +767,7 @@ cfg.groups = {
   ["Samu Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "emergency.service",
@@ -755,6 +783,7 @@ cfg.groups = {
     ["Doutor"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "emergency.service",
@@ -770,6 +799,7 @@ cfg.groups = {
   ["Médico Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "bossemergency.service",
@@ -785,6 +815,7 @@ cfg.groups = {
   ["Médico"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "emergency.service",
@@ -799,6 +830,7 @@ cfg.groups = {
   ["Paramédico"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "emergency.service",
@@ -813,6 +845,7 @@ cfg.groups = {
   ["Socorrista"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
     "emergency.service",
@@ -831,7 +864,6 @@ cfg.groups = {
     "vehicle.replace",
 	"repair.paycheck",
 	"mission.repair.satellite_dishes",
-	"mission.repair.wind_turbines",
     "repair.service",
     "shop.mecanico",
 	"repair.garagem"
@@ -839,14 +871,13 @@ cfg.groups = {
   --Minerador de Diamante  
   ["Minerador de Diamante"] = {
     _config = { gtype = "job" },
-    "veiculo.minerador",
-    "minerar",
-    "minerador.uniforme",
-    "processar.diamante",
-    "vender.diamante"
+    "minerar.diamante",
+    "lapidar.diamante",
+    "vender.diamante",
+    "shop.diamante"
   },
   --GARI
-  ["Gari"] = {
+  ["Lixeiro"] = {
     _config = { gtype = "job" },
     "missao.gari.coleta",
     "gari.veiculo",
@@ -867,14 +898,13 @@ cfg.groups = {
     "correios.uniforme"
   },
   --UBER
-  ["UBER"] = {
+  ["Táxi"] = {
     _config = { gtype = "job" },
-    "UBER.service",
-    "UBER.paycheck",
-    "uber.uniforme",
+    "taxi.service",
+    "taxi.paycheck",
     "mission.UBER.passenger",
-    "UBER.garagem",
-    "UBER.paycheck"
+    "taxi.garagem",
+    "taxi.paycheck"
   },
   --Advogado  
   ["Advogado"] = {
@@ -922,6 +952,7 @@ cfg.groups = {
     "tartaruga.garagem",
     "tartaruga.cloakroom",
     "shop.tartaruga",
+    "entrega.tartaruga",
 	"process.Tartaruga"
   },
   ["Traficante de Armas"] = {
@@ -943,6 +974,7 @@ cfg.groups = {
     _config = { gtype = "job" },
 	"-player.blips",
 	"sell.clonedcards",
+    "mission.delivery.cartoes",
 	"pick.toclonecards",
 	"clone.cards",
 	"hacker.hack"
@@ -993,16 +1025,16 @@ cfg.selectors = {
     _config = {x = -268.363739013672, y = -957.255126953125, z = 31.22313880920410, blipid = 351, blipcolor = 47},
 	 "Mecânico",
      "Minerador de Diamante",
-     "Gari",
-     "Correios",
-     "UBER",
+     "Lixeiro",
+     --"Correios",
+     "Táxi",
      "Advogado",
      "Transportador de Valores",
      "Desempregado"
   },
   ["Empregos Ilegais"] = {
     _config = {x = 707.324462890625, y = -966.986511230469, z = 30.4128551483154, blipid = 351, blipcolor = 49},
-	 "Ladrão de Carros",
+	 --"Ladrão de Carros",
 	 "Traficante de Metanfetamina",
 	 "Traficante de Maconha",
 	 "Traficante de Tartaruga",

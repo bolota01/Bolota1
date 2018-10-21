@@ -64,7 +64,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=5,
-    x=2208.777,y=5578.235,z=53.735, -- pos
+    x=1060.5489501953,y=-3201.4318847656,z=-39.161098480225, -- pos
     radius=7.5, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
@@ -85,7 +85,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=5,
-    x=79.686859130859,y=3705.6840820313,z=41.077156066895, -- Localização
+    x=1005.6223754883,y=-3195.7946777344,z=-38.9931640625, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -106,7 +106,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
-    x=1208.3706054688,y=-3116.1745605469,z=5.5403265953064, -- pos
+    x=1005.7634887695,y=-3200.1235351563,z=-38.519580841064, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -118,7 +118,6 @@ cfg.item_transformers = {
 	      },
         products={ -- items given per unit
           ["metanfetamina"] = 2,
-		      ["dirty_money"] = 10
         }
       }
     }
@@ -130,7 +129,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=5,
-    x=-41.372623443604,y=3033.3776855469,z=41.020195007324, -- Localização
+    x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -151,7 +150,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
-    x=473.24905395508,y=-1686.6027832031,z=29.381669998169, -- pos
+    x=510.53283691406,y=-1823.2603759766,z=28.502973556519, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -174,7 +173,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
-    x=4095.5485839844,y=4464.8696289063,z=1.9822434186935, -- pos
+    x=4287.8818359375,y=4515.2158203125,z=-13.030641555786, -- pos
     radius=5.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Pescar"] = { -- action name
@@ -190,9 +189,9 @@ cfg.item_transformers = {
       }
     }
   },
-  -- VENDER TARTARUGA
+  -- LIMPAR TARTARUGA
   {
-    name="Vender Tartaruga", -- menu name
+    name="Limpar Tartaruga", -- menu name
     permissions = {"process.Tartaruga"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
@@ -200,7 +199,7 @@ cfg.item_transformers = {
     x=-119.17678833008,y=-1486.1040039063,z=36.98205947876, -- pos -119.17678833008,-1486.1040039063,36.98205947876
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
-      ["Vender Tartaruga"] = { -- action name
+      ["Limpar Tartaruga"] = { -- action name
         description="", -- action description
         in_money=0, -- money taken per unit
         out_money=0, -- money earned per unit
@@ -208,14 +207,15 @@ cfg.item_transformers = {
           ["Tartaruga"] = 1
         },
         products={ -- items given per unit
-          ["dirty_money"] = 2500
+          ["carne_tartaruga"] = 3,
+          ["casco_tartaruga"] = 1
         }
       }
     }
   },
   
   -- Lavagem de dinheiro
- {
+  {
     name="Lavagem de Dinheiro",
     r=0,g=200,b=0, ---cores
     max_units=1000,
@@ -247,7 +247,7 @@ cfg.item_transformers = {
     recipes = {
       ["Pegar"] = { -- Nome da ação
         description="Pegar cartões clonáveis", -- Descrição do produto a se colher
-        in_money=50, -- Dinheiro dado por unidade
+        in_money=75, -- Dinheiro dado por unidade
         out_money=0, -- Dinheiro ganho por unidade
         reagents={}, -- Itens colhidos por unidade
         products={ -- Nome do produto fornecido por unidade
@@ -256,7 +256,6 @@ cfg.item_transformers = {
       }
     }
   },
-  
     -- CLONAR CARTÕES
   {
     name="Clonagem de Cartões", -- menu name
@@ -280,31 +279,7 @@ cfg.item_transformers = {
       }
     }
   },
-  
-    -- VENDER CARTÕES CLONADOS
   {
-    name="Cartões Clonados", -- menu name
-    permissions = {"sell.clonedcards"}, -- you can add permissions
-    r=0,g=200,b=0, -- cor do menu
-    max_units=200, -- unidades maximas do item
-    units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
-    x=-621.35168457031,y=36.309566497803,z=43.566032409668, -- pos -119.17678833008,-1486.1040039063,36.98205947876
-    radius=2.5, height=1.5, -- area
-    recipes = { -- items do menu
-      ["Vender Cartões Clonados"] = { -- action name
-        description="", -- action description
-        in_money=0, -- money taken per unit
-        out_money=250, -- money earned per unit
-        reagents={  -- items taken per unit
-          ["clonedcards"] = 1
-      },
-        products={ -- items given per unit
-          ["dirty_money"] = 5000
-        }
-      }
-    }
-  },
-   {
     name="Cofre", -- menu name
     permissions = {"bankdriver.money"}, -- you can add permissions
     r=0,g=200,b=0, -- color
@@ -326,28 +301,30 @@ cfg.item_transformers = {
   },
   --MINERADOR COMEÇO--   
   {
-    name="Mina", -- Nome do menu
-    permissions = {"minerar"}, -- Você pode adicionar permissões
+    name="Mina de Diamantes", -- Nome do menu
+    permissions = {"minerar.diamante"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=500,
     units_per_minute=50,
-    x=-596.43072509766,y=2090.7236328125,z=131.4126739502, -- Localização
+    x=-445.04028320313,y=2013.8580322266,z=123.57197570801, -- Localização
     radius=7.5, height=1.5, -- area
     recipes = {
       ["Minerar"] = { -- Nome da ação
         description="Minerar", -- Descrição do produto a se colher
         in_money=0, -- Dinheiro dado por unidade
         out_money=0, -- Dinheiro ganho por unidade
-        reagents={}, -- Itens colhidos por unidade
+        reagents={
+          ["picareta"] = 1
+        }, -- Itens colhidos por unidade
         products={ -- Nome do produto fornecido por unidade
-          ["diamante_bruto"] = 1
+          ["diamante_bruto"] = 2
         }
       }
     }
   },  
   {
     name="Lapidação", -- Nome do menu
-    permissions = {"minerar"}, -- Você pode adicionar permissões
+    permissions = {"lapidar.diamante"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=500,
     units_per_minute=50,
@@ -369,7 +346,7 @@ cfg.item_transformers = {
   }, 
   {
     name="Venda de Diamante", -- Nome do menu
-    --permissions = {"minerar"}, -- Você pode adicionar permissões
+    permissions = {"vender.diamante"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=500,
     units_per_minute=50,
@@ -377,7 +354,7 @@ cfg.item_transformers = {
     radius=3.5, height=1.5, -- area
     recipes = {
       ["Vender Diamante"] = { -- Nome da ação
-        description="Lapidando Diamante", -- Descrição do produto a se colher
+        description="Vendendo Diamante", -- Descrição do produto a se colher
         in_money=0, -- Dinheiro dado por unidade
         out_money=300, -- Dinheiro ganho por unidade
         reagents={
@@ -392,9 +369,9 @@ cfg.item_transformers = {
     name="OAB", -- menu name
     permissions = {"carteira.oab"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
-    max_units=200, -- unidades maximas do item
-    units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
-    x=-1910.6088867188,y=-571.90643310547,z=19.097219467163, -- pos
+    max_units=1, -- unidades maximas do item
+    units_per_minute=1, -- unidades que o transformador ganha de volta por minuto
+    x=-1905.5899658203,y=-573.38714599609,z=19.097213745117, -- pos
     radius=5.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Pegar Carteira OAB"] = { -- action name
@@ -415,7 +392,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=200, -- unidades que o transformador ganha de volta por minuto
-    x=-785.97308349609,y=580.78576660156,z=126.80484771729, -- pos
+    x=443.82019042969,y=-1737.138671875,z=29.220277786255, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -424,9 +401,9 @@ cfg.item_transformers = {
         out_money=0, -- money earned per unit
         reagents={  -- items taken per unit
           ["weed"] = 1
-		},
+		    },
         products={ -- items given per unit
-		  ["cannabis"] = 2
+		      ["cannabis"] = 2
         }
       }
     }
