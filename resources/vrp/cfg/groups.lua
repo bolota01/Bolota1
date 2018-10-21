@@ -80,9 +80,6 @@ cfg.groups = {
 	"player.store_armor",
 	"player.fix_haircut",
     "player.player_menu",
-	"venda.todos",
-	"venda.weed",
-	"venda.cocaina",
 	"venda.metanfetamina",
     "player.store_money",
     "player.store_weapons",
@@ -457,6 +454,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "police.menu_interaction",
     "mission.police.patrol",
     "mission.police.transfer",
@@ -502,6 +500,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "police.menu_interaction",
     "mission.police.patrol",
     "mission.police.transfer",
@@ -548,6 +547,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "police.menu_interaction",
     "mission.police.patrol",
     "mission.police.transfer",
@@ -594,6 +594,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "police.menu_interaction",
     "mission.police.patrol",
     "mission.police.transfer",
@@ -640,6 +641,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "coronel.door",
     "police.menu_interaction",
     "mission.police.patrol",
@@ -686,6 +688,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "player.group.add",
     "coronel.door",
     "police.menu_interaction",
     "mission.police.patrol",
@@ -767,6 +770,7 @@ cfg.groups = {
   ["Samu Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
@@ -783,6 +787,7 @@ cfg.groups = {
     ["Doutor"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
@@ -799,6 +804,7 @@ cfg.groups = {
   ["Médico Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
@@ -815,6 +821,7 @@ cfg.groups = {
   ["Médico"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
@@ -939,6 +946,7 @@ cfg.groups = {
   ["Traficante de Maconha"] = {
     _config = { gtype = "job" },
 	"harvest.weed",
+    "venda.weed",
 	"process.weed",
 	"mission.delivery.weed",
 	"mission.delivery.pot"
@@ -947,6 +955,7 @@ cfg.groups = {
     _config = { gtype = "job" },
 	"harvest.metanfetamina",
 	"process.metanfetamina",
+    "venda.todos",
 	"mission.delivery.metanfetamina",
 	"mission.delivery.pot3"
   },  
@@ -954,6 +963,7 @@ cfg.groups = {
     _config = { gtype = "job" },
 	"process.cocaina",
 	"harvest.cocaina",
+    "venda.cocaina",
 	"mission.delivery.cocaina",
 	"mission.delivery.pot2"
   },  
