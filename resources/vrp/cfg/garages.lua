@@ -126,7 +126,7 @@ cfg.garage_types = {
 	_config = {vtype="car",blipid=226,blipcolor=47,radius=5.1,buy=true},
 	["Sanctus"] = {"Sanctus",300000,"<img src='https://i.imgur.com/khAWYVh.jpg'/><br/>CAPACIDADE:10kg<br/>"},
 	["Avarus"] = {"Avarus",210000,"<img src='https://i.imgur.com/1IYaVHy.png'/><br/>CAPACIDADE:10kg<br/>"},
-	["Daemon"] = {"Daemon",12000,"<img src='https://i.imgur.com/a3S2uy2.png'/><br/>CAPACIDADE:10kg<br/>"},
+	["Daemon"] = {"Daemon",120000,"<img src='https://i.imgur.com/a3S2uy2.png'/><br/>CAPACIDADE:10kg<br/>"},
         ["Blazer"] = {"Blazer",200000,"<img src='https://i.imgur.com/yPJxBsW.png'/<br/>CAPACIDADE:10kg<br/>"},
         ["Blazer4"] = {"Blazer",200000,"<img src='https://i.imgur.com/e53F7nP.png'/<br/>CAPACIDADE:10kg<br/>"},
 	["Faggio2"] = {"Faggio",8000,"<img src='https://i.imgur.com/XI42R6F.png'/><br/>CAPACIDADE:10kg<br/>"},
