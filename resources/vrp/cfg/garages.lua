@@ -69,6 +69,7 @@ cfg.garage_types = {
         ["Baller3"] = {"Baller3",0,"<img src='https://i.imgur.com/ewzTjqR.png'/<br/>CAPACIDADE:70kg<br/>"},
         ["Dubsta"] = {"Dubsta",0,"<img src='https://i.imgur.com/ewzTjqR.png'/<br/>CAPACIDADE:70kg<br/>"},
         ["Asea"] = {"Asea",0,"<img src='https://i.imgur.com/XdDeLxU.png'/<br/>CAPACIDADE:50kg<br/>"},
+        ["aventadors"] = {"Lamborghini Aventador",0,"<img src=''/<br/>CAPACIDADE:50kg<br/>"},
         ["Cog55"] = {"Cog 55",0,"<img src='https://i.imgur.com/m7SQqHd.jpg'/<br/>CAPACIDADE:50kg<br/>"},
         ["Primo2"] = {"Primo",0,"<img src='https://i.imgur.com/w02Lic9.png'/<br/>CAPACIDADE:50kg<br/>"},
         ["Stretch"] = {"Stretch",0,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"}
