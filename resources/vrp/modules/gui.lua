@@ -10,7 +10,7 @@ local rclient_menus = {}
 
 -- cell na mao
 local seq_in = {
-  {"cellphone@","cellphone_text_in",1},
+  --{"cellphone@","cellphone_text_in",1},
   {"cellphone@","cellphone_text_read_base",1}
 }
 local seq_out = {
@@ -43,7 +43,12 @@ function vRP.openMenu(source,menudef)
   menudata.css = menudef.css or {}
 
   -- set new id
-  menudata.id = menu_ids:gen() 
+  menudata.id = menu_ids:gen()
+
+  if rclient_menus[source] == nil then
+    TriggerClientEvent("createPhone", source)
+    vRPclient.playAnim(source,{true,seq_in,true})
+  end
 
   -- add client menu
   client_menus[menudata.id] = {def = menudef, source = source}
@@ -162,16 +167,11 @@ function vRP.openMainMenu(source)
     menudata.css = {top="75px",header_color="rgba(0,125,255,0.75)"}
     vRP.openMenu(source,menudata) -- open the generated menu
   end)
-  TriggerClientEvent("createPhone", source)
-  vRPclient.playAnim(source,{true,seq_in,true})
 end
 
 -- SERVER TUNNEL API
 
 function tvRP.closeMenu(id)
-  if id == nil then
-    id = rclient_menus[source]
-  end
   local menu = client_menus[id]
 
   if menu and menu.source == source then
@@ -182,9 +182,8 @@ function tvRP.closeMenu(id)
 
     menu_ids:free(id)
     client_menus[id] = nil
-    rclient_menus[source] = nil
-
-    if menu.def.name == "Main menu" then
+    if rclient_menus[source] == id then
+      rclient_menus[source] = nil
       TriggerClientEvent("deletePhone", source)
       vRPclient.playAnim(source,{true,seq_out,false})
     end
