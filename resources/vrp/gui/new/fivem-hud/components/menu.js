@@ -52,7 +52,7 @@ export default class Menu extends React.Component {
     }
 
     onMenuOpen(data){
-        this.setState(this.getInitialState(), () => {
+        this.close(() => {
             var menudata = data.menudata;
             this.setState({
                 opened: true,
@@ -63,26 +63,11 @@ export default class Menu extends React.Component {
     }
 
     onMenuHide(data){
-        this.setState({opened: false});
+        this.close();
     }
 
     onChangeChoices(data){
         this.setState({choices: data});
-    }
-
-    close(){
-        axios.post("http://vrp/menu", JSON.stringify(
-            {act: "close", id: this.state.id }));
-
-        if (this.state.opened){
-            this.setState(this.getInitialState());
-        }
-    }
-
-    select(){
-        var current = this.state.choices[this.state.position];
-        axios.post("http://vrp/menu", JSON.stringify(
-            {act: "valid", id: this.state.id, choice: current[0], mod: 0}));
     }
 
     onKeyboard(data){
@@ -108,6 +93,23 @@ export default class Menu extends React.Component {
                     break;
             }
         }
+    }
+
+
+    close(callback){
+        axios.post("http://vrp/menu", JSON.stringify(
+            {act: "close", id: this.state.id }));
+
+        this.setState(this.getInitialState(), callback);
+    }
+
+    select(){
+        var current = this.state.choices[this.state.position];
+        axios.post("http://vrp/menu", JSON.stringify({
+            act: "valid",
+            id: this.state.id,
+            choice: current[0],
+            mod: 0}));
     }
 
     valid(mod){

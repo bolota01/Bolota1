@@ -50,7 +50,7 @@ html, body {
 
 /* menu */
 .menu{
-  background-image: url(../img/fundo.png);
+  background-image: url(../img/fundo.jpg);
   background-size: 100% 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
@@ -65,8 +65,8 @@ html, body {
   position: absolute;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  top: 48%;
-  margin-left: 9%;
+  top: 60%;
+  right: 30%;
 }
 
 .menu-content{
@@ -92,7 +92,7 @@ html, body {
 .menu .desc{
   position: absolute;
   left: 100.9%;
-  top: 33%;
+  top: 10%;
   background: #f0f0f0;
   padding: 10px;
   color: rgba(0,0,0,0.9);
@@ -392,7 +392,7 @@ html, body {
 
 @media only screen and (min-width: 1800px){
   .player-status {
-    left: 17.5%;
+    left: 17.1%;
     bottom: 1%;
   }
 
@@ -401,10 +401,10 @@ html, body {
   }
 
   .div_job{
-    left: 22% !important;
+    left: 21.6% !important;
   }
 
   .div_money{
-    left: 22% !important;
+    left: 21.6% !important;
   }
 }

@@ -51,10 +51,14 @@ class Request extends React.Component {
         events.emit("request-remove");
     }
 
+    createText() {
+        return {__html: this.props.text};
+    }
+
     render(){
         return (
             <div className="request-message">
-                <div className="message">{this.props.text}</div>
+                <div className="message" dangerouslySetInnerHTML={this.createText()}></div>
                 <div className="options">
                     <span className="yes">Sim [F5]</span>
                     <span className="no">Não [F6]</span>
