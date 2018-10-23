@@ -52,10 +52,11 @@ cfg.market_types = {
     ["sorvetec"] = 10,
     ["sorvetef"] = 10,
     ["sorveten"] = 10,
-    ["sorvetepa"] = 10,
-    ["sorveteplc"] = 10,
-    ["sorvetepl"] = 10,
-    ["sorvetepu"] = 10
+    ["sorveteqm"] = 10,
+    ["picolea"] = 10,
+    ["picolelc"] = 10,
+    ["picolel"] = 10,
+    ["picoleu"] = 10
   },
   ["Mercado Entregador"] = {
     _config = {blipid=0, blipcolor=0, permissions={"delivery.shop"}},
