@@ -880,6 +880,7 @@ cfg.groups = {
   ["Minerador de Diamante"] = {
     _config = { gtype = "job" },
     "minerar.diamante",
+    "mission.delivery.diamante",
     "minerar.paycheck",
     "lapidar.diamante",
     "vender.diamante",
