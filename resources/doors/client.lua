@@ -5,6 +5,29 @@
 local doors = {}
 local LockHotkey = {0,182}
 
+function DrawText3d(x,y,z, text)
+  local onScreen,_x,_y=World3dToScreen2d(x,y,z)
+  local px,py,pz=table.unpack(GetGameplayCamCoords())
+  
+  if onScreen then
+      SetTextScale(0.2, 0.2)
+      SetTextFont(0)
+      SetTextProportional(1)
+      SetTextColour(255, 255, 255, 255)
+      SetTextDropshadow(0, 0, 0, 0, 55)
+      SetTextEdge(2, 0, 0, 0, 150)
+      SetTextDropShadow()
+      SetTextOutline()
+      SetTextEntry("STRING")
+      SetTextCentre(1)
+      AddTextComponentString(text)
+       SetDrawOrigin(x,y,z, 0)
+       DrawText(0.0, 0.0)
+       ClearDrawOrigin()
+  end
+end
+
+
 RegisterNetEvent('vrpdoorsystem:load')
 AddEventHandler('vrpdoorsystem:load', function(list)
   doors = list
@@ -28,9 +51,6 @@ function searchIdDoor()
 end
 
 
-
-
-
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(1)
@@ -46,7 +66,7 @@ end)
 
 Citizen.CreateThread(function()
   while true do
-    Citizen.Wait(100)
+    Citizen.Wait(0)
     local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
     for k,v in pairs(doors) do
       if GetDistanceBetweenCoords(x,y,z,v.x,v.y,v.z,true) <= 10 then
@@ -56,11 +76,19 @@ Citizen.CreateThread(function()
             if v.locked == false then
               NetworkRequestControlOfEntity(door)
               FreezeEntityPosition(door, false)
+
+              if v["txtX"] ~= nil then
+                DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~g~Aberta")
+              end
             else
               local locked, heading = GetStateOfClosestDoorOfType(v.hash, v.x,v.y,v.z, locked, heading)
               if heading > -0.02 and heading < 0.02 then
                 NetworkRequestControlOfEntity(door)
                 FreezeEntityPosition(door, true)
+
+                if v["txtX"] ~= nil then
+                  DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~r~Fechada")
+                end
               end
             end
           end
