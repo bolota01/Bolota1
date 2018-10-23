@@ -37,7 +37,7 @@ local uniforme_random20 = { model = "s_m_y_clown_01" }
 local uniforme_random21 = { model = "a_f_m_bodybuild_01" }
 local uniforme_random22 = { model = "a_m_m_acult_01" }
 local uniforme_random23 = { model = "a_f_m_downtown_01" }
-local uniforme_random24 = { model = "StrPerf01SMM" }
+local uniforme_random24 = { model = "S_M_M_STRPERF_01" }
 
 
 
@@ -273,7 +273,7 @@ cfg.cloakroom_types = {
 cfg.cloakrooms = {
   {"Uniformes Masculino",457.47616577148,-993.30609130859,30.689603805542},
   {"Uniformes Feminino",456.07196044922,-988.55352783203,30.689605712891},
-  {"Tartaruga",4327.6328125,4528.4877929688,-0.22433114051819},
+  {"Tartaruga",4301.6860351563,4517.939453125,-14.009434700012},
   --{"Águia",455.47723388672,-993.35894775391,30.689599990845},
   {"Skins",423.07284545898,-799.64221191406,29.502632141113},
   --{"ROTA",459.47399902344,-993.30609130859,30.689599990845},
