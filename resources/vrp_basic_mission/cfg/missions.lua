@@ -16,7 +16,7 @@ cfg.repair = {
   ["mission.repair.satellite_dishes"] = { -- permissao
     chance = 1, -- quantidade de lados do dado 1
     title = "Antenas parabólicas", -- nome
-    steps = 3,
+    steps = 2,
     positions = {
       {1985.55017089844,2929.42211914063,46.5480003356934},
       {1965.38012695313,2917.47241210938,56.1684608459473},
@@ -42,7 +42,7 @@ cfg.repair = {
       {2137.61767578125,2906.61645507813,59.770336151123},
       {2144.6728515625,2900.85595703125,59.7593727111816}
     },
-    reward = 2250
+    reward = 1875
   },
   ["mission.repair.wind_turbines"] = {
     chance = 1,
@@ -60,7 +60,7 @@ cfg.repair = {
       {2299.90209960938,1857.3779296875,106.976081848145},
       {2356.48413085938,1836.69982910156,102.337211608887}
     },
-    reward = 1500
+    reward = 1875
   }
 }
 cfg.bankdriver = {
@@ -93,7 +93,7 @@ cfg.bankdriver = {
     reward = 1875
   },
   ["mission.bankdriver.moneybank2"] = {
-    chance = 2,
+    chance = 1,
     title = "Transferencia de Dinheiro",
     steps = 1,
     positions = {
@@ -296,6 +296,29 @@ local vendapeixe_position = {
   {-707.408996582031,-913.681701660156,19.2155857086182}
 }
 
+local diamantesveda_position = {
+  {-905.09790039062,587.02142333984,100.99085998536},
+  {-1253.5981445312,-1192.1677246094,7.0767159461976},
+  {951.16314697266,-251.4662475586,67.589950561524},
+  {-1539.8935546875,421.76443481446,110.01398468018},
+  {63.2505569458,-80.091011047364,62.50798034668},
+  {-884.9642944336,-1071.5681152344,2.1628777980804},
+  {-1667.2891845704,-441.4132385254,40.355899810792},
+  {-698.54620361328,46.2643699646,44.033828735352},
+  {-1341.8388671875,-872.02587890625,16.836462020874},
+  {-632.80596923828,-238.79309082032,38.077545166016},
+  {-116.90155792236,-606.16143798828,36.280727386474},
+  {-697.80895996094,45.641052246094,44.034076690674,},
+  {-1467.0889892578,36.209774017334,54.545028686524},
+  {-2796.912109375,1433.0462646484,100.92837524414},
+  {-2587.7841796875,1912.7614746094,167.49893188476},
+  {-1277.4822998046,630.0307006836,143.25758361816},
+  {-3017.8645019532,746.8013305664,27.587602615356},
+  {-2014.6943359375,499.75622558594,107.17177581788},
+  {-1932.4482421875,362.27615356446,93.790466308594}
+}
+
+
 -- map of permission => delivery config
 --- items: map of idname => {min_amount,max_amount,reward_per_item}
 --- positions
@@ -309,6 +332,13 @@ cfg.delivery = {
       ["gocagola"] = {7,20,30}
     }
   },
+  ["mission.delivery.diamante"] ={
+    positions = diamantesveda_position,
+    chance = 1,
+    items = {
+      ["diamante"] = {7,20,170}
+    }
+  },    
   ["mission.delivery.weed"] = {
     chance = 3,
     items = {
@@ -426,7 +456,7 @@ cfg.carjack = {
 -- EMERGENCY
   cfg.emergency = {
   ["mission.emergency.transfer"] = {
-    chance = 5,
+    chance = 9,
     title = "Transferência de Paciente",
     steps = 2,
     positions = {
@@ -578,7 +608,7 @@ cfg.gari = {
 -- POLICE 
 cfg.police = {
   ["mission.police.transfer"] = {
-    chance = 5,
+    chance = 9,
     title = "Transferência de prisioneiro",
     text = "Transfira o prisioneiro.",
     steps = 2,
@@ -589,7 +619,7 @@ cfg.police = {
     reward = 1000
   },
   ["mission.police.patrol"] = {
-    chance = 5,
+    chance = 9,
     title = "Patrulha do Banco da cidade",
     text = "Patrulhe a área.",
     steps = 3,
@@ -601,7 +631,7 @@ cfg.police = {
   {219.737426757813,205.291076660156,105.063316345215},
   {152.946182250977,-1029.80944824219,28.8697566986084}
     },
-    reward = 1000 
+    reward = 1500 
   }
 }
 

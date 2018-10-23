@@ -54,7 +54,7 @@ end)
 RegisterNetEvent('es_holdup:toofarlocal')
 AddEventHandler('es_holdup:toofarlocal', function(robb)
 	holdingup = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto foi cancelado, voce não receberá nada.")
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto foi cancelado, você não receberá nada.")
 	robbingName = ""
 	secondsRemaining = 0
 	incircle = false
@@ -63,7 +63,7 @@ end)
 RegisterNetEvent('es_holdup:playerdiedlocal')
 AddEventHandler('es_holdup:playerdiedlocal', function(robb)
 	holdingup = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto foi cancelado, Voce Morreu!")
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "O Assalto foi cancelado, Você Morreu!")
 	robbingName = ""
 	secondsRemaining = 0
 	incircle = false
@@ -72,7 +72,7 @@ end)
 RegisterNetEvent('es_holdup:robberycomplete')
 AddEventHandler('es_holdup:robberycomplete', function(reward)
 	holdingup = false
-	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Roubo terminado, Voce Recebeu: ^2" .. reward)
+	TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Roubo terminado, Você Recebeu: ^2" .. reward)
 	store = ""
 	secondsRemaining = 0
 	incircle = false

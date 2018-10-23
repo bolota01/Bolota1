@@ -20,9 +20,9 @@ cfg = {}
 
 cfg.blips = false -- enable blips
 
-cfg.seconds = 300 -- seconds to rob
+cfg.seconds = 600 -- seconds to rob
 
-cfg.cooldown = 600 -- time between robbaries
+cfg.cooldown = 900 -- time between robbaries
 
 cfg.cops = 4 -- minimum cops online
 cfg.permission = "bank.police" -- permission given to cops
@@ -72,8 +72,14 @@ cfg.banks = { -- list of banks
 	},
 	["bancoprincipal"] = {
 		position = { ['x'] = 265.60995483398, ['y'] =  213.61218261719, ['z'] = 101.68347930908 },
-		reward = 150000 + math.random(100000,200000),
+		reward = 150000 + math.random(200000,300000),
 		nameofbank = "Banco do Brasil (Centro da Cidade)",
+		lastrobbed = 0
+	},
+	["rockford_jewlery"] = {
+		position = { ['x'] = -621.989135742188, ['y'] = -230.804443359375, ['z'] = 38.0570297241211 },
+		reward = 30000 + math.random(100000,200000),
+		nameofstore = " Vangelico Jewelry Store. (Rockford Hills)",
 		lastrobbed = 0
 	}	
 }
