@@ -7,6 +7,7 @@ vRPbsS = Tunnel.getInterface("vRP_barbershop","vRP_barbershop")
 vRP = Proxy.getInterface("vRP")
 
 function vRPbsT.setOverlay(custom,spawn)
+  print("huehueheu")
   if custom then
     local ped = GetPlayerPed(-1)
     if (GetEntityModel(ped) == GetHashKey("mp_m_freemode_01")) or (GetEntityModel(ped) == GetHashKey("mp_f_freemode_01")) then -- check for mp model

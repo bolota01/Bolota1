@@ -189,9 +189,9 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
     SetTimeout(35000,function()
       local custom = {}
       vRP.getUData({user_id,"vRP:head:overlay",function(value)
-	    if value ~= nil then
+	    if value ~= "" then
 	      custom = json.decode(value)
-          vRPbsC.setOverlay(source,{custom,true})
+        vRPbsC.setOverlay(source,{custom,true})
 	    end
 	  end})
     end)
@@ -199,9 +199,9 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
     SetTimeout(15000,function()
       local custom = {}
       vRP.getUData({user_id,"vRP:head:overlay",function(value)
-	    if value ~= nil then
+	    if value ~= "" then
 	      custom = json.decode(value)
-          vRPbsC.setOverlay(source,{custom,true})
+        vRPbsC.setOverlay(source,{custom,true})
 	    end
 	  end})
     end)
@@ -215,7 +215,7 @@ AddEventHandler('vRP:cloakroom:update', function(player)
   SetTimeout(1000,function()
   local custom = {}
     vRP.getUData({user_id,"vRP:head:overlay",function(value)
-	  if value ~= nil then
+	  if value ~= "" then
 	    custom = json.decode(value)
         vRPbsC.setOverlay(player,{custom,true})
 	  end

@@ -209,10 +209,10 @@ end
 function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] components or props (p0...) plus .modelhash or .model
   local exit = TUNNEL_DELAYED() -- delay the return values
 
-  Citizen.CreateThread(function() -- new thread
+  --[[Citizen.CreateThread(function() -- new thread
     if custom then
       local ped = GetPlayerPed(-1)
-      local mhash = nil
+      --local mhash = nil
 
       -- model
       if custom.modelhash ~= nil then
@@ -223,9 +223,9 @@ function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] com
 
       if mhash ~= nil then
         local i = 0
-        while not HasModelLoaded(mhash) and i < 10000 do
+        while not HasModelLoaded(mhash) do
           RequestModel(mhash)
-          Citizen.Wait(10)
+          Citizen.Wait(1)
         end
 
         if HasModelLoaded(mhash) then
@@ -257,7 +257,7 @@ function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] com
     end
 
     exit({})
-  end)
+  end)]]--
 end
 
 -- fix invisible players by resetting customization every minutes
