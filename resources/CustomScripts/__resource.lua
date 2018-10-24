@@ -6,6 +6,7 @@ server_scripts{
 -- client scripts
 client_scripts{
   "crouch-client.lua",
+  "markers.lua",
   "pointfinger-client.lua",
   "handsup-client.lua",
   "lockcar-client.lua",
