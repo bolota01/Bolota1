@@ -109,6 +109,25 @@ Citizen.CreateThread(function()
   end
 end)
 
+-- MÃOS NA CABEÇA E AJOELHAR
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+        if IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "random@arrests@busted", "idle_a", 3) then
+            DisableControlAction(1, 140, true)
+            DisableControlAction(1, 141, true)
+            DisableControlAction(1, 142, true)
+            DisableControlAction(0,21,true)
+        end
+    end
+end)
+function loadAnimDict( dict )
+    while ( not HasAnimDictLoaded( dict ) ) do
+        RequestAnimDict( dict )
+        Citizen.Wait( 5 )
+    end
+end
+
 -- THIS IS FOR ENGINE-CONTROL
 Citizen.CreateThread(function()
   while true do
@@ -139,9 +158,9 @@ Citizen.CreateThread(function() -- coma thread
 	      if skipper or caller then
 		    HKserver.docsOnline({},function(docs)
 		      if docs == 0 and skipper then
-			    vRP.notify({"~r~Você morreu.\n~b~Aperte ~g~E~b~ para reviver."})
+			    vRP.notify({"~r~Não há paramédicos de plantão.~h~~b~Pressione ~g~E~b~ e aguarde 2 minutos para ir ao respawn."})
 			  elseif docs > 0 and caller then
-			    vRP.notify({"~g~Há Paramédicos online.\n~b~Aperte ~g~E~b~ para chamar uma ambulância."})
+			    vRP.notify({"~g~Há paramédicos online.\n~b~Aperte ~g~E~b~ para chamar uma ambulância."})
 			  end
 		    end)
           end

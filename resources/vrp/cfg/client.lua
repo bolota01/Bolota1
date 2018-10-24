@@ -38,16 +38,16 @@ cfg.handcuff_disable_menu = true
 
 -- when health is under the threshold, player is in coma
 -- set to 0 to disable coma
-cfg.coma_threshold = 120
+cfg.coma_threshold = 100
 
 -- maximum duration of the coma in minutes
-cfg.coma_duration = 10
+cfg.coma_duration = 15
 
 -- if true, a player in coma will not be able to open the main menu
 cfg.coma_disable_menu = false
 
 -- see https://wiki.fivem.net/wiki/Screen_Effects
-cfg.coma_effect = "DeathFailMPIn"
+cfg.coma_effect = "DeathFailMPDark"
 
 -- if true, vehicles can be controlled by others, but this might corrupts the vehicles id and prevent players from interacting with their vehicles
 cfg.vehicle_migration = false

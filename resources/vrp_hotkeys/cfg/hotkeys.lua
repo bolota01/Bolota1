@@ -52,7 +52,7 @@ cfg.hotkeys = {
     -- X toggle HandsUp
     group = 1, 
 	pressed = function() 
-      if not IsPauseMenuActive() and not IsPedInAnyVehicle(GetPlayerPed(-1), true) then -- Comment to allow use in vehicle
+      --if not IsPauseMenuActive() and not IsPedInAnyVehicle(GetPlayerPed(-1), true) then -- Comment to allow use in vehicle
 	    handsup = not handsup
 	    SetEnableHandcuffs(GetPlayerPed(-1), handsup)
 	    if handsup then
@@ -61,7 +61,7 @@ cfg.hotkeys = {
 	      vRP.stopAnim({true})
 		  SetPedStealthMovement(GetPlayerPed(-1),false,"") 
 	    end
-	  end -- Comment to allow use in vehicle
+	  --end -- Comment to allow use in vehicle
 	end,
 	released = function()
 	  -- Do nothing on release because it's toggle.
@@ -120,6 +120,35 @@ cfg.hotkeys = {
 	  -- Do nothing on release because it's toggle.
 	end,
   },
+  [26] = {
+    -- Ajoelhar e colocar as mãos na cabeça
+    group = 1, 
+    pressed = function() 
+      if not IsPauseMenuActive() and not IsPedInAnyVehicle(GetPlayerPed(-1), true) then
+        local player = GetPlayerPed( -1 )
+          if ( DoesEntityExist( player ) and not IsEntityDead( player )) then
+          loadAnimDict( "random@arrests" )
+            loadAnimDict( "random@arrests@busted" )
+            if ( IsEntityPlayingAnim( player, "random@arrests@busted", "idle_a", 3 ) ) then 
+                TaskPlayAnim( player, "random@arrests@busted", "exit", 8.0, 1.0, -1, 2, 0, 0, 0, 0 )
+                Wait (3000)
+                TaskPlayAnim( player, "random@arrests", "kneeling_arrest_get_up", 8.0, 1.0, -1, 128, 0, 0, 0, 0 )
+            else
+                TaskPlayAnim( player, "random@arrests", "idle_2_hands_up", 8.0, 1.0, -1, 2, 0, 0, 0, 0 )
+                Wait (4000)
+                TaskPlayAnim( player, "random@arrests", "kneeling_arrest_idle", 8.0, 1.0, -1, 2, 0, 0, 0, 0 )
+                Wait (500)
+                TaskPlayAnim( player, "random@arrests@busted", "enter", 8.0, 1.0, -1, 2, 0, 0, 0, 0 )
+                Wait (1000)
+                TaskPlayAnim( player, "random@arrests@busted", "idle_a", 8.0, 1.0, -1, 9, 0, 0, 0, 0 )
+            end
+        end
+      end 
+    end,
+    released = function()
+	  -- Do nothing on release because it's toggle.
+    end,
+},
   [46] = {
     -- E call/skip emergency
     group = 0, 
