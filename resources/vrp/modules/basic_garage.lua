@@ -57,7 +57,14 @@ for group,vehicles in pairs(vehicle_groups) do
       local kitems = {}
       local submenu = {name=lang.garage.title({lang.garage.owned.title()}), css={top="75px",header_color="rgba(255,125,0,0.75)"}}
       submenu.onclose = function()
-        vRP.openMenu(player,menu)
+        if vehicles._config.buy or false then 
+          vRP.openMenu(player,menu)
+        else
+          local menu_edit = {name=menu.name, css=menu.css}
+          menu_edit[lang.garage.owned.title()] = menu[lang.garage.owned.title()]
+          menu_edit[lang.garage.store.title()] = menu[lang.garage.store.title()]
+          vRP.openMenu(player, menu_edit)
+        end
       end
 
       local choose = function(player, choice)
