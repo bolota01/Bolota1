@@ -780,13 +780,10 @@ cfg.groups = {
   --CORREIOS
   ["Correios"] = {
     _config = { gtype = "job" },
-    "missao.correios.coleta",
+    "missao.correio.encomendas",
     "correios.veiculo",
-    "sedex.permissao",
-    "correios.paycheck",
-    "delivery.gopostal",
-    "correios.pacote",
-    "correios.uniforme"
+    "encomenda.correio",
+    "correios.paycheck"
   },
   --UBER
   ["Táxi"] = {
@@ -802,6 +799,14 @@ cfg.groups = {
     _config = { gtype = "job" },
     "carteira.oab",
     "advogado.paycheck",
+    "advogado.entrega"
+  },
+  ["Garota de Programa"] = {
+    _config = { gtype = "job" },
+    "mission.prostituta",
+    "prostituta.paycheck",
+    "prostituta.cloakroom",
+    "puta.service"
   },
   --Transporte de Valores  
   ["Transportador de Valores"] = {
@@ -844,7 +849,6 @@ cfg.groups = {
   ["Traficante de Tartaruga"] = {
     _config = { gtype = "job" },
     "harvest.tartaruga",
-    "tartaruga.garagem",
     "tartaruga.cloakroom",
     "shop.tartaruga",
     "entrega.tartaruga",
@@ -922,7 +926,8 @@ cfg.selectors = {
      "Motoboy",
      "Minerador de Diamante",
      "Lixeiro",
-     --"Correios",
+     "Correios",
+     "Garota de Programa",
      "Táxi",
      "Advogado",
      "Transportador de Valores",

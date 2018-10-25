@@ -196,7 +196,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
-    x=-119.17678833008,y=-1486.1040039063,z=36.98205947876, -- pos -119.17678833008,-1486.1040039063,36.98205947876
+    x=985.18585205078,y=-2122.2233886719,z=30.475374221802, -- pos -119.17678833008,-1486.1040039063,36.98205947876
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Limpar Tartaruga"] = { -- action name
@@ -234,7 +234,27 @@ cfg.item_transformers = {
       }
     }
   },
-  
+   -- Correios
+  {
+    name="Pegar Encomendas", -- menu name
+    permissions = {"encomenda.correio"},
+    r=255,g=125,b=0, -- color
+    max_units=200,
+    units_per_minute=35,
+    x=64.544059753418,y=125.55610656738,z=79.173439025879,
+    radius=2, height=1.0, -- area
+    recipes = {
+      ["Encomenda"] = { -- action name
+       description="Pegar Encomendas.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["encomenda"] = 1,
+        } -- items given per unit
+      }
+    }
+  },
     -- Cartões clonáveis
   {
     name="Cartões Clonáveis", -- Nome do menu

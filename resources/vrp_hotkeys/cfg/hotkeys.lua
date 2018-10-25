@@ -48,25 +48,6 @@ cfg.hotkeys = {
 	  -- Do nothing on release because it's toggle.
 	end,
   },
-  [73] = {
-    -- X toggle HandsUp
-    group = 1, 
-	pressed = function() 
-      --if not IsPauseMenuActive() and not IsPedInAnyVehicle(GetPlayerPed(-1), true) then -- Comment to allow use in vehicle
-	    handsup = not handsup
-	    SetEnableHandcuffs(GetPlayerPed(-1), handsup)
-	    if handsup then
-	      vRP.playAnim({true,{{"random@mugging3", "handsup_standing_base", 1}},true})
-	    else
-	      vRP.stopAnim({true})
-		  SetPedStealthMovement(GetPlayerPed(-1),false,"") 
-	    end
-	  --end -- Comment to allow use in vehicle
-	end,
-	released = function()
-	  -- Do nothing on release because it's toggle.
-	end,
-  },
   [29] = {
     -- B toggle Point
     group = 0, 
@@ -120,7 +101,7 @@ cfg.hotkeys = {
 	  -- Do nothing on release because it's toggle.
 	end,
   },
-  [26] = {
+  [47] = {
     -- Ajoelhar e colocar as mãos na cabeça
     group = 1, 
     pressed = function() 

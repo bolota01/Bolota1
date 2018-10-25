@@ -39,6 +39,14 @@ local uniforme_random22 = { model = "a_m_m_acult_01" }
 local uniforme_random23 = { model = "a_f_m_downtown_01" }
 local uniforme_random24 = { model = "S_M_M_STRPERF_01" }
 
+local uniforme_prostituta01 = { model = "S_F_Y_BARTENDER_01"}
+local uniforme_prostituta02 = { model = "U_F_Y_DANCEBURL_01"}
+local uniforme_prostituta03 = { model = "CSB_STRIPPER_01"}
+local uniforme_prostituta04 = { model = "CSB_STRIPPER_02"}
+local uniforme_prostituta05 = { model = "MP_F_STRIPPERLITE"}
+local uniforme_prostituta06 = { model = "S_F_Y_STRIPPER_01"}
+local uniforme_prostituta07 = { model = "S_F_Y_STRIPPER_02"}
+local uniforme_prostituta08 = { model = "S_F_Y_STRIPPERLITE"}
 
 
 -- cloakroom types (_config, map of name => customization)
@@ -72,6 +80,17 @@ cfg.cloakroom_types = {
     ["Skin 22"] = uniforme_random22,
     ["Skin 23"] = uniforme_random23,
     ["Skin 24"] = uniforme_random24
+  },
+  ["Traje Sexy"] = {
+    _config = { permissions = {"prostituta.cloakroom"} },
+    ["Skin 01"] = uniforme_prostituta01,
+    ["Skin 02"] = uniforme_prostituta02,
+    ["Skin 03"] = uniforme_prostituta03,
+    ["Skin 04"] = uniforme_prostituta04,
+    ["Skin 05"] = uniforme_prostituta05,
+    ["Skin 06"] = uniforme_prostituta06,
+    ["Skin 07"] = uniforme_prostituta07,
+    ["Skin 08"] = uniforme_prostituta08
   },
   ["Hospital"] = {
     _config = { permissions = {"medico.cloakroom"} },
@@ -243,7 +262,7 @@ cfg.cloakroom_types = {
     ["Homem"] = surgery_male,
     ["Mulher"] = surgery_female
   },
-  ["Tartaruga"] = {
+  ["Traje de Mergulho"] = {
     _config = { permissions = {"tartaruga.cloakroom"} },
     ["Roupa de Mergulho M"] = {
       [3] = {17,0,2},
@@ -273,8 +292,9 @@ cfg.cloakroom_types = {
 cfg.cloakrooms = {
   {"Uniformes Masculino",457.47616577148,-993.30609130859,30.689603805542},
   {"Uniformes Feminino",456.07196044922,-988.55352783203,30.689605712891},
-  {"Tartaruga",4301.6860351563,4517.939453125,-14.009434700012},
+  {"Traje de Mergulho",3846.2712402344,4446.5131835938,0.11954033374786},
   --{"Águia",455.47723388672,-993.35894775391,30.689599990845},
+  {"Traje Sexy",108.26893615723,-1305.3421630859,28.768793106079},
   {"Skins",423.07284545898,-799.64221191406,29.502632141113},
   --{"ROTA",459.47399902344,-993.30609130859,30.689599990845},
   {"Hospital 2",269.77987670898,-1363.4407958984,24.537780761719},

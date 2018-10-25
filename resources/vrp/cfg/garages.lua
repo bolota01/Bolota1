@@ -210,11 +210,6 @@ cfg.garage_types = {
     	_config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"},buy=true},
     	["polmav"] = {"Águia FAE",0, "<img src='https://i.imgur.com/faxY7BN.png'/><br/"}
 	}, 
-  	["Barco de Pesca"] = {  
-    	_config = {blipid=427,blipcolor=59,vtype="boats",permissions={"tartaruga.garagem"},buy=true},
-    	["Dinghy"] = {"Barco de Pesca",100, "<img src='https://i.imgur.com/Wc1yIRb.png'/><br/"},
-    	["Dinghy2"] = {"Barco de Pesca 2",100, "<img src='https://i.imgur.com/fpT0DWB.png'/><br/"}
-	},
 	["Lixão"] = {
 	_config = {vtype="car",permissions={"gari.veiculo"},buy=true},
 	["trash"] = {"Caminhão de Lixo",150, "<img src=''/><br/"}
@@ -230,8 +225,7 @@ cfg.garage_types = {
 	},
 	["CORREIOS S/A"] = {
 	_config = {vtype="car",permissions={"correios.veiculo"},buy=true},
-	["boxville2"] = {"Caminhão Correios 01", 0, ""},
-	["boxville4"] = {"Caminhão Correios 02", 0, ""}
+	["boxville7"] = {"Caminhão Elite Postal", 0, ""}
 	},  	
 	["HELIPORTO"] = {
 	_config = {blipid=370,blipcolor=47,vtype="helicopters",buy=true},
@@ -299,7 +293,7 @@ cfg.garages = {
 	{"GARAGEM",-836.31384277344,114.28999328613,55.355060577393}, -- Garagem
 	{"GARAGEM",11.120021820068,548.63977050781,175.96977233887}, -- Garagem Mansão Franklin
 	{"Lixão",179.07063293457,-2210.9807128906,5.9991369247437},
-	--{"CORREIOS S/A",-289.3962097168,-890.03399658203,31.080615997314},
+	{"CORREIOS S/A",68.724258422852,119.7261428833,79.131874084473},
 	--{"MADEIRA & CIA",-805.62573242188,5409.2807617188,33.991455078125},
 	{"Táxi",-339.94155883789,-1023.3903198242,30.400903244019},
 	{"Motoboy",118.25058746338,-1485.9897460938,29.141597747803},
@@ -321,7 +315,7 @@ cfg.garages = {
   	--{"Veículos Federal",452.83148193359,-1011.642578125,28.47452545166},
  	{"Heliponto FAE",449.32727050781,-981.21728515625,43.691673278809},
   	{"Heliponto Hospital",313.24923706055,-1465.1434326172,46.509502410889},
-  	{"Barco de Pesca",3846.2712402344,4446.5131835938,0.11954033374786},
+  	--{"Barco de Pesca",3846.2712402344,4446.5131835938,0.11954033374786},
 	{"Hospital",299.75296020508,-1442.3692626953,29.79154586792}
 }
 

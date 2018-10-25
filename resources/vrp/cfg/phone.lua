@@ -43,6 +43,15 @@ cfg.services = {
     alert_notify = "~r~[Advogado] Alguém ligou para você solicitando serviço:~n~~s~",
     notify = "~b~Você chamou um advogado.",
     answer_notify = "~b~O advogado está a caminho."
+  },
+  ["Garota de Programa"] = {
+    blipid = 280, --Blip q vai aparecer no mapa
+    blipcolor = 6, --Cor do Blip
+    alert_time = 300, --Tempo do alerta
+    alert_permission = "puta.service", --Perm do grupo
+    alert_notify = "~y~[Garota de Programa] Voce tem um Chamado para um serviço:~n~~s~",
+    notify = "~g~Você chamou um prostituta.",
+    answer_notify = "~g~Uma Prostituta está a caminho."
   },  
   ["Taxi"] = {
     blipid = 198,
