@@ -2,12 +2,12 @@ local m = {} -- <<< Don't touch this!
 -----------[ SETTINGS ]---------------------------------------------------
 
 -- Delay in minutes between messages
-m.delay = 10
+m.delay = 7
 
 -- Prefix appears in front of each message. 
 -- Suffix appears on the end of each message.
 -- Leave a prefix/suffix empty ( '' ) to disable them.
-m.prefix = '^1[A PREFEITURA INFORMA]^0: '
+m.prefix = '^2[A PREFEITURA INFORMA]^0: '
 m.suffix = '^0 '
 
 -- You can make as many messages as you want.

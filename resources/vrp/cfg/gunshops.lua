@@ -21,6 +21,7 @@ cfg.gunshop_types = {
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
     ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""},
     ["WEAPON_ASSAULTRIFLE"] = {"Ak-47",150000,50,""}
   },
   ["Loja da Biqueira"] = {
