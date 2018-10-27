@@ -74,17 +74,19 @@ AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
     -- disable handcuff
     vRPclient.setHandcuffed(player,{false})
 
-    if cfg.spawn_enabled then -- respawn (CREATED SPAWN_DEATH)
+    --if cfg.spawn_enabled then -- respawn (CREATED SPAWN_DEATH)
       local x = cfg.spawn_death[1]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       local y = cfg.spawn_death[2]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       local z = cfg.spawn_death[3]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       data.position = {x=x,y=y,z=z}
       vRPclient.teleport(source,{x,y,z})
-    end
+    --end
 
     -- load character customization
     if data.customization ~= nil then
-      vRPclient.setCustomization(source,{data.customization})
+      vRPclient.setCustomization(source,{data.customization}, function()
+        TriggerClientEvent('customization', source)
+      end)
     end
   end
   Debug.pend()
