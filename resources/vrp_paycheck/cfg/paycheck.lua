@@ -41,9 +41,11 @@ cfg.paycheck = { -- ["permission"] = paycheck
   ["paramedico.paycheck"] = 5000,
   ["socorrista.paycheck"] = 3000,
   --legal
+  ["correios.paycheck"] = 1000,
   ["minerar.paycheck"] = 1000,
   ["delivery.paycheck"] = 1000,
   ["gari.paycheck"] = 1000,
+  ["prostituta.paycheck"] = 1000,
   ["advogado.paycheck"] = 1000,
   ["taxi.paycheck"] = 1000,
   ["repair.paycheck"] = 1000,
@@ -77,9 +79,11 @@ cfg.bill = { -- ["permission"] = withdrawal
   ["paramedico.paycheck"] = 200,
   ["socorrista.paycheck"] = 200,
   --legal
+  ["correios.paycheck"] = 200,
   ["minerar.paycheck"] = 200,
   ["delivery.paycheck"] = 200,
   ["gari.paycheck"] = 200,
+  ["prostituta.paycheck"] = 200,
   ["advogado.paycheck"] = 200,
   ["taxi.paycheck"] = 200,
   ["repair.paycheck"] = 200,

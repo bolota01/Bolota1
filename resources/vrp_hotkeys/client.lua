@@ -43,34 +43,6 @@ Citizen.CreateThread(function()
   end
 end)
 
--- THIS IS FOR HANDSUP
-Citizen.CreateThread(function()
-  while true do
-    Citizen.Wait(0)
-    if handsup then
-      SetPedStealthMovement(GetPlayerPed(-1),true,"")
-      DisableControlAction(0,21,true) -- disable sprint
-      DisableControlAction(0,24,true) -- disable attack
-      DisableControlAction(0,25,true) -- disable aim
-      DisableControlAction(0,47,true) -- disable weapon
-      DisableControlAction(0,58,true) -- disable weapon
-      DisableControlAction(0,71,true) -- veh forward
-      DisableControlAction(0,72,true) -- veh backwards
-      DisableControlAction(0,63,true) -- veh turn left
-      DisableControlAction(0,64,true) -- veh turn right
-      DisableControlAction(0,263,true) -- disable melee
-      DisableControlAction(0,264,true) -- disable melee
-      DisableControlAction(0,257,true) -- disable melee
-      DisableControlAction(0,140,true) -- disable melee
-      DisableControlAction(0,141,true) -- disable melee
-      DisableControlAction(0,142,true) -- disable melee
-      DisableControlAction(0,143,true) -- disable melee
-      --DisableControlAction(0,75,true) -- disable exit vehicle
-      --DisableControlAction(27,75,true) -- disable exit vehicle
-    end
-  end
-end)
-
 -- THIS IS FOR POINTING
 Citizen.CreateThread(function()
   while true do
@@ -109,6 +81,25 @@ Citizen.CreateThread(function()
   end
 end)
 
+-- MÃOS NA CABEÇA E AJOELHAR
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+        if IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "random@arrests@busted", "idle_a", 3) then
+            DisableControlAction(1, 140, true)
+            DisableControlAction(1, 141, true)
+            DisableControlAction(1, 142, true)
+            DisableControlAction(0,21,true)
+        end
+    end
+end)
+function loadAnimDict( dict )
+    while ( not HasAnimDictLoaded( dict ) ) do
+        RequestAnimDict( dict )
+        Citizen.Wait( 5 )
+    end
+end
+
 -- THIS IS FOR ENGINE-CONTROL
 Citizen.CreateThread(function()
   while true do
@@ -139,9 +130,9 @@ Citizen.CreateThread(function() -- coma thread
 	      if skipper or caller then
 		    HKserver.docsOnline({},function(docs)
 		      if docs == 0 and skipper then
-			    vRP.notify({"~r~Você morreu.\n~b~Aperte ~g~E~b~ para reviver."})
+			    vRP.notify({"~r~Não há paramédicos de plantão.~h~~b~Pressione ~g~E~b~ e aguarde 2 minutos para ir ao respawn."})
 			  elseif docs > 0 and caller then
-			    vRP.notify({"~g~Há Paramédicos online.\n~b~Aperte ~g~E~b~ para chamar uma ambulância."})
+			    vRP.notify({"~g~Há paramédicos online.\n~b~Aperte ~g~E~b~ para chamar uma ambulância."})
 			  end
 		    end)
           end

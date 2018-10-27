@@ -61,7 +61,7 @@ function vRPhk.canSkipComa(p1,p2)
 end
 
 function vRPhk.helpComa(x,y,z)
-  vRP.sendServiceAlert({source,"emergency",x,y,z,"Help! I've fallen and can't get up!"}) -- people will change this message anyway haha
+  vRP.sendServiceAlert({source,"emergency",x,y,z,"Socorro! Eu caí e não consigo me levantar!"}) -- people will change this message anyway haha
 end
 
 local vehStorage = {}

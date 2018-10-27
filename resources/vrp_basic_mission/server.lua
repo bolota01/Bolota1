@@ -150,6 +150,54 @@ function task_mission()
       end
     end
   end
+  -- Correios
+  for k,v in pairs(cfg.correio) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                if vRP.tryGetInventoryItem({user_id,"encomenda",1,false}) then
+                  SetTimeout(5000, function()
+                  vRPclient.notify(player,{"Entregando as encomendas, aguarde alguns segundos."})
+                    vRP.nextMissionStep({player})
+                    vRP.giveInventoryItem({user_id,"encomenda",1,false})
+                    Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Acabaram as encomendas por aqui! ~n~Já, já terá mais, aguarde alguns minutos"})
+          else
+                      vRPclient.notify(player,{"Entregue as encomendas!"})
+                    end
+                  end)
+                end
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
   -- DELIVERY
   for k,v in pairs(cfg.delivery) do -- each repair perm def
     -- add missions to users
