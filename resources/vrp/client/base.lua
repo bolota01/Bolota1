@@ -27,6 +27,11 @@ function tvRP.getPosition()
   return x,y,z
 end
 
+function tvRP.GetRotation()
+  local x, y, z = table.unpack(GetEntityRotation(GetPlayerPed(-1), true))
+  return x, y, z
+end
+
 -- return false if in exterior, true if inside a building
 function tvRP.isInside()
   local x,y,z = tvRP.getPosition()
