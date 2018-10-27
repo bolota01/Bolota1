@@ -1015,9 +1015,9 @@ local ch_player_menu = {function(player,choice)
       menu["Guardar Dinheiro"] = choice_store_money -- transforms money in wallet to money in inventory to be stored in houses and cars
     end
 	
-    if vRP.hasPermission({user_id,"player.fix_haircut"}) then
+    --[[if vRP.hasPermission({user_id,"player.fix_haircut"}) then
       menu["Desbugar Rosto"] = ch_fixhair -- just a work around for barbershop green hair bug while I am busy
-    end
+    end]]
 	
     if vRP.hasPermission({user_id,"player.userlist"}) then
       menu["Lista de players"] = ch_userlist -- a user list for players with vRP ids, player name and identity names only.

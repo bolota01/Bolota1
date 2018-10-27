@@ -5,7 +5,7 @@ local state_ready = false
 
 AddEventHandler("playerSpawned",function() -- delay state recording
   state_ready = false
-  
+
   Citizen.CreateThread(function()
     Citizen.Wait(30000)
     state_ready = true
@@ -189,12 +189,12 @@ function tvRP.getCustomization()
   local ped = GetPlayerPed(-1)
 
   local custom = {}
-
   custom.modelhash = GetEntityModel(ped)
+  local indexes = {1,3,4,5,6,7,8,9,11}
 
   -- ped parts
-  for i=0,20 do -- index limit to 20
-    custom[i] = {GetPedDrawableVariation(ped,i), GetPedTextureVariation(ped,i), GetPedPaletteVariation(ped,i)}
+  for i=1,#indexes do -- index limit to 20
+    custom[indexes[i]] = {GetPedDrawableVariation(ped,indexes[i]), GetPedTextureVariation(ped,indexes[i]), GetPedPaletteVariation(ped,indexes[i])}
   end
 
   -- props
@@ -209,13 +209,13 @@ end
 function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] components or props (p0...) plus .modelhash or .model
   local exit = TUNNEL_DELAYED() -- delay the return values
 
-  --[[Citizen.CreateThread(function() -- new thread
+  Citizen.CreateThread(function() -- new thread
     if custom then
       local ped = GetPlayerPed(-1)
-      --local mhash = nil
+      local mhash = nil
 
       -- model
-      if custom.modelhash ~= nil then
+      --[[if custom.modelhash ~= nil then
         mhash = custom.modelhash
       elseif custom.model ~= nil then
         mhash = GetHashKey(custom.model)
@@ -235,9 +235,7 @@ function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] com
           tvRP.giveWeapons(weapons,true)
           SetModelAsNoLongerNeeded(mhash)
         end
-      end
-
-      ped = GetPlayerPed(-1)
+      end]]
 
       -- parts
       for k,v in pairs(custom) do
@@ -255,9 +253,8 @@ function tvRP.setCustomization(custom) -- indexed [drawable,texture,palette] com
         end
       end
     end
-
     exit({})
-  end)]]--
+  end)
 end
 
 -- fix invisible players by resetting customization every minutes

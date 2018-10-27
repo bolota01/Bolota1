@@ -7,10 +7,12 @@ AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
   local player = source
   local data = vRP.getUserDataTable(user_id)
   local tmpdata = vRP.getUserTmpTable(user_id)
+  local first_customization = false
 
   if first_spawn then -- first spawn
     -- cascade load customization then weapons
     if data.customization == nil then
+      first_customization = true
       data.customization = cfg.default_customization
     end
 
@@ -27,6 +29,8 @@ AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
 
     if data.customization ~= nil then
       vRPclient.setCustomization(source,{data.customization},function() -- delayed weapons/health, because model respawn
+        TriggerClientEvent('customization', source)
+
         if data.weapons ~= nil then -- load saved weapons
           vRPclient.giveWeapons(source,{data.weapons,true})
 
@@ -70,17 +74,19 @@ AddEventHandler("vRP:playerSpawn", function(user_id, source, first_spawn)
     -- disable handcuff
     vRPclient.setHandcuffed(player,{false})
 
-    if cfg.spawn_enabled then -- respawn (CREATED SPAWN_DEATH)
+    --if cfg.spawn_enabled then -- respawn (CREATED SPAWN_DEATH)
       local x = cfg.spawn_death[1]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       local y = cfg.spawn_death[2]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       local z = cfg.spawn_death[3]+math.random()*cfg.spawn_radius*2-cfg.spawn_radius
       data.position = {x=x,y=y,z=z}
       vRPclient.teleport(source,{x,y,z})
-    end
+    --end
 
     -- load character customization
     if data.customization ~= nil then
-      vRPclient.setCustomization(source,{data.customization})
+      vRPclient.setCustomization(source,{data.customization}, function()
+        TriggerClientEvent('customization', source)
+      end)
     end
   end
   Debug.pend()

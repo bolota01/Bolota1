@@ -21,7 +21,7 @@ local lang = Lang.new(module("vrp", "cfg/lang/"..cfg.lang) or {})
 -- open the skin shop for the specified ped parts
 -- name = partid
 function vRPbs.openBarbershop(source,parts)
-  local user_id = vRP.getUserId({source})
+  --[[local user_id = vRP.getUserId({source})
   if user_id ~= nil then
 
     -- get old customization to compute the price
@@ -154,6 +154,10 @@ function vRPbs.openBarbershop(source,parts)
       -- open menu
       vRP.openMenu({source,menudata})
 	end})
+  end]]
+  local user_id = vRP.getUserId({source})
+  if user_id ~= nil then
+    TriggerClientEvent('createCharacter', source, true)
   end
 end
 
@@ -186,6 +190,8 @@ end
 AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
   if first_spawn then
     build_client_barbershops(source)
+  end
+  --[[
     SetTimeout(35000,function()
       local custom = {}
       vRP.getUData({user_id,"vRP:head:overlay",function(value)
@@ -205,12 +211,12 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
 	    end
 	  end})
     end)
-  end
+  end]]
 end)
 
 RegisterServerEvent('vRP:cloakroom:update')
 AddEventHandler('vRP:cloakroom:update', function(player)
-  local user_id = vRP.getUserId({player})
+  --[[local user_id = vRP.getUserId({player})
   local player = vRP.getUserSource({user_id})
   SetTimeout(1000,function()
   local custom = {}
@@ -220,7 +226,7 @@ AddEventHandler('vRP:cloakroom:update', function(player)
         vRPbsC.setOverlay(player,{custom,true})
 	  end
 	end})
-  end)
+  end)]]
 end)
 
 -- UPDATE
@@ -290,7 +296,7 @@ local ch_display_blend = {function(player, choice)
   end)
 end, "Shows head blend data."}
 
-vRP.registerMenuBuilder({"admin", function(add, data)
+--[[vRP.registerMenuBuilder({"admin", function(add, data)
   local user_id = vRP.getUserId({data.player})
   if user_id ~= nil then
     local choices = {}
@@ -302,4 +308,4 @@ vRP.registerMenuBuilder({"admin", function(add, data)
 	
     add(choices)
   end
-end})
+end})]]
