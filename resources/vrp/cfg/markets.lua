@@ -62,7 +62,16 @@ cfg.market_types = {
     _config = {blipid=0, blipcolor=0, permissions={"delivery.shop"}},
     ["gocagola"] = 10,
     ["pizza"] = 5 
-  },   
+  },
+  ["Buteco da Praia"] = {
+    _config = {blipid=52, blipcolor=2},
+    ["orangejuice"] = 8,
+    ["gocagola"] = 12,
+    ["redgull"] = 12,
+    ["lemonlimonad"] = 14,
+    ["vodka"] = 30,
+    ["smirnoff"] = 40
+  },
   ["drugstore"] = {
     _config = {blipid=51, blipcolor=2},
     ["medkit"] = 75,
@@ -102,6 +111,7 @@ cfg.markets = {
   {"Feira",1042.3732910156,698.3154296875,158.85466003418},
   {"máquinas",436.37149047852,-986.49005126953,30.689599990845},
   {"Sorveteria",218.52868652344,-955.46838378906,30.086919784546},
+  {"Buteco da Praia",1323.6665039063,-2719.5485839844,2.3019030094147},
   {"food",128.1410369873, -1286.1120605469, 29.281036376953},
   {"Mercado Entregador",144.68577575684,-1461.7618408203,29.141620635986},
   {"redes",840.18249511719,-1028.2701416016,28.194843292236},
