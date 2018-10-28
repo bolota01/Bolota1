@@ -2,6 +2,7 @@ local running = false
 local barber = false
 local language = {
 	charMenu = 'Criar Personagem',
+	barberTitle = 'Barbearia',
 	back = 'Voltar',
 	gender = "Género",
 	male = "Masculino",
@@ -283,6 +284,67 @@ function setCamera(flag)
 	end
 end
 
+local Ibuttons = nil
+
+function DrawIbuttons()
+	if HasScaleformMovieLoaded(Ibuttons) then
+		DrawScaleformMovie(Ibuttons, 0.5, 0.5, 1.0, 1.0, 255, 255, 255, 255)
+	end
+end
+
+function SetIbuttons(buttons, layout)
+	Citizen.CreateThread(function()
+		if not HasScaleformMovieLoaded(Ibuttons) then
+			Ibuttons = RequestScaleformMovie("INSTRUCTIONAL_BUTTONS")
+			while not HasScaleformMovieLoaded(Ibuttons) do
+				Citizen.Wait(0)
+			end
+		else
+			Ibuttons = RequestScaleformMovie("INSTRUCTIONAL_BUTTONS")
+			while not HasScaleformMovieLoaded(Ibuttons) do
+				Citizen.Wait(0)
+			end
+		end
+		local sf = Ibuttons
+		local w,h = GetScreenResolution()
+		PushScaleformMovieFunction(sf,"CLEAR_ALL")
+		PopScaleformMovieFunction()
+		PushScaleformMovieFunction(sf,"SET_DISPLAY_CONFIG")
+		PushScaleformMovieFunctionParameterInt(w)
+		PushScaleformMovieFunctionParameterInt(h)
+		PushScaleformMovieFunctionParameterFloat(0.03)
+		PushScaleformMovieFunctionParameterFloat(0.98)
+		PushScaleformMovieFunctionParameterFloat(0.01)
+		PushScaleformMovieFunctionParameterFloat(0.95)
+		PushScaleformMovieFunctionParameterBool(true)
+		PushScaleformMovieFunctionParameterBool(false)
+		PushScaleformMovieFunctionParameterBool(false)
+		PushScaleformMovieFunctionParameterInt(w)
+		PushScaleformMovieFunctionParameterInt(h)
+		PopScaleformMovieFunction()
+		PushScaleformMovieFunction(sf,"SET_MAX_WIDTH")
+		PushScaleformMovieFunctionParameterInt(1)
+		PopScaleformMovieFunction()
+		
+		for i,btn in pairs(buttons) do
+			PushScaleformMovieFunction(sf,"SET_DATA_SLOT")
+			PushScaleformMovieFunctionParameterInt(i-1)
+			PushScaleformMovieFunctionParameterString(btn[1])
+			PushScaleformMovieFunctionParameterString(btn[2])
+			PopScaleformMovieFunction()
+			
+		end
+		if layout ~= 1 then
+			PushScaleformMovieFunction(sf,"SET_PADDING")
+			PushScaleformMovieFunctionParameterInt(10)
+			PopScaleformMovieFunction()
+		end
+		PushScaleformMovieFunction(sf,"DRAW_INSTRUCTIONAL_BUTTONS")
+		PushScaleformMovieFunctionParameterInt(layout)
+		PopScaleformMovieFunction()
+	end)
+end
+
 function blendface(shapeFirstID, shapeSecondID, shapeMix, skinMix)
 	SetPedHeadBlendData(GetPlayerPed(-1),shapeFirstID,shapeSecondID,0,shapeFirstID,shapeSecondID,0,shapeMix,skinMix,0.0,false)	
 end
@@ -342,8 +404,6 @@ function rotateCamera()
 end
 
 function updateCharacter()
-	print("huehueheu")
-	print(hairOptions.index)
 	local ped = GetPlayerPed(-1)
 	local model = GetEntityModel(ped)
 
@@ -505,12 +565,26 @@ local firstSpawn = true
 local create = false
 
 RegisterNetEvent('createCharacter')
-AddEventHandler('createCharacter',function (barber_t)
+AddEventHandler('createCharacter',function ()
 	if not running then
 		canClose = false
 		create = true
 		running = true
-		barber = barber_t or false
+		barber = false
+		WarMenu.SetTitle('mainMenu', language.charMenu)
+		updateCharacter()
+		run_customization()
+	end
+end)
+
+RegisterNetEvent('openBarberShop')
+AddEventHandler('openBarberShop',function ()
+	if not running then
+		canClose = false
+		create = false
+		running = true
+		barber = true
+		WarMenu.SetTitle('mainMenu', language.barberTitle)
 		updateCharacter()
 		run_customization()
 	end
@@ -623,6 +697,16 @@ end
 function run_customization()
 	Citizen.CreateThread(function()
 		local rotate = 0
+
+		SetIbuttons({
+			{GetControlInstructionalButton(1, 177, 0), "Voltar"},
+			{GetControlInstructionalButton(1, 201, 0), "Selecionar"},
+			{GetControlInstructionalButton(1, 27, 0), "Cima"},
+			{GetControlInstructionalButton(1, 173, 0), "Baixo"},
+			{GetControlInstructionalButton(1, 174, 0), "Esquerda"},
+			{GetControlInstructionalButton(1, 175, 0), "Direita"}
+		},0)
+
 		while running do
 			if WarMenu.IsMenuOpened('mainMenu') then
 				--combobox do genero
@@ -743,6 +827,7 @@ function run_customization()
 			if WarMenu.CurrentMenu() ~= nil  then
 				setCamera(true)
 				rotateCamera()
+				DrawIbuttons()
 			end
 
 			Citizen.Wait(0)

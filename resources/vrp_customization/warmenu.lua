@@ -5,11 +5,9 @@ WarMenu = { }
 -- Options
 WarMenu.debug = true
 
-
-
 -- Local variables
 local menus = { }
-local keys = { up = 32, down = 33, left = 34, right = 35, select = 176, back = 177 }
+local keys = { up = 27, down = 173, left = 174, right = 175, select = 201, back = 177 }
 
 local optionCount = 0
 
@@ -18,7 +16,6 @@ local currentKey = nil
 local pressed = nil
 
 local currentMenu = nil
-
 
 local menuWidth = 0.33
 
@@ -456,6 +453,7 @@ end
 
 function WarMenu.Display()
     if isMenuVisible(currentMenu) then
+        --drawRightMenuText(menu.selected..'/'..tablelength(menu.buttons),cfg.font,0,x + (width/2.1),ty,scale,cfg.text_color.r,cfg.text_color.g,cfg.text_color.b,cfg.text_color.a)
         if menus[currentMenu].aboutToBeClosed then
             WarMenu.CloseMenu()
         else
@@ -466,8 +464,6 @@ function WarMenu.Display()
 
             currentKey = nil
 
-			
-			
             if IsControlJustPressed(0, keys.down) then
                 PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", true)
 
@@ -552,6 +548,10 @@ end
 
 function WarMenu.SetSubTitle(id, text)
     setMenuProperty(id, 'subTitle', (text))
+end
+
+function WarMenu.SetTitle(id, text)
+    setMenuProperty(id, 'title', (text))
 end
 
 
