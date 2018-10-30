@@ -1,100 +1,115 @@
--- a basic tattooshop implementation
+--[[
+    FiveM Scripts
+    Copyright C 2018  Sighmir
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    at your option any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+-- vRP TUNNEL/PROXY
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 
+-- RESOURCE TUNNEL/PROXY
 vRPts = {}
 vRP = Proxy.getInterface("vRP")
 vRPclient = Tunnel.getInterface("vRP","vrp_tattoos")
-TSclient = Tunnel.getInterface("vrp_tattoos","vrp_tattoos")
+Proxy.addInterface("vrp_tattoos",vRPts)
+TSclient = Tunnel.getInterface("vrp_tattoos", "vrp_tattoos")
 Tunnel.bindInterface("vrp_tattoos",vRPts)
 
+-- CFG
+local cfg = module("vrp_tattoos", "cfg/tattoos")
+-- LANG
 local Lang = module("vrp", "lib/Lang")
 local lcfg = module("vrp", "cfg/base")
-local lang = Lang.new(module("vrp", "cfg/lang/"..lcfg.lang) or {})
-
-local cfg = module("vrp_tattoos", "cfg/tattoos")
-
-local tattooshop_menus = {}
-
-function vRPts.addTattoo(user_id, tattoo, store)
-  local player = vRP.getUserSource({user_id})
-  if player ~= nil then
-    TSclient.drawTattoo(player,{tattoo,store})
-	vRP.getUData({user_id,"vRP:tattoos",function(value)
-	  local tattoos = json.decode(value)
-	  if tattoos == nil then
-	    tattoos = {}
-	  end
-	  tattoos[tattoo] = store
-	  vRP.setUData({user_id,"vRP:tattoos",json.encode(tattoos)})
-	end})
-  end
-end
+local lang = Lang.new(module("vrp_tattoos", "cfg/lang/"..lcfg.lang) or {})
 
 -- build tattooshop menus
-for shop,tattoos in pairs(cfg.tattoos) do
-  local tattooshop_menu = {
-    name="Tattoos",
-    css={top = "75px", header_color="rgba(255,0,0,0.75)"}
-  }
+function vRPts.openTattooshop(source, shop)
+    local user_id = vRP.getUserId({source})
+    local menudata = {
+      name=lang.tattoos.title(),
+      css={top = "75px", header_color="rgba(255,0,0,0.75)"}
+    }
+  
+    -- build tattooshop items
+    local kitems = {}
+    local old_custom
+    
+    TSclient.getTattoos(source, {}, function(c)
+      old_custom = c
+    end)
+  
+    -- item choice
+    local tattoshop_choice = function(player,choice)
+      local tattoo = cfg.tattoos[shop][choice][1]
+      local price = cfg.tattoos[shop][choice][2]
 
-  -- build tattooshop items
-  local kitems = {}
-
-  -- item choice
-  local tattoshop_choice = function(player,choice)
-    local tattoo = kitems[choice][1]
-    local price = kitems[choice][2]
-
-    if tattoo then
-      local user_id = vRP.getUserId({player})
-	  local owned = false
-	  if tattoo == "CLEAR" then-- get player weapons to not rebuy the body
-        -- payment
-        if user_id ~= nil and vRP.tryFullPayment({user_id,price}) then
-          TSclient.cleanPlayer(player,{})
-		  TriggerEvent("vRP:cloakroom:update", player)
-		  vRP.setUData({user_id,"vRP:tattoos",json.encode({})})
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
-        else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
-        end
-	  else
-        -- get player tattoos to not rebuy
-		vRP.getUData({user_id,"vRP:tattoos",function(value)
-		  local tattoos = json.decode(value)
-		  if tattoos ~= nil then
-		    for k,v in pairs(tattoos) do
-		      if k == tattoo then
-			    owned = true
-			  end
-		    end
-		  end
-		  if not owned then
-		    -- payment
-            if user_id ~= nil and vRP.tryFullPayment({user_id,price}) then
-			  vRPts.addTattoo(user_id, tattoo, shop)
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
-            else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+      if tattoo then
+  	    local applied = false
+  	    if tattoo == "CLEAR" then
+		      vRPclient.notify(source,lang.tattoos.cleaned())
+          TSclient.cleanPlayer(source, {})
+  	    else
+          TSclient.getTattoos(source, {}, function(custom)
+            for k,v in pairs(custom) do
+              if k == tattoo then
+                applied = true
+              end
             end
-		  else
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "Você já possui essa tatuagem", type = "error", timeout = (3000),layout = "centerLeft"})
-		  end
-		end})
-	  end
+            if not applied then
+              vRPclient.notify(source, {lang.tattoos.added()})
+              TSclient.addTattoo(source, {tattoo, shop, price})
+            else
+              vRPclient.notify(source, {lang.tattoos.removed()})
+              TSclient.delTattoo(source, {tattoo})
+            end
+          end)
+        end
+      end
+	end
+    
+    menudata.onclose = function(player)
+      -- compute price
+      TSclient.getTattoos(player, {}, function(custom)
+        local price = 0
+        for k,v in pairs(custom) do
+          local old = old_custom[k]
+          if not old then price = price + v[2] end -- change of tattoo
+        end
+    
+        if vRP.tryPayment({user_id, price}) then
+          vRP.setUData({user_id, "vRP:tattoos", json.encode(custom)})
+          if price > 0 then
+            vRPclient.notify(source, {lang.money.paid({price})})
+          end
+        else
+          vRPclient.notify(source, {lang.money.not_enough()})
+          -- revert changes
+          TSclient.setTattoos(source, {old_custom})
+        end
+      end)
     end
-  end
-
-  -- add item options
-  for k,v in pairs(tattoos) do
-    if k ~= "_config" then -- ignore config property
-      kitems[v[1]] = {k,math.max(v[2],0)} -- idname/price
-      tattooshop_menu[v[1]] = {tattoshop_choice,v[3]} -- add description
+  
+    -- add item options
+    for k,v in pairs(cfg.tattoos[shop]) do
+      if k ~= "_config" then -- ignore config property
+        menudata[k] = {tattoshop_choice,lang.garage.buy.info({v[2],v[3]})} -- add description
+      end
     end
-  end
-
-  tattooshop_menus[shop] = tattooshop_menu
+  
+    vRP.openMenu({source, menudata})
 end
 
 local function build_client_tattooshops(source)
@@ -103,19 +118,18 @@ local function build_client_tattooshops(source)
     for k,v in pairs(cfg.shops) do
       local shop,x,y,z = table.unpack(v)
       local group = cfg.tattoos[shop]
-      local menu = tattooshop_menus[shop]
 
-      if group and menu then
+      if group then
         local gcfg = group._config
 
-        local function tattooshop_enter()
+        local function tattooshop_enter(source)
           local user_id = vRP.getUserId({source})
-          if user_id ~= nil and vRP.hasPermissions({user_id,gcfg.permissions or {}}) then
-            vRP.openMenu({source,menu}) 
+          if user_id and vRP.hasPermissions({user_id,gcfg.permissions or {}}) then
+            vRPts.openTattooshop(source,shop)
           end
         end
 
-        local function tattooshop_leave()
+        local function tattooshop_leave(source)
           vRP.closeMenu({source})
         end
         vRPclient.addBlip(source,{x,y,z,gcfg.blipid,gcfg.blipcolor,gcfg.title})
@@ -128,28 +142,14 @@ local function build_client_tattooshops(source)
 end
 
 AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
+  local mySource = source
   if first_spawn then
-    build_client_tattooshops(source)
-	SetTimeout(31000,function() -- increase this if you have problems with tattoos not saving on login has to be >31000
-	  vRP.getUData({user_id,"vRP:tattoos",function(value)
-	    local tattoos = json.decode(value)
-        if tattoos ~= nil then
-		  for k,v in pairs(tattoos) do
-            TSclient.drawTattoo(source,{k,v})
-		  end
-        end
-	  end})
-	end)
-  else
-	SetTimeout(16000,function() -- increase this if you have problems with tattoos not saving after death has to be >16000
-	  vRP.getUData({user_id,"vRP:tattoos",function(value)
-	    local tattoos = json.decode(value)
-        if tattoos ~= nil then
-		  for k,v in pairs(tattoos) do
-            TSclient.drawTattoo(source,{k,v})
-		  end
-        end
-	  end})
-	end)
+    build_client_tattooshops(mySource)
+    vRP.getUData({user_id,"vRP:tattoos", function(data)
+      if data ~= "" then
+        local tattoos = json.decode(data)
+        TSclient.setTattoos(mySource, {tattoos})
+      end
+    end})
   end
 end)

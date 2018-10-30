@@ -17,17 +17,16 @@
 ]]
 
 
-description "vRP tattoos"
-
-dependency "vrp"
-
-client_scripts {
-  "lib/Proxy.lua",
-  "lib/Tunnel.lua",
-  "client.lua"
+local lang = {
+	tattoos = {
+		title = "Tattoos",
+		added = "~g~Tattoo adicionada.",
+		removed = "~r~Tattoo removida.",
+		cleaned = "~r~Todas tattoos removidas."
+    },
+    money = {
+        paid = "Pago ~r~{1}$."
+    }
 }
 
-server_scripts{ 
-  "@vrp/lib/utils.lua",
-  "server.lua"
-}
+return lang
