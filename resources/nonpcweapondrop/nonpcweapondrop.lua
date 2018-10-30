@@ -4,7 +4,7 @@ ____________________________________________________________________________
 						
 						AUTHOR : Soig
 
-			Plus aucune armes droppées par les PNJ
+			Plus aucune armes droppï¿½es par les PNJ
 			Peds wont drop weapons no more
 		
 
@@ -36,7 +36,7 @@ end
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Citizen.Wait(500)
         SetWeaponDrops()
     end
 end)

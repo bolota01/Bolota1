@@ -829,7 +829,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 		local pos = GetEntityCoords(GetPlayerPed(-1), false)
 		for k,v in ipairs(dmvpedpos) do
-			if(Vdist(v.x, v.y, v.z, pos.x, pos.y, pos.z) < 1.0)then
+			if(Vdist2(v.x, v.y, v.z, pos.x, pos.y, pos.z) < 1.0)then
 				DisplayHelpText("Pressione ~INPUT_CONTEXT~ para interagir com o ~y~NPC")
 				if(IsControlJustReleased(1, 38))then
 						if talktodmvped then

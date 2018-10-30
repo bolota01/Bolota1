@@ -2,7 +2,7 @@ outputLoading = false
 playButtonPressSounds = true
 printDebugInformation = true
 
-vehicleSyncDistance = 150
+vehicleSyncDistance = 22500
 envirementLightBrightness = 0.006
 
 panelType = "original"

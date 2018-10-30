@@ -10,7 +10,7 @@ Citizen.CreateThread(function()
             local ped = GetPlayerPed(PlayerId())
             local pedPos = GetEntityCoords(ped, false)
             local pedHead = GetEntityRotation(ped, 2)
-            local distance = Vdist(pedPos.x, pedPos.y, pedPos.z, SecurityCamConfig.Locations[a].camBox.x, SecurityCamConfig.Locations[a].camBox.y, SecurityCamConfig.Locations[a].camBox.z)
+            local distance = Vdist2(pedPos.x, pedPos.y, pedPos.z, SecurityCamConfig.Locations[a].camBox.x, SecurityCamConfig.Locations[a].camBox.y, SecurityCamConfig.Locations[a].camBox.z)
             if SecurityCamConfig.DebugMode then
                 Draw3DText(pedPos.x, pedPos.y, pedPos.z + 0.6, tostring("X: " .. pedPos.x))
                 Draw3DText(pedPos.x, pedPos.y, pedPos.z + 0.4, tostring("Y: " .. pedPos.y))
@@ -25,13 +25,13 @@ Citizen.CreateThread(function()
             end
 
             if pedAllowed then
-                if distance <= 5.0 then
+                if distance < 25.0 then
                     local box_label = SecurityCamConfig.Locations[a].camBox.label
                     local box_x = SecurityCamConfig.Locations[a].camBox.x
                     local box_y = SecurityCamConfig.Locations[a].camBox.y
                     local box_z = SecurityCamConfig.Locations[a].camBox.z
                     Draw3DText(box_x, box_y, box_z, tostring("~o~[E]~w~ Use " .. box_label .. " Cameras"))
-                    if IsControlJustPressed(1, 38) and createdCamera == 0 and distance <= 1.2 then
+                    if IsControlJustPressed(1, 38) and createdCamera == 0 and distance < 1.45 then
                         local firstCamx = SecurityCamConfig.Locations[a].cameras[1].x
                         local firstCamy = SecurityCamConfig.Locations[a].cameras[1].y
                         local firstCamz = SecurityCamConfig.Locations[a].cameras[1].z

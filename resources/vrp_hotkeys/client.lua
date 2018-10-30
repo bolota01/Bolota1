@@ -196,8 +196,8 @@ end
 function vRPhk.playSoundWithinDistanceOfCoords(x, y, z, maxDistance, soundFile, soundVolume)
     local lCoords = GetEntityCoords(GetPlayerPed(-1))
     local distIs  = Vdist(lCoords.x, lCoords.y, lCoords.z, x, y, z)
-	local Sreduc = 1.0 - (distIs/maxDistance)
-	local reducedVolume = Sreduc*soundVolume
+    local Sreduc = 1.0 - (distIs/maxDistance)
+    local reducedVolume = Sreduc*soundVolume
     if(distIs <= maxDistance) then
         SendNUIMessage({
             transactionType     = 'playSound',

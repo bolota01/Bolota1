@@ -132,15 +132,17 @@ incircle = false
 Citizen.CreateThread(function()
 	while true do
 		local pos = GetEntityCoords(GetPlayerPed(-1), true)
-
+		local pos2 = nil
+		local distance = nil
 		for k,v in pairs(banks)do
-			local pos2 = v.position
+			pos2 = v.position
+			distance = Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z)
 
-			if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 15.0)then
+			if(distance < 225.0)then
 				if not robbing then
 					DrawMarker(1, v.position.x, v.position.y, v.position.z - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 1555, 0, 0,255, 0, 0, 0,0)
 					
-					if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 2)then
+					if(distance < 4)then
 						if (incircle == false) then
 							bank_DisplayHelpText("Pressione ~INPUT_CONTEXT~ para iniciar um assalto ao Banco ~b~" .. v.nameofbank .. "~w~ Cuidado, a Polícia Militar será Alertada!")
 						end
@@ -148,7 +150,7 @@ Citizen.CreateThread(function()
 						if(IsControlJustReleased(1, 51))then
 							TriggerServerEvent('es_bank:rob', k)
 						end
-					elseif(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 2)then
+					elseif(distance > 4)then
 						incircle = false
 					end
 				end
@@ -166,7 +168,7 @@ Citizen.CreateThread(function()
 			
             if IsEntityDead(ped) then
 			TriggerServerEvent('es_bank:playerdied', bank)
-			elseif (Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 15)then
+			elseif (Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 225)then
 				TriggerServerEvent('es_bank:toofar', bank)
 			end
 		end

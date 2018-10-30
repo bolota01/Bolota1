@@ -87,7 +87,7 @@ Citizen.CreateThread(function()
 			end
 		end
 
-		Citizen.Wait(0)
+		Citizen.Wait(500)
 	end
 end)
 
@@ -97,7 +97,7 @@ Citizen.CreateThread(function()
 		for k,v in pairs(stores)do
 			local pos2 = v.position
 
-			if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 15.0)then
+			if(Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 225)then
 				if IsPlayerWantedLevelGreater(PlayerId(),0) or ArePlayerFlashingStarsAboutToDrop(PlayerId()) then
 					local wanted = GetPlayerWantedLevel(PlayerId())
 					Citizen.Wait(5000)
@@ -106,7 +106,7 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
-		Citizen.Wait(0)
+		Citizen.Wait(300)
 	end
 end)
 
@@ -131,28 +131,6 @@ Citizen.CreateThread(function()
 	while true do
 		local pos = GetEntityCoords(GetPlayerPed(-1), true)
 
-		for k,v in pairs(stores)do
-			local pos2 = v.position
-
-			if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 15.0)then
-				if not holdingup then
-					DrawMarker(1, v.position.x, v.position.y, v.position.z - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 1555, 0, 0,255, 0, 0, 0,0)
-					
-					if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 2.0)then
-						if (incircle == false) then
-							holdup_DisplayHelpText("Pressione ~INPUT_CONTEXT~ para iniciar um assalto ~b~" .. v.nameofstore .. "~w~ Cuidado, a Policia Militar será Alertada!")
-						end
-						incircle = true
-						if(IsControlJustReleased(1, 51))then
-							TriggerServerEvent('es_holdup:rob', k)
-						end
-					elseif(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 2.0)then
-						incircle = false
-					end
-				end
-			end
-		end
-
 		if holdingup then
 		    SetPlayerWantedLevel(PlayerId(), 2, 0)
             SetPlayerWantedLevelNow(PlayerId(), 0)
@@ -165,8 +143,31 @@ Citizen.CreateThread(function()
 			
             if IsEntityDead(ped) then
 			TriggerServerEvent('es_holdup:playerdied', store)
-			elseif(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 15)then
+			elseif(Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 225.0)then
 				TriggerServerEvent('es_holdup:toofar', store)
+			end
+		else
+			local pos2 = nil
+			local distance = nil
+			for k,v in pairs(stores)do
+				pos2 = v.position
+				distance = Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z)
+	
+				if(distance < 225.0)then
+					DrawMarker(1, v.position.x, v.position.y, v.position.z - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 1555, 0, 0,255, 0, 0, 0,0)
+					
+					if(distance < 4.0)then
+						if (incircle == false) then
+							holdup_DisplayHelpText("Pressione ~INPUT_CONTEXT~ para iniciar um assalto ~b~" .. v.nameofstore .. "~w~ Cuidado, a Policia Militar será Alertada!")
+						end
+						incircle = true
+						if(IsControlJustReleased(1, 51))then
+							TriggerServerEvent('es_holdup:rob', k)
+						end
+					elseif(distance > 4.0)then
+						incircle = false
+					end
+				end
 			end
 		end
 

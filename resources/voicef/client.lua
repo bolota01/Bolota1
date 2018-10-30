@@ -1,6 +1,6 @@
 local showPlayerBlips = true
 local ignorePlayerNameDistance = false
-local playerNamesDist = 15
+local playerNamesDist = 225
 local displayIDHeight = 1.5 --Height of ID above players head(starts at center body mass)
 --Set Default Values for Colors
 local red = 255
@@ -38,14 +38,15 @@ Citizen.CreateThread(function()
         for i=0,99 do
             N_0x31698aa80e0223f8(i)
         end
+        local player = GetPlayerPed(-1)
+        local ped = nil
         for id = 0, 31 do
-            if  ((NetworkIsPlayerActive( id )) and GetPlayerPed( id ) ~= GetPlayerPed( -1 )) then
-                ped = GetPlayerPed( id )
+            ped = GetPlayerPed(id)
+            if  ((NetworkIsPlayerActive( id )) and ped ~= player) then
                 blip = GetBlipFromEntity( ped ) 
  
                 x1, y1, z1 = table.unpack( GetEntityCoords( GetPlayerPed( -1 ), true ) )
                 x2, y2, z2 = table.unpack( GetEntityCoords( GetPlayerPed( id ), true ) )
-                distance = math.floor(GetDistanceBetweenCoords(x1,  y1,  z1,  x2,  y2,  z2,  true))
 				local takeaway = 0.95
 
                 if(ignorePlayerNameDistance) then
@@ -57,7 +58,7 @@ Citizen.CreateThread(function()
                     end
                 end
 
-                if ((distance < playerNamesDist)) then
+                if (Vdist2(x1,  y1,  z1,  x2,  y2,  z2) < playerNamesDist) then
                     if not (ignorePlayerNameDistance) then
 						if NetworkIsPlayerTalking(id) then
 							red = 255

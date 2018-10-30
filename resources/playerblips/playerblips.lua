@@ -55,7 +55,7 @@ Citizen.CreateThread(function()
 	
 			x1, y1 = table.unpack( GetEntityCoords( GetPlayerPed( -1 ), true ) )
 			x2, y2 = table.unpack( GetEntityCoords( GetPlayerPed( id ), true ) )
-			distance = ( math.floor( math.abs( math.sqrt( ( x1 - x2 ) * ( x1 - x2 ) + ( y1 - y2 ) * ( y1 - y2 ) ) ) / -1 ) )
+			distance = Vdist2(x1,y1,0,x2,y2,0)
 			-- Probably a way easier way to do this but whatever im an idiot
 			
 			ped = GetPlayerPed( id )
@@ -66,7 +66,7 @@ Citizen.CreateThread(function()
 			-- Create head display (this is safe to be spammed)
 			headId = Citizen.InvokeNative( 0xBFEFE3321A3F5015, ped, GetPlayerName( id ), false, false, "", false )
 			wantedLvl = GetPlayerWantedLevel( id )
-			if NetworkIsPlayerActive( id ) and GetPlayerPed( id ) ~= GetPlayerPed( -1 ) and distance<2 then
+			if NetworkIsPlayerActive( id ) and GetPlayerPed( id ) ~= GetPlayerPed( -1 ) and distance<4 then
 
 				-- Wanted level display
 				if wantedLvl then
