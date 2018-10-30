@@ -8,12 +8,12 @@ client_scripts{
   "crouch-client.lua",
   "markers.lua",
   "pointfinger-client.lua",
-  "handsup-client.lua",
-  "lockcar-client.lua",
+  --"handsup-client.lua",
+  --"lockcar-client.lua",
   "stopwanted-client.lua",
   "names-client.lua",
   "gameui-client.lua",
   "deletepoliceweapons-client.lua",
   "taxi-client.lua",
   "missiontext-client.lua"
- }
+}

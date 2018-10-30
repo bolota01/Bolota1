@@ -11,7 +11,7 @@ server_script {
     "server.lua"
 }
 client_script {
-    "lib/Proxy.lua",
-    "lib/Tunnel.lua",
+    --"lib/Proxy.lua",
+    --"lib/Tunnel.lua",
     "client.lua"
 }
