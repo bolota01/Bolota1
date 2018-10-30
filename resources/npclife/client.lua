@@ -29,6 +29,8 @@ local ShopClerk = {
 	{id = 10, modelHash = "mp_f_cocaine_01", x = 1090.2777099609, y = -3196.6728515625, z = -38.993423461914, heading = 19.1558074951172},
 	-- npc processamento de metanfetamina
 	{id = 11, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", modelHash = "ig_rashcosvki", x = 1208.3706054688, y = -3116.1745605469, z = 5.5403265953064, heading = 48.1558074951172},
+	-- npc hospital
+	{id = 12, modelHash = "s_f_y_scrubs_01", x = 262.08874511719, y = -1359.6343994141, z = 24.537784576416, heading = 48.1558074951172},
 }
 
 -------------------------------------------------------------------------------------------------

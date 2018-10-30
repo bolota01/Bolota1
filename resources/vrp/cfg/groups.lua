@@ -85,7 +85,28 @@ cfg.groups = {
     "player.calladmin",
 	"emergency_heal",
     "police.seizable" -- can be seized
-  }, 
+  },
+  ["galpaocannabis"] = {
+    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Maconha."}) end},
+    "galpao.maconha"
+  },
+  ["galpaometannfetamina"] = {
+    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Metanfetamina."}) end},
+    "galpao.meta"
+  },
+  ["galpaococainna"] = {
+    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Cocaina."}) end},
+    "galpao.coca"
+  },
+  ["galpaodirtymoney"] = {
+    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Lavagem."}) end},
+    "galpao.lavagem"
+  },
+  ["galpaofabricadearma"] = {
+    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Armas."}) end},
+    "galpao.armas",
+    "build.gun"
+  },
   -- Polícia  
   ["Recruta"] = {
     _config = { 
@@ -637,6 +658,7 @@ cfg.groups = {
   ["Samu Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
@@ -655,6 +677,7 @@ cfg.groups = {
     ["Doutor"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
@@ -673,6 +696,7 @@ cfg.groups = {
   ["Médico Chefe"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
@@ -691,6 +715,7 @@ cfg.groups = {
   ["Médico"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "player.group.add",
     "mission.emergency.transfer",
     "emergency.shop",
@@ -708,6 +733,7 @@ cfg.groups = {
   ["Paramédico"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",
@@ -724,6 +750,7 @@ cfg.groups = {
   ["Socorrista"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "ems.farmacia",
     "mission.emergency.transfer",
     "emergency.shop",
     "emergency_heal",

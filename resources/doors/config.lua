@@ -42,8 +42,11 @@ cfg.list = {
   [42] = {offset = -1.2, mystatus = false, hash = 1245831483, x = -794.99041748047, y = 177.80874633789, z = 72.835266113281, locked = true, key = "key_grove_house", permission="grove.doors", name = "Mansão 01", pair = 40},
   [43] = {offset = -1.2, mystatus = false, hash = -1454760130, x = -793.58135986328, y = 181.13201904297, z = 72.835243225098, locked = true, key = "key_grove_house", permission="grove.doors", name = "Mansão 01", pair = 44},
   [44] = {offset = -1.2, mystatus = false, hash = 1245831483, x = -794.99041748047, y = 181.97880554199, z = 72.835273742676, locked = true, key = "key_grove_house", permission="grove.doors", name = "Mansão 01", pair = 43},
+  [45] = {offset = -1.2, mystatus = false, hash = -1081024910, x = 722.44061279297, y = -924.34283447266, z = 26.658725738525, locked = true, key = "key_grove_house", permission="grove.doors", name = "Lavagem"},
+  [46] = {offset = -1.2, mystatus = false, hash = -1726331785, x = 758.4296875, y = -914.50543212891, z = 25.382110595703, locked = true, key = "key_grove_house", permission="grove.doors", name = "Lavagem"},
   --- Hospital
   [24] = { offset = -1.2, mystatus = false, hash = 1653893025, x = 271.666, y = -1360.943, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Troca de Roupas"},
+  [47] = { offset = -1.2, mystatus = false, hash = 1653893025, x = 265.62805175781, y = -1362.6926269531, z = 24.537788391113, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Troca de Roupas"},
   [25] = { offset = -1.2, mystatus = false, hash = 580361003, x = 265.77, y = -1346.0, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Operações"},
   [26] = { offset = 1.2, mystatus = false, hash = 1415151278, x = 267.47, y = -1344.447, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Operações"},
   [27] = { offset = -1.2, mystatus = false, hash = 580361003, x = 253.011, y = -1360.902, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service", name = "Sala de Operações"},
