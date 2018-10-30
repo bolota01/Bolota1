@@ -1,5 +1,7 @@
 description "VRP lscustoms"
 
+dependency "vrp"
+
 client_script{'menu.lua', 'lscustoms.lua', 'lsconfig.lua'}
 server_script{
     '@vrp/lib/utils.lua',

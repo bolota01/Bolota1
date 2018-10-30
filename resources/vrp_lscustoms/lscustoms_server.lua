@@ -5,7 +5,6 @@ Credits - MythicalBro
 Do not reupload/re release any part of this script without my permission
 ]]
 MySQL = module("vrp_mysql", "MySQL")
-local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 local json = module("vrp", "lib/dkjson")
 
@@ -70,7 +69,7 @@ RegisterServerEvent("LSC:finished")
 AddEventHandler("LSC:finished", function(veh, playerId)
 	local user_id = vRP.getUserId({source})
 
-	MySQL.query(
+	local a = MySQL.query(
 		"vRP/ls_sveh",
 		{id = user_id, upgrades=json.encode(veh), veh=veh.model})
 	--Do w/e u need with all this stuff when vehicle drives out of lsc

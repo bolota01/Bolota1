@@ -14,7 +14,6 @@ end
 function removePlayer(source)
     local index = getIndex(source)
     if index ~= nil then
-        print("remove")
         table.remove(players, index)
         TriggerClientEvent('characterInvisibleRemove', -1, source, players)
     end
@@ -28,8 +27,6 @@ end)
 
 RegisterServerEvent("hc:hidePlayer")
 AddEventHandler("hc:hidePlayer", function()
-    print("hidden")
-    print(source)
     local index = getIndex(source)
     if index == nil then
         table.insert(players, source)

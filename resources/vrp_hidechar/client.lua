@@ -10,7 +10,6 @@ end
 
 function onStop()
     running = false
-    print("stop edit")
 end
 
 RegisterNetEvent('stopHide')
@@ -49,24 +48,31 @@ AddEventHandler('hc:RemoveEntity', function(target)
     end
 end)
 
+function onHideUpdate()
+    while running do
+        local playerOwner = GetPlayerPed(-1)
+        local player = nil
+        local pped = nil
+
+        for i=1,#playersInvisible do
+            player = GetPlayerFromServerId(playersInvisible[i])
+            pped = GetPlayerPed(player)
+            if playerOwner ~= pped then
+                SetEntityVisible(pped, false)
+                SetEntityCollision(pped, false)
+                FreezeEntityPosition(pped, true)
+                SetPlayerInvincible(player, true)
+            end
+        end
+
+        Citizen.Wait(0)
+    end
+end
+    
+
 function runHidePlayers()
     running = true
-    Citizen.CreateThread(function()
-        while running do
-            local playerOwner = GetPlayerPed(-1)
-            for i=1,#playersInvisible do
-                local player = GetPlayerFromServerId(playersInvisible[i])
-                local pped = GetPlayerPed(player)
-                if playerOwner ~= pped then
-                    SetEntityVisible(pped, false)
-                    SetEntityCollision(pped, false)
-                    FreezeEntityPosition(pped, true)
-                    SetPlayerInvincible(player, true)
-                end
-            end
-            Citizen.Wait(0)
-        end
-    end)
+    Citizen.CreateThread(onHideUpdate)
 end
 
 runHidePlayers()
