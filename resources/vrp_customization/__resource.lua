@@ -6,7 +6,7 @@ client_scripts {
 	--"lib/Tunnel.lua",
 	--"lib/Proxy.lua",
 	'warmenu.lua',
-	'cc.lua',
+	'client.lua',
 }
 
 server_scripts{ 
