@@ -157,7 +157,7 @@ function vRPbs.openBarbershop(source,parts)
   end]]
   local user_id = vRP.getUserId({source})
   if user_id ~= nil then
-    TriggerClientEvent('createCharacter', source, true)
+    TriggerClientEvent('openBarberShop', source)
   end
 end
 
