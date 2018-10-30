@@ -43,7 +43,7 @@ end)
 function searchIdDoor()
   local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
   for k,v in pairs(doors) do
-    if GetDistanceBetweenCoords(x,y,z,v.x,v.y,v.z,true) <= 1.5 then
+    if Vdist2(x,y,z,v.x,v.y,v.z) <= 2.26 then
       return k
     end
   end
@@ -69,7 +69,7 @@ Citizen.CreateThread(function()
     Citizen.Wait(0)
     local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
     for k,v in pairs(doors) do
-      if GetDistanceBetweenCoords(x,y,z,v.x,v.y,v.z,true) <= 10 then
+      if Vdist2(x,y,z,v.x,v.y,v.z) < 101 then
           local door = GetClosestObjectOfType(v.x,v.y,v.z, 1.0, v.hash, false, false, false)
           if door ~= 0 then
             SetEntityCanBeDamaged(door, false)

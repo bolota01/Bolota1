@@ -5,9 +5,9 @@
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP", "doors")
+vRPclient = Tunnel.getInterface("vRP", "vrp_doors")
 
-local cfg = module("doors", "config")
+local cfg = module("vrp_doors", "config")
 
 AddEventHandler("vRP:playerSpawn",function(user_id,source,first_spawn)
   if first_spawn then
