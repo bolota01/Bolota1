@@ -26,7 +26,7 @@ Citizen.CreateThread(function()
         local playerPos = GetEntityCoords(ped, true)
 
         for i,pos in pairs(INTERIORS) do
-            DrawMarker(21, pos.x, pos.y, pos.z-1, 0, 0, 0, 0, 0, 0, 1.0,1.0,0.5, 255,255,255, 200, 0, 0, 2, 0, 0, 0, 0)
+            DrawMarker(21, pos.x, pos.y, pos.z, 0, 0, 0, 0, 0, 0, 1.0,1.0,0.5, 253,254,1, 200, 0.5, 0, 2, 0, 0, 0, 0)
             if (Vdist2(playerPos.x, playerPos.y, playerPos.z, pos.x, pos.y, pos.z) < 1.0) and (not PED_hasBeenTeleported) then
                 POS_actual = pos.id
                 if not gui_interiors.opened then
