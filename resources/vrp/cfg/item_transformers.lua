@@ -65,7 +65,7 @@ cfg.item_transformers = {
     max_units=200,
     units_per_minute=50,
     x=1060.5489501953,y=-3201.4318847656,z=-39.161098480225, -- pos
-    radius=7.5, height=1.5, -- area
+    radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
         description="Colher maconha.", -- action description
@@ -130,7 +130,7 @@ cfg.item_transformers = {
     max_units=200,
     units_per_minute=50,
     x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- Localização
-    radius=7.5, height=1.5, -- area
+    radius=5, height=3, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
         description="Colher folha de Coca.", -- Descrição do produto a se colher
@@ -151,7 +151,7 @@ cfg.item_transformers = {
     max_units=200, -- unidades maximas do item
     units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
     x=510.53283691406,y=-1823.2603759766,z=28.502973556519, -- pos
-    radius=2.5, height=1.5, -- area
+    radius=5, height=4, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
         description="Processar cocaina.", -- action description
@@ -174,7 +174,7 @@ cfg.item_transformers = {
     max_units=200, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
     x=4287.8818359375,y=4515.2158203125,z=-13.030641555786, -- pos
-    radius=5.5, height=1.5, -- area
+    radius=5.5, height=2.5, -- area
     recipes = { -- items do menu
       ["Pescar"] = { -- action name
         description="Pescar Tartaruga com Rede.", -- action description
@@ -197,7 +197,7 @@ cfg.item_transformers = {
     max_units=200, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
     x=985.18585205078,y=-2122.2233886719,z=30.475374221802, -- pos -119.17678833008,-1486.1040039063,36.98205947876
-    radius=2.5, height=1.5, -- area
+    radius=3, height=3, -- area
     recipes = { -- items do menu
       ["Limpar Tartaruga"] = { -- action name
         description="", -- action description
@@ -413,7 +413,7 @@ cfg.item_transformers = {
     max_units=200, -- unidades maximas do item
     units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
     x=443.82019042969,y=-1737.138671875,z=29.220277786255, -- pos
-    radius=2.5, height=1.5, -- area
+    radius=5, height=3, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
         description="Processar Maconha.", -- action description
