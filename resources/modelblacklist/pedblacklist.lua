@@ -18,25 +18,25 @@ pedblacklist = {
 	"MP_F_Cop_01", 
 	"S_F_Y_Sheriff_01_p",
 	"S_F_Y_Sheriff_01",
-	"CSB_BallasOG" 
-    "MP_S_ARMOURED_01" 
-	"S_F_Y_Cop_02" 
-	"S_F_Y_Cop_03" 
-	"S_M_Y_Cop_02" 
-	"S_M_Y_Cop_03" 
-	"S_F_Y_Sheriff_02" 
-	"S_F_Y_Sheriff_03" 
-	"S_M_Y_Marine_01" 
-	"S_M_Y_Marine_02" 
-	"S_M_Y_Marine_03" 
-	"S_M_SECURITY_01" 
-	"S_M_SECURITY_02 " 
-	"S_M_SECURITY_03 " 
-	"S_M_Y_ARMYMECH_01 " 
-	"S_M_Y_ARMYMECH_02 " 
-	"S_M_Y_ARMYMECH_03 " 
-	"S_M_Y_BLACKOPS_01 "
-	"S_M_Y_BLACKOPS_02" 
+	"CSB_BallasOG",
+    "MP_S_ARMOURED_01", 
+	"S_F_Y_Cop_02",
+	"S_F_Y_Cop_03", 
+	"S_M_Y_Cop_02", 
+	"S_M_Y_Cop_03", 
+	"S_F_Y_Sheriff_02", 
+	"S_F_Y_Sheriff_03", 
+	"S_M_Y_Marine_01", 
+	"S_M_Y_Marine_02", 
+	"S_M_Y_Marine_03", 
+	"S_M_SECURITY_01", 
+	"S_M_SECURITY_02", 
+	"S_M_SECURITY_03", 
+	"S_M_Y_ARMYMECH_01", 
+	"S_M_Y_ARMYMECH_02",
+	"S_M_Y_ARMYMECH_03", 
+	"S_M_Y_BLACKOPS_01",
+	"S_M_Y_BLACKOPS_02",
 	"S_M_Y_BLACKOPS_03"
 }
 
@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
 			else
 				if isPedBlacklisted(playerModel) then
 					SetPlayerModel(PlayerId(), prevPlayerModel)
-					sendForbiddenMessage("This ped model is blacklisted!")
+					sendForbiddenMessage("Este item está na blacklist!")
 				end
 
 				prevPlayerModel = playerModel

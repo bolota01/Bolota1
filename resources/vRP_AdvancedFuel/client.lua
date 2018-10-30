@@ -362,38 +362,9 @@ Citizen.CreateThread(function()
 end)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --[[
 					FUNC PART
 ]]--
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 -- 0.0001 pour 0 à 20, 0.142 = 100%
@@ -432,27 +403,25 @@ function renderBoxes()
 	if(IsPedInAnyVehicle(GetPlayerPed(-1), -1) and GetPedVehicleSeat(GetPlayerPed(-1)) == -1 and not isBlackListedModel()) then
 
 		if(hud_form == 1) then
-			if(showBar) then
+			--[[if(showBar) then
 				DrawRect(hud_x, hud_y, 0.0149999999999998, 0.15, 255, 255, 255, 200)
 				DrawRect(hud_x, hud_y, 0.0119999999999998, 0.142, 80, 80, 80, 255)
 				DrawRect(hud_x, hud_y, 0.0119999999999998, essence, 225, 146, 45, 255)
-			end
+			end]]
 
-			if(showText) then
+			if showText then
 				local percent = (essence/0.142)*100
-
 				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
 			end
 		else
-			if(showBar) then
+			--[[if(showBar) then
 				DrawRect(hud_x, hud_y, 0.15, 0.0149999999999998, 255, 255, 255, 200)
 				DrawRect(hud_x, hud_y, 0.142, 0.0119999999999998, 80, 80, 80, 255)
 				DrawRect(hud_x, hud_y, essence, 0.0119999999999998, 225, 146, 45, 255)
-			end
+			end]]
 
-			if(showText) then
+			if showText then
 				local percent = (essence/0.142)*100
-
 				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
 			end
 		end
@@ -471,7 +440,7 @@ function isNearStation()
 	local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
 	for _,items in pairs(station) do
-		if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 2) then
+		if(Vdist2(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 4) then
 			return true, items.s
 		end
 	end
@@ -485,7 +454,7 @@ function isNearPlaneStation()
 	local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
 	for _,items in pairs(avion_stations) do
-		if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 10) then
+		if(Vdist2(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 100) then
 			return true, items.s
 		end
 	end
@@ -499,7 +468,7 @@ function isNearHeliStation()
 	local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
 	for _,items in pairs(heli_stations) do
-		if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 10) then
+		if(Vdist2(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 100) then
 			return true, items.s
 		end
 	end
@@ -513,7 +482,7 @@ function isNearBoatStation()
 	local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
 	for _,items in pairs(boat_stations) do
-		if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 10) then
+		if(Vdist2(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 100) then
 			return true, items.s
 		end
 	end
@@ -527,7 +496,7 @@ function isNearElectricStation()
 	local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
 	for _,items in pairs(electric_stations) do
-		if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 2) then
+		if(Vdist2(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 4) then
 			return true
 		end
 	end

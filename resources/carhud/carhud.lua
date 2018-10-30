@@ -27,7 +27,7 @@ local HUD = {
 local UI = { 
 
 	x =  0.000 ,	-- Base Screen Coords 	+ 	 x
-	y = -0.001 ,	-- Base Screen Coords 	+ 	-y
+	y = -0.1 ,	-- Base Screen Coords 	+ 	-y
 
 }
 
@@ -102,7 +102,7 @@ Citizen.CreateThread(function()
 					drawTxt(UI.x + 0.645, UI.y + 1.270, 1.0,1.0,0.45, "~w~AC", 255, 255, 255, 150)
 				end
 				if HUD.ParkIndicator then
-					drawRct(UI.x + 0.159, UI.y + 0.768, 0.0122, 0.038, 0,0,0,150)
+					--drawRct(UI.x + 0.159, UI.y + 0.768, 0.0122, 0.038, 0,0,0,150)
 					if VehStopped then
 						drawTxt(UI.x + 0.6605, UI.y + 1.262, 1.0,1.0,0.6, "~r~P", 255, 255, 255, 200)
 					else
@@ -111,11 +111,10 @@ Citizen.CreateThread(function()
 				end
 			else
 				if HUD.Plate then
-					drawTxt(UI.x + 0.61, 	UI.y + 1.385, 1.0,1.0,0.55, "~w~" .. PlateVeh, 255, 255, 255, 255)
-
-					drawRct(UI.x + 0.11, 	UI.y + 0.89, 0.045, 0.037, 0,0,0,150)  
+					drawTxt(UI.x + 0.569, 	UI.y + 1.372, 1.0,1.0,0.45, "~w~" .. PlateVeh, 255, 255, 255, 255)
+					--drawRct(UI.x + 0.11, 	UI.y + 0.89, 0.045, 0.037, 0,0,0,150)  
 				end
-				if HUD.ParkIndicator then
+				--[[if HUD.ParkIndicator then
 					drawRct(UI.x + 0.142, UI.y + 0.848, 0.0122, 0.038, 0,0,0,150)
 
 					if VehStopped then
@@ -123,13 +122,13 @@ Citizen.CreateThread(function()
 					else
 						drawTxt(UI.x + 0.643, UI.y + 1.34, 1.0,1.0,0.6, "P", 255, 255, 255, 150)
 					end
-				end
+				end]]
 			end
 			if HUD.SpeedIndicator then
-				drawRct(UI.x + 0.11, 	UI.y + 0.932, 0.046,0.03,0,0,0,150) -- Speed panel
+				--drawRct(UI.x + 0.11, 	UI.y + 0.932, 0.046,0.03,0,0,0,150) -- Speed panel
 				if HUD.Speed == 'kmh' then
-					drawTxt(UI.x + 0.61, 	UI.y + 1.42, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speed), 255, 255, 255, 255)
-					drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ km/h", 255, 255, 255, 255)
+					drawTxt(UI.x + 0.516, 	UI.y + 1.369, 1.0,1.0,0.53 , "~w~" .. math.ceil(Speed).." km/h", 255, 255, 255, 255)
+					--drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ km/h", 255, 255, 255, 255)
 				elseif HUD.Speed == 'mph' then
 					drawTxt(UI.x + 0.61, 	UI.y + 1.42, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speed), 255, 255, 255, 255)
 					drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ mph", 255, 255, 255, 255)
