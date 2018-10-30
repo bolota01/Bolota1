@@ -25,13 +25,13 @@ local function atm_choice_deposit(player,choice)
       local user_id = vRP.getUserId(source)
       if user_id ~= nil then
         if vRP.tryDeposit(user_id,v) then
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Depositado <span color='red'>" ..v.. "R$</span> ", type = "info", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Depositado ~r~R$" ..v})
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"~r~Você não tem dinheiro suficiente"})
         end
       end
     else
-      TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+      vRPclient.notify(player,{"~r~Valor inválido"})
     end
   end)
 end
@@ -48,13 +48,13 @@ local function atm_choice_withdraw(player,choice)
       local user_id = vRP.getUserId(source)
       if user_id ~= nil then
         if vRP.tryWithdraw(user_id,v) then
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Retirado <span color='red'>" ..v.. "R$</span> ", type = "info", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Retirado ~r~R$" ..v})
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente no banco</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"~r~Você não tem dinheiro suficiente no banco"})
         end
       end
     else
-      TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+      vRPclient.notify(player,{"~r~Valor inválido"})
     end
   end)
 end

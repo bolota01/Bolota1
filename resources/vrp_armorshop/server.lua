@@ -48,9 +48,9 @@ for gtype,weapons in pairs(gunshop_types) do
         -- payment
         if user_id ~= nil and vRP.tryFullPayment({user_id,price}) then
           ASclient.setArmour(player,{100,true})
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Pagou ~r~R$" ..price})
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"~r~Você não tem dinheiro suficiente"})
         end
 	  else
         -- get player weapons to not rebuy the body
@@ -72,12 +72,12 @@ for gtype,weapons in pairs(gunshop_types) do
                   [weapon] = {ammo=amount}
                 }})
 
-               TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..total.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player, {"Pagou ~r~R$" ..total})
               else
-               TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player,{"~r~Você não tem dinheiro suficiente"})
               end
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+              vRPclient.notify(player,{"~r~Valor inválido"})
             end
           end})
         end)

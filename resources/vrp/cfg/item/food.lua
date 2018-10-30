@@ -44,10 +44,10 @@ local function gen(ftype, vary_hunger, vary_thirst)
           if vary_thirst ~= 0 then vRP.varyThirst(user_id,vary_thirst) end
 
           if ftype == "drink" then
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "Bebendo <span color='red'>" ..name.. "</span>",type = "info", timeout = (3000),layout = "centerLeft"})
+            vRPclient.notify(player,{"Bebendo ~r~" ..name})
             play_drink(player)
           elseif ftype == "eat" then
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "Comendo <span color='red'>" ..name.. "</span>",type = "info", timeout = (3000),layout = "centerLeft"})
+            vRPclient.notify(player, {"Comendo ~r~" ..name})
             play_eat(player)
           end
 

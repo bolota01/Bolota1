@@ -34,10 +34,10 @@ function vRP.defInventoryItem(idname,name,description,choices,weight)
       vRP.prompt(player,lang.inventory.trash.prompt({vRP.getInventoryItemAmount(user_id,idname)}),"",function(player,amount)
         local amount = parseInt(amount)
         if vRP.tryGetInventoryItem(user_id,idname,amount,false) then
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Destruido <span color='green'>"..vRP.getItemName(idname).."</span> "..amount, type = "info", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Destruido ~r~"..vRP.getItemName(idname)})
           vRPclient.playAnim(player,{true,{{"pickup_object","pickup_low",1}},false})
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"~r~Valor inválido"})
         end
       end)
     end
@@ -65,17 +65,17 @@ function ch_give(idname, player, choice)
                 vRPclient.playAnim(player,{true,{{"mp_common","givetake1_a",1}},false})
                 vRPclient.playAnim(nplayer,{true,{{"mp_common","givetake2_a",1}},false})
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player,{"~r~Valor inválido"})
               end
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Inventário Cheio</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+              vRPclient.notify(player,{"~r~Inventário Cheio"})
             end
           end)
         else
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Nenhum jogador perto de você.</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"~r~Nenhum jogador perto de você."})
         end
       else
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Nenhum jogador perto de você.</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+        vRPclient.notify(player,{"~r~Nenhum jogador perto de você."})
       end
     end)
   end
@@ -89,10 +89,10 @@ function ch_trash(idname, player, choice)
     vRP.prompt(player,lang.inventory.trash.prompt({vRP.getInventoryItemAmount(user_id,idname)}),"",function(player,amount)
       local amount = parseInt(amount)
       if vRP.tryGetInventoryItem(user_id,idname,amount,false) then
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "Destruido <span color='green'>"..vRP.getItemName(idname).."</span> "..amount, type = "info", timeout = (3000),layout = "centerLeft"})
+        vRPclient.notify(player,{"Destruido ~g~"..vRP.getItemName(idname)})
         vRPclient.playAnim(player,{true,{{"pickup_object","pickup_low",1}},false})
       else
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+        vRPclient.notify(player,{"~r~Valor inválido"})
       end
     end)
   end
@@ -208,7 +208,7 @@ function vRP.giveInventoryItem(user_id,idname,amount,notify)
     if notify then
       local player = vRP.getUserSource(user_id)
       if player ~= nil then
-        TriggerClientEvent("pNotify:SendNotification",player,{text = "Recebeu <span color='green'>"..vRP.getItemName(idname).."</span> "..amount, type = "info", timeout = (3000),layout = "centerLeft"})
+        vRPclient.notify(player,{"Recebeu ~g~"..vRP.getItemName(idname)})
       end
     end
   end
@@ -233,7 +233,7 @@ function vRP.tryGetInventoryItem(user_id,idname,amount,notify)
       if notify then
         local player = vRP.getUserSource(user_id)
         if player ~= nil then
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Enviou <span color='green'>"..vRP.getItemName(idname).."</span> "..amount, type = "info", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Enviou ~g~"..vRP.getItemName(idname)})
         end
       end
 
@@ -245,7 +245,7 @@ function vRP.tryGetInventoryItem(user_id,idname,amount,notify)
         if player ~= nil then
           local entry_amount = 0
           if entry then entry_amount = entry.amount end
-          TriggerClientEvent("pNotify:SendNotification",player,{text = "Recebeu <span color='green'>"..vRP.getItemName(idname).."</span> "..amount, type = "info", timeout = (3000),layout = "centerLeft"})
+          vRPclient.notify(player,{"Recebeu ~g~"..vRP.getItemName(idname)})
         end
       end
     end
@@ -398,6 +398,10 @@ end
 -- cb_out(idname, amount): called when an item is taken (optional)
 function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
   local user_id = vRP.getUserId(source)
+  print(source)
+  print(name)
+  print(max_weight)
+  print("valores")
   if user_id ~= nil then
     local data = vRP.getUserDataTable(user_id)
     if data.inventory ~= nil then
@@ -435,10 +439,10 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
                   -- actualize by closing
                   vRP.closeMenu(player)
                 else
-                 TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Inventário Cheio</span>", type = "info", timeout = (3000),layout = "centerLeft"})
+                  vRPclient.notify(player,{"~r~Inventário Cheio"})
                 end
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player,{"~r~Valor inválido"})
               end
             end)
           end
@@ -484,7 +488,7 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
                   vRP.closeMenu(player)
                 end
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Baú Cheio</span>", type = "info", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player,{"~r~Baú Cheio"})
               end
             end)
           end
@@ -523,8 +527,8 @@ function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
           vRP.openMenu(source, menu)
         end)
       else
-        TriggerClientEvent("pNotify:SendNotification", player, {text = "<span color='red'>Este Baú já foi Aberto por outra pessoa.</span>", type = "info", timeout = (3000), layout = "centerLeft"})
-        TriggerClientEvent("DropSystem:drop", player, idname, amount)
+        vRPclient.notify(source, {"~r~Este Baú já foi Aberto por outra pessoa."})
+        TriggerClientEvent("DropSystem:drop", source, idname, amount)
       end
     end
   end

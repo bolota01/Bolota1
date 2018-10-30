@@ -6,6 +6,7 @@
 -- To change this template use File | Settings | File Templates.
 --
 client_script {
+    'lib/Proxy.lua',
     'client.lua',
     'GUI.lua'
 }

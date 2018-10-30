@@ -6,8 +6,7 @@
 -- To change this template use File | Settings | File Templates.
 --
 
-
-
+vRP = Proxy.getInterface("vRP")
 
 local options = {
     x = 0.1,
@@ -125,10 +124,10 @@ function limiter(vit)
    
     if (vit == 0) then
     SetEntityMaxSpeed(vehicle, Max)
-    exports.pNotify:SendNotification({text = "Limite desativado", type = "error", layout = "bottomRight", timeout = math.random(4000, 8000)})
+    vRP.notify({"Limite desativado"})
     else
     SetEntityMaxSpeed(vehicle, speed)
-    exports.pNotify:SendNotification({text = "Limite ativado", type = "success", layout = "bottomRight", timeout = math.random(4000, 8000)})
+    vRP.notify({"Limite ativado"})
     PersonnalMenu()
     end
 end

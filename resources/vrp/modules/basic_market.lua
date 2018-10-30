@@ -38,15 +38,15 @@ local function build_market_menus()
                 -- payment
                 if vRP.tryPayment(user_id,amount*price) then
                   vRP.giveInventoryItem(user_id,idname,amount,true)
-                  TriggerClientEvent("pNotify:SendNotification",player,{text = "Pagou <span color='red'>" ..amount*price.. "R$</span>", type = "success", timeout = (3000),layout = "centerLeft"})
+                  vRPclient.notify(player,{"Pagou ~r~R$" ..amount*price})
                 else
-                   TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Você não tem dinheiro suficiente</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+                  vRPclient.notify(player,{"~r~Você não tem dinheiro suficiente"})
                 end
               else
-                TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Inventário Cheio</span>", type = "info", timeout = (3000),layout = "centerLeft"})
+                vRPclient.notify(player,{"~r~Inventário Cheio"})
               end
             else
-              TriggerClientEvent("pNotify:SendNotification",player,{text = "<span color='red'>Valor inválido</span>", type = "error", timeout = (3000),layout = "centerLeft"})
+              vRPclient.notify(player,{"~r~Valor inválido"})
             end
           end)
         end
