@@ -59,6 +59,6 @@ AddEventHandler('scrap:Mechanic', function(triggerevent)
     if vRP.hasPermission({user_id,"vehicle.repair"}) then
 		TriggerClientEvent(triggerevent, source)
 	else
-		TriggerClientEvent("pNotify:SendNotification", player,{text = "Você não é um mecânico!", type = "error", queue = "global", timeout = 2000, layout = "centerRight",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"},killer = true})
+		vRPclient.notify(player,{"Você não é um mecânico!"})
 	end
 end)

@@ -22,18 +22,20 @@ scrapyards = {
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
+		local distance = nil
 		for i = 1, #scrapyards do
 			scrapCoords2 = scrapyards[i] --
-			if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), scrapCoords2[1], scrapCoords2[2], scrapCoords2[3], true ) < 40 then
+			distance = Vdist2(GetEntityCoords(GetPlayerPed(-1)), scrapCoords2[1], scrapCoords2[2], scrapCoords2[3])
+			if distance < 1600 then
 	   			if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then
 					DrawMarker(27, scrapCoords2[1], scrapCoords2[2], scrapCoords2[3], 0, 0, 0, 0, 0, 0, 5.75, 5.75, 5.75, 53, 146, 0, 100, 0, 0, 0, 1)
-					if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), scrapCoords2[1], scrapCoords2[2], scrapCoords2[3], true ) < 3 then
+					if distance < 9.1 then
 						vehSR_drawTxt("Pressione ~g~E~s~ socatear seu veículo",0,1,0.5,0.95,0.6,255,255,255,255)
 						if IsControlJustPressed(1, key) then
 							local vehicle1 = GetVehiclePedIsIn(GetPlayerPed(-1), false)
 							local plate1 = GetVehicleNumberPlateText(vehicle1)
 							if string.sub(plate1, 1, 8) == "P " .. vRP.getRegistrationNumber({}) then
-								TriggerEvent("pNotify:SendNotification",{text = "Você não pode socatear seu proprio veículo!",type = "error",timeout = (1500),layout = "centerRight",queue = "global",animation = {open = "gta_effects_fade_in", close = "gta_effects_fade_out"}})
+								vRP.notify({"Você não pode socatear seu proprio veículo!"})
 							else
 								if vehPrice ~= nil then
 									local health = GetEntityHealth(GetVehiclePedIsIn(GetPlayerPed(-1)))
