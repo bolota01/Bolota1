@@ -46,7 +46,7 @@ cfg.drugs= {
   	    local user_id = vRP.getUserId({player})
   	    if user_id ~= nil then
   	      if vRP.tryGetInventoryItem({user_id,"cannabis",1,false}) then
-  		    TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:red'>Fumando Maconha</b> ", type = "error", timeout = (3000),layout = "centerLeft"})
+					vRPclient.notify(player,{"~r~Fumando Maconha"})
   		    local seq = {
   		      {"mp_player_int_uppersmoke","mp_player_int_smoke_enter",1},
   		      {"mp_player_int_uppersmoke","mp_player_int_smoke",1},
@@ -82,7 +82,7 @@ cfg.drugs= {
             vRP.varyHunger({user_id,30})
             vRP.varyThirst({user_id,-70})
 
-            TriggerClientEvent("pNotify:SendNotification",player,{text = "<b style='color:MediumPurple'>Bebendo Cachaça</b> ", type = "info", timeout = (3000),layout = "centerLeft"})
+            vRPclient.notify(player,{"~b~Bebendo Cachaça"})
             local seq = {
               {"mp_player_intdrink","intro_bottle",1},
               {"mp_player_intdrink","loop_bottle",1},
