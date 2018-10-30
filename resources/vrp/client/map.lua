@@ -129,7 +129,7 @@ Citizen.CreateThread(function()
     for k,v in pairs(markers) do
       -- check visibility
       if Vdist2(v.x,v.y,v.z,px,py,pz) < (v.visible_distance*v.visible_distance) then
-        DrawMarker(27,v.x,v.y,v.z,0,0,0,0,0,0,v.sx,v.sy,v.sz,v.r,v.g,v.b,v.a,0,0,0,0)
+        DrawMarker(23,v.x,v.y,v.z,0,0,0,0,0,0,v.sx,v.sy,v.sz,v.r,v.g,v.b,v.a,0,0,0,0)
       end
     end
   end
