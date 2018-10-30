@@ -5,6 +5,7 @@ items["medkit"] = {"Kit Médico","Usado para reanimar pessoas inconscientes.",ni
 items["dirty_money"] = {"Dinheiro sujo","Dinheiro Ilegalmente ganho.",nil,0}
 items["repairkit"] = {"Kit de reparo","Usado para reparar veiculos.",nil,0.5}
 items["pistol_parts"] = {"Partes de Pistola","Usado para criar pistola.",nil,5}
+items["assaultrifle_parts"] = {"Partes de Rifle","Usado para criar rifle.",nil,5}
 items["shotgun_parts"] = {"Partes de Shotgun","Usado para criar shotgun.",nil,10}
 items["smg_parts"] = {"Partes de SMG","Usado para criar submachinegun.",nil,7.5}
 
@@ -111,11 +112,11 @@ local wammo_choices = function(args)
   local choices = {}
   local fullidname = joinStrings(args,"|")
 
-  choices["Load"] = {function(player,choice)
+  choices["Carregar"] = {function(player,choice)
     local user_id = vRP.getUserId(player)
     if user_id ~= nil then
       local amount = vRP.getInventoryItemAmount(user_id, fullidname)
-      vRP.prompt(player, "Amount to load ? (max "..amount..")", "", function(player,ramount)
+      vRP.prompt(player, "Quantidade para recarregar ? (max "..amount..")", "", function(player,ramount)
         ramount = parseInt(ramount)
 
         vRPclient.getWeapons(player, {}, function(uweapons)
