@@ -72,10 +72,21 @@ cfg.market_types = {
     ["vodka"] = 30,
     ["smirnoff"] = 40
   },
-  ["drugstore"] = {
-    _config = {blipid=51, blipcolor=2},
-    ["medkit"] = 75,
-    ["pills"] = 10
+  ["Farmácia"] = {
+    _config = {blipid=0, blipcolor=0},
+    ["dipirona"] = 60,
+    ["ibuprofeno"] = 200,
+    ["nimesulida"] = 200,
+    ["paracetamol"] = 250,
+    ["bandaid"] = 100
+  },
+  ["Farmácia Emergência"] = {
+    _config = {blipid=0, blipcolor=0, permissions={"ems.farmacia"}},
+    ["bezetacil"] = 0,
+    ["tylenol"] = 0,
+    ["omeprazol"] = 0,
+    ["toxrilax"] = 0,
+    ["bandagens"] = 0
   },
   ["redes"] = {
     _config = {blipid=371, blipcolor=1, permissions={"shop.tartaruga"}},
@@ -112,6 +123,7 @@ cfg.markets = {
   {"máquinas",436.37149047852,-986.49005126953,30.689599990845},
   {"Sorveteria",218.52868652344,-955.46838378906,30.086919784546},
   {"Buteco da Praia",1323.6665039063,-2719.5485839844,2.3019030094147},
+  {"Farmácia",260.49597167969,-1358.4555664063,24.537788391113},
   {"food",128.1410369873, -1286.1120605469, 29.281036376953},
   {"Mercado Entregador",144.68577575684,-1461.7618408203,29.141620635986},
   {"redes",840.18249511719,-1028.2701416016,28.194843292236},

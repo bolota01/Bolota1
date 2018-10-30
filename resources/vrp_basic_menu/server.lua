@@ -217,10 +217,14 @@ end, "Enviar seu dinheiro da carteira para o inventário."}
 
 --medkit storage
 local emergency_medkit = {}
-emergency_medkit["Take"] = {function(player,choice)
+emergency_medkit["Kit Primeiros Socorros"] = {function(player,choice)
 	local user_id = vRP.getUserId({player}) 
-	vRP.giveInventoryItem({user_id,"medkit",25,true})
-	vRP.giveInventoryItem({user_id,"pills",25,true})
+  vRP.giveInventoryItem({user_id,"medkit",25,true})
+  vRP.giveInventoryItem({user_id,"bezetacil",10,true})
+  vRP.giveInventoryItem({user_id,"tylenol",10,true})
+  vRP.giveInventoryItem({user_id,"omeprazol",10,true})
+  vRP.giveInventoryItem({user_id,"toxrilax",10,true})
+  vRP.giveInventoryItem({user_id,"bandagens",25,true})
 end}
 
 --heal me
@@ -544,7 +548,7 @@ function jail_clock(target_id,timer)
 	  SetTimeout(15000,function()
 		BMclient.loadFreeze(target,{false,false,false})
 	  end)
-	  vRPclient.teleport(target,{425.7607421875,-978.73425292969,30.709615707397}) -- teleport to outside jail
+	  vRPclient.teleport(target,{1810.0316162109,2607.5502929688,45.587646484375}) -- teleport to outside jail
 	  vRPclient.setHandcuffed(target,{false})
       vRPclient.notify(target,{"~b~Você foi liberado."})
 	  vRP.setUData({tonumber(target_id),"vRP:jail:time",json.encode(-1)})

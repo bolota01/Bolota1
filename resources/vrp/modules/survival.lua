@@ -189,8 +189,8 @@ local choice_revive = {function(player,choice)
           if in_coma then
             if vRP.tryGetInventoryItem(user_id,"medkit",1,true) then
               vRPclient.playAnim(player,{false,revive_seq,false}) -- anim
-              SetTimeout(15000, function()
-                vRPclient.varyHealth(nplayer,{50}) -- heal 50
+              SetTimeout(8000, function()
+                vRPclient.varyHealth(nplayer,{20}) -- heal 20
               end)
             end
           else
