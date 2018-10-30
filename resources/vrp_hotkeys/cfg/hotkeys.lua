@@ -101,7 +101,7 @@ cfg.hotkeys = {
 	  -- Do nothing on release because it's toggle.
 	end,
   },
-  [47] = {
+  [104] = {
     -- Ajoelhar e colocar as mãos na cabeça
     group = 1, 
     pressed = function() 
