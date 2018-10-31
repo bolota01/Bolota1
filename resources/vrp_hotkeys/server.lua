@@ -51,7 +51,7 @@ function vRPhk.toggleHandcuff()
 end
 
 function vRPhk.docsOnline()
-  local docs = vRP.getUsersByPermission({"emergency.revive"})
+  local docs = vRP.getUsersByPermission({"coma.caller"})
   return #docs
 end
 
@@ -61,7 +61,7 @@ function vRPhk.canSkipComa(p1,p2)
 end
 
 function vRPhk.helpComa(x,y,z)
-  vRP.sendServiceAlert({source,"emergency",x,y,z,"Socorro! Eu caí e não consigo me levantar!"}) -- people will change this message anyway haha
+  vRP.sendServiceAlert({source,"SAMU",x,y,z,"Socorro! Eu caí e não consigo me levantar!"}) -- people will change this message anyway haha
 end
 
 local vehStorage = {}
