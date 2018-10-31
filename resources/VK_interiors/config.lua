@@ -14,6 +14,10 @@ INTERIORS = {
     -- BAHMAS MAMAS
     [8] = {id = 8, x = -1388.9272460938, y = -586.08123779297, z = 30.219741821289, h = 35.407787322998, name = "Sair", destination = {9}},
     [9] = {id = 9, x = -1394.5030517578, y = -596.09210205078, z = 30.319562911987, h = 205.4248046875, name = "Entrar", destination = {8}},
+
+    -- LOJA DE CARROS ADDON
+    [10] = {id = 10, x = 719.01446533203, y = -2991.3686523438, z = -38.999897003174, name = "Entrar na Elite Car", destination = {11}},
+    [11] = {id = 11, x = -177.1608581543, y = -1158.3416748047, z = 23.813663482666, name = "Sair da Elite Car", destination = {10}},
 		
 	-- Business
     [18] = {id = 18, x =  3562.8259277344, y = 3690.3332519531, z = 28.121658325195,  name = "Entrar Empresa", destination = {19}},
