@@ -33,8 +33,8 @@ function tvRP.spawnGarageVehicle(vtype,name,pos) -- vtype is the vehicle type (o
       end
 
       local nveh = CreateVehicle(mhash, x,y,z+0.5, 0.0, true, false)
-	  NetworkFadeInEntity(nveh,0)
-	  TriggerServerEvent("garage:requestMods", name)
+      NetworkFadeInEntity(nveh,0)
+      TriggerServerEvent("garage:requestMods", name)
       SetVehicleOnGroundProperly(nveh)
       SetEntityInvincible(nveh,false)
       SetPedIntoVehicle(GetPlayerPed(-1),nveh,-1) -- put player inside
@@ -142,8 +142,9 @@ function tvRP.getNearestOwnedVehicle(radius)
   local px,py,pz = tvRP.getPosition()
   for k,v in pairs(vehicles) do
     local x,y,z = table.unpack(GetEntityCoords(v[3],true))
-    local dist = Vdist2(x,y,z,px,py,pz)
-    if dist < (radius*radis)+0.01 then return true,v[1],v[2] end
+    if Vdist2(x,y,z,px,py,pz) < (radius*radius) then 
+      return true,v[1],v[2]
+    end
   end
 
   return false,"",""
