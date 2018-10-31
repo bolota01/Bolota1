@@ -306,7 +306,7 @@ local function build_client_garages(source)
         end
 
         vRPclient.addBlip(source,{x,y,z,gcfg.blipid,gcfg.blipcolor,lang.garage.title({gtype})})
-        vRPclient.addMarker(source,{x,y,z-1,0.7,0.7,0.5,0,255,125,125,150})
+        vRPclient.addMarker(source,{x,y,z-1,2,2,1,0,233,75,125,150})
 
         vRP.setArea(source,"vRP:garage"..k,x,y,z,1,1.5,garage_enter,garage_leave)
       end
