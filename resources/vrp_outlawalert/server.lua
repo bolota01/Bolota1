@@ -13,6 +13,16 @@ function sendMessage(event, ...)
 	end
 end
 
+RegisterServerEvent('robbaryInProgressPos') -- adicione esse evento
+AddEventHandler('robbaryInProgressPos', function(gx, gy, gz)
+    TriggerClientEvent('robbaryPlace', -1, gx, gy, gz)
+end)
+
+RegisterServerEvent('robbaryInProgress') -- adicione esse evento
+AddEventHandler('robbaryInProgress', function(street1, street2, sex)
+    sendMessage("outlawNotify", "~r~Roubo iniciado por um(a) ~w~"..sex.." ~r~entre ~w~"..street1.."~r~ e ~w~"..street2)
+end)
+
 RegisterServerEvent('thiefInProgress')
 AddEventHandler('thiefInProgress', function(street1, street2, veh, sex)
 	if veh == "NULL" then

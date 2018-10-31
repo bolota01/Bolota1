@@ -45,11 +45,13 @@ end
 local banks = cfg.banks
 
 
-RegisterNetEvent('es_bank:currentlyrobbing')
+RegisterNetEvent('es_bank:currentlyrobbing') -- substitua o evento existente
 AddEventHandler('es_bank:currentlyrobbing', function(robb)
-	robbing = true
-	bank = robb
-	secondsRemaining = cfg.seconds
+    robbing = true
+    bank = robb
+    secondsRemaining = cfg.seconds
+    local pos = banks[bank].position
+    TriggerServerEvent('robbaryInProgressPos', pos.x, pos.y, pos.z)
 end)
 
 RegisterNetEvent('es_bank:toofarlocal')

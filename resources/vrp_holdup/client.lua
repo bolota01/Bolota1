@@ -46,9 +46,11 @@ local stores = cfg.holdups
 
 RegisterNetEvent('es_holdup:currentlyrobbing')
 AddEventHandler('es_holdup:currentlyrobbing', function(robb)
-	holdingup = true
-	store = robb
-	secondsRemaining = cfg.seconds
+    holdingup = true
+    store = robb
+    secondsRemaining = cfg.seconds
+    local pos = stores[store].position
+    TriggerServerEvent('robbaryInProgressPos', pos.x, pos.y, pos.z)
 end)
 
 RegisterNetEvent('es_holdup:toofarlocal')

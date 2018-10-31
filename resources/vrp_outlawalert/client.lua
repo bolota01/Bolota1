@@ -92,6 +92,31 @@ AddEventHandler('meleePlace', function(mx, my, mz)
     end
 end)
 
+RegisterNetEvent('robbaryPlace') -- adicione esse evento
+AddEventHandler('robbaryPlace', function(gx, gy, gz)
+    if not origin then
+        if gunshotAlert then
+            local transG = 250
+            local gunshotBlip = AddBlipForCoord(gx, gy, gz)
+            SetBlipSprite(gunshotBlip,  103) -- aqui voce troca o id da imagem
+            SetBlipColour(gunshotBlip,  1) -- aqui voce troca o id da cor
+            SetBlipAlpha(gunshotBlip,  transG)
+            SetBlipAsShortRange(gunshotBlip,  1)
+            BeginTextCommandSetBlipName("STRING")
+            AddTextComponentString("Roubo a loja")
+            EndTextCommandSetBlipName(gunshotBlip)
+            while transG ~= 0 do
+                Wait(6000) -- aqui voce aumenta ou diminui o tempo que a blip aparece
+                transG = transG - 1
+                SetBlipAlpha(gunshotBlip,  transG)
+                if transG == 0 then
+                    SetBlipSprite(gunshotBlip,  2)
+                    return end
+            end
+        end
+    end
+end)
+
 --Star color
 --[[1- White
 2- Black
