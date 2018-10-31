@@ -136,17 +136,17 @@ cfg.hotkeys = {
 	pressed = function() 
 	  if vRP.isInComa({}) then
 	    if called == 0 then 
-	      HKserver.canSkipComa({"coma.skipper","coma.caller"},function(skipper,caller) -- permission to skip when no Doc is online, or just call them when they are. Change them on client.lua too if you do
+	      HKserver.canSkipComa({"coma.skipper","coma.caller"}, function(skipper,caller) -- permission to skip when no Doc is online, or just call them when they are. Change them on client.lua too if you do
 		    if skipper or caller then
 		      HKserver.docsOnline({},function(docs)
-		        if docs == 0 and skipper then
-				  vRP.killComa({})
-			    else
-				  called = 30
-				  local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1),true))
-				  HKserver.helpComa({x,y,z})
-				  Citizen.Wait(1000)
-			    end
+            if docs == 0 and skipper then
+              vRP.killComa({})
+            else
+              called = 30
+              local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1),true))
+              HKserver.helpComa({x,y,z})
+              Citizen.Wait(1000)
+            end
 			  end)
             end
 		  end)

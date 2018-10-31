@@ -30,7 +30,7 @@ cfg.services = {
     blipid = 153,
     blipcolor = 1,
     alert_time = 300, -- 5 minutes
-    alert_permission = "emergency.service",
+    alert_permission = "coma.caller",
     alert_notify = "~r~[SAMU] Chamado de emergência:~n~~s~",
     notify = "~b~Você chamou o samu.",
     answer_notify = "~b~O Samu está a caminho."
@@ -70,7 +70,7 @@ cfg.services = {
     alert_notify = "~y~[Mecanico] Alguem ligou para você solicitando serviço:~n~~s~",
     notify = "~y~Você chamou um mecanico.",
     answer_notify = "~y~Mecânico está a caminho."
-  }
+  },
 }
 
 -- define phone announces
