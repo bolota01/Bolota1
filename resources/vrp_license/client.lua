@@ -191,7 +191,7 @@ end
 
 
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
 	pos = weaponlicense_location
 	local blip = AddBlipForCoord(pos[1],pos[2],pos[3])
 	SetBlipSprite(blip,103)
@@ -201,4 +201,4 @@ Citizen.CreateThread(function()
 	EndTextCommandSetBlipName(blip)
 	SetBlipAsShortRange(blip,true)
 	SetBlipAsMissionCreatorBlip(blip,true)
-end)
+end)- ]]

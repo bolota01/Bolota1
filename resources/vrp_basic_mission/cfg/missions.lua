@@ -563,7 +563,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de erva",
     items = {
-      ["cannabis"] = {10,20,200}
+      ["cannabis"] = {10,20,340}
     }
   },
   ["mission.delivery.pot2"] = {
@@ -571,7 +571,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de 'coca'",
     items = {
-      ["cocaina"] = {10,20,200}
+      ["cocaina"] = {10,20,340}
     }
   },
   ["mission.delivery.pot3"] = {
@@ -579,7 +579,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de cristal",
     items = {
-      ["metanfetamina"] = {10,20,200}
+      ["metanfetamina"] = {10,20,340}
     }
   },  
   ["entrega.tartaruga"] = {
@@ -596,7 +596,7 @@ cfg.delivery = {
     positions = clonecards_positions,
     title = "Entrega de cartões clonados",
     items = {
-      ["clonedcards"] = {10,20,400}
+      ["clonedcards"] = {10,20,390}
     }
   },
   ["mission.delivery.smg"] = {

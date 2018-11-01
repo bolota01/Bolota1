@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- ELS VEHICLE CONFIGURATION FILE -->
-<vcfroot Description="CHP Police" Author="CHP" >
+<vcfroot Description="BMW 1200RT" Author="DarkHatos" >
 	<!-- INTERFACE -->
 	<INTERFACE>
 		<LstgActivationType>manual</LstgActivationType>
@@ -10,24 +10,24 @@
 	</INTERFACE>
 	<!-- EXTRAS OVERRIDE AND ENV LIGHTING-->
 	<EOVERRIDE>	
-		<Extra01 IsElsControlled="true" AllowEnvLight="true" Color="red" OffsetX="-0.70" OffsetY="-0.20" OffsetZ="0.50" />
-		<Extra02 IsElsControlled="true" AllowEnvLight="true" Color="red" OffsetX="-0.25" OffsetY="-0.20" OffsetZ="0.50" />
+		<Extra01 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="-0.70" OffsetY="-0.20" OffsetZ="0.50" />
+		<Extra02 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="-0.25" OffsetY="-0.20" OffsetZ="0.50" />
 		<Extra03 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="0.25" OffsetY="-0.20" OffsetZ="0.50" />
 		<Extra04 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="0.70" OffsetY="-0.20" OffsetZ="0.50" />
-		<Extra05 IsElsControlled="true" AllowEnvLight="true" Color="red" OffsetX="-0.70" OffsetY="-0.20" OffsetZ="0.50" />
+		<Extra05 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="-0.70" OffsetY="-0.20" OffsetZ="0.50" />
 		<Extra06 IsElsControlled="true" AllowEnvLight="true" Color="blue" OffsetX="0.70" OffsetY="-0.20" OffsetZ="0.50" />
 		<Extra07 IsElsControlled="true" AllowEnvLight="true" Color="amber" OffsetX="-0.40" OffsetY="-0.80" OffsetZ="0.40" />
 		<Extra08 IsElsControlled="true" AllowEnvLight="true" Color="amber" OffsetX="0.00" OffsetY="-0.80" OffsetZ="0.40" />
 		<Extra09 IsElsControlled="true" AllowEnvLight="true" Color="amber" OffsetX="0.40" OffsetY="-0.80" OffsetZ="0.40" />
 		<Extra10 IsElsControlled="true" />
 		<Extra11 IsElsControlled="true" />
-		<Extra12 IsElsControlled="false" />
+		<Extra12 IsElsControlled="true" />
 	</EOVERRIDE>
 	<!-- MISC -->
 	<MISC>
 		<VehicleIsSlicktop>false</VehicleIsSlicktop>
 		<ArrowboardType>off</ArrowboardType>
-		<UseSteadyBurnLights>true</UseSteadyBurnLights>
+		<UseSteadyBurnLights>false</UseSteadyBurnLights>
 		<DfltSirenLtsActivateAtLstg>3</DfltSirenLtsActivateAtLstg>
 		<Takedowns AllowUse="true" Mirrored="true" />
 		<SceneLights AllowUse="true" IlluminateSidesOnly="true" />	
@@ -58,7 +58,7 @@
 		<PanicMde AllowUse="true" AudioString="VEHICLES_HORNS_POLICE_WARNING" />
 	</SOUNDS>
 	<!-- WRNL -->
-	<WRNL LightingFormat="CHP" >
+	<WRNL LightingFormat="leds" >
 		<PresetPatterns>
 			<Lstg3 Enabled="false" Pattern="0" />
 		</PresetPatterns>
@@ -78,7 +78,7 @@
 		</ScanPatternCustomPool>
 	</WRNL>
 	<!-- PRML -->
-	<PRML LightingFormat="CHP" ExtrasActiveAtLstg2="1and4" >
+	<PRML LightingFormat="leds" ExtrasActiveAtLstg2="1and4" >
 		<PresetPatterns>
 			<Lstg2 Enabled="false" Pattern="0" />
 			<Lstg3 Enabled="false" Pattern="0" />
@@ -99,7 +99,7 @@
 		</ScanPatternCustomPool>
 	</PRML>
 	<!-- SECL -->
-	<SECL LightingFormat="CHP" DisableAtLstg3="false" >
+	<SECL LightingFormat="leds" DisableAtLstg3="false" >
 		<PresetPatterns>
 			<Lstg1 Enabled="false" Pattern="0" />
 			<Lstg2 Enabled="false" Pattern="0" />
