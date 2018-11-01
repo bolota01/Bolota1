@@ -7,19 +7,15 @@ function GetVehHealthPercent()
 	return procentage
 end
 
-
-
-
 function ShowNotification(text)
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
 	DrawNotification(false, false)
 end
 
-
 Citizen.CreateThread(function()
 	while true do
-	Citizen.Wait(0)
+		Citizen.Wait(200)
 		local ped = GetPlayerPed(-1)
 		local vehicle = GetVehiclePedIsUsing(ped)
 		local damage = GetVehHealthPercent(vehicle)

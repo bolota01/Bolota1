@@ -51,8 +51,8 @@ hud_form = 2 -- 1 : Vertical | 2 = Horizontal
 hud_x = 0.087
 hud_y = 0.785
 
-text_x = 0.215
-text_y = 0.794
+text_x = 0.2215
+text_y = 0.792
 
 
 electricityPrice = 1 -- NOT RANOMED !!

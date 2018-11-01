@@ -116,18 +116,18 @@ AddEventHandler('hood',function()
 			vehicle = GetVehiclePedIsIn(player,true)
 		end
 			
-			local isopen = GetVehicleDoorAngleRatio(vehicle,4)
-			local distanceToVeh = GetDistanceBetweenCoords(GetEntityCoords(player), GetEntityCoords(vehicle), 1)
-			
-			if distanceToVeh <= interactionDistance then
-				if (isopen == 0) then
-				SetVehicleDoorOpen(vehicle,4,0,0)
-				else
-				SetVehicleDoorShut(vehicle,4,0)
-				end
+		local isopen = GetVehicleDoorAngleRatio(vehicle,4)
+		local distanceToVeh = GetDistanceBetweenCoords(GetEntityCoords(player), GetEntityCoords(vehicle), 1)
+		
+		if distanceToVeh <= interactionDistance then
+			if (isopen == 0) then
+			SetVehicleDoorOpen(vehicle,4,0,0)
 			else
-				ShowNotification("~r~Você deve estar perto do seu veículo para fazer isso.")
+			SetVehicleDoorShut(vehicle,4,0)
 			end
+		else
+			ShowNotification("~r~Você deve estar perto do seu veículo para fazer isso.")
+		end
 end)
 -- S A V E --
 RegisterNetEvent('save')
