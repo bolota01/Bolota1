@@ -215,11 +215,13 @@ local function DriveInGarage()
 		myveh.neoncolor = table.pack(GetVehicleNeonLightsColour(veh))
 		myveh.smokecolor = table.pack(GetVehicleTyreSmokeColor(veh))
 		myveh.plateindex = GetVehicleNumberPlateTextIndex(veh)
+		myveh.neon = IsVehicleNeonLightEnabled(veh, 0)
 		myveh.mods = {}
+	
 		for i = 0, 48 do
 			myveh.mods[i] = {mod = nil}
 		end
-		for i,t in pairs(myveh.mods) do 
+		for i,t in pairs(myveh.mods) do
 			if i == 22 or i == 18 then
 				if IsToggleModOn(veh,i) then
 				t.mod = 1
@@ -506,7 +508,8 @@ local function DriveInGarage()
 			Citizen.Wait(50)
 			
 			TaskVehicleDriveToCoord(ped, veh, pos.inside.x, pos.inside.y, pos.inside.z, f(3), f(1), GetEntityModel(veh), 16777216, f(0.1), true)
-			EndFade()Citizen.Wait(3000)
+			EndFade()
+			Citizen.Wait(3000)
 			
 			local c = 0
 			while not IsVehicleStopped(veh) do
@@ -546,15 +549,18 @@ local function DriveOutOfGarage(pos)
 	
 		local ped = LocalPed()
 		local veh = GetVehiclePedIsUsing(ped)
-		
+		--[[local model = GetEntityModel(veh)
+		local displaytext = GetDisplayNameFromVehicleModel(model)
+		local name = GetLabelText(displaytext)]]
+
+		TriggerServerEvent("LSC:finished", myveh)
+
 		pos = currentpos
 		TaskVehicleDriveToCoord(ped, veh, pos.outside.x, pos.outside.y, pos.outside.z, f(5), f(0.1), GetEntityModel(veh), 16777216, f(0.1), true)
 		
 		pos = currentpos.driveout
-		
 		--The vehicle customization is finished, so we send to server our vehicle data
-		TriggerServerEvent("LSC:finished", myveh, PlayerId())
-		
+
 		StartFade()
 		Citizen.Wait(500)
 		SetEntityCollision(veh,true,true)
@@ -843,6 +849,7 @@ AddEventHandler("LSC:buttonSelected", function(name, button, canpurchase)
 			myveh.neoncolor[1] = 255
 			myveh.neoncolor[2] = 255
 			myveh.neoncolor[3] = 255
+			myveh.neon = false
 			SetVehicleNeonLightsColour(veh,255,255,255)
 		elseif button.purchased or CanPurchase(price, canpurchase) then
 			if not myveh.neoncolor[1] then
@@ -850,6 +857,7 @@ AddEventHandler("LSC:buttonSelected", function(name, button, canpurchase)
 				myveh.neoncolor[2] = 255
 				myveh.neoncolor[3] = 255
 			end
+			myveh.neon = true
 			SetVehicleNeonLightsColour(veh,myveh.neoncolor[1],myveh.neoncolor[2],myveh.neoncolor[3])
 			SetVehicleNeonLightEnabled(veh,0,true)
 			SetVehicleNeonLightEnabled(veh,1,true)
@@ -861,6 +869,7 @@ AddEventHandler("LSC:buttonSelected", function(name, button, canpurchase)
 			myveh.neoncolor[1] = button.neon[1]
 			myveh.neoncolor[2] = button.neon[2]
 			myveh.neoncolor[3] = button.neon[3]
+			myveh.neon = true
 			SetVehicleNeonLightsColour(veh,button.neon[1],button.neon[2],button.neon[3])
 		end
 	elseif mname == "windows" then
@@ -1408,12 +1417,12 @@ Citizen.CreateThread(function()
 					EnableGameplayCam(true)
 					SetCamActive(cam, false)
 					SetIbuttons({
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_back, 0),"Back"},
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_select, 0),"Select"},
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_up, 0),"Up"},
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_down, 0),"Down"},
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_left, 0),"Left"},
-							{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_right, 0),"Right"}
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_back, 0),"Voltar"},
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_select, 0),"Selecionar"},
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_up, 0),"Cima"},
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_down, 0),"Baixo"},
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_left, 0),"Esquerda"},
+						{GetControlInstructionalButton(1,LSCMenu.config.controls.menu_right, 0),"Direita"}
 					 },0)
 				end
 			end
