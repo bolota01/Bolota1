@@ -190,7 +190,7 @@ Citizen.CreateThread(function()
 end)
 
 -- detect vehicle stealing
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do
     Citizen.Wait(1)
     local ped = GetPlayerPed(-1)
@@ -206,5 +206,5 @@ Citizen.CreateThread(function()
       Citizen.Wait(15000) -- wait 15 seconds before checking again
     end
   end
-end)
+end)]]
 

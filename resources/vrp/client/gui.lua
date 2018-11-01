@@ -74,7 +74,6 @@ end)
 
 RegisterNetEvent("deletePhone")
 AddEventHandler("deletePhone", function()
-  print("chamout tirar telefone")
   Citizen.CreateThread(function()
     DeleteObject(myPhone)
     myPhone = nil

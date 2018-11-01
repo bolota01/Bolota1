@@ -3,13 +3,12 @@ local crouched = false
 Citizen.CreateThread( function()
     while true do 
         Citizen.Wait( 1 )
-
         local ped = GetPlayerPed( -1 )
 
-        if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then 
-            DisableControlAction( 0, 36, true ) -- INPUT_DUCK  
+        if DoesEntityExist( ped ) and not IsEntityDead( ped ) then 
+            DisableControlAction(0, 36, true) -- INPUT_DUCK  
 
-            if ( not IsPauseMenuActive() ) then 
+            if not IsPauseMenuActive() then 
                 if ( IsDisabledControlJustPressed( 0, 36 ) ) then 
                     RequestAnimSet( "move_ped_crouched" )
 
