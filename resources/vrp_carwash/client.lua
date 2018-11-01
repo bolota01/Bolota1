@@ -30,11 +30,11 @@ end
 Citizen.CreateThread(function ()
 	while true do
 		Citizen.Wait(0)
-		if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then 
+		if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then
 			for i = 1, #vehicleWashStation do
 				garageCoords2 = vehicleWashStation[i]
 				DrawMarker(1, garageCoords2[1], garageCoords2[2], garageCoords2[3], 0, 0, 0, 0, 0, 0, 5.0, 5.0, 2.0, 0, 157, 0, 155, 0, 0, 2, 0, 0, 0, 0)
-				if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), garageCoords2[1], garageCoords2[2], garageCoords2[3], true ) < 5 then
+				if Vdist2(GetEntityCoords(GetPlayerPed(-1)), garageCoords2[1], garageCoords2[2], garageCoords2[3]) < 25 then
 					DrawSpecialText("Pressione [~g~ENTER~s~] para limpar seu veículo!")
 					if(IsControlJustPressed(1, Key)) then
 						TriggerServerEvent('carwash:checkmoney', GetVehicleDirtLevel(GetVehiclePedIsIn(GetPlayerPed(-1),false)))
