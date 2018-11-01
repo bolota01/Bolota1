@@ -299,7 +299,7 @@ function vRP.accessHome(user_id, home, number, cbr)
 end
 
 -- build the home entry menu
-local function build_entry_menu(user_id, home_name)
+local function build_entry_menu(user_id, home_name, add_group)
   local home = cfg.homes[home_name]
   local menu = {name=home_name,css={top="75px",header_color="rgba(0,255,125,0.75)"}}
 
@@ -349,6 +349,10 @@ local function build_entry_menu(user_id, home_name)
               -- bought, set address
               vRP.setUserAddress(user_id, home_name, number)
 
+              if add_group ~= nil then
+                vRP.addUserGroup(user_id, add_group)
+              end
+
               vRPclient.notify(player,{lang.home.buy.bought()})
             else
               vRPclient.notify(player,{lang.money.not_enough()})
@@ -369,6 +373,10 @@ local function build_entry_menu(user_id, home_name)
         -- sold, give sell price, remove address
         vRP.giveMoney(user_id, home.sell_price)
         vRP.removeUserAddress(user_id)
+
+        if add_group ~= nil then
+          vRP.removeUserGroup(user_id, add_group)
+        end
         vRPclient.notify(player,{lang.home.sell.sold()})
       else
         vRPclient.notify(player,{lang.home.sell.no_home()})
@@ -389,7 +397,7 @@ local function build_client_homes(source)
       local function entry_enter(player,area)
         local user_id = vRP.getUserId(player)
         if user_id ~= nil and vRP.hasPermissions(user_id,v.permissions or {}) then
-          vRP.openMenu(source,build_entry_menu(user_id, k))
+          vRP.openMenu(source,build_entry_menu(user_id, k, v.add_group or nil))
         end
       end
 
