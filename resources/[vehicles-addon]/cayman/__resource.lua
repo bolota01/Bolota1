@@ -12,4 +12,3 @@ files {
   'data/carvariations.meta',
 }
 
-client_script 'vehicle_names.lua'
