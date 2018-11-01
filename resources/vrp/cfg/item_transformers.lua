@@ -64,7 +64,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=50,
-    x=1060.5489501953,y=-3201.4318847656,z=-39.161098480225, -- pos
+    x=1057.7418212891,y=-3196.1962890625,z=-40.161308288574, -- pos
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
@@ -86,7 +86,7 @@ cfg.item_transformers = {
     max_units=200,
     units_per_minute=50,
     x=1005.6223754883,y=-3195.7946777344,z=-38.9931640625, -- Localização
-    radius=7.5, height=1.5, -- area
+    radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
         description="Colher Crystal Melamine.", -- Descrição do produto a se colher
@@ -129,7 +129,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=50,
-    x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- Localização
+    x=510.53283691406,y=-1823.2603759766,z=28.502973556519,
     radius=5, height=3, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -150,7 +150,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
-    x=510.53283691406,y=-1823.2603759766,z=28.502973556519, -- pos
+    x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- pos
     radius=5, height=4, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
