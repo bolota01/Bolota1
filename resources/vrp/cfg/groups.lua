@@ -610,7 +610,7 @@ cfg.groups = {
     "-police.store_weapons",
     "-police.seizable" -- negative permission, police can't seize itself, even if another group add the permission
   },
-  ["Policia Militar Águia"] = {
+  ["FAE Águia"] = {
     _config = { 
       gtype = "job",
       onjoin = function(player) vRPclient.setCop(player,{true}) end,
@@ -672,7 +672,7 @@ cfg.groups = {
     "samuchefe.paycheck",
     "radar.pass",
     "coma.caller",
-    "chefe.cloakroom"
+    "medico.cloakroom"
   },
     ["Doutor"] = {
     _config = { gtype = "job" },
@@ -691,7 +691,7 @@ cfg.groups = {
     "doutor.paycheck",
     "radar.pass",
     "coma.caller",
-    "chefe.cloakroom"
+    "medico.cloakroom"
   },
   ["Médico Chefe"] = {
     _config = { gtype = "job" },
@@ -710,7 +710,7 @@ cfg.groups = {
     "medicochefe.paycheck",
     "radar.pass",
     "coma.caller",
-    "chefe.cloakroom"
+    "medico.cloakroom"
   },
   ["Médico"] = {
     _config = { gtype = "job" },
