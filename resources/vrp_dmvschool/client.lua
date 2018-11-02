@@ -898,7 +898,7 @@ end
 Citizen.CreateThread(function()
 	pos = dmvschool_location
 	local blip = AddBlipForCoord(pos[1],pos[2],pos[3])
-	SetBlipSprite(blip,408)
+	SetBlipSprite(blip,538)
 	SetBlipColour(blip,11)
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString('Detran')
