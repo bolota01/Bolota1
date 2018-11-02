@@ -3,7 +3,7 @@ patternInfoTable = {}
 
 local verFile = LoadResourceFile(GetCurrentResourceName(), "version.json")
 local curVersion = json.decode(verFile).version
-Citizen.CreateThread( function()
+--[[Citizen.CreateThread( function()
 	local updatePath = "ELS-FiveM"
 	local resourceName = "ELS-FiveM ("..GetCurrentResourceName()..")"
 	PerformHttpRequest("https://raw.githubusercontent.com/MrDaGree/"..updatePath.."/master/version.json", function(err, response, headers)
@@ -35,7 +35,7 @@ RegisterCommand('_curver', function(source)
 			TriggerClientEvent('chat:addMessage', source, { args = { "ELS-FiveM", "Your version of [ " .. GetCurrentResourceName() .. " ] is up to date! Current version: [ " .. curVersion .. " ]."}, color = {13, 161, 200}})
 		end
 	end, "GET", "", {version = 'this'})
-end)
+end)]]
 
 local function processXml(el)
     local v = {}

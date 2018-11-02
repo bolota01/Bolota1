@@ -6,9 +6,11 @@ Do not reupload/re release any part of this script without my permission
 ]]
 MySQL = module("vrp_mysql", "MySQL")
 local Proxy = module("vrp", "lib/Proxy")
-local json = module("vrp", "lib/dkjson")
+local Tunnel = module("vrp", "lib/Tunnel")
+--local json = module("vrp", "lib/dkjson")
 
-vRP = Proxy.getInterface("vRP")
+local vRP = Proxy.getInterface("vRP")
+local vRPclient = Tunnel.getInterface("vRP", "vrp_lscustoms")
 
 MySQL.createCommand("vRP/ls_sveh", "UPDATE vrp_user_vehicles SET upgrades=@upgrades WHERE user_id=@id AND vehicle=@veh")
 
@@ -56,21 +58,24 @@ AddEventHandler("LSC:buttonSelected", function(name, button)
 	local user_id = vRP.getUserId({source})
 
 	if button.price then
+		local paid = vRP.tryFullPayment({user_id, button.price})
 		TriggerClientEvent(
-			"LSC:buttonSelected",
-			source,
-			name,
-			button,
-			vRP.tryFullPayment({user_id, button.price}))
+			"LSC:buttonSelected", source, name, button, paid)
+		if paid then
+			vRPclient.notify(source, {"Pago ~r~R$"..button.price})
+		end
 	end
 end)
 
 RegisterServerEvent("LSC:finished")
-AddEventHandler("LSC:finished", function(veh, playerId)
+AddEventHandler("LSC:finished", function(veh, vehModel)
 	local user_id = vRP.getUserId({source})
 
-	local a = MySQL.query(
-		"vRP/ls_sveh",
-		{id = user_id, upgrades=json.encode(veh), veh=veh.model})
-	--Do w/e u need with all this stuff when vehicle drives out of lsc
+	vRPclient.getNearestOwnedVehicle(source, {1}, function(vtype, result, name)
+		--print(name)
+		if result then
+			MySQL.query(
+				"vRP/ls_sveh", {id=user_id, upgrades=json.encode(veh), veh=name})
+		end
+	end)
 end)

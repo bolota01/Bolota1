@@ -868,28 +868,32 @@ cfg.homes = {
     entry_point = {1454.4614257813,-1651.6026611328,66.99479675293},
     buy_price = 5000000,
     sell_price = 3500000,
-    max = 1
+    max = 1,
+    add_group = "galpaocannabis"
   },
   ["Galpao 02"] = { --Maconha
     slot = "galpaoMACONHA",
     entry_point = {2846.6674804688,4449.4375,48.518280029297},
     buy_price = 5000000,
     sell_price = 3500000,
-    max = 1
+    max = 1,
+    add_group = "galpaometannfetamina"
   },
   ["Galpao 03"] = { --Cocaina
     slot = "galpaoCOCA",
     entry_point = {-1461.5863037109,-382.83508300781,38.745960235596},
     buy_price = 5000000,
     sell_price = 3500000,
-    max = 1
+    max = 1,
+    add_group = "galpaococainna"
   },
   ["Galpao 04"] = {
     slot = "galpaoARMAS",
     entry_point = {939.76989746094,-1490.833984375,30.092649459839},
     buy_price = 5000000,
     sell_price = 3500000,
-    max = 1
+    max = 1,
+    add_group = "galpaodirtymoney"
   },
   ["Galpao 05"] = {
     slot = "galpaoCOMUM1",
@@ -903,7 +907,8 @@ cfg.homes = {
     entry_point = {758.97644042969,-914.66522216797,25.432731628418},
     buy_price = 5000000,
     sell_price = 3500000,
-    max = 1
+    max = 1,
+    add_group = "galpaodirtymoney"
   }
 }
 

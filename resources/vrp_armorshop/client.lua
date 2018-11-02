@@ -9,13 +9,13 @@ end
 function vRPas.setArmour(armour,vest)
   local player = GetPlayerPed(-1)
   if vest then
-	if(GetEntityModel(player) == GetHashKey("mp_m_freemode_01")) then
-	  SetPedComponentVariation(player, 9, 4, 1, 2)  --Bulletproof Vest
-	else 
-	  if(GetEntityModel(player) == GetHashKey("mp_f_freemode_01")) then
-	    SetPedComponentVariation(player, 9, 6, 1, 2)
-	  end
-	end
+    if(GetEntityModel(player) == GetHashKey("mp_m_freemode_01")) then
+      SetPedComponentVariation(player, 9, 4, 1, 2)  --Bulletproof Vest
+    else 
+      if(GetEntityModel(player) == GetHashKey("mp_f_freemode_01")) then
+        SetPedComponentVariation(player, 9, 6, 1, 2)
+      end
+    end
   end
   local n = math.floor(armour)
   SetPedArmour(player,n)
@@ -37,11 +37,11 @@ Citizen.CreateThread(function()
     Citizen.Wait(10000)
     if IsPlayerPlaying(PlayerId()) and state_ready then
       ASserver.updateArmor({vRPas.getArmour()})
-	  if vRPas.getArmour() == 0 then
-	    if(GetEntityModel(GetPlayerPed(-1)) == GetHashKey("mp_m_freemode_01")) or (GetEntityModel(GetPlayerPed(-1)) == GetHashKey("mp_f_freemode_01")) then
-	      SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 1, 2)
-		end
-	  end
+      if vRPas.getArmour() == 0 then
+        if(GetEntityModel(GetPlayerPed(-1)) == GetHashKey("mp_m_freemode_01")) or (GetEntityModel(GetPlayerPed(-1)) == GetHashKey("mp_f_freemode_01")) then
+          SetPedComponentVariation(GetPlayerPed(-1), 9, 0, 1, 2)
+        end
+      end
     end
   end
 end)

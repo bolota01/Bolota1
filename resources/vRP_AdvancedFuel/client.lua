@@ -411,7 +411,7 @@ function renderBoxes()
 
 			if showText then
 				local percent = (essence/0.142)*100
-				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
+				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.5,round(percent,1).."%", 255, 255, 255, 255, 4, 1)
 			end
 		else
 			--[[if(showBar) then
@@ -422,7 +422,7 @@ function renderBoxes()
 
 			if showText then
 				local percent = (essence/0.142)*100
-				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
+				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.5,round(percent,1).."%", 255, 255, 255, 255, 4, 1)
 			end
 		end
 	end
@@ -584,7 +584,7 @@ function DrawAdvancedText(x,y ,w,h,sc, text, r,g,b,a,font,jus)
 	N_0x4e096588b13ffeca(jus)
     SetTextColour(r, g, b, a)
     SetTextDropShadow(0, 0, 0, 0,255)
-    SetTextEdge(1, 0, 0, 0, 255)
+    SetTextEdge(2, 0, 0, 0, 255)
     SetTextDropShadow()
     SetTextOutline()
     SetTextEntry("STRING")

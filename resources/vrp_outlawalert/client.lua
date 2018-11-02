@@ -156,7 +156,7 @@ function onTryingToEnterVehicle(playerPed, plyPos, street1, street2)
 end
 
 function onPedInMelee(playerPed, plyPos, street1, street2)
-    if IsPedInMeleeCombat(playerPed) then 
+    if IsPedInMeleeCombat(playerPed) and DoesEntityExist(GetMeleeTargetForPed(playerPed)) then 
         origin = true
         DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)

@@ -22,7 +22,7 @@ MySQL.execute("vRP/vehicles_table")
 
 -- load config
 
-local json = module("lib/dkjson")
+--local json = module("lib/dkjson")
 
 local cfg = module("cfg/garages")
 local cfg_inventory = module("cfg/inventory")
@@ -544,7 +544,7 @@ AddEventHandler("garage:requestMods", function(vname)
 
 	MySQL.query("vRP/get_vehicleups", {user_id = user_id, vehicle = vname}, function(rows, affected)
     if #rows > 0 then -- has vehicle
-      local mods = json.decode(rows[1].upgrades, 1, nil)
+      local mods = json.decode(rows[1].upgrades)
 			vRPclient.garage_setmods(src, {mods})
 		end
 	end)

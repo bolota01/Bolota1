@@ -58,11 +58,14 @@ end
 
 function tvRP.despawnGarageVehicle(vtype,max_range)
   local vehicle = vehicles[vtype]
-  if vehicle then
+  if vehicle then 
     local x,y,z = table.unpack(GetEntityCoords(vehicle[3],true))
     local px,py,pz = tvRP.getPosition()
+    local damage = GetVehicleBodyHealth(vehicle[3])
 
-    if GetDistanceBetweenCoords(x,y,z,px,py,pz,true) < max_range then -- check distance with the vehicule
+    if damage < 870 then
+      tvRP.notify("Você não pode guardar um veículo danificado!")
+    elseif GetDistanceBetweenCoords(x,y,z,px,py,pz,true) < max_range then -- check distance with the vehicule
       -- remove vehicle
       SetVehicleHasBeenOwnedByPlayer(vehicle[3],false)
       Citizen.InvokeNative(0xAD738C3085FE7E11, vehicle[3], false, true) -- set not as mission entity
@@ -71,7 +74,6 @@ function tvRP.despawnGarageVehicle(vtype,max_range)
       vehicles[vtype] = nil
       tvRP.notify("Veículo Guardado.")
     else
-
       tvRP.notify("Você está muito longe do veiculo")
     end
   end
@@ -273,6 +275,8 @@ function tvRP.garage_setmods(mods)
 end
 
 function tvRP.setMod(veh, myveh)
+  local neon = myveh.neon or false
+  SetVehicleModKit(veh,0)
   for key, value in pairs(myveh) do
     if key == "mods" then
       for _key, _value in pairs(value) do
@@ -282,23 +286,26 @@ function tvRP.setMod(veh, myveh)
               SetVehicleModKit(veh,0)
             end
           end
-          SetVehicleMod(veh, tonumber(_key), _value["mod"], _value["variation"] or true)
+          if _key == "22" then
+            ToggleVehicleMod(veh, tonumber(_key), _value["mod"])
+          else
+            SetVehicleMod(veh, tonumber(_key), _value["mod"], _value["variation"] or true)
+          end
         end
       end
     elseif key == "wheeltype" then
       SetVehicleWheelType(veh, value)
     elseif key == "neoncolor" then
-      SetVehicleNeonLightEnabled(veh,0,true)
-			SetVehicleNeonLightEnabled(veh,1,true)
-			SetVehicleNeonLightEnabled(veh,2,true)
-			SetVehicleNeonLightEnabled(veh,3,true)
+      SetVehicleNeonLightEnabled(veh,0,neon)
+			SetVehicleNeonLightEnabled(veh,1,neon)
+			SetVehicleNeonLightEnabled(veh,2,neon)
+			SetVehicleNeonLightEnabled(veh,3,neon)
       SetVehicleNeonLightsColour(veh, value[1], value[2], value[3])
     elseif key == "extracolor" then
       SetVehicleExtraColours(veh, value[1], value[2])
     elseif key == "windowtint" then
       SetVehicleWindowTint(veh, value)
     elseif key == "smokecolor" then
-      SetVehicleModKit(veh,0)
       ToggleVehicleMod(veh,20,true)
       SetVehicleTyreSmokeColor(veh, value[1], value[2], value[3])
     elseif key == "color" then

@@ -34,14 +34,14 @@ end)
 
 -- OTHER THREADS
 -- THIS IS FOR CROUCH
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do 
     Citizen.Wait(0)
     if DoesEntityExist(GetPlayerPed(-1)) and not IsEntityDead(GetPlayerPed(-1)) then 
       DisableControlAction(0,36,true) -- INPUT_DUCK   
     end 
   end
-end)
+end)]]
 
 -- THIS IS FOR POINTING
 Citizen.CreateThread(function()
@@ -101,24 +101,24 @@ function loadAnimDict( dict )
 end
 
 -- THIS IS FOR ENGINE-CONTROL
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do
-	Citizen.Wait(0)
+	  Citizen.Wait(0)
     if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId())) then
       local veh = GetVehiclePedIsTryingToEnter(PlayerPedId())
-	  engine = IsVehicleEngineOn(veh)
-	end
-	if IsPedInAnyVehicle(GetPlayerPed(-1), false) and not engine then
-	  local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
-	  local damage = GetVehicleBodyHealth(vehicle)
-	  SetVehicleEngineOn(vehicle, engine, false, false)
-	  if damage <= 0 then
-		SetVehicleUndriveable(vehicle, true)
-		vRP.notify({"~r~O veículo está quebrado."})
-	  end
-	end
+      engine = IsVehicleEngineOn(veh)
+    end
+    if IsPedInAnyVehicle(GetPlayerPed(-1), false) and not engine then
+      local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
+      local damage = GetVehicleBodyHealth(vehicle)
+      SetVehicleEngineOn(vehicle, engine, false, false)
+      --[[if damage <= 0 then
+      SetVehicleUndriveable(vehicle, true)
+      vRP.notify({"~r~O veículo está quebrado."})
+      end
+    end
   end
-end)
+end)]]
 
 -- THIS IS FOR NO DOC COMA
 Citizen.CreateThread(function() -- coma thread

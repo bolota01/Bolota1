@@ -98,8 +98,9 @@ end)
 Citizen.CreateThread(function()
 	while true do
 		local pos = GetEntityCoords(GetPlayerPed(-1), true)
+		local pos2 = nil
 		for k,v in pairs(banks)do
-			local pos2 = v.position
+			pos2 = v.position
 
 			if(Vdist(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) < 15.0)then
 				if IsPlayerWantedLevelGreater(PlayerId(),0) or ArePlayerFlashingStarsAboutToDrop(PlayerId()) then
@@ -169,7 +170,7 @@ Citizen.CreateThread(function()
 			local ped = GetPlayerPed(-1)
 			
             if IsEntityDead(ped) then
-			TriggerServerEvent('es_bank:playerdied', bank)
+				TriggerServerEvent('es_bank:playerdied', bank)
 			elseif (Vdist2(pos.x, pos.y, pos.z, pos2.x, pos2.y, pos2.z) > 225)then
 				TriggerServerEvent('es_bank:toofar', bank)
 			end

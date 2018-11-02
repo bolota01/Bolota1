@@ -14,6 +14,12 @@ import FabricProgressBar from './components/progressbar';
 import FabricRequestMessage from './components/requests';
 
 
+/*
+    <div style={{position: "absolute", top: "2%", left: "1.5%"}}>
+        <img src="img/logo.png" />
+    </div>
+*/
+
 class Application extends React.Component {
     render(){
         return (
@@ -21,9 +27,6 @@ class Application extends React.Component {
                 <FabricComponent />
                 <Menu />
                 <Prompt />
-                <div style={{position: "absolute", top: "2%", left: "1.5%"}}>
-                    <img src="img/logo.png" />
-                </div>
                 <div className="center">
                     <FabricProgressBar anchor="center" layout="horizontal" />
                 </div>
