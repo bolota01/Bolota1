@@ -20,8 +20,8 @@ INTERIORS = {
     [11] = {id = 11, x = -177.1608581543, y = -1158.3416748047, z = 23.813663482666, name = "Sair da Elite Car", destination = {10}},
 
     -- Telhado DP
-    [12] = {id = 12, x = 464.09829711914, y = -986.00158691406, z = 30.689599990845, name = "Ir para o telhado", destination = {13}},
-    [13] = {id = 13, x = 463.59606933594, y = -984.10662841797, z = 43.691921234131, name = "Voltar para a DP", destination = {12}},
+    [12] = {id = 12, x = 463.59606933594, y = -984.10662841797, z = 43.691921234131, name = "Ir para o telhado", destination = {13}},
+    [13] = {id = 13, x = 464.09829711914, y = -986.00158691406, z = 30.689599990845, name = "Voltar para a DP", destination = {12}},
 		
 	-- Business
     [18] = {id = 18, x =  3562.8259277344, y = 3690.3332519531, z = 28.121658325195,  name = "Entrar Empresa", destination = {19}},
@@ -54,7 +54,5 @@ INTERIORS = {
     -- OAB
     [32] = {id = 32, x = -1902.6004638672, y = -573.19598388672, z = 19.097215652466,  name = "Entrar", destination = {33}},
     [33] = {id = 33, x = -1899.1215820313, y = -562.33374023438, z = 11.803235054016,  name = "Sair", destination = {32}},
-    }
-    }
 	
 }
