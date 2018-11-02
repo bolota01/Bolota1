@@ -138,7 +138,6 @@ recruta_weapons["Equip"] = {function(player,choice)
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -150,7 +149,6 @@ police_weapons["Equip"] = {function(player,choice)
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -163,7 +161,6 @@ police_weapons_capitao["Equip"] = {function(player,choice)
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -176,7 +173,6 @@ police_weapons_coronel["Equip"] = {function(player,choice)
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -188,7 +184,6 @@ police_weapons_federal["Equip"] = {function(player,choice)
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -199,7 +194,6 @@ police_weapons_aguia["Equip"] = {function(player,choice)
     ["WEAPON_SNIPERRIFLE"] = {ammo=200},
     ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
-    ["ARMOR"] = {ammo=200}
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -240,7 +234,7 @@ samu_emergency_medkit["Equip"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
     ["WEAPON_FLASHLIGHT"] = {ammo=200}
   }, true})
-  BMclient.setArmour(player,{100,true})
+  --BMclient.setArmour(player,{100,true})
 end}
 -- Médico Chefe/Doutor/Samu Chefe
 local medico_emergency_medkit = {}
@@ -249,9 +243,8 @@ medico_emergency_medkit["Equip"] = {function(player,choice)
     ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_FLARE"] = {ammo=200},
     ["WEAPON_FLASHLIGHT"] = {ammo=200},
-    ["WEAPON_FLAREGUN"] = {ammo=200}
   }, true})
-  BMclient.setArmour(player,{100,true})
+  --BMclient.setArmour(player,{100,true})
 end}
 
 --loot corpse
@@ -994,7 +987,7 @@ end,
 5.00})
 
 -- ADD STATIC MENU CHOICES // STATIC MENUS NEED TO BE ADDED AT vRP/cfg/gui.lua
-vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
+--vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
 vRP.addStaticMenuChoices({"recruta_weapons", recruta_weapons}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons_capitao", police_weapons_capitao}) -- equipamentos da polícia
