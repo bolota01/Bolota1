@@ -74,7 +74,17 @@ for group,vehicles in pairs(vehicle_groups) do
           local vehicle = vehicles[vname]
           if vehicle then
             vRP.closeMenu(player)
-            vRPclient.spawnGarageVehicle(player,{veh_type,vname})
+            local user_id = vRP.getUserId(player)
+            vRP.getSData("apreendido:u"..user_id, function(data)
+              local d = json.decode(data)
+              if d ~= nil then 
+                if d[vname] then
+                  vRPclient.notify(player, {"~r~Veículo apreendido!"})
+                  return
+                end
+              end
+              vRPclient.spawnGarageVehicle(player,{veh_type,vname})
+            end)
           end
         end
       end
@@ -374,18 +384,18 @@ veh_actions[lang.vehicle.sellTP.title()] = {function(playerID,player,vtype,name)
           usrList = usrList .. "[" .. vRP.getUserId(k) .. "]" .. GetPlayerName(k) .. " | "
         end
         if usrList ~= "" then
-          vRP.prompt(player,"Players Nearby: " .. usrList .. "","",function(player,user_id) 
+          vRP.prompt(player,"Jogadores próximos: " .. usrList .. "","",function(player,user_id) 
             user_id = user_id
             if user_id ~= nil and user_id ~= "" then 
               local target = vRP.getUserSource(tonumber(user_id))
               if target ~= nil then
-                vRP.prompt(player,"Price $: ","",function(player,amount)
-                  if (tonumber(amount)) then
+                vRP.prompt(player,"Preço $: ","",function(player,amount)
+                  if (tonumber(amount) > 0) then
                     MySQL.query("vRP/get_vehicle", {user_id = user_id, vehicle = name}, function(pvehicle, affected)
                       if #pvehicle > 0 then
-                        vRPclient.notify(player,{"~r~The player already has this vehicle type."})
+                        vRPclient.notify(player,{"~r~O jogador já tem esse tipo de veículo."})
                       else
-                        vRP.request(target,GetPlayerName(player).." wants to sell: " ..name.. " Price: $"..amount, 10, function(target,ok)
+                        vRP.request(target,GetPlayerName(player).." quer vender: " ..name.. " Preço: R$"..amount, 10, function(target,ok)
                           if ok then
                             local pID = vRP.getUserId(target)
                             local money = vRP.getMoney(pID)
@@ -396,33 +406,33 @@ veh_actions[lang.vehicle.sellTP.title()] = {function(playerID,player,vtype,name)
                               end)
                               vRP.giveMoney(playerID, amount)
                               vRP.setMoney(pID,money-amount)
-                              vRPclient.notify(player,{"~g~You have successfully sold the vehicle to ".. GetPlayerName(target).." for $"..amount.."!"})
-                              vRPclient.notify(target,{"~g~"..GetPlayerName(player).." has successfully sold you the car for $"..amount.."!"})
+                              vRPclient.notify(player,{"~g~Você vendeu o véiculo para o ".. GetPlayerName(target).." por R$"..amount.."!"})
+                              vRPclient.notify(target,{"~g~"..GetPlayerName(player).." finalizou com sucesso a venda por R$"..amount.."!"})
                             else
-                              vRPclient.notify(player,{"~r~".. GetPlayerName(target).." doesn't have enough money!"})
-                              vRPclient.notify(target,{"~r~You don't have enough money!"})
+                              vRPclient.notify(player,{"~r~".. GetPlayerName(target).." não tem dinheiro suficiente!"})
+                              vRPclient.notify(target,{"~r~Você não tem dinheiro suficiente!"})
                             end
                           else
-                            vRPclient.notify(player,{"~r~"..GetPlayerName(target).." has refused to buy the car."})
-                            vRPclient.notify(target,{"~r~You have refused to buy "..GetPlayerName(player).."'s car."})
+                            vRPclient.notify(player,{"~r~"..GetPlayerName(target).." recusou comprar o carro."})
+                            vRPclient.notify(target,{"~r~Eu recusei comprar o carro do "..GetPlayerName(player)})
                           end
                         end)
                         vRP.closeMenu(player)
                       end 
                     end) 
                   else
-                    vRPclient.notify(player,{"~r~The price of the car has to be a number."})
+                    vRPclient.notify(player,{"~r~O preço do carro tem que ser um número e maior que zero."})
                   end
                 end)
               else
-                vRPclient.notify(player,{"~r~That ID seems invalid."})
+                vRPclient.notify(player,{"~r~Essa é uma ID inválida."})
               end
             else
-              vRPclient.notify(player,{"~r~No player ID selected."})
+              vRPclient.notify(player,{"~r~Nenhum jogador selecionado."})
             end
           end)
         else
-          vRPclient.notify(player,{"~r~No player nearby."})
+          vRPclient.notify(player,{"~r~Nenhum jogador perto."})
         end
       --end)
     end)

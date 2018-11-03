@@ -36,6 +36,20 @@ function vRPcmd.teleport(x,y,z,h)
     vRPserver.updatePos({x+0.0001, y+0.0001, z+0.0001})
 end
 
+function vRPcmd.getNearestVehPlate()
+    local pos = GetEntityCoords(GetPlayerPed(-1))
+    local entityWorld = GetOffsetFromEntityInWorldCoords(GetPlayerPed(-1), 0.0, 20.0, 0.0)
+
+    local rayHandle = CastRayPointToPoint(pos.x, pos.y, pos.z, entityWorld.x, entityWorld.y, entityWorld.z, 10, GetPlayerPed(-1), 0)
+    local _, _, _, _, vehicleHandle = GetRaycastResult(rayHandle)
+
+    if vehicleHandle ~= nil then
+        return GetVehicleNumberPlateText(vehicleHandle)
+    end
+
+    return nil
+end
+
 function vRPcmd.getDistance(x,y,z)
     return Vdist2(GetEntityCoords(GetPlayerPed(-1), true), x,y,z)
 end
@@ -635,53 +649,6 @@ mask = not mask
 end
 end
 
-<<<<<<< HEAD
-function DrawSpecialText(m_text, showtime)
-	SetTextEntry_2("STRING")
-	AddTextComponentString(m_text)
-	DrawSubtitleTimed(showtime, 1)
-end
-
-function renderPagarMultas(x,y,z)
-    DrawMarker(29, 248.245,222.336,107.180-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
-    if Vdist2(x,y,z, 248.245,222.336,106.286) < 1 then
-        DrawSpecialText("Digite ~y~/pagarmultas~s~")
-    end
-end
-
-function renderVerMultas(x,y,z)
-    DrawMarker(29, 246.529,223.064,107.180-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
-    if Vdist2(x,y,z, 246.529,223.064,106.286) < 1 then
-        DrawSpecialText("Digite ~y~/vermultas~s~")
-    end
-end
-
-function renderRetirar(x,y,z)
-    DrawMarker(29, 370.871,-1607.528,29.991-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
-    if Vdist2(x,y,z, 370.871,-1607.528,29.291) < 1 then
-        DrawSpecialText("Digite ~y~/retirar (modelo do veiculo)~s~")
-    end
-end
-
-function renderConsultar(x,y,z)
-    DrawMarker(29, 369.830,-1609.027,29.991-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
-    if Vdist2(x,y,z, 369.830,-1609.027,29.291) < 1 then
-        DrawSpecialText("Digite ~y~/consultar~s~")
-    end
-end
-
-
-Citizen.CreateThread(function ()
-	while true do
-        Citizen.Wait(0)
-        local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1)))
-        renderPagarMultas(x,y,z)
-        renderVerMultas(x,y,z)
-        renderRetirar(x,y,z)
-        renderConsultar(x,y,z)
-	end
-end)
-
 function vRPcmd.capacete1(p)
     mask = not mask
         if mask then
@@ -847,3 +814,49 @@ function vRPcmd.capacete19(p)
         end
 end
 
+
+function DrawSpecialText(m_text, showtime)
+	SetTextEntry_2("STRING")
+	AddTextComponentString(m_text)
+	DrawSubtitleTimed(showtime, 1)
+end
+
+function renderPagarMultas(x,y,z)
+    DrawMarker(29, 248.245,222.336,107.180-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
+    if Vdist2(x,y,z, 248.245,222.336,106.286) < 1 then
+        DrawSpecialText("Digite ~y~/pagarmultas~s~")
+    end
+end
+
+function renderVerMultas(x,y,z)
+    DrawMarker(29, 246.529,223.064,107.180-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
+    if Vdist2(x,y,z, 246.529,223.064,106.286) < 1 then
+        DrawSpecialText("Digite ~y~/vermultas~s~")
+    end
+end
+
+function renderRetirar(x,y,z)
+    DrawMarker(29, 370.871,-1607.528,29.991-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
+    if Vdist2(x,y,z, 370.871,-1607.528,29.291) < 1 then
+        DrawSpecialText("Digite ~y~/retirar (modelo do veiculo)~s~")
+    end
+end
+
+function renderConsultar(x,y,z)
+    DrawMarker(29, 369.830,-1609.027,29.991-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 232, 255, 155, 0, 1, 2, 0, 0, 0, 0)
+    if Vdist2(x,y,z, 369.830,-1609.027,29.291) < 1 then
+        DrawSpecialText("Digite ~y~/consultar~s~")
+    end
+end
+
+
+Citizen.CreateThread(function ()
+	while true do
+        Citizen.Wait(0)
+        local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1)))
+        renderPagarMultas(x,y,z)
+        renderVerMultas(x,y,z)
+        renderRetirar(x,y,z)
+        renderConsultar(x,y,z)
+	end
+end)
