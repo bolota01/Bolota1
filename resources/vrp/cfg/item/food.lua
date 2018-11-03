@@ -73,8 +73,8 @@ items["orangejuice"] = {"Suco de laranja","Que delícia caraaa !", gen("drink",0
 items["gocagola"] = {"Coca-Cola","", gen("drink",0,-35),0.3}
 items["redgull"] = {"RedBull","", gen("drink",0,-40),0.3}
 items["lemonlimonad"] = {"Limonada","", gen("drink",0,-45),0.3}
-items["vodka"] = {"Vodka","", gen("drink",15,-65),0.5}
-items["smirnoff"] = {"Cachaça","", gen("drink",15,-65),0.5}
+items["vodka"] = {"Vodka","", gen("drink",15,-35),0.5}
+items["smirnoff"] = {"Cachaça","", gen("drink",15,-35),0.5}
 
 --FOOD
 
