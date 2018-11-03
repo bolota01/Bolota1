@@ -1,5 +1,6 @@
 local running = false
 local barber = false
+local oldsuperstring = ""
 local language = {
 	charMenu = 'Criar Personagem',
 	barberTitle = 'Barbearia',
@@ -513,7 +514,7 @@ function saveCharData()
 		end
 	end
 
-	TriggerServerEvent('saveCharacter', superString, barber)
+	TriggerServerEvent('saveCharacter', superString, barber, superString ~= oldsuperstring)
 	TriggerServerEvent('hc:showPlayer')
 
 	running = false
@@ -531,9 +532,8 @@ function stringsplit(inputstr, sep)
 	return t
 end
 
-RegisterNetEvent('loadCharacter')
-AddEventHandler('loadCharacter', function(superString)
-	print("load character")
+function loadCharacter(superString)
+	oldsuperstring = superString
 	local charData=stringsplit(superString,",")
 
 	gender.index=tonumber(charData[1])
@@ -559,7 +559,10 @@ AddEventHandler('loadCharacter', function(superString)
 	Citizen.CreateThread(function()
 		updateCharacter()
 	end)
-end)
+end
+
+RegisterNetEvent('loadCharacter')
+AddEventHandler('loadCharacter', loadCharacter)
 
 local firstSpawn = true
 local create = false
@@ -605,12 +608,21 @@ RegisterNetEvent('customization')
 AddEventHandler('customization', function()
 	if canClose then
 		TriggerServerEvent('hc:showPlayer')
-		TriggerServerEvent('hc:stophide')
+		TriggerEvent("stopHide")
 	end
 
 	Citizen.CreateThread(function()
 		updateCharacter()
 	end)
+end)
+
+RegisterNetEvent('customizationPaid')
+AddEventHandler('customizationPaid', function(paid, sstring)
+	if not paid then
+		loadCharacter(oldsuperstring)
+	else
+		oldsuperstring = sstring
+	end
 end)
 
 local camera = nil
@@ -710,16 +722,27 @@ function run_customization()
 		while running do
 			if WarMenu.IsMenuOpened('mainMenu') then
 				--combobox do genero
-				if WarMenu.ComboBox(gender.name, gender.items, gender.index, gender.index, onChangeGender) then
-				elseif WarMenu.MenuButton(language.heritage,'menuHeritage') then	
-				elseif WarMenu.MenuButton(language.face,'menuFeatures') then
-				elseif WarMenu.MenuButton(language.appearance,'menuAppearance') then
-				elseif WarMenu.Button(language.finish) then
-					canClose=true
-					create = false
-					setCamera(false)
-					saveCharData()
-					WarMenu.CloseMenu()
+				if barber then
+					if WarMenu.MenuButton(language.appearance,'menuAppearance') then
+					elseif WarMenu.Button(language.finish) then
+						canClose=true
+						create = false
+						setCamera(false)
+						saveCharData()
+						WarMenu.CloseMenu()
+					end
+				else
+					if WarMenu.ComboBox(gender.name, gender.items, gender.index, gender.index, onChangeGender) then
+					elseif WarMenu.MenuButton(language.heritage,'menuHeritage') then	
+					elseif WarMenu.MenuButton(language.face,'menuFeatures') then
+					elseif WarMenu.MenuButton(language.appearance,'menuAppearance') then
+					elseif WarMenu.Button(language.finish) then
+						canClose=true
+						create = false
+						setCamera(false)
+						saveCharData()
+						WarMenu.CloseMenu()
+					end
 				end
 
 				WarMenu.Display()
@@ -755,6 +778,10 @@ function run_customization()
 				--cabelo
 				if (WarMenu.MenuButton(hairOptions.name,'menuChange')) then
 					GetMenuChange=0
+				end
+
+				if barber then
+					WarMenu.SetTitle('menuAppearance', 'Barbearia')
 				end
 
 				for i=1,12 do

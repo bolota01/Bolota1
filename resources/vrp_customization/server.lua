@@ -20,12 +20,24 @@ AddEventHandler('selectCharacter', function()
 	end})
 end)
  
-AddEventHandler('saveCharacter', function(superString, barber)
+AddEventHandler('saveCharacter', function(superString, barber, charge)
 	local user_id = vRP.getUserId({source})
 	TriggerClientEvent('stopHide', source)
-	vRP.setUData({user_id, "vRP:customization", superString})
 
 	if not barber then
 		vRPclient.teleport(source,{-1037.7828369141,-2737.9025878906,20.169273376465})
+	else
+		if charge then 
+			if vRP.tryPayment({user_id, 200}) then
+				TriggerClientEvent('customizationPaid', source, true, superString)
+				vRPclient.notify(source, {"Pago ~r~R$200"})
+			else
+				TriggerClientEvent('customizationPaid', source, false, superString)
+				vRPclient.notify(source, {"~r~Você não tem dinheiro suficiente!"})
+				return
+			end
+		end
 	end
+
+	vRP.setUData({user_id, "vRP:customization", superString})
 end)
