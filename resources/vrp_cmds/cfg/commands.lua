@@ -860,8 +860,215 @@ cfg.commands = {
     end
     },
 	
-	
-  
+    -- multas --
+    ["/placa"] = {
+        -- /plate checks vehicle owner
+        action = function(p,color,msg) 
+          local user_id = vRP.getUserId({p})
+          local rg = vRP.generateRegistrationNumber()
+          local telefone = vRP.generatePhoneNumber()
+          local name = cfg.random_last_names[math.random(1,#cfg.random_last_names)]
+          local firstname = cfg.random_first_names[math.random(1,#cfg.random_first_names)]
+          if vRP.hasPermission({user_id,"police.cmd_plate"}) then
+            if msg then
+                local user_id = vRP.getUserByRegistration({msg})
+                if user_id then
+                  local identity = vRP.getUserIdentity({user_id})
+                  if identity then
+                    --TriggerClientEvent('chatMessage', p, "LSPD", {80, 80, 255},"Dono: ^2"..identity.name.." "..identity.firstname.."^0, Idade: ^2"..identity.age)
+                    vRPclient.notify(p,{"~r~Informações do Veiculo ~w~- Dono: " ..identity.name.." "..identity.firstname.. " - Telefone: " .. identity.phone .. " - RG: " .. identity.registration})
+                  else
+                    vRPclient.notify(p,{"~r~Veiculo Roubado ~w~- Dono: " ..name.." "..firstname.. " - Telefone: " .. telefone .. " - RG: " .. rg})
+                  end
+                else
+                    vRPclient.notify(p,{"~r~Veiculo Roubado ~w~- Dono: " ..name.." "..firstname.. " - Telefone: " .. telefone .. " - RG: " .. rg})
+                end
+            else
+              TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Use: /placa <placa>")
+            end
+          else
+            TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você não tem permissão para executar esse comando!")
+          end
+        end
+      },
+      ["/apreender"] = {
+        -- /plate checks vehicle owner
+        action = function(p,color,msg)
+        local user_id = vRP.getUserId({p})
+        if vRP.hasPermission({user_id,"apreender.veiculo"}) then
+            if msg then
+             local user_id = vRP.getUserByRegistration({msg})
+             GNclient.getNearestOwnedVehicle(vRP.getUserSource({user_id}), {50000}, function(ok, vtype, model)
+                if ok then
+                    vRP.getSData({"apreendido:u"..user_id, function(data)
+                        if data == "" then data = "{}" end
+                        local carros = json.decode(data)
+                        if not carros then carros = {} end
+                        carros[model] = true
+                        vRP.setSData({"apreendido:u"..user_id, json.encode(carros)})
+                        TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Veiculo apreendido!")
+                    end})
+                end
+             end)
+            end
+          else
+            TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você não tem permissão para executar este comando!")	   
+          end
+        end
+      },
+      ["/retirar"] = {
+        action = function(p,color,msg)
+            CMDclient.getDistance(p,{370.871,-1607.528,29.29}, function(d)
+                if d < 1 then
+                    local user_id = vRP.getUserId({p})
+                    vRP.getSData({"apreendido:u"..user_id, function(data)
+                        if data ~= "" then
+                            local carros = json.decode(data)
+                            local apreendido = carros[msg]
+                            if apreendido then
+                                if vRP.tryPayment({user_id, 3000}) then
+                                    carros[msg] = nil
+                                    vRP.setSData({"apreendido:u"..user_id, json.encode(carros)})
+                                    vRPclient.notify(p, {"~r~Você pagou R$3000"})
+                                end
+                            end
+                        else
+                            TriggerClientEvent('chatMessage', p, "Patio", {80, 80, 255},"Nenhum veículo apreendido!")
+                        end
+                    end})
+                else
+                    vRPclient.notify(p, {"~r~Você está muito longe"})
+                end        
+            end)
+        end
+    },
+    ["/consultar"] = {
+        action = function(p,color,msg) 
+          CMDclient.getDistance(p,{369.830,-1609.027,29.291}, function(d)
+            if d < 1 then
+                local user_id = vRP.getUserId({p})
+                local data = vRP.getSData({"apreendido:u"..user_id, function(data)
+                    if data ~= "" then
+                        local carros = json.decode(data)
+                        local text = ""
+                        for k,v in pairs(carros) do
+                            text = text .. " " .. k
+                        end
+                        TriggerClientEvent('chatMessage', p, "Patio", {80, 80, 255},"Veículos que estão apreendidos: "..text)
+                    else
+                        TriggerClientEvent('chatMessage', p, "Patio", {80, 80, 255},"Nenhum veículo apreendido!")
+                    end
+                end})
+            else
+                vRPclient.notify(p, {"~r~Você está muito longe"})
+            end
+          end) 
+        end
+      },
+
+    ["/pagarmultas"] = {
+        action = function(p,color,msg) 
+          CMDclient.getDistance(p,{248.245,222.336,107.180}, function(d)
+            if d < 9 then
+                local user_id = vRP.getUserId({p})
+                local multas = vRP.getUData({user_id,"multas", function(multas)
+                    if multas == "" then multas = 0 else multas = tonumber(multas) end
+                    if vRP.tryPayment({user_id, multas}) then
+                        vRP.setUData({user_id,"multas",0})
+                        vRP.insertPoliceRecord({user_id, "Pagou ".. multas .." R$ de multa"})
+                        vRPclient.notify(p, {"Você pagou ~r~R$" ..multas.. " ~w~em multas"})
+                    else
+                        vRPclient.notify(p, {"~r~Dinheiro insuficiente"})
+                    end
+                end})
+            else
+                vRPclient.notify(p, {"~r~Você está muito longe"})
+            end
+          end)
+        end
+      },
+    
+      ["/vermultas"] = {
+        action = function(p,color,msg) 
+            local d = CMDclient.getDistance(p,{246.529,223.064,106.286}, function(d)
+                if d < 9 then
+                    local user_id = vRP.getUserId({p})
+                    vRP.getUData({user_id, "multas", function(multas)
+                        if multas == "" then multas = 0 else multas = tonumber(multas) end
+                        TriggerClientEvent('chatMessage', p, "Banco do Brasil", {80, 80, 255},"Você tem ^2R$"..multas.. "^0 em multas pendentes")
+                    end})
+                else
+                    vRPclient.notify(p, {"~r~Você está muito longe"})
+                end
+            end)
+        end
+      },
+    
+      ["/multar"] = {
+        -- /plate checks vehicle owner
+        action = function(p,color,msg) 
+          if msg ~= nil then
+            local args = splitString(msg, " ")
+            local user_id = vRP.getUserId({p})
+            local target_id = tonumber(args[1])
+            local money = tonumber(args[2] or 0)
+
+            if not money then
+                TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Comando: /multar {identidade} {dinheiro}!")
+            end
+
+            if vRP.hasPermission({user_id,"police.multas"}) then
+                local identity = vRP.getUserIdentity({target_id})
+                if identity then
+                    vRP.getUData({target_id, "multas", function(multas)
+                        if multas == "" then multas = 0 else multas = tonumber(multas) end
+                        vRP.setUData({target_id, "multas", multas + money})
+                        TriggerClientEvent('chatMessage', p, "LSPD", {80, 80, 255},"O jogador("..target_id.."), foi multado em R$"..money)
+                    end})
+                else
+                    TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Não há usuário para essa ID!")
+                end
+            else
+            TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você não tem permissão para executar este comando!")
+            end
+          else
+            TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você deve digitar uma ID de usuário!")
+          end
+        end
+      },
+    
+      ["/verificarmultas"] = {
+        -- /plate checks vehicle owner
+        action = function(p,color,msg) 
+          if msg ~= nil then
+                local args = splitString(msg, " ")
+                local user_id = vRP.getUserId({p})
+                local target_id = tonumber(args[1])
+                if vRP.hasPermission({user_id,"police.multas"}) then
+                      local identity = vRP.getUserIdentity({target_id})
+                      if identity then
+                          vRP.getUData({target_id, "multas", function(multas)
+                            if multas == "" then multas = 0 else multas = tonumber(multas) end
+                            TriggerClientEvent('chatMessage', p, "LSPD", {80, 80, 255},"Player: ^2"..identity.name.." "..identity.firstname.."^0, Tem: ^2R$"..multas.. "^0 em multas pendentes")
+                          end})
+                      else
+                          TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Não há usuário para essa ID!")
+                      end
+                else
+                  TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você não tem permissão para executar este comando!")
+                end
+          else
+                TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Você deve digitar uma ID de usuário!")
+          end
+        end
+      },
+      --HERE GOES YOUR COMMANDS
+      ["/discord"] = {
+        -- /pos to log postion to file with user name and msg
+        action = function(p,color,msg) 
+            vRPclient.notify(p, {"https://discord.gg/BFAWVQ"})
+        end
+      }
 }
 
 return cfg
