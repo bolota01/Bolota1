@@ -15,7 +15,7 @@ local toggle_lock_on = 117 -- control id to lock onto a vehicle with the camera.
 
 -- Script starts here
 local helicam = false
-local polmav_hash = GetHashKey("as350")
+local polmav_hash = GetHashKey("polmav")
 local fov = (fov_max+fov_min)*0.5
 local vision_state = 0 -- 0 is normal, 1 is nightmode, 2 is thermal vision
 Citizen.CreateThread(function()
@@ -37,10 +37,10 @@ Citizen.CreateThread(function()
 						PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
 						TaskRappelFromHeli(GetPlayerPed(-1), 1)
 					else
-						SetNotificationTextEntry( "STRING" )
+						SetNotificationTextEntry("STRING")
 						AddTextComponentString("~r~Can't rappel from this seat")
-						DrawNotification(false, false )
-						PlaySoundFrontend(-1, "5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", false) 
+						DrawNotification(false, false)
+						PlaySoundFrontend(-1, "5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", false)
 					end
 				end
 			end
