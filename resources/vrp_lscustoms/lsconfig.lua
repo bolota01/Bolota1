@@ -87,7 +87,7 @@ LSC_Config.prices = {
 		{ name = "Fumaça escura", tint = 2, price = 1000},
 		{ name = "Fumaça Clara", tint = 3, price = 1000},
 		{ name = "Limusine", tint = 4, price = 1000},
-		{ name = "Verde", tint = 5, price = 1000},
+		{ name = "Verde", tint = 5, price = 1000}
 	},
 
 -------Respray--------
@@ -167,7 +167,7 @@ LSC_Config.prices = {
 		{ name = "Rosa Pónei", neon = {255,102,255}, price = 1000},
 		{ name = "Rosa Quente",neon = {255,0,255}, price = 1000},
 		{ name = "Roxo", neon = {153,0,153}, price = 1000},
-		{ name = "Marrom", neon = {139,69,19}, price = 1000},
+		{ name = "Marrom", neon = {139,69,19}, price = 1000}
 	},
 	
 --------Plates---------
@@ -176,7 +176,7 @@ LSC_Config.prices = {
 		{ name = "Azul no Branco 2", plateindex = 3, price = 200},
 		{ name = "Azul no Branco 3", plateindex = 4, price = 200},
 		{ name = "Amarelo no Azul", plateindex = 2, price = 300},
-		{ name = "Preto no Preto", plateindex = 1, price = 600},
+		{ name = "Preto no Preto", plateindex = 1, price = 600}
 	},
 	
 --------Wheels--------
@@ -193,13 +193,13 @@ LSC_Config.prices = {
 		{ name = "Fumaça Verde nos Pneus", smokecolor = {10,255,10}, price = 3000},
 		{ name = "Fumaça Roxo nos Pneus", smokecolor = {153,10,153}, price = 3000},
 		{ name = "Fumaça Rosa nos Pneus", smokecolor = {255,102,178}, price = 3000},
-		{ name = "Fumaça Cinza nos Pneus",smokecolor = {128,128,128}, price = 3000},
+		{ name = "Fumaça Cinza nos Pneus",smokecolor = {128,128,128}, price = 3000}
 	},
 
 ----Wheel color----
 	wheelcolor = {
 		colors = colors,
-		price = 1000,
+		price = 1000
 	},
 
 ----Front wheel (Bikes)----
@@ -217,7 +217,7 @@ LSC_Config.prices = {
 		{name = "Bobber", wtype = 6, mod = 9, price = 1000},
 		{name = "Solidus", wtype = 6, mod = 10, price = 1000},
 		{name = "Escudo de Gelo", wtype = 6, mod = 11, price = 1000},
-		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000},
+		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000}
 	},
 
 ----Back wheel (Bikes)-----
@@ -235,7 +235,7 @@ LSC_Config.prices = {
 		{name = "Bobber", wtype = 6, mod = 9, price = 1000},
 		{name = "Solidus", wtype = 6, mod = 10, price = 1000},
 		{name = "Escudo de Gelo", wtype = 6, mod = 11, price = 1000},
-		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000},
+		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000}
 	},
 
 ----Sport wheels-----
@@ -264,7 +264,7 @@ LSC_Config.prices = {
 		{name = "Wangenmaster", wtype = 0, mod = 20, price = 1000},
 		{name = "Superfive", wtype = 0, mod = 21, price = 1000},
 		{name = "Endov2", wtype = 0, mod = 22, price = 1000},
-		{name = "Slitsix", wtype = 0, mod = 23, price = 1000},
+		{name = "Slitsix", wtype = 0, mod = 23, price = 1000}
 	},
 -----Suv wheels------
 	suvwheels = {
@@ -287,7 +287,7 @@ LSC_Config.prices = {
 		{name = "Empowered", wtype = 3, mod = 15, price = 1000},
 		{name = "Sunrise", wtype = 3, mod = 16, price = 1000},
 		{name = "Dashvip", wtype = 3, mod = 17, price = 1000},
-		{name = "Cutter", wtype = 3, mod = 18, price = 1000},
+		{name = "Cutter", wtype = 3, mod = 18, price = 1000}
 	},
 -----Offroad wheels-----
 	offroadwheels = {
@@ -301,7 +301,7 @@ LSC_Config.prices = {
 		{name = "Dunebasher", wtype = 4, mod = 6, price = 1000},
 		{name = "Fivestar", wtype = 4, mod = 7, price = 1000},
 		{name = "Rockcrawler", wtype = 4, mod = 8, price = 1000},
-		{name = "MilspecAçoie", wtype = 4, mod = 9, price = 1000},
+		{name = "MilspecAçoie", wtype = 4, mod = 9, price = 1000}
 	},
 -----Tuner wheels------
 	tunerwheels = {
@@ -329,7 +329,7 @@ LSC_Config.prices = {
 		{name = "Fujiwara", wtype = 5, mod = 20, price = 1000},
 		{name = "Zokusha", wtype = 5, mod = 21, price = 1000},
 		{name = "Battlevill", wtype = 5, mod = 22, price = 1000},
-		{name = "Rallymaster", wtype = 5, mod = 23, price = 1000},
+		{name = "Rallymaster", wtype = 5, mod = 23, price = 1000}
 	},
 -----Highend wheels------
 	highendwheels = {
@@ -353,7 +353,7 @@ LSC_Config.prices = {
 		{name = "Carbonz", wtype = 7, mod = 16, price = 1000},
 		{name = "Carbonsolar", wtype = 7, mod = 17, price = 1000},
 		{name = "Carboncheetahr", wtype = 7, mod = 18, price = 1000},
-		{name = "CarbonsCorrida", wtype = 7, mod = 19, price = 1000},
+		{name = "CarbonsCorrida", wtype = 7, mod = 19, price = 1000}
 	},
 -----Lowrider wheels------
 	lowriderwheels = {
@@ -372,7 +372,7 @@ LSC_Config.prices = {
 		{name = "Dollar", wtype = 2, mod = 11, price = 1000},
 		{name = "Dukes", wtype = 2, mod = 12, price = 1000},
 		{name = "Lowfive", wtype = 2, mod = 13, price = 1000},
-		{name = "Gooch", wtype = 2, mod = 14, price = 1000},
+		{name = "Gooch", wtype = 2, mod = 14, price = 1000}
 	},
 -----Muscle wheels-----
 	musclewheels = {
@@ -393,7 +393,7 @@ LSC_Config.prices = {
 		{name = "Eljefe", wtype = 1, mod = 13, price = 1000},
 		{name = "Dodman", wtype = 1, mod = 14, price = 1000},
 		{name = "Sixgun", wtype = 1, mod = 15, price = 1000},
-		{name = "Mercenary", wtype = 1, mod = 16, price = 1000},
+		{name = "Mercenary", wtype = 1, mod = 16, price = 1000}
 	},
 	
 ---------Trim color--------
@@ -696,7 +696,7 @@ LSC_Config.prices = {
 
 ------Model Pretolist--------
 --Does'nt allow specific vehicles to be upgraded
-LSC_Config.ModelPretolist = {
+LSC_Config.ModelBlacklist = {
 	"Policia",
 }
 
