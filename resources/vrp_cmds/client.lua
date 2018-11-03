@@ -635,6 +635,7 @@ mask = not mask
 end
 end
 
+<<<<<<< HEAD
 function DrawSpecialText(m_text, showtime)
 	SetTextEntry_2("STRING")
 	AddTextComponentString(m_text)
@@ -680,3 +681,169 @@ Citizen.CreateThread(function ()
         renderConsultar(x,y,z)
 	end
 end)
+
+function vRPcmd.capacete1(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 48, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete2(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 16, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete3(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 17, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete4(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 18, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete5(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 49, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete6(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 50, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete7(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 51, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete8(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 52, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete9(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 67, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete10(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 68, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete11(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 69, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete12(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 70, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete13(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 71, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete14(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 72, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete15(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 73, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete16(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 74, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete17(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 75, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+function vRPcmd.capacete18(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 82, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete19(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 89, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+

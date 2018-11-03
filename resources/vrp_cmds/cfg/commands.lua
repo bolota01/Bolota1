@@ -852,6 +852,121 @@ cfg.commands = {
         CMDclient.mascaracoruja(p)
     end
 	},
+
+	["/capacete1"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete1(p)
+    end
+	},
+	["/capacete2"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete2(p)
+    end
+	},
+	["/capacete3"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete3(p)
+    end
+	},
+	["/capacete4"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete4(p)
+    end
+	},
+	["/capacete5"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete5(p)
+    end
+	},
+	["/capacete6"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete6(p)
+    end
+	},
+	["/capacete7"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete7(p)
+    end
+	},
+	["/capacete8"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete8(p)
+    end
+	},
+	["/capacete9"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete9(p)
+    end
+	},
+	["/capacete10"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete10(p)
+    end
+	},
+	["/capacete11"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete11(p)
+    end
+	},
+	["/capacete12"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete12(p)
+    end
+	},
+	["/capacete13"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete13(p)
+    end
+	},
+	["/capacete14"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete14(p)
+    end
+	},
+	["/capacete15"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete15(p)
+    end
+	},
+	["/capacete16"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete16(p)
+    end
+	},
+	["/capacete17"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete17(p)
+    end
+	},
+	["/capacete18"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete18(p)
+    end
+	},
+	["/capacete19"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete19(p)
+    end
+	},
 	
 	["/mascararaposa"] = {
     -- /mask toggles mask on and off
