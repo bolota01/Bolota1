@@ -8,16 +8,9 @@ function playersUpdate(players)
 	end
 end
 
-function onStop()
-    running = false
-end
-
 RegisterNetEvent('stopHide')
-AddEventHandler('stopHide', onStop)
-
-RegisterNetEvent('showPlayer')
-AddEventHandler('showPlayer', function()
-    TriggerServerEvent("hc:showPlayer")
+AddEventHandler('stopHide', function()
+    running = false
 end)
 
 RegisterNetEvent('characterInvisible')
@@ -42,31 +35,39 @@ AddEventHandler('hc:RemoveEntity', function(target)
         Citizen.CreateThread(function()
             local player = GetPlayerFromServerId(target)
             local pped = GetPlayerPed(player)
-            SetEntityCoords(pped, 99999, 99999, 99999)
-            DeletePed(pped)
+
+            if DoesEntityExist(pped) then
+                SetEntityCoords(pped, 99999, 99999, 99999)
+                DeletePed(pped)
+            end
         end)
     end
 end)
 
 function onHideUpdate()
     while running do
-        local playerOwner = GetPlayerPed(-1)
         local player = nil
         local pped = nil
+        local playerOwner = GetPlayerPed(-1)
 
         for i=1,#playersInvisible do
             player = GetPlayerFromServerId(playersInvisible[i])
             pped = GetPlayerPed(player)
             if playerOwner ~= pped then
-                SetEntityVisible(pped, false)
-                SetEntityCollision(pped, false)
-                FreezeEntityPosition(pped, true)
-                SetPlayerInvincible(player, true)
+                SetEntityCollision(pped, false, false)
             end
         end
 
-        Citizen.Wait(0)
+        if IsEntityVisible(playerOwner) then
+            SetLocalPlayerVisibleLocally(1)
+            SetPlayerInvincible(GetPlayerIndex(),true)
+        end
+
+        Citizen.Wait(100)
     end
+
+    SetLocalPlayerVisibleLocally(0)
+    SetPlayerInvincible(GetPlayerIndex(),false)
 end
     
 
