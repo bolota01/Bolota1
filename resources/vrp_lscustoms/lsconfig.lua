@@ -5,72 +5,72 @@ Credits - MythicalBro
 Do not reupload/re release any part of this script without my permission
 ]]
 local colors = {
-{name = "Black", colorindex = 0},{name = "Carbon Black", colorindex = 147},
-{name = "Hraphite", colorindex = 1},{name = "Anhracite Black", colorindex = 11},
-{name = "Black Steel", colorindex = 2},{name = "Dark Steel", colorindex = 3},
-{name = "Silver", colorindex = 4},{name = "Bluish Silver", colorindex = 5},
-{name = "Rolled Steel", colorindex = 6},{name = "Shadow Silver", colorindex = 7},
-{name = "Stone Silver", colorindex = 8},{name = "Midnight Silver", colorindex = 9},
-{name = "Cast Iron Silver", colorindex = 10},{name = "Red", colorindex = 27},
-{name = "Torino Red", colorindex = 28},{name = "Formula Red", colorindex = 29},
-{name = "Lava Red", colorindex = 150},{name = "Blaze Red", colorindex = 30},
-{name = "Grace Red", colorindex = 31},{name = "Garnet Red", colorindex = 32},
-{name = "Sunset Red", colorindex = 33},{name = "Cabernet Red", colorindex = 34},
-{name = "Wine Red", colorindex = 143},{name = "Candy Red", colorindex = 35},
-{name = "Hot Pink", colorindex = 135},{name = "Pfsiter Pink", colorindex = 137},
-{name = "Salmon Pink", colorindex = 136},{name = "Sunrise Orange", colorindex = 36},
-{name = "Orange", colorindex = 38},{name = "Bright Orange", colorindex = 138},
-{name = "Gold", colorindex = 99},{name = "Bronze", colorindex = 90},
-{name = "Yellow", colorindex = 88},{name = "Race Yellow", colorindex = 89},
-{name = "Dew Yellow", colorindex = 91},{name = "Dark Green", colorindex = 49},
-{name = "Racing Green", colorindex = 50},{name = "Sea Green", colorindex = 51},
-{name = "Olive Green", colorindex = 52},{name = "Bright Green", colorindex = 53},
-{name = "Gasoline Green", colorindex = 54},{name = "Lime Green", colorindex = 92},
-{name = "Midnight Blue", colorindex = 141},
-{name = "Galaxy Blue", colorindex = 61},{name = "Dark Blue", colorindex = 62},
-{name = "Saxon Blue", colorindex = 63},{name = "Blue", colorindex = 64},
-{name = "Mariner Blue", colorindex = 65},{name = "Harbor Blue", colorindex = 66},
-{name = "Diamond Blue", colorindex = 67},{name = "Surf Blue", colorindex = 68},
-{name = "Nautical Blue", colorindex = 69},{name = "Racing Blue", colorindex = 73},
-{name = "Ultra Blue", colorindex = 70},{name = "Light Blue", colorindex = 74},
-{name = "Chocolate Brown", colorindex = 96},{name = "Bison Brown", colorindex = 101},
-{name = "Creeen Brown", colorindex = 95},{name = "Feltzer Brown", colorindex = 94},
-{name = "Maple Brown", colorindex = 97},{name = "Beechwood Brown", colorindex = 103},
-{name = "Sienna Brown", colorindex = 104},{name = "Saddle Brown", colorindex = 98},
-{name = "Moss Brown", colorindex = 100},{name = "Woodbeech Brown", colorindex = 102},
-{name = "Straw Brown", colorindex = 99},{name = "Sandy Brown", colorindex = 105},
-{name = "Bleached Brown", colorindex = 106},{name = "Schafter Purple", colorindex = 71},
-{name = "Spinnaker Purple", colorindex = 72},{name = "Midnight Purple", colorindex = 142},
-{name = "Bright Purple", colorindex = 145},{name = "Cream", colorindex = 107},
-{name = "Ice White", colorindex = 111},{name = "Frost White", colorindex = 112}}
+{name = "Preto", colorindex = 0},{name = "Carbon Preto", colorindex = 147},
+{name = "Grafite", colorindex = 1},{name = "Anhracite Preto", colorindex = 11},
+{name = "Aço Preto", colorindex = 2},{name = "Aço Escuro", colorindex = 3},
+{name = "Prata", colorindex = 4},{name = "Prata Azulada", colorindex = 5},
+{name = "Alo laminado", colorindex = 6},{name = "Sombra Prata", colorindex = 7},
+{name = "Pedra Prata", colorindex = 8},{name = "Prata da meia-noite", colorindex = 9},
+{name = "Prata do ferro fundido", colorindex = 10},{name = "Vermelho", colorindex = 27},
+{name = "Torino Vermelho", colorindex = 28},{name = "Fórmula Vermelha", colorindex = 29},
+{name = "Lava Vermelha", colorindex = 150},{name = "Chama Vermelha", colorindex = 30},
+{name = "Vermelho Graça", colorindex = 31},{name = "Granada Vermelha", colorindex = 32},
+{name = "Pôr do Sol Vermelho", colorindex = 33},{name = "Cabernet Vermelho", colorindex = 34},
+{name = "Vinho Vermelho", colorindex = 143},{name = "Doce Vermelho", colorindex = 35},
+{name = "Rosa Quente", colorindex = 135},{name = "Pfsiter Rosa", colorindex = 137},
+{name = "Rosa Salmão", colorindex = 136},{name = "Laranja do Nascer do Sol", colorindex = 36},
+{name = "Laranja", colorindex = 38},{name = "Laranja Brilhante", colorindex = 138},
+{name = "Ouro", colorindex = 99},{name = "Bronze", colorindex = 90},
+{name = "Amarelo", colorindex = 88},{name = "Amarelo Corrida", colorindex = 89},
+{name = "Orvalho Amarelo", colorindex = 91},{name = "Verde Escuro", colorindex = 49},
+{name = "Verde Corrida", colorindex = 50},{name = "Verde Mar", colorindex = 51},
+{name = "Verde Oliva", colorindex = 52},{name = "Verde Brilhante", colorindex = 53},
+{name = "Verde Gasolina", colorindex = 54},{name = "Verde Limãp", colorindex = 92},
+{name = "Azul da Meia Noite", colorindex = 141},
+{name = "Azul Galáxia", colorindex = 61},{name = "Azul Escuro", colorindex = 62},
+{name = "Azul saxão", colorindex = 63},{name = "Azul", colorindex = 64},
+{name = "Azul Marinho", colorindex = 65},{name = "Azul do Porto", colorindex = 66},
+{name = "Diamante Azul", colorindex = 67},{name = "Surf Azul", colorindex = 68},
+{name = "Azul náutico", colorindex = 69},{name = "Azul Corrida", colorindex = 73},
+{name = "Ultra Azul", colorindex = 70},{name = "Azul Claro", colorindex = 74},
+{name = "Chocolate Marrom", colorindex = 96},{name = "Bison Castanho", colorindex = 101},
+{name = "Creeen Marrom", colorindex = 95},{name = "Feltzer Marrom", colorindex = 94},
+{name = "Feltzer Marrom", colorindex = 97},{name = "Madeira Marrom", colorindex = 103},
+{name = "Sienna Marrom", colorindex = 104},{name = "Marrom Selin", colorindex = 98},
+{name = "Musgo Marrom", colorindex = 100},{name = "Faia de Madeira Marrom", colorindex = 102},
+{name = "Marrom Palha", colorindex = 99},{name = "Marrom Areia", colorindex = 105},
+{name = "Marrom descorado", colorindex = 106},{name = "Schafter Roxo", colorindex = 71},
+{name = "Spinnaker Roxo", colorindex = 72},{name = "Roxo meia-noite", colorindex = 142},
+{name = "Roxo Claro", colorindex = 145},{name = "Creme", colorindex = 107},
+{name = "Branco Gelo", colorindex = 111},{name = "Brando Geada", colorindex = 112}}
 local metalcolors = {
-{name = "Brushed Steel",colorindex = 117},
-{name = "Brushed Black Steel",colorindex = 118},
-{name = "Brushed Aluminum",colorindex = 119},
-{name = "Pure Gold",colorindex = 158},
-{name = "Brushed Gold",colorindex = 159}
+{name = "Aço Escovado",colorindex = 117},
+{name = "Preto Escovado",colorindex = 118},
+{name = "Aluminio Escovado",colorindex = 119},
+{name = "Ouro Puro",colorindex = 158},
+{name = "Ouro Escovado",colorindex = 159}
 }
 local mattecolors = {
-{name = "Black", colorindex = 12},
-{name = "Gray", colorindex = 13},
-{name = "Light Gray", colorindex = 14},
-{name = "Ice White", colorindex = 131},
-{name = "Blue", colorindex = 83},
-{name = "Dark Blue", colorindex = 82},
-{name = "Midnight Blue", colorindex = 84},
-{name = "Midnight Purple", colorindex = 149},
-{name = "Schafter Purple", colorindex = 148},
-{name = "Red", colorindex = 39},
-{name = "Dark Red", colorindex = 40},
-{name = "Orange", colorindex = 41},
-{name = "Yellow", colorindex = 42},
-{name = "Lime Green", colorindex = 55},
-{name = "Green", colorindex = 128},
-{name = "Frost Green", colorindex = 151},
-{name = "Foliage Green", colorindex = 155},
-{name = "Olive Darb", colorindex = 152},
-{name = "Dark Earth", colorindex = 153},
-{name = "Desert Tan", colorindex = 154}
+{name = "Preto", colorindex = 12},
+{name = "Cinza", colorindex = 13},
+{name = "Cinza Claro", colorindex = 14},
+{name = "Branco Gelo", colorindex = 131},
+{name = "Azul", colorindex = 83},
+{name = "Azul Escuro", colorindex = 82},
+{name = "Azul da meia-noite", colorindex = 84},
+{name = "Roxo da meia-noite", colorindex = 149},
+{name = "Schafter Roxo", colorindex = 148},
+{name = "Vermelho", colorindex = 39},
+{name = "Vermelho Escuro", colorindex = 40},
+{name = "Laranja", colorindex = 41},
+{name = "Amarelo", colorindex = 42},
+{name = "Verde Limão", colorindex = 55},
+{name = "Verde", colorindex = 128},
+{name = "Verde Geada", colorindex = 151},
+{name = "Verde Folhagem", colorindex = 155},
+{name = "Oliva", colorindex = 152},
+{name = "Terra escura", colorindex = 153},
+{name = "Tan do Deserto", colorindex = 154}
 }
 
 
@@ -83,11 +83,11 @@ LSC_Config.prices = {
 
 ------Window tint------
 	windowtint = {
-		{ name = "Pure Black", tint = 1, price = 1000},
-		{ name = "Darksmoke", tint = 2, price = 1000},
-		{ name = "Lightsmoke", tint = 3, price = 1000},
-		{ name = "Limo", tint = 4, price = 1000},
-		{ name = "Green", tint = 5, price = 1000},
+		{ name = "Preto Puro", tint = 1, price = 1000},
+		{ name = "Fumaça escura", tint = 2, price = 1000},
+		{ name = "Fumaça Clara", tint = 3, price = 1000},
+		{ name = "Limusine", tint = 4, price = 1000},
+		{ name = "Verde", tint = 5, price = 1000},
 	},
 
 -------Respray--------
@@ -95,7 +95,7 @@ LSC_Config.prices = {
 	--Chrome 
 	chrome = {
 		colors = {
-			{name = "Chrome", colorindex = 120}
+			{name = "Cromado", colorindex = 120}
 		},
 		price = 1000
 	},
@@ -124,7 +124,7 @@ LSC_Config.prices = {
 	--Chrome 
 	chrome2 = {
 		colors = {
-			{name = "Chrome", colorindex = 120}
+			{name = "Cromado", colorindex = 120}
 		},
 		price = 1000
 	},
@@ -151,50 +151,49 @@ LSC_Config.prices = {
 
 ------Neon layout------
 	neonlayout = {
-		{name = "Front,Back and Sides", price = 5000},
+		{name = "Frente, Verso e Lados", price = 5000},
 	},
 	--Neon color
 	neoncolor = {
-		{ name = "White", neon = {255,255,255}, price = 1000},
-		{ name = "Blue", neon = {0,0,255}, price = 1000},
-		{ name = "Electric Blue", neon = {0,150,255}, price = 1000},
-		{ name = "Mint Green", neon = {50,255,155}, price = 1000},
-		{ name = "Lime Green", neon = {0,255,0}, price = 1000},
-		{ name = "Yellow", neon = {255,255,0}, price = 1000},
-		{ name = "Golden Shower", neon = {204,204,0}, price = 1000},
-		{ name = "Orange", neon = {255,128,0}, price = 1000},
-		{ name = "Red", neon = {255,0,0}, price = 1000},
-		{ name = "Pony Pink", neon = {255,102,255}, price = 1000},
-		{ name = "Hot Pink",neon = {255,0,255}, price = 1000},
-		{ name = "Purple", neon = {153,0,153}, price = 1000},
-		{ name = "Brown", neon = {139,69,19}, price = 1000},
+		{ name = "Branco", neon = {255,255,255}, price = 1000},
+		{ name = "Azul", neon = {0,0,255}, price = 1000},
+		{ name = "Azul Eletrico", neon = {0,150,255}, price = 1000},
+		{ name = "Verde Menta", neon = {50,255,155}, price = 1000},
+		{ name = "Verde Limão", neon = {0,255,0}, price = 1000},
+		{ name = "Amarelo", neon = {255,255,0}, price = 1000},
+		{ name = "Chuva Dourada", neon = {204,204,0}, price = 1000},
+		{ name = "Laranja", neon = {255,128,0}, price = 1000},
+		{ name = "Vermelho", neon = {255,0,0}, price = 1000},
+		{ name = "Rosa Pónei", neon = {255,102,255}, price = 1000},
+		{ name = "Rosa Quente",neon = {255,0,255}, price = 1000},
+		{ name = "Roxo", neon = {153,0,153}, price = 1000},
+		{ name = "Marrom", neon = {139,69,19}, price = 1000},
 	},
 	
 --------Plates---------
 	plates = {
-		{ name = "Blue on White 1", plateindex = 0, price = 200},
-		{ name = "Blue On White 2", plateindex = 3, price = 200},
-		{ name = "Blue On White 3", plateindex = 4, price = 200},
-		{ name = "Yellow on Blue", plateindex = 2, price = 300},
-		{ name = "Yellow on Black", plateindex = 1, price = 600},
+		{ name = "Azul no Branco 1", plateindex = 0, price = 200},
+		{ name = "Azul no Branco 2", plateindex = 3, price = 200},
+		{ name = "Azul no Branco 3", plateindex = 4, price = 200},
+		{ name = "Amarelo no Azul", plateindex = 2, price = 300},
+		{ name = "Preto no Preto", plateindex = 1, price = 600},
 	},
 	
 --------Wheels--------
 ----Wheel accessories----
 	wheelaccessories = {
-		{ name = "Stock Tires", price = 1000},
-		{ name = "Custom Tires", price = 1250},
-		{ name = "Bulletproof Tires", price = 5000},
-		{ name = "White Tire Smoke",smokecolor = {254,254,254}, price = 3000},
-		{ name = "Black Tire Smoke", smokecolor = {1,1,1}, price = 3000},
-		{ name = "BLue Tire Smoke", smokecolor = {0,150,255}, price = 3000},
-		{ name = "Yellow Tire Smoke", smokecolor = {255,255,50}, price = 3000},
-		{ name = "Orange Tire Smoke", smokecolor = {255,153,51}, price = 3000},
-		{ name = "Red Tire Smoke", smokecolor = {255,10,10}, price = 3000},
-		{ name = "Green Tire Smoke", smokecolor = {10,255,10}, price = 3000},
-		{ name = "Purple Tire Smoke", smokecolor = {153,10,153}, price = 3000},
-		{ name = "Pink Tire Smoke", smokecolor = {255,102,178}, price = 3000},
-		{ name = "Gray Tire Smoke",smokecolor = {128,128,128}, price = 3000},
+		{ name = "Pneus estoque", price = 1000},
+		{ name = "Pneus Personalizados", price = 1250},
+		{ name = "Fumaça Branca nos Pneus",smokecolor = {254,254,254}, price = 3000},
+		{ name = "Fumaça Preta nos Pneus", smokecolor = {1,1,1}, price = 3000},
+		{ name = "Fumaça Azul nos Pneus", smokecolor = {0,150,255}, price = 3000},
+		{ name = "Fumaça Amarelo nos Pneus", smokecolor = {255,255,50}, price = 3000},
+		{ name = "Fumaça Laranja nos Pneus", smokecolor = {255,153,51}, price = 3000},
+		{ name = "Fumaça Vermelho nos Pneus", smokecolor = {255,10,10}, price = 3000},
+		{ name = "Fumaça Verde nos Pneus", smokecolor = {10,255,10}, price = 3000},
+		{ name = "Fumaça Roxo nos Pneus", smokecolor = {153,10,153}, price = 3000},
+		{ name = "Fumaça Rosa nos Pneus", smokecolor = {255,102,178}, price = 3000},
+		{ name = "Fumaça Cinza nos Pneus",smokecolor = {128,128,128}, price = 3000},
 	},
 
 ----Wheel color----
@@ -205,43 +204,43 @@ LSC_Config.prices = {
 
 ----Front wheel (Bikes)----
 	frontwheel = {
-		{name = "Stock", wtype = 6, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 6, mod = -1, price = 1000},
 		{name = "Speedway", wtype = 6, mod = 0, price = 1000},
-		{name = "Streetspecial", wtype = 6, mod = 1, price = 1000},
-		{name = "Racer", wtype = 6, mod = 2, price = 1000},
-		{name = "Trackstar", wtype = 6, mod = 3, price = 1000},
+		{name = "Especial de rua", wtype = 6, mod = 1, price = 1000},
+		{name = "Corrida", wtype = 6, mod = 2, price = 1000},
+		{name = "Roda de Trilha", wtype = 6, mod = 3, price = 1000},
 		{name = "Overlord", wtype = 6, mod = 4, price = 1000},
-		{name = "Trident", wtype = 6, mod = 5, price = 1000},
-		{name = "Triplethreat", wtype = 6, mod = 6, price = 1000},
-		{name = "Stilleto", wtype = 6, mod = 7, price = 1000},
-		{name = "Wires", wtype = 6, mod = 8, price = 1000},
+		{name = "Tridente", wtype = 6, mod = 5, price = 1000},
+		{name = "Ameaça Tripla", wtype = 6, mod = 6, price = 1000},
+		{name = "Estilete", wtype = 6, mod = 7, price = 1000},
+		{name = "Fios", wtype = 6, mod = 8, price = 1000},
 		{name = "Bobber", wtype = 6, mod = 9, price = 1000},
 		{name = "Solidus", wtype = 6, mod = 10, price = 1000},
-		{name = "Iceshield", wtype = 6, mod = 11, price = 1000},
-		{name = "Loops", wtype = 6, mod = 12, price = 1000},
+		{name = "Escudo de Gelo", wtype = 6, mod = 11, price = 1000},
+		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000},
 	},
 
 ----Back wheel (Bikes)-----
 	backwheel = {
-		{name = "Stock", wtype = 6, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 6, mod = -1, price = 1000},
 		{name = "Speedway", wtype = 6, mod = 0, price = 1000},
-		{name = "Streetspecial", wtype = 6, mod = 1, price = 1000},
-		{name = "Racer", wtype = 6, mod = 2, price = 1000},
-		{name = "Trackstar", wtype = 6, mod = 3, price = 1000},
+		{name = "Especial de rua", wtype = 6, mod = 1, price = 1000},
+		{name = "Corrida", wtype = 6, mod = 2, price = 1000},
+		{name = "Roda de Trilha", wtype = 6, mod = 3, price = 1000},
 		{name = "Overlord", wtype = 6, mod = 4, price = 1000},
-		{name = "Trident", wtype = 6, mod = 5, price = 1000},
-		{name = "Triplethreat", wtype = 6, mod = 6, price = 1000},
-		{name = "Stilleto", wtype = 6, mod = 7, price = 1000},
-		{name = "Wires", wtype = 6, mod = 8, price = 1000},
+		{name = "Tridente", wtype = 6, mod = 5, price = 1000},
+		{name = "Ameaça Tripla", wtype = 6, mod = 6, price = 1000},
+		{name = "Estilete", wtype = 6, mod = 7, price = 1000},
+		{name = "Fios", wtype = 6, mod = 8, price = 1000},
 		{name = "Bobber", wtype = 6, mod = 9, price = 1000},
 		{name = "Solidus", wtype = 6, mod = 10, price = 1000},
-		{name = "Iceshield", wtype = 6, mod = 11, price = 1000},
-		{name = "Loops", wtype = 6, mod = 12, price = 1000},
+		{name = "Escudo de Gelo", wtype = 6, mod = 11, price = 1000},
+		{name = "Rotaçao", wtype = 6, mod = 12, price = 1000},
 	},
 
 ----Sport wheels-----
 	sportwheels = {
-		{name = "Stock", wtype = 0, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 0, mod = -1, price = 1000},
 		{name = "Inferno", wtype = 0, mod = 0, price = 1000},
 		{name = "Deepfive", wtype = 0, mod = 1, price = 1000},
 		{name = "Lozspeed", wtype = 0, mod = 2, price = 1000},
@@ -269,7 +268,7 @@ LSC_Config.prices = {
 	},
 -----Suv wheels------
 	suvwheels = {
-		{name = "Stock", wtype = 3, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 3, mod = -1, price = 1000},
 		{name = "Vip", wtype = 3, mod = 0, price = 1000},
 		{name = "Benefactor", wtype = 3, mod = 1, price = 1000},
 		{name = "Cosmo", wtype = 3, mod = 2, price = 1000},
@@ -292,7 +291,7 @@ LSC_Config.prices = {
 	},
 -----Offroad wheels-----
 	offroadwheels = {
-		{name = "Stock", wtype = 4, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 4, mod = -1, price = 1000},
 		{name = "Raider", wtype = 4, mod = 0, price = 1000},
 		{name = "Mudslinger", wtype = 4, modtype = 23, wtype = 4, mod = 1, price = 1000},
 		{name = "Nevis", wtype = 4, mod = 2, price = 1000},
@@ -302,11 +301,11 @@ LSC_Config.prices = {
 		{name = "Dunebasher", wtype = 4, mod = 6, price = 1000},
 		{name = "Fivestar", wtype = 4, mod = 7, price = 1000},
 		{name = "Rockcrawler", wtype = 4, mod = 8, price = 1000},
-		{name = "Milspecsteelie", wtype = 4, mod = 9, price = 1000},
+		{name = "MilspecAçoie", wtype = 4, mod = 9, price = 1000},
 	},
 -----Tuner wheels------
 	tunerwheels = {
-		{name = "Stock", wtype = 5, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 5, mod = -1, price = 1000},
 		{name = "Cosmo", wtype = 5, mod = 0, price = 1000},
 		{name = "Supermesh", wtype = 5, mod = 1, price = 1000},
 		{name = "Outsider", wtype = 5, mod = 2, price = 1000},
@@ -334,7 +333,7 @@ LSC_Config.prices = {
 	},
 -----Highend wheels------
 	highendwheels = {
-		{name = "Stock", wtype = 7, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 7, mod = -1, price = 1000},
 		{name = "Shadow", wtype = 7, mod = 0, price = 1000},
 		{name = "Hyper", wtype = 7, mod = 1, price = 1000},
 		{name = "Blade", wtype = 7, mod = 2, price = 1000},
@@ -349,16 +348,16 @@ LSC_Config.prices = {
 		{name = "Splitten", wtype = 7, mod = 11, price = 1000},
 		{name = "Dashvip", wtype = 7, mod = 12, price = 1000},
 		{name = "Lozspeedten", wtype = 7, mod = 13, price = 1000},
-		{name = "Carboninferno", wtype = 7, mod = 14, price = 1000},
+		{name = "CarbonInferno", wtype = 7, mod = 14, price = 1000},
 		{name = "Carbonshadow", wtype = 7, mod = 15, price = 1000},
 		{name = "Carbonz", wtype = 7, mod = 16, price = 1000},
 		{name = "Carbonsolar", wtype = 7, mod = 17, price = 1000},
 		{name = "Carboncheetahr", wtype = 7, mod = 18, price = 1000},
-		{name = "Carbonsracer", wtype = 7, mod = 19, price = 1000},
+		{name = "CarbonsCorrida", wtype = 7, mod = 19, price = 1000},
 	},
 -----Lowrider wheels------
 	lowriderwheels = {
-		{name = "Stock", wtype = 2, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 2, mod = -1, price = 1000},
 		{name = "Flare", wtype = 2, mod = 0, price = 1000},
 		{name = "Wired", wtype = 2, mod = 1, price = 1000},
 		{name = "Triplegolds", wtype = 2, mod = 2, price = 1000},
@@ -377,14 +376,14 @@ LSC_Config.prices = {
 	},
 -----Muscle wheels-----
 	musclewheels = {
-		{name = "Stock", wtype = 1, mod = -1, price = 1000},
+		{name = "Padrao", wtype = 1, mod = -1, price = 1000},
 		{name = "Classicfive", wtype = 1, mod = 0, price = 1000},
 		{name = "Dukes", wtype = 1, mod = 1, price = 1000},
 		{name = "Musclefreak", wtype = 1, mod = 2, price = 1000},
 		{name = "Kracka", wtype = 1, mod = 3, price = 1000},
 		{name = "Azrea", wtype = 1, mod = 4, price = 1000},
 		{name = "Mecha", wtype = 1, mod = 5, price = 1000},
-		{name = "Blacktop", wtype = 1, mod = 6, price = 1000},
+		{name = "Pretotop", wtype = 1, mod = 6, price = 1000},
 		{name = "Dragspl", wtype = 1, mod = 7, price = 1000},
 		{name = "Revolver", wtype = 1, mod = 8, price = 1000},
 		{name = "Classicrod", wtype = 1, mod = 9, price = 1000},
@@ -545,8 +544,8 @@ LSC_Config.prices = {
 	
 ---------Headlights---------
 	[22] = {
-		{name = "Stock Lights", mod = 0, price = 0},
-		{name = "Xenon Lights", mod = 1, price = 1625},
+		{name = "Luzes Padrao", mod = 0, price = 0},
+		{name = "Luzes de Xenon", mod = 1, price = 1625},
 	},
 	
 ----------Turbo---------
@@ -557,79 +556,79 @@ LSC_Config.prices = {
 	
 -----------Armor-------------
 	[16] = {
-		{name = "Armor Upgrade 20%",modtype = 16, mod = 0, price = 2500},
-		{name = "Armor Upgrade 40%",modtype = 16, mod = 1, price = 5000},
-		{name = "Armor Upgrade 60%",modtype = 16, mod = 2, price = 7500},
-		{name = "Armor Upgrade 80%",modtype = 16, mod = 3, price = 10000},
-		{name = "Armor Upgrade 100%",modtype = 16, mod = 4, price = 12500},
+		{name = "Atualização de armadura 20%",modtype = 16, mod = 0, price = 2500},
+		{name = "Atualização de armadura 40%",modtype = 16, mod = 1, price = 5000},
+		{name = "Atualização de armadura 60%",modtype = 16, mod = 2, price = 7500},
+		{name = "Atualização de armadura 80%",modtype = 16, mod = 3, price = 10000},
+		{name = "Atualização de armadura 100%",modtype = 16, mod = 4, price = 12500},
 	},
 
 ---------Suspension-----------
 	[15] = {
-		{name = "Lowered Suspension",mod = 0, price = 1000},
-		{name = "Street Suspension",mod = 1, price = 2000},
-		{name = "Sport Suspension",mod = 2, price = 3500},
-		{name = "Competition Suspension",mod = 3, price = 4000},
+		{name = "Suspensão Rebaixada",mod = 0, price = 1000},
+		{name = "Suspensão de Rua",mod = 1, price = 2000},
+		{name = "Suspensão Sport",mod = 2, price = 3500},
+		{name = "Suspensão de Competição",mod = 3, price = 4000},
 	},
 
------------Horn----------
+-----------Buzina----------
 	[14] = {
-		{name = "Truck Horn", mod = 0, price = 1625},
-		{name = "Police Horn", mod = 1, price = 4062},
-		{name = "Clown Horn", mod = 2, price = 6500},
-		{name = "Musical Horn 1", mod = 3, price = 11375},
-		{name = "Musical Horn 2", mod = 4, price = 11375},
-		{name = "Musical Horn 3", mod = 5, price = 11375},
-		{name = "Musical Horn 4", mod = 6, price = 11375},
-		{name = "Musical Horn 5", mod = 7, price = 11375},
-		{name = "Sadtrombone Horn", mod = 8, price = 11375},
-		{name = "Calssical Horn 1", mod = 9, price = 11375},
-		{name = "Calssical Horn 2", mod = 10, price = 11375},
-		{name = "Calssical Horn 3", mod = 11, price = 11375},
-		{name = "Calssical Horn 4", mod = 12, price = 11375},
-		{name = "Calssical Horn 5", mod = 13, price = 11375},
-		{name = "Calssical Horn 6", mod = 14, price = 11375},
-		{name = "Calssical Horn 7", mod = 15, price = 11375},
-		{name = "Scaledo Horn", mod = 16, price = 11375},
-		{name = "Scalere Horn", mod = 17, price = 11375},
-		{name = "Scalemi Horn", mod = 18, price = 11375},
-		{name = "Scalefa Horn", mod = 19, price = 11375},
-		{name = "Scalesol Horn", mod = 20, price = 11375},
-		{name = "Scalela Horn", mod = 21, price = 11375},
-		{name = "Scaleti Horn", mod = 22, price = 11375},
-		{name = "Scaledo Horn High", mod = 23, price = 11375},
-		{name = "Jazz Horn 1", mod = 25, price = 11375},
-		{name = "Jazz Horn 2", mod = 26, price = 11375},
-		{name = "Jazz Horn 3", mod = 27, price = 11375},
-		{name = "Jazzloop Horn", mod = 28, price = 11375},
-		{name = "Starspangban Horn 1", mod = 29, price = 11375},
-		{name = "Starspangban Horn 2", mod = 30, price = 11375},
-		{name = "Starspangban Horn 3", mod = 31, price = 11375},
-		{name = "Starspangban Horn 4", mod = 32, price = 11375},
-		{name = "Classicalloop Horn 1", mod = 33, price = 11375},
-		{name = "Classicalloop Horn 2", mod = 34, price = 11375},
-		{name = "Classicalloop Horn 3", mod = 35, price = 11375},
+		{name = "Buzina de Caminhao", mod = 0, price = 1625},
+		{name = "Buzina Policial", mod = 1, price = 4062},
+		{name = "Buzina de Palhaço", mod = 2, price = 6500},
+		{name = "Musical Buzina 1", mod = 3, price = 11375},
+		{name = "Musical Buzina 2", mod = 4, price = 11375},
+		{name = "Musical Buzina 3", mod = 5, price = 11375},
+		{name = "Musical Buzina 4", mod = 6, price = 11375},
+		{name = "Musical Buzina 5", mod = 7, price = 11375},
+		{name = "Buzina Trombone Triste", mod = 8, price = 11375},
+		{name = "Classica Buzina 1", mod = 9, price = 11375},
+		{name = "Classica Buzina 2", mod = 10, price = 11375},
+		{name = "Classica Buzina 3", mod = 11, price = 11375},
+		{name = "Classica Buzina 4", mod = 12, price = 11375},
+		{name = "Classica Buzina 5", mod = 13, price = 11375},
+		{name = "Classica Buzina 6", mod = 14, price = 11375},
+		{name = "Classica Buzina 7", mod = 15, price = 11375},
+		{name = "Scaledo Buzina", mod = 16, price = 11375},
+		{name = "Scalere Buzina", mod = 17, price = 11375},
+		{name = "Scalemi Buzina", mod = 18, price = 11375},
+		{name = "Scalefa Buzina", mod = 19, price = 11375},
+		{name = "Scalesol Buzina", mod = 20, price = 11375},
+		{name = "Scalela Buzina", mod = 21, price = 11375},
+		{name = "Scaleti Buzina", mod = 22, price = 11375},
+		{name = "Scaledo Buzina High", mod = 23, price = 11375},
+		{name = "Jazz Buzina 1", mod = 25, price = 11375},
+		{name = "Jazz Buzina 2", mod = 26, price = 11375},
+		{name = "Jazz Buzina 3", mod = 27, price = 11375},
+		{name = "Jazzloop Buzina", mod = 28, price = 11375},
+		{name = "Starspangban Buzina 1", mod = 29, price = 11375},
+		{name = "Starspangban Buzina 2", mod = 30, price = 11375},
+		{name = "Starspangban Buzina 3", mod = 31, price = 11375},
+		{name = "Starspangban Buzina 4", mod = 32, price = 11375},
+		{name = "Classicalloop Buzina 1", mod = 33, price = 11375},
+		{name = "Classicalloop Buzina 2", mod = 34, price = 11375},
+		{name = "Classicalloop Buzina 3", mod = 35, price = 11375},
 	},
 
 ----------Transmission---------
 	[13] = {
-		{name = "Street Transmission", mod = 0, price = 10000},
-		{name = "Sports Transmission", mod = 1, price = 12500},
-		{name = "Race Transmission", mod = 2, price = 15000},
+		{name = "Trasmissão de Rua", mod = 0, price = 10000},
+		{name = "Trasmissão Sport", mod = 1, price = 12500},
+		{name = "Trasmissão de Corrida", mod = 2, price = 15000},
 	},
 	
 -----------Brakes-------------
 	[12] = {
-		{name = "Street Brakes", mod = 0, price = 6500},
-		{name = "Sport Brakes", mod = 1, price = 8775},
-		{name = "Race Brakes", mod = 2, price = 11375},
+		{name = "Freios de Rua", mod = 0, price = 6500},
+		{name = "Freios Sport", mod = 1, price = 8775},
+		{name = "Freios de Corrida", mod = 2, price = 11375},
 	},
 	
 ------------Engine----------
 	[11] = {
-		{name = "EMS Upgrade, Level 2", mod = 0, price = 4500},
-		{name = "EMS Upgrade, Level 3", mod = 1, price = 8000},
-		{name = "EMS Upgrade, Level 4", mod = 2, price = 10500},
+		{name = "Upgrade EMS, Level 2", mod = 0, price = 4500},
+		{name = "Upgrade EMS, Level 3", mod = 1, price = 8000},
+		{name = "Upgrade EMS, Level 4", mod = 2, price = 10500},
 	},
 	
 -------------Roof----------
@@ -695,10 +694,10 @@ LSC_Config.prices = {
 	
 }
 
-------Model Blacklist--------
+------Model Pretolist--------
 --Does'nt allow specific vehicles to be upgraded
-LSC_Config.ModelBlacklist = {
-	"police",
+LSC_Config.ModelPretolist = {
+	"Policia",
 }
 
 --Sets if garage will be locked if someone is inside it already
@@ -725,7 +724,7 @@ LSC_Config.menu = {
 	--Left
 	--Right
 	--Custom position, example: position = {x = 0.2, y = 0.2}
-	position = "left",
+	position = "esquerda",
 
 -------Menu theme--------
 	--Possible themes: light, darkred, bluish, greenish
@@ -737,7 +736,7 @@ LSC_Config.menu = {
 		stext_color = { r = 0,g = 0, b = 0, a = 255},
 		sbg_color = { r = 255,g = 255, b = 0, a = 200},
 	},]]
-	theme = "light",
+	theme = "luzes",
 	
 --------Max buttons------
 	--Default: 10

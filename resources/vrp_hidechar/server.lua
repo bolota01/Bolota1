@@ -19,12 +19,6 @@ function removePlayer(source)
     end
 end
 
-RegisterServerEvent('stopHide')
-
-AddEventHandler('hc:stopHide', function()
-    TriggerClientEvent('stopHide', source)
-end)
-
 RegisterServerEvent("hc:hidePlayer")
 AddEventHandler("hc:hidePlayer", function()
     local index = getIndex(source)

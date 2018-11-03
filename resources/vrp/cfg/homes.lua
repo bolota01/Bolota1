@@ -869,7 +869,7 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    add_group = "galpaocannabis"
+    add_group = "galpaometannfetamina"
   },
   ["Galpao 02"] = { --Maconha
     slot = "galpaoMACONHA",
@@ -877,7 +877,7 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    add_group = "galpaometannfetamina"
+    add_group = "galpaocannabis"
   },
   ["Galpao 03"] = { --Cocaina
     slot = "galpaoCOCA",
@@ -893,7 +893,7 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    add_group = "galpaodirtymoney"
+    add_group = "galpaofabricadearma"
   },
   ["Galpao 05"] = {
     slot = "galpaoCOMUM1",
