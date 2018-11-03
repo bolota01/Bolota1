@@ -291,6 +291,7 @@ cfg.groups = {
     "police.fine",
     "police.announce",
     "police.askid",
+    "pm.weapons",
     "pm.paycheck",
     "sargento.paycheck",
     "-police.store_weapons",
