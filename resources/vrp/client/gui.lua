@@ -162,9 +162,14 @@ end
 -- CONTROLS/GUI
 
 local paused = false
+local menuopen = false
 
 function tvRP.isPaused()
   return paused
+end
+
+function unlockmenu()
+  menuopen = false
 end
 
 -- gui controls (from cellphone)
@@ -180,7 +185,11 @@ Citizen.CreateThread(function()
     if IsControlJustPressed(table.unpack(cfg.controls.phone.cancel)) then SendNUIMessage({act="event",event="CANCEL"}) end
 
     -- open general menu
-    if IsControlJustPressed(table.unpack(cfg.controls.phone.open)) and (not tvRP.isInComa() or not cfg.coma_disable_menu) and (not tvRP.isHandcuffed() or not cfg.handcuff_disable_menu) then vRPserver.openMainMenu({}) end
+    if IsControlJustPressed(table.unpack(cfg.controls.phone.open)) and not menuopen and (not tvRP.isInComa() or not cfg.coma_disable_menu) and (not tvRP.isHandcuffed() or not cfg.handcuff_disable_menu) then
+      menuopen = true
+      vRPserver.openMainMenu({})
+      SetTimeout(700, unlockmenu)
+    end
 
     -- F5,F6 (default: control michael, control franklin)
     if IsControlJustPressed(table.unpack(cfg.controls.request.yes)) then SendNUIMessage({act="event",event="F5"}) end

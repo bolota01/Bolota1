@@ -609,6 +609,10 @@ vRP.registerMenuBuilder("main", function(add, data)
           menu.name = lang.police.title()
           menu.css = {top="75px",header_color="rgba(0,125,255,0.75)"}
 
+          if vRP.hasPermission(user_id,"police.askid") then
+            choices[lang.police.menu.askid.title()] = choice_askid
+          end
+
           if vRP.hasPermission(user_id,"police.handcuff") then
             menu[lang.police.menu.handcuff.title()] = choice_handcuff
           end
@@ -633,13 +637,13 @@ vRP.registerMenuBuilder("main", function(add, data)
             menu[lang.police.menu.seize.items.title()] = choice_seize_items
           end
 
-          if vRP.hasPermission(user_id,"police.jail") then
+          --[[if vRP.hasPermission(user_id,"police.jail") then
             menu[lang.police.menu.jail.title()] = choice_jail
-          end
+          end]]
 
-          if vRP.hasPermission(user_id,"police.fine") then
+          --[[if vRP.hasPermission(user_id,"police.fine") then
             menu[lang.police.menu.fine.title()] = choice_fine
-          end
+          end]]
 		  
 		  if vRP.hasPermission(user_id,"police.license") then
             menu[lang.police.menu.license.title()] = choice_license
@@ -652,10 +656,6 @@ vRP.registerMenuBuilder("main", function(add, data)
 		  vRP.openMenu(player,menu)
         end)
       end}
-    end
-
-    if vRP.hasPermission(user_id,"police.askid") then
-      choices[lang.police.menu.askid.title()] = choice_askid
     end
 
     if vRP.hasPermission(user_id, "police.store_weapons") then
