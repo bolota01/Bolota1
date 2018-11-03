@@ -17,16 +17,7 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	  elseif vRP.hasGroup({user_id,"moderador"}) then
 		CancelEvent();
 		TriggerClientEvent('wk:deleteVehicle', source);
-		elseif vRP.hasGroup({user_id,"Mecânico"}) then
-		CancelEvent();
-		TriggerClientEvent('wk:deleteVehicle', source);
 		elseif vRP.hasGroup({user_id,"Capitão"}) then
-		CancelEvent();
-		TriggerClientEvent('wk:deleteVehicle', source);
-		elseif vRP.hasGroup({user_id,"Major"}) then
-		CancelEvent();
-		TriggerClientEvent('wk:deleteVehicle', source);
-		elseif vRP.hasGroup({user_id,"Tenente-Coronel"}) then
 		CancelEvent();
 		TriggerClientEvent('wk:deleteVehicle', source);
 		elseif vRP.hasGroup({user_id,"Coronel"}) then

@@ -21,12 +21,12 @@ AddEventHandler( 'wk:deleteVehicle', function()
                 deleteCar( vehicle )
 
                 if ( DoesEntityExist( vehicle ) ) then 
-                	ShowNotification( "~r~Unable to delete vehicle, try again." )
+                	ShowNotification( "~r~Não é possível excluir o veículo, tente novamente." )
                 else 
-                	ShowNotification( "Vehicle deleted." )
+                	ShowNotification( "Veículo excluído." )
                 end 
             else 
-                ShowNotification( "You must be in the driver's seat!" )
+                ShowNotification( "Você deve estar no banco do motorista!" )
             end 
         else
             local playerPos = GetEntityCoords( ped, 1 )
@@ -38,12 +38,12 @@ AddEventHandler( 'wk:deleteVehicle', function()
                 deleteCar( vehicle )
 
                 if ( DoesEntityExist( vehicle ) ) then 
-                	ShowNotification( "~r~Unable to delete vehicle, try again." )
+                	ShowNotification( "~r~Não é possível excluir o veículo, tente novamente." )
                 else 
-                	ShowNotification( "Vehicle deleted." )
+                	ShowNotification( "Veículo excluído." )
                 end 
             else 
-                ShowNotification( "You must be in or near a vehicle to delete it." )
+                ShowNotification( "Você deve estar no banco do motorista!" )
             end 
         end 
     end 
