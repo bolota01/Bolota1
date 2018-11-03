@@ -46,8 +46,8 @@ Citizen.CreateThread(function()
             if NetworkIsPlayerActive(id) and ped ~= player then
                 blip = GetBlipFromEntity(ped)
 
-                x1, y1, z1 = table.unpack(GetEntityCoords( GetPlayerPed( -1 ), true ))
-                x2, y2, z2 = table.unpack(GetEntityCoords( GetPlayerPed( id ), true ))
+                --[[x1, y1, z1 = table.unpack(GetEntityCoords( GetPlayerPed( -1 ), true ))
+                x2, y2, z2 = table.unpack(GetEntityCoords( GetPlayerPed( id ), true ))]]
 				local takeaway = 0.95
 
                 --[[if(ignorePlayerNameDistance) then
@@ -59,7 +59,7 @@ Citizen.CreateThread(function()
                     end
                 end]]
 
-                if Vdist2(x1,  y1,  z1,  x2,  y2,  z2) < playerNamesDist then
+                if Vdist2(GetEntityCoords(player, true), GetEntityCoords(GetPlayerPed(id), true)) < playerNamesDist then
                     if not (ignorePlayerNameDistance) then
 						if NetworkIsPlayerTalking(id) then
 							red = 255
