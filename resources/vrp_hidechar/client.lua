@@ -54,6 +54,8 @@ function onHideUpdate()
             player = GetPlayerFromServerId(playersInvisible[i])
             pped = GetPlayerPed(player)
             if playerOwner ~= pped then
+                SetEntityVisible(pped, false)
+                FreezeEntityPosition(pped, true)
                 SetEntityCollision(pped, false, false)
             end
         end
@@ -63,7 +65,7 @@ function onHideUpdate()
             SetPlayerInvincible(GetPlayerIndex(),true)
         end
 
-        Citizen.Wait(100)
+        Citizen.Wait(0)
     end
 
     SetLocalPlayerVisibleLocally(0)
