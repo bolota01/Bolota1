@@ -51,7 +51,7 @@ function vRPhk.toggleHandcuff()
 end
 
 function vRPhk.docsOnline()
-  local docs = vRP.getUsersByPermission({"coma.caller"})
+  local docs = vRP.getUsersByPermission({"emergency.revive"})
   return #docs
 end
 
