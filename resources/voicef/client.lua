@@ -1,6 +1,6 @@
 local showPlayerBlips = true
 local ignorePlayerNameDistance = false
-local playerNamesDist = 16
+local playerNamesDist = 20
 local displayIDHeight = 1.5 --Height of ID above players head(starts at center body mass)
 --Set Default Values for Colors
 local red = 255
@@ -46,8 +46,8 @@ Citizen.CreateThread(function()
             if NetworkIsPlayerActive(id) and ped ~= player then
                 blip = GetBlipFromEntity(ped)
 
-                --[[x1, y1, z1 = table.unpack(GetEntityCoords( GetPlayerPed( -1 ), true ))
-                x2, y2, z2 = table.unpack(GetEntityCoords( GetPlayerPed( id ), true ))]]
+                --x1, y1, z1 = table.unpack(GetEntityCoords( GetPlayerPed( -1 ), true ))
+                x2, y2, z2 = table.unpack(GetEntityCoords( GetPlayerPed( id ), true ))
 				local takeaway = 0.95
 
                 --[[if(ignorePlayerNameDistance) then
