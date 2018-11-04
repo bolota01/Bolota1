@@ -169,11 +169,10 @@ function task_mission()
             local step = {
               text = v.text.."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
-                if vRP.tryGetInventoryItem({user_id,"encomenda",1,false}) then
-                  SetTimeout(5000, function()
+                if vRP.tryGetInventoryItem({user_id,"encomenda",1,true}) then
+                  SetTimeout(1000, function()
                   vRPclient.notify(player,{"Entregando as encomendas, aguarde alguns segundos."})
                     vRP.nextMissionStep({player})
-                    vRP.giveInventoryItem({user_id,"encomenda",1,false})
                     Mclient.freezePedVehicle(player,{false})
 
                     -- last step
