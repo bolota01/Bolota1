@@ -36,7 +36,9 @@ cfg.items = {
   ["saco_lixo"] = {"Saco de Lixo", "Saco para embalar lixo.", nil, 0.000}, -- no choices
   ["bank_money"] = {"Malote de Dinheiro", "$.", nil, 1.000}, -- no choices
 --CORREIOS
-  ["encomenda"] = {"Encomendas", "Certamenta é alguma coisa comprada desses sites da china.", nil, 5.00}, -- no choices 
+  ["encomenda"] = {"Encomendas", "Certamenta é alguma coisa comprada desses sites da china.", nil, 5.00}, -- no choices
+  -- Receita médica
+  ["receitam"] = {"Receita Médica", "Receita passada por um médico para uso de medicamento restrito.", nil, 0.01}, -- no choices
   --TRAFICANTE DE ÓRGÃOS
   ["orgaos"] = {"Órgãos Humanos","Órgão para transplante ilegal", nil, 1.000}, -- no choices 
   
