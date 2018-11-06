@@ -180,7 +180,7 @@ function task_mission()
                       vRP.giveMoney({user_id,v.reward})
                       vRPclient.notify(player,{glang.money.received({v.reward})})
                       vRPclient.notify(player,{"Acabaram as encomendas por aqui! ~n~Já, já terá mais, aguarde alguns minutos"})
-          else
+                    else
                       vRPclient.notify(player,{"Entregue as encomendas!"})
                     end
                   end)

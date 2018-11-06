@@ -602,16 +602,16 @@ vRP.registerMenuBuilder("main", function(add, data)
   if user_id ~= nil then
     local choices = {}
 
+    if vRP.hasPermission(user_id,"police.askid") then
+      choices[lang.police.menu.askid.title()] = choice_askid
+    end
+
     if vRP.hasPermission(user_id,"police.menu") then
       -- build police menu
       choices[lang.police.title()] = {function(player,choice)
         vRP.buildMenu("police", {player = player}, function(menu)
           menu.name = lang.police.title()
           menu.css = {top="75px",header_color="rgba(0,125,255,0.75)"}
-
-          if vRP.hasPermission(user_id,"police.askid") then
-            choices[lang.police.menu.askid.title()] = choice_askid
-          end
 
           if vRP.hasPermission(user_id,"police.handcuff") then
             menu[lang.police.menu.handcuff.title()] = choice_handcuff
@@ -637,15 +637,15 @@ vRP.registerMenuBuilder("main", function(add, data)
             menu[lang.police.menu.seize.items.title()] = choice_seize_items
           end
 
-          --[[if vRP.hasPermission(user_id,"police.jail") then
+          if vRP.hasPermission(user_id,"police.jail") then
             menu[lang.police.menu.jail.title()] = choice_jail
-          end]]
+          end
 
-          --[[if vRP.hasPermission(user_id,"police.fine") then
+          if vRP.hasPermission(user_id,"police.fine") then
             menu[lang.police.menu.fine.title()] = choice_fine
-          end]]
+          end
 		  
-		  if vRP.hasPermission(user_id,"police.license") then
+		      if vRP.hasPermission(user_id,"police.license") then
             menu[lang.police.menu.license.title()] = choice_license
           end
 		  

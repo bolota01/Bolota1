@@ -1029,9 +1029,9 @@ cfg.commands = {
                             local carros = json.decode(data)
                             if not carros then carros = {} end
                             carros[model] = true
-                            vRP.setSData({"apreendido:u"..user_id, json.encode(carros)})
                             vRPclient.despawnGarageVehicle(source,{vtype,50000}) 
                             vRPclient.notify(source, {"~r~Seu veículo foi apreendido!"})
+                            vRP.setSData({"apreendido:u"..user_id, json.encode(carros)})
                             TriggerClientEvent('chatMessage', p, "SERVER", {255, 0, 0}, "Veiculo apreendido!")
                         end})
                     end
