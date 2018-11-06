@@ -553,15 +553,15 @@ cfg.hidden_transformer_duration = 30-- 12 hours -- 5*24*60 -- 5 days
 -- configure the information reseller (can sell hidden transformers positions)
 cfg.informer = {
   infos = {
-    ["weed plant"] = 10000,
-    ["gun warehouse"] = 25000
+    ["weed plant"] = 10000000,
+    ["gun warehouse"] = 250000000
   },
   positions = {
     {1821.12390136719,3685.9736328125,34.2769317626953},
     {1804.2958984375,3684.12280273438,34.217945098877}
   },
-  interval = 30, -- interval in minutes for the reseller respawn
-  duration = 10, -- duration in minutes of the spawned reseller
+  interval = 900, -- interval in minutes for the reseller respawn
+  duration = 1, -- duration in minutes of the spawned reseller
   blipid = 133,
   blipcolor = 2
 }
