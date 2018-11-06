@@ -33,7 +33,10 @@ cfg.items = {
   ["papelao"] = {"Pedaço de Papelão", "Papelão velho para reciclagem.", nil, 10.000}, -- no choices
   ["latinha_vazia"] = {"Latinha de Alumínio", "Lata de alumínio para reciclagem.", nil, 0.0145}, -- no choices
   ["pet_vazia"] = {"Garrafa PET 2L", "Garrafa pet vazia para reciclagem.", nil, 0.047}, -- no choices
-  ["saco_lixo"] = {"Saco de Lixo", "Saco para embalar lixo.", nil, 0.000}, -- no choices
+  ["saco_lixo"] = {"Saco de Lixo", "Saco cheio de lixo.", nil, 1.50}, -- no choices
+  -- Taxista
+  ["recibo_corrida"] = {"Recibo de Corrida", "Recibo de pagamento de viagem de táxi.", nil, 0,01},
+  -- Malote Bancário
   ["bank_money"] = {"Malote de Dinheiro", "$.", nil, 1.000}, -- no choices
 --CORREIOS
   ["encomenda"] = {"Encomendas", "Certamenta é alguma coisa comprada desses sites da china.", nil, 5.00}, -- no choices

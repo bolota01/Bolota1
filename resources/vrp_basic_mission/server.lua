@@ -131,8 +131,7 @@ function task_mission()
 
                     -- last step
                     if i == v.steps then
-                      vRP.giveMoney({user_id,v.reward})
-                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRP.giveInventoryItem({user_id,"saco_lixo",1,false})
                       vRPclient.notify(player,{"Acabou o lixo por aqui! ~n~Já, já terá mais, aguarde um minutinho"})
 					else
                       vRPclient.notify(player,{"Recolha o lixo."})
@@ -491,8 +490,7 @@ function task_mission()
 
                     -- last step
                     if i == v.steps then
-                      vRP.giveMoney({user_id,v.reward})
-                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRP.giveInventoryItem({user_id,"recibo_corrida",1,false})
                       vRPclient.notify(player,{"~g~Por enquanto é isso!~n~~h~Aguarde um minuto para o próximo chamado"})
 					else
                       vRPclient.notify(player,{"~h~~y~Leve ao local indicado no GPS."})
