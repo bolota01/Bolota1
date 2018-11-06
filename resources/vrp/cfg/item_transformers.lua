@@ -255,6 +255,48 @@ cfg.item_transformers = {
       }
     }
   },
+-- Lixeiro
+  {
+    name="Reciclagem",
+    permissions = {"lixeiro.saco"},
+    r=0,g=200,b=0, ---cores
+    max_units=1000,
+    units_per_minute=100,
+    x=1048.7095947266,y=-2427.921875,z=30.304559707642, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Reciclar Lixo"] = { -- action name
+        description="Reciclando o Lixo", -- action description
+        in_money=0, -- money taken per unit
+        out_money=1500, -- money earned per unit
+        reagents={
+          ["saco_lixo"] = 1
+        }, -- items taken per unit
+        products={}, -- items given per unit
+      }
+    }
+  },
+-- Taxi
+  {
+    name="Central do Taxista",
+    permissions = {"taxi.recibo"},
+    r=0,g=200,b=0, ---cores
+    max_units=1000,
+    units_per_minute=100,
+    x=895.34832763672,y=-179.32203674316,z=74.700332641602, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Receber pagamento de recibos"] = { -- action name
+        description="Pagando Recibos", -- action description
+        in_money=0, -- money taken per unit
+        out_money=1500, -- money earned per unit
+        reagents={
+          ["recibo_corrida"] = 1
+        }, -- items taken per unit
+        products={}, -- items given per unit
+      }
+    }
+  },
     -- Cartões clonáveis
   {
     name="Cartões Clonáveis", -- Nome do menu
