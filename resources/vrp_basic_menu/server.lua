@@ -1141,9 +1141,9 @@ vRP.registerMenuBuilder({"police", function(add, data)
       choices["Tirar da prisão"] = ch_unjail -- Un jails chosen player if he is jailed (Use admin.easy_unjail as permission to have this in admin menu working in non jailed players)
     end
 	
-	--[[if vRP.hasPermission({user_id,"police.easy_fine"}) then
+	if vRP.hasPermission({user_id,"police.easy_fine"}) then
       choices["Multar Fácil"] = ch_fine -- Fines closeby player
-    end]]
+    end
 	
 	if vRP.hasPermission({user_id,"police.easy_cuff"}) then
       choices["Algemar"] = ch_handcuff -- Toggle cuffs AND CLOSE MENU for nearby player

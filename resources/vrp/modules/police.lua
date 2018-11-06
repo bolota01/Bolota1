@@ -637,13 +637,13 @@ vRP.registerMenuBuilder("main", function(add, data)
             menu[lang.police.menu.seize.items.title()] = choice_seize_items
           end
 
-          if vRP.hasPermission(user_id,"police.jail") then
+          --[[if vRP.hasPermission(user_id,"police.jail") then
             menu[lang.police.menu.jail.title()] = choice_jail
           end
 
           if vRP.hasPermission(user_id,"police.fine") then
             menu[lang.police.menu.fine.title()] = choice_fine
-          end
+          end]]
 		  
 		      if vRP.hasPermission(user_id,"police.license") then
             menu[lang.police.menu.license.title()] = choice_license
