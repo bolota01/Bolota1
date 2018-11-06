@@ -4,9 +4,9 @@ local cfg = {}
 
 cfg.iplload = true
 
-cfg.voice_proximity = 4 -- default voice proximity (outside)
-cfg.voice_proximity_vehicle = 3
-cfg.voice_proximity_inside = 3
+cfg.voice_proximity = 6 -- default voice proximity (outside)
+cfg.voice_proximity_vehicle = 5
+cfg.voice_proximity_inside = 5
 
 cfg.gui = {
   anchor_minimap_width = 186,
