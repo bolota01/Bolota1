@@ -5,7 +5,7 @@
   <HandlingData>
     <Item type="CHandlingData">
       <handlingName>RS03</handlingName>
-      <fMass value="1000.000000" />
+      <fMass value="800.000000" />
       <fInitialDragCoeff value="10.240000" />
       <fPercentSubmerged value="85.000000" />
       <vecCentreOfMassOffset x="0.000000" y="0.050000" z="0.000000" />
@@ -16,14 +16,14 @@
       <fDriveInertia value="1.000000" />
       <fClutchChangeRateScaleUpShift value="7.000000" />
       <fClutchChangeRateScaleDownShift value="6.000000" />
-      <fInitialDriveMaxFlatVel value="160.100000" />
+      <fInitialDriveMaxFlatVel value="220.100000" />
       <fBrakeForce value="3.050000" />
       <fBrakeBiasFront value="0.450000" />
       <fHandBrakeForce value="0.500000" />
-      <fSteeringLock value="35.000000" />
+      <fSteeringLock value="40.000000" />
       <fTractionCurveMax value="2.660000" />
       <fTractionCurveMin value="2.540000" />
-      <fTractionCurveLateral value="22.500000" />
+      <fTractionCurveLateral value="20.500000" />
       <fTractionSpringDeltaMax value="0.150000" />
       <fLowSpeedTractionLossMult value="1.300000" />
       <fCamberStiffnesss value="0.000000" />

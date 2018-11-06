@@ -5,9 +5,9 @@
   <InitDatas>
 
      <Item>
-      <modelName>sheriff2</modelName>
-      <txdName>sheriff2</txdName>
-      <handlingId>sheriff2</handlingId>
+      <modelName>police2</modelName>
+      <txdName>police2</txdName>
+      <handlingId>police2</handlingId>
       <gameName>Mustang</gameName>
       <vehicleMakeName>Ford</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -146,7 +146,7 @@
   <txdRelationships>
     <Item>
       <parent>vehicles_dom_interior</parent>
-      <child>sheriff2</child>
+      <child>police2</child>
     </Item>
 
 
