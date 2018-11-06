@@ -74,7 +74,7 @@ cfg.garage_types = {
     ["Primo2"] = {"Primo",0,"<img src='https://i.imgur.com/w02Lic9.png'/<br/>CAPACIDADE:50kg<br/>"},
     ["Stretch"] = {"Stretch",0,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"},
     ["agusta"] = {"Augusta",0,"<img src='https://i.imgur.com/TGUWOb5.png'/><br/>CAPACIDADE:10kg<br/>"},
-    ["bmws"] = {"Bmw 1000RR",0,"<img src='https://i.imgur.com/s6pPIkO.png'/><br/>CAPACIDADE:10kg<br/>"},
+    ["bmw1000"] = {"Bmw 1000RR",0,"<img src='https://i.imgur.com/s6pPIkO.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["bros60"] = {"Bross 160",0,"<img src='https://i.imgur.com/sxH4kmd.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["hcbr17"] = {"CBR Fireblade",0,"<img src='https://i.imgur.com/knCR56r.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["nh2r"] = {"Kawasaki H2R",0,"<img src='https://i.imgur.com/CHG0vYj.png'/><br/>CAPACIDADE:10kg<br/>"},
@@ -164,7 +164,7 @@ cfg.garage_types = {
     ["Cog55"] = {"Cog 55",148000,"<img src='https://i.imgur.com/m7SQqHd.jpg'/<br/>CAPACIDADE:50kg<br/>"},
     ["Primo2"] = {"Primo",142500,"<img src='https://i.imgur.com/w02Lic9.png'/<br/>CAPACIDADE:50kg<br/>"},
     ["Stretch"] = {"Stretch",251075,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"},
-    ["kuruma"] = {"Kuruma",0,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
+    ["kuruma"] = {"Kuruma",300000,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
 	},
 	["VENDA MOTOS"] = {
 	_config = {vtype="car",radius=5.1,buy=true},
@@ -215,7 +215,7 @@ cfg.garage_types = {
     ["REVENDA MOTOS"] = {
     _config = {vtype="car",radius=5.1,buy=true},
     ["agusta"] = {"Augusta",800000,"<img src='https://i.imgur.com/TGUWOb5.png'/><br/>CAPACIDADE:10kg<br/>"},
-    ["bmws"] = {"Bmw 1000RR",800000,"<img src='https://i.imgur.com/s6pPIkO.png'/><br/>CAPACIDADE:10kg<br/>"},
+    ["bmw1000"] = {"Bmw 1000RR",800000,"<img src='https://i.imgur.com/s6pPIkO.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["bros60"] = {"Bross 160",25000,"<img src='https://i.imgur.com/sxH4kmd.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["hcbr17"] = {"CBR Fireblade",400000,"<img src='https://i.imgur.com/knCR56r.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["nh2r"] = {"Kawasaki H2R",600000,"<img src='https://i.imgur.com/CHG0vYj.png'/><br/>CAPACIDADE:10kg<br/>"},
