@@ -92,7 +92,12 @@ cfg.vehicle_chest_weights = {
   ["hornet"] = 10,
   ["r6"] = 10,
   ["r1"] = 10,
-  ["xj6"] = 10
+  ["xj6"] = 10,
+  ["hdfb"] = 10,
+  ["hdkn"] = 10,
+  ["ke400"] = 10,
+  ["yss"] = 10,
+  ["718"] = 30
 }
 
 return cfg
