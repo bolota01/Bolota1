@@ -83,11 +83,11 @@ LSC_Config.prices = {
 
 ------Window tint------
 	windowtint = {
-		{ name = "Preto Puro", tint = 1, price = 1000},
+		{ name = "Preto Puro", tint = 1, price = 1500},
 		{ name = "Fumaça escura", tint = 2, price = 1000},
-		{ name = "Fumaça Clara", tint = 3, price = 1000},
-		{ name = "Limusine", tint = 4, price = 1000},
-		{ name = "Verde", tint = 5, price = 1000}
+		{ name = "Fumaça Clara", tint = 3, price = 750},
+		{ name = "Limusine", tint = 4, price = 500},
+		{ name = "Verde", tint = 5, price = 250}
 	},
 
 -------Respray--------
@@ -151,7 +151,7 @@ LSC_Config.prices = {
 
 ------Neon layout------
 	neonlayout = {
-		{name = "Frente, Verso e Lados", price = 5000},
+		{name = "Frente, Verso e Lados", price = 2000},
 	},
 	--Neon color
 	neoncolor = {
@@ -551,7 +551,7 @@ LSC_Config.prices = {
 ----------Turbo---------
 	[18] = {
 		{ name = "None", mod = 0, price = 0},
-		{ name = "Turbo Tuning", mod = 1, price = 15000},
+		{ name = "Turbo Tuning", mod = 1, price = 3000},
 	},
 	
 -----------Armor-------------
@@ -573,55 +573,55 @@ LSC_Config.prices = {
 
 -----------Buzina----------
 	[14] = {
-		{name = "Buzina de Caminhao", mod = 0, price = 1625},
-		{name = "Buzina Policial", mod = 1, price = 4062},
-		{name = "Buzina de Palhaço", mod = 2, price = 6500},
-		{name = "Musical Buzina 1", mod = 3, price = 11375},
-		{name = "Musical Buzina 2", mod = 4, price = 11375},
-		{name = "Musical Buzina 3", mod = 5, price = 11375},
-		{name = "Musical Buzina 4", mod = 6, price = 11375},
-		{name = "Musical Buzina 5", mod = 7, price = 11375},
-		{name = "Buzina Trombone Triste", mod = 8, price = 11375},
-		{name = "Classica Buzina 1", mod = 9, price = 11375},
-		{name = "Classica Buzina 2", mod = 10, price = 11375},
-		{name = "Classica Buzina 3", mod = 11, price = 11375},
-		{name = "Classica Buzina 4", mod = 12, price = 11375},
-		{name = "Classica Buzina 5", mod = 13, price = 11375},
-		{name = "Classica Buzina 6", mod = 14, price = 11375},
-		{name = "Classica Buzina 7", mod = 15, price = 11375},
-		{name = "Scaledo Buzina", mod = 16, price = 11375},
-		{name = "Scalere Buzina", mod = 17, price = 11375},
-		{name = "Scalemi Buzina", mod = 18, price = 11375},
-		{name = "Scalefa Buzina", mod = 19, price = 11375},
-		{name = "Scalesol Buzina", mod = 20, price = 11375},
-		{name = "Scalela Buzina", mod = 21, price = 11375},
-		{name = "Scaleti Buzina", mod = 22, price = 11375},
-		{name = "Scaledo Buzina High", mod = 23, price = 11375},
-		{name = "Jazz Buzina 1", mod = 25, price = 11375},
-		{name = "Jazz Buzina 2", mod = 26, price = 11375},
-		{name = "Jazz Buzina 3", mod = 27, price = 11375},
-		{name = "Jazzloop Buzina", mod = 28, price = 11375},
-		{name = "Starspangban Buzina 1", mod = 29, price = 11375},
-		{name = "Starspangban Buzina 2", mod = 30, price = 11375},
-		{name = "Starspangban Buzina 3", mod = 31, price = 11375},
-		{name = "Starspangban Buzina 4", mod = 32, price = 11375},
-		{name = "Classicalloop Buzina 1", mod = 33, price = 11375},
-		{name = "Classicalloop Buzina 2", mod = 34, price = 11375},
-		{name = "Classicalloop Buzina 3", mod = 35, price = 11375},
+		{name = "Buzina de Caminhao", mod = 0, price = 500},
+		{name = "Buzina Policial", mod = 1, price = 5000},
+		{name = "Buzina de Palhaço", mod = 2, price = 500},
+		{name = "Musical Buzina 1", mod = 3, price = 1000},
+		{name = "Musical Buzina 2", mod = 4, price = 1000},
+		{name = "Musical Buzina 3", mod = 5, price = 1000},
+		{name = "Musical Buzina 4", mod = 6, price = 1000},
+		{name = "Musical Buzina 5", mod = 7, price = 1000},
+		{name = "Buzina Trombone Triste", mod = 8, price = 1000},
+		{name = "Classica Buzina 1", mod = 9, price = 1000},
+		{name = "Classica Buzina 2", mod = 10, price = 1000},
+		{name = "Classica Buzina 3", mod = 11, price = 1000},
+		{name = "Classica Buzina 4", mod = 12, price = 1000},
+		{name = "Classica Buzina 5", mod = 13, price = 1000},
+		{name = "Classica Buzina 6", mod = 14, price = 1000},
+		{name = "Classica Buzina 7", mod = 15, price = 1000},
+		{name = "Scaledo Buzina", mod = 16, price = 1000},
+		{name = "Scalere Buzina", mod = 17, price = 1000},
+		{name = "Scalemi Buzina", mod = 18, price = 1000},
+		{name = "Scalefa Buzina", mod = 19, price = 1000},
+		{name = "Scalesol Buzina", mod = 20, price = 1000},
+		{name = "Scalela Buzina", mod = 21, price = 1000},
+		{name = "Scaleti Buzina", mod = 22, price = 1000},
+		{name = "Scaledo Buzina High", mod = 23, price = 1000},
+		{name = "Jazz Buzina 1", mod = 25, price = 1000},
+		{name = "Jazz Buzina 2", mod = 26, price = 1000},
+		{name = "Jazz Buzina 3", mod = 27, price = 1000},
+		{name = "Jazzloop Buzina", mod = 28, price = 1000},
+		{name = "Starspangban Buzina 1", mod = 29, price = 1000},
+		{name = "Starspangban Buzina 2", mod = 30, price = 1000},
+		{name = "Starspangban Buzina 3", mod = 31, price = 1000},
+		{name = "Starspangban Buzina 4", mod = 32, price = 1000},
+		{name = "Classicalloop Buzina 1", mod = 33, price = 1000},
+		{name = "Classicalloop Buzina 2", mod = 34, price = 1000},
+		{name = "Classicalloop Buzina 3", mod = 35, price = 1000},
 	},
 
 ----------Transmission---------
 	[13] = {
-		{name = "Trasmissão de Rua", mod = 0, price = 10000},
-		{name = "Trasmissão Sport", mod = 1, price = 12500},
-		{name = "Trasmissão de Corrida", mod = 2, price = 15000},
+		{name = "Trasmissão de Rua", mod = 0, price = 5000},
+		{name = "Trasmissão Sport", mod = 1, price = 7500},
+		{name = "Trasmissão de Corrida", mod = 2, price = 10000},
 	},
 	
 -----------Brakes-------------
 	[12] = {
-		{name = "Freios de Rua", mod = 0, price = 6500},
-		{name = "Freios Sport", mod = 1, price = 8775},
-		{name = "Freios de Corrida", mod = 2, price = 11375},
+		{name = "Freios de Rua", mod = 0, price = 4000},
+		{name = "Freios Sport", mod = 1, price = 6000},
+		{name = "Freios de Corrida", mod = 2, price = 8000},
 	},
 	
 ------------Engine----------
