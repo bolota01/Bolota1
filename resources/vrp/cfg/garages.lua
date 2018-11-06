@@ -108,7 +108,13 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",0,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",0,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",0,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    ["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"}
+    ["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    ["hdfb"] = {"Harley Davidson Fat Boy Lo Vintage",0,"<img src='https://i.imgur.com/LDkSGxN.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["hdkn"] = {"Harley-Davidson Knucklehead",0,"<img src='https://i.imgur.com/nKe5THQ.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["ke400"] = {"Kawasaki Eliminator 400SE by gosuke",0,"<img src='https://i.imgur.com/PFXN8qE.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["yss"] = {"Yamaha Star Stryker 2012 by MrKonDz",0,"<img src='https://i.imgur.com/TKpQImw.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["718"] = {"Porsche 718 Boxster",0,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"},
+    ["kuruma"] = {"Kuruma",0,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
 	},
 	["VENDA CARROS"] = {
 	_config = {vtype="car",radius=5.1,buy=true},
@@ -157,7 +163,8 @@ cfg.garage_types = {
     ["Asea"] = {"Asea",47000,"<img src='https://i.imgur.com/XdDeLxU.png'/<br/>CAPACIDADE:50kg<br/>"},
     ["Cog55"] = {"Cog 55",148000,"<img src='https://i.imgur.com/m7SQqHd.jpg'/<br/>CAPACIDADE:50kg<br/>"},
     ["Primo2"] = {"Primo",142500,"<img src='https://i.imgur.com/w02Lic9.png'/<br/>CAPACIDADE:50kg<br/>"},
-    ["Stretch"] = {"Stretch",251075,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"}
+    ["Stretch"] = {"Stretch",251075,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["kuruma"] = {"Kuruma",0,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
 	},
 	["VENDA MOTOS"] = {
 	_config = {vtype="car",radius=5.1,buy=true},
@@ -202,7 +209,8 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",45000,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",600000,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",1500000,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    ["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"}
+    ["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    ["718"] = {"Porsche 718 Boxster",1500000,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"}
     },
     ["REVENDA MOTOS"] = {
     _config = {vtype="car",radius=5.1,buy=true},
@@ -211,10 +219,14 @@ cfg.garage_types = {
     ["bros60"] = {"Bross 160",25000,"<img src='https://i.imgur.com/sxH4kmd.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["hcbr17"] = {"CBR Fireblade",400000,"<img src='https://i.imgur.com/knCR56r.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["nh2r"] = {"Kawasaki H2R",600000,"<img src='https://i.imgur.com/CHG0vYj.png'/><br/>CAPACIDADE:10kg<br/>"},
-    ["hornet"] = {"Hornet",200000,"<img src='https://i.imgur.com/M9lkoAT.png'/><br/>CAPACIDADE:10kg<br/>"},
+    ["hornet"] = {"Hornet",120000,"<img src='https://i.imgur.com/M9lkoAT.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["r6"] = {"Yamaha R6",350000,"<img src='https://i.imgur.com/jYdjtU5.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["r1"] = {"Yamaha r1",550000,"<img src='https://i.imgur.com/9YHc2fw.png'/><br/>CAPACIDADE:10kg<br/>"},
-    ["xj6"] = {"Yamaha XJ6",200000,"<img src='https://i.imgur.com/9lta3M9.png'/><br/>CAPACIDADE:10kg<br/>"}
+    ["xj6"] = {"Yamaha XJ6",100000,"<img src='https://i.imgur.com/9lta3M9.png'/><br/>CAPACIDADE:10kg<br/>"},
+    ["hdfb"] = {"Harley Davidson Fat Boy Lo Vintage",380000,"<img src='https://i.imgur.com/LDkSGxN.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["hdkn"] = {"Harley-Davidson Knucklehead",350000,"<img src='https://i.imgur.com/nKe5THQ.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["ke400"] = {"Kawasaki Eliminator 400SE by gosuke",300000,"<img src='https://i.imgur.com/PFXN8qE.jpg'/><br/>CAPACIDADE:10kg<br/>"},
+    ["yss"] = {"Yamaha Star Stryker 2012 by MrKonDz",400000,"<img src='https://i.imgur.com/TKpQImw.jpg'/><br/>CAPACIDADE:10kg<br/>"}
     },
 	["Transportador de Valores"] = {
 	_config = {blipid=67,blipcolor=3,vtype="car",permissions={"bankdriver.vehicle"},buy=true},
