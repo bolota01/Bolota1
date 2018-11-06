@@ -668,6 +668,7 @@ cfg.groups = {
     _config = { gtype = "job" },
     "missao.gari.coleta",
     "gari.veiculo",
+    "lixeiro.saco",
     "gari.paycheck",
     "gari.uniforme",
     "gari.coleta",
@@ -685,6 +686,7 @@ cfg.groups = {
   ["Táxi"] = {
     _config = { gtype = "job" },
     "taxi.service",
+    "taxi.recibo",
     "taxi.paycheck",
     "mission.UBER.passenger",
     "taxi.garagem",
