@@ -1,6 +1,6 @@
 local showPlayerBlips = true
 local ignorePlayerNameDistance = false
-local playerNamesDist = 20
+local playerNamesDist = 36
 local displayIDHeight = 1.5 --Height of ID above players head(starts at center body mass)
 --Set Default Values for Colors
 local red = 255
