@@ -315,7 +315,7 @@ cfg.garage_types = {
 	["towtruck2"] = {"Guincho",0, "<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
   	},   
   	["Motoboy"] = {
-	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"},buy=true},
+	_config = {vtype="bike",blipid=226,blipcolor=4,permissions={"delivery.garagem"},buy=true},
 	["enduro"] = {"Honda CG Fan 150",0, "<img src=''/><br/"}
   }
 }
