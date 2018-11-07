@@ -2,7 +2,7 @@ local m = {} -- <<< Don't touch this!
 -----------[ SETTINGS ]---------------------------------------------------
 
 -- Delay in minutes between messages
-m.delay = 7
+m.delay = 10
 
 -- Prefix appears in front of each message. 
 -- Suffix appears on the end of each message.
@@ -13,7 +13,7 @@ m.suffix = '^0 '
 -- You can make as many messages as you want.
 -- You can use ^0-^9 in your messages to change text color.
 m.messages = {   
-    '^1Qualquer dúvida visite nosso discord: https://discord.gg/dGu3syk',
+    '^1Qualquer dúvida visite nosso discord: ^2https://discord.gg/YRX7N3f',
     '^7A lista com todos os comandos está disponível no discod na aba ^2#Comandos ^7.',
     '^1Obrigatório fazer sua identidade ao entrar na cidade.',
     '^4Lembre-se de se alimentar e se hidratar !',
