@@ -309,8 +309,8 @@ cfg.garage_types = {
   	},
     ["Aluguel Jetsky"] = {
     _config = {vtype="airplane",buy=true},
-    ["seashark"] = {"JetSky 1",5000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
-    ["seashark3"] = {"JetSky 3",5000, "<img src='https://i.imgur.com/MWwNoFe.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
+    ["seashark"] = {"JetSky 1",15000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["seashark3"] = {"JetSky 3",15000, "<img src='https://i.imgur.com/MWwNoFe.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
     },   
   	["Táxi"] = {
 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"},buy=true},
