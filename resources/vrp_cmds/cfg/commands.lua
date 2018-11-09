@@ -1045,7 +1045,7 @@ cfg.commands = {
       },
       ["/retirar"] = {
         action = function(p,color,msg)
-            CMDclient.getDistance(p,{370.871,-1607.528,29.29}, function(d)
+            CMDclient.getDistance(p,{437.06619262696,-994.18487548828,30.68959236145}, function(d)
                 if d < 1 then
                     local user_id = vRP.getUserId({p})
                     vRP.getSData({"apreendido:u"..user_id, function(data)
@@ -1074,7 +1074,7 @@ cfg.commands = {
     },
     ["/consultar"] = {
         action = function(p,color,msg) 
-          CMDclient.getDistance(p,{369.830,-1609.027,29.291}, function(d)
+          CMDclient.getDistance(p,{440.95288085938,-981.49865722656,30.689601898194}, function(d)
             if d < 1 then
                 local user_id = vRP.getUserId({p})
                 local data = vRP.getSData({"apreendido:u"..user_id, function(data)

@@ -24,8 +24,8 @@
       <scenarioLayout />
       <cameraName>FOLLOW_BIKE_CAMERA</cameraName>
       <aimCameraName>BIKE_AIM_CAMERA</aimCameraName>
-      <bonnetCameraName>BIKE_xj6_POV_CAMERA</bonnetCameraName>
-      <povCameraName>BIKE_xj6_POV_CAMERA</povCameraName>
+      <bonnetCameraName>BIKE_BATI_POV_CAMERA</bonnetCameraName>
+      <povCameraName>BIKE_BATI_POV_CAMERA</povCameraName>
       <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000" />
       <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000" />
 	  <FirstPersonProjectileDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000" />
@@ -109,7 +109,7 @@
       <pOverrideRagdollThreshold type="NULL" />
 	  <firstPersonDrivebyData>
         <Item>BIKE_CARBONRS_FRONT</Item>
-        <Item>BIKE_xj6_REAR</Item>
+        <Item>BIKE_BATI_REAR</Item>
       </firstPersonDrivebyData>
      </Item>
  </InitDatas>

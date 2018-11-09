@@ -63,7 +63,7 @@ cfg.item_transformers = {
     permissions = {"harvest.weed"}, -- you can add permissions
     r=0,g=200,b=0, -- color
     max_units=200,
-    units_per_minute=50,
+    units_per_minute=10,
     x=1057.7418212891,y=-3196.1962890625,z=-40.161308288574, -- pos
     radius=3, height=1.5, -- area
     recipes = {
@@ -84,7 +84,7 @@ cfg.item_transformers = {
     permissions = {"harvest.metanfetamina"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=50,
+    units_per_minute=10,
     x=1005.6223754883,y=-3195.7946777344,z=-38.9931640625, -- Localização
     radius=3, height=1.5, -- area
     recipes = {
@@ -105,7 +105,7 @@ cfg.item_transformers = {
     permissions = {"process.metanfetamina"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
     x=1005.7634887695,y=-3200.1235351563,z=-38.519580841064, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
@@ -128,7 +128,7 @@ cfg.item_transformers = {
     permissions = {"harvest.cocaina"}, -- Você pode adicionar permissões
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=50,
+    units_per_minute=10,
     x=510.53283691406,y=-1823.2603759766,z=28.502973556519,
     radius=5, height=3, -- area
     recipes = {
@@ -149,7 +149,7 @@ cfg.item_transformers = {
     permissions = {"process.cocaina"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
     x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- pos
     radius=5, height=4, -- area
     recipes = { -- items do menu
@@ -219,7 +219,7 @@ cfg.item_transformers = {
     name="Lavagem de Dinheiro",
     r=0,g=200,b=0, ---cores
     max_units=1000,
-    units_per_minute=1000,
+    units_per_minute=100,
     x=1122.6433105469,y=-3195.1062011719,z=-40.402393341064, -- coordenas mudas aqui
     radius=2.5, height=1.5, -- area
     recipes = {
@@ -303,7 +303,7 @@ cfg.item_transformers = {
     permissions = {"pick.toclonecards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor
     max_units=200,
-    units_per_minute=45,
+    units_per_minute=25,
     x=261.61892700195,y=204.29025268555,z=110.28720855713, -- Localização    
     radius=2.5, height=1.5, -- area
     recipes = {
@@ -324,7 +324,7 @@ cfg.item_transformers = {
     permissions = {"clone.cards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=45, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=25, -- unidades que o transformador ganha de volta por minuto
     x=-1054.0205078125,y=-230.26893615723,z=44.020957946777, -- pos -119.17678833008,-1486.1040039063,36.98205947876
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
@@ -453,7 +453,7 @@ cfg.item_transformers = {
     permissions = {"process.weed"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
-    units_per_minute=50, -- unidades que o transformador ganha de volta por minuto
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
     x=443.82019042969,y=-1737.138671875,z=29.220277786255, -- pos
     radius=5, height=3, -- area
     recipes = { -- items do menu

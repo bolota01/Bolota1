@@ -20,7 +20,7 @@ cfg = {}
 
 cfg.blips = false -- enable blips
 
-cfg.seconds = 420 -- seconds to rob
+cfg.seconds = 300 -- seconds to rob
 
 cfg.cooldown = 360 -- time between robbaries
 

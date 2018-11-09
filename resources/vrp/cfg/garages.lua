@@ -9,7 +9,7 @@ local cfg = {}
 -- _config: vtype, blipid, blipcolor, permissions (optional, only users with the permission will have access to the shop)
 
 cfg.rent_factor = 0.2 -- 10% of the original price if a rent //20% DO VALOR DE COMPRA
-cfg.sell_factor = 0.5 -- sell for 75% of the original price //70% DO VALOR DE COMPRA
+cfg.sell_factor = 0.7 -- sell for 75% of the original price //70% DO VALOR DE COMPRA
 
 cfg.garage_types = {
 	["GARAGEM"] = {
@@ -114,7 +114,8 @@ cfg.garage_types = {
     ["ke400"] = {"Kawasaki Eliminator 400SE by gosuke",0,"<img src='https://i.imgur.com/PFXN8qE.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["yss"] = {"Yamaha Star Stryker 2012 by MrKonDz",0,"<img src='https://i.imgur.com/TKpQImw.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["718"] = {"Porsche 718 Boxster",0,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"},
-    ["kuruma"] = {"Kuruma",0,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
+    ["kuruma"] = {"Kuruma",0,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["elegy2"] = {"Elegy 2",0,"<img src='https://i.imgur.com/zCEFUWx.png'/<br/>CAPACIDADE:50kg<br/>"}
 	},
 	["VENDA CARROS"] = {
 	_config = {vtype="car",radius=5.1,buy=true},
@@ -164,7 +165,8 @@ cfg.garage_types = {
     ["Cog55"] = {"Cog 55",148000,"<img src='https://i.imgur.com/m7SQqHd.jpg'/<br/>CAPACIDADE:50kg<br/>"},
     ["Primo2"] = {"Primo",142500,"<img src='https://i.imgur.com/w02Lic9.png'/<br/>CAPACIDADE:50kg<br/>"},
     ["Stretch"] = {"Stretch",251075,"<img src='https://i.imgur.com/myp6b1Z.png'/<br/>CAPACIDADE:50kg<br/>"},
-    ["kuruma"] = {"Kuruma",300000,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"}
+    ["kuruma"] = {"Kuruma",300000,"<img src='https://i.imgur.com/taW43qx.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["elegy2"] = {"Elegy 2",300000,"<img src='https://i.imgur.com/zCEFUWx.png'/<br/>CAPACIDADE:50kg<br/>"}
 	},
 	["VENDA MOTOS"] = {
 	_config = {vtype="car",radius=5.1,buy=true},
@@ -304,7 +306,12 @@ cfg.garage_types = {
 	_config = {blipid=371,blipcolor=47,vtype="airplane",buy=true},
 	["seashark"] = {"Speedophile Seashark <br/>JetSki",12000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
 	["jetmax"] = {"Shitzu Jetmax",200000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
-  	},  
+  	},
+    ["Aluguel Jetsky"] = {
+    _config = {vtype="airplane",buy=true},
+    ["seashark"] = {"JetSky 1",15000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["seashark3"] = {"JetSky 3",15000, "<img src='https://i.imgur.com/MWwNoFe.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
+    },   
   	["Táxi"] = {
 	_config = {vtype="car",blipid=198,blipcolor=5,permissions={"taxi.garagem"},buy=true},
 	["taxi"] = {"Táxi",0, "<img src='https://i.imgur.com/xre8r75.png'/><br/"}
@@ -315,7 +322,7 @@ cfg.garage_types = {
 	["towtruck2"] = {"Guincho",0, "<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
   	},   
   	["Motoboy"] = {
-	_config = {vtype="bike",blipid=355,blipcolor=4,permissions={"delivery.garagem"},buy=true},
+	_config = {vtype="bike",blipid=226,blipcolor=4,permissions={"delivery.garagem"},buy=true},
 	["enduro"] = {"Honda CG Fan 150",0, "<img src=''/><br/"}
   }
 }
@@ -337,7 +344,10 @@ cfg.garages = {
 	--{"GARAGEM",151.99737548828,-1309.5081787109,29.202308654785}, -- GARAGEM PABLETE
 	--{"GARAGEM",497.71151733398,-1335.3879394531,29.327247619629}, -- GARAGEM CARRIJO
 	{"GARAGEM",1220.6368408203,2710.6381835938,38.005794525146},
+    {"GARAGEM",447.73132324218,-995.88702392578,25.779796600342}, -- GARAGEM DP
+    {"GARAGEM",323.5057067871,-1478.1837158204,29.162942886352}, -- GARAGEM SAMU
 	--{"GARAGEM",1930.3410644531,3745.3630371094,32.30867767334},
+    {"GARAGEM",1046.4252929688,-789.7318725586,57.989654541016}, -- GARAGEM PRAÇA 2
 	{"GARAGEM",-138.35879516602,6353.3129882813,31.487783432007},
 	{"GARAGEM",-297.95516967773,-991.01470947266,31.080604553223},
 	{"GARAGEM",41.892395019531,-869.02374267578,30.000281799316},
@@ -363,9 +373,11 @@ cfg.garages = {
     {"GARAGEM",-232.66966247559,-1166.4450683594,22.500797149658},
 	{"GARAGEM",-795.96862792969,304.84030151367,85.700485229492},
 	{"GARAGEM",1728.5637207031,3313.8908691406,41.223480224609},
+    {"Aluguel Jetsky",1100.9748535156,-556.74517822266,55.736450195312}, -- Aluguel jetsky
 	{"Bicicletário",-989.34674072266,-2751.9240722656,20.169269561768}, -- BICICLETÁRIO
 	{"Lixão",1065.9232177734,-2468.2780761719,28.742719650269},
 	{"CORREIOS S/A",68.724258422852,119.7261428833,79.242874084473},
+    {"Bicicletário",1018.071472168,-697.19561767578,56.89158630371},
 	{"Táxi",915.37152099609,-164.62077331543,74.55965423584},
 	{"Motoboy",118.25058746338,-1485.9897460938,29.141597747803},
 	{"Mecânico",407.83251953125,-1634.0269775391,29.291940689087},
