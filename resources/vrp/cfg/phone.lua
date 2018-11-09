@@ -50,7 +50,7 @@ cfg.services = {
     alert_time = 300, --Tempo do alerta
     alert_permission = "puta.service", --Perm do grupo
     alert_notify = "~y~[Garota de Programa] Voce tem um Chamado para um serviço:~n~~s~",
-    notify = "~g~Você chamou um prostituta.",
+    notify = "~g~Você chamou uma prostituta.",
     answer_notify = "~g~Uma Prostituta está a caminho."
   },  
   ["Taxi"] = {
