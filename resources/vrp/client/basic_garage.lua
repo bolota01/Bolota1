@@ -277,8 +277,8 @@ end
 function tvRP.setMod(veh, myveh)
   local neon = myveh.neon or false
 
-  if veh.wheeltype and veh.wheeltype ~= -1 then
-    SetVehicleWheelType(veh, veh.wheeltype)
+  if myveh.wheeltype and myveh.wheeltype ~= -1 then
+    SetVehicleWheelType(veh, myveh.wheeltype)
   end
 
   for key, value in pairs(myveh) do
