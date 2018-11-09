@@ -112,7 +112,7 @@ cfg.market_types = {
   },
   ["tools"] = {
     _config = {blipid=402, blipcolor=2, permissions={"shop.mecanico"}},
-    ["repairkit"] = 5
+    ["repairkit"] = 0
   }
 }
 
