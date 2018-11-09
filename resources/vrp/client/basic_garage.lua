@@ -276,6 +276,7 @@ end
 
 function tvRP.setMod(veh, myveh)
   local neon = myveh.neon or false
+  SetVehicleModKit(veh,0)
 
   if myveh.wheeltype and myveh.wheeltype ~= -1 then
     SetVehicleWheelType(veh, myveh.wheeltype)
