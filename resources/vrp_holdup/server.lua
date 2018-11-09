@@ -66,7 +66,7 @@ AddEventHandler('es_holdup:rob', function(robb)
 		  end
 		  TriggerClientEvent('chatMessage', -1, 'AVISO', {255, 0, 0}, "Assalto em Andamento em ^2" .. store.nameofstore)
 		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Voce iniciou um Assalto a: ^2" .. store.nameofstore .. "^0, Não se afaste muito deste ponto!")
-		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Segure por ^12 ^0minutes, e escape da Policia Vivo, e o Dinheiro é Seu!")
+		  TriggerClientEvent('chatMessage', player, 'SYSTEM', {255, 0, 0}, "Segure por ^15 ^0minutes, e escape da Policia Vivo, e o Dinheiro é Seu!")
 		  TriggerClientEvent('es_holdup:currentlyrobbing', player, robb)
 		  stores[robb].lastrobbed = os.time()
 		  robbers[player] = robb
