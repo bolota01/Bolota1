@@ -180,10 +180,6 @@ end}
 local police_weapons_federal = {}
 police_weapons_federal["Equip"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-    ["WEAPON_SPECIALCARBINE"] = {ammo=200},
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
-    ["WEAPON_STUNGUN"] = {ammo=200},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
