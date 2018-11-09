@@ -196,7 +196,7 @@ for group,vehicles in pairs(vehicle_groups) do
       MySQL.query("vRP/get_vehicles", {user_id = user_id}, function(_pvehicles, affected)
         local pvehicles = {}
         for k,v in pairs(_pvehicles) do
-          pvehicles[string.lower(v.vehicle)] = true
+          pvehicles[v.vehicle] = true
         end
 
         -- for each existing vehicle in the garage group
@@ -356,7 +356,7 @@ end, lang.vehicle.detach_trailer.description()}
 -- detach towtruck
 veh_actions[lang.vehicle.detach_towtruck.title()] = {function(user_id,player,vtype,name)
   vRPclient.vc_detachTowTruck(player, {vtype})
-end, lang.vehicle.detach_towtruck.description()}
+end, lang.vehicle.detach_towtruck.desacription()}
 
 -- detach cargobob
 veh_actions[lang.vehicle.detach_cargobob.title()] = {function(user_id,player,vtype,name)

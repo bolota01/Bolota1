@@ -276,7 +276,11 @@ end
 
 function tvRP.setMod(veh, myveh)
   local neon = myveh.neon or false
-  SetVehicleModKit(veh,0)
+
+  if veh.wheeltype and veh.wheeltype ~= -1 then
+    SetVehicleWheelType(veh, veh.wheeltype)
+  end
+
   for key, value in pairs(myveh) do
     if key == "mods" then
       for _key, _value in pairs(value) do
@@ -286,15 +290,13 @@ function tvRP.setMod(veh, myveh)
               SetVehicleModKit(veh,0)
             end
           end
-          if _key == "22" then
+          if _key == "22" or _key == "18" then
             ToggleVehicleMod(veh, tonumber(_key), _value["mod"])
           else
             SetVehicleMod(veh, tonumber(_key), _value["mod"], _value["variation"] or true)
           end
         end
       end
-    elseif key == "wheeltype" then
-      SetVehicleWheelType(veh, value)
     elseif key == "neoncolor" then
       SetVehicleNeonLightEnabled(veh,0,neon)
 			SetVehicleNeonLightEnabled(veh,1,neon)
