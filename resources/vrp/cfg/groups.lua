@@ -559,6 +559,7 @@ cfg.groups = {
     ["Doutor"] = {
     _config = { gtype = "job" },
     "emergency.revive",
+    "medico.receita",
     "ems.farmacia",
     "player.group.add",
     "mission.emergency.transfer",
