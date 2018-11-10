@@ -234,6 +234,27 @@ cfg.item_transformers = {
       }
     }
   },
+   -- Receita Médica
+  {
+    name="Receita Médica",
+    permissions = {"medico.receita"},
+    r=0,g=200,b=0, ---cores
+    max_units=10,
+    units_per_minute=2,
+    x=229.24058532714,y=-1368.681274414,z=39.534378051758, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Receita Médica"] = { -- action name
+       description="Preenchendo Receita Médica.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["receitam"] = 1,
+        } -- items given per unit
+      }
+    }
+  },
    -- Correios
   {
     name="Pegar Encomendas", -- menu name
