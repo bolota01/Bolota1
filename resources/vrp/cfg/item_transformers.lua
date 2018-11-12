@@ -234,6 +234,27 @@ cfg.item_transformers = {
       }
     }
   },
+   -- Receita Médica
+  {
+    name="Receita Médica",
+    permissions = {"medico.receita"},
+    r=0,g=200,b=0, ---cores
+    max_units=10,
+    units_per_minute=2,
+    x=229.24058532714,y=-1368.681274414,z=39.534378051758, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Receita Médica"] = { -- action name
+       description="Preenchendo Receita Médica.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["receitam"] = 1,
+        } -- items given per unit
+      }
+    }
+  },
    -- Correios
   {
     name="Pegar Encomendas", -- menu name
@@ -405,28 +426,7 @@ cfg.item_transformers = {
         }
       }
     }
-  }, 
-  {
-    name="Venda de Diamante", -- Nome do menu
-    permissions = {"vender.diamante"}, -- Você pode adicionar permissões
-    r=0,g=200,b=0, -- cor
-    max_units=500,
-    units_per_minute=50,
-    x=-630.34429931641,y=-229.12178039551,z=38.057052612305, -- Localização
-    radius=3.5, height=1.5, -- area
-    recipes = {
-      ["Vender Diamante"] = { -- Nome da ação
-        description="Vendendo Diamante", -- Descrição do produto a se colher
-        in_money=0, -- Dinheiro dado por unidade
-        out_money=300, -- Dinheiro ganho por unidade
-        reagents={
-         ["diamante"] = 1
-        }, -- Itens colhidos por unidade
-        products={ -- Nome do produto fornecido por unidade
-        }
-      }
-    }
-  }, 
+  },  
   {
     name="OAB", -- menu name
     permissions = {"carteira.oab"}, -- you can add permissions

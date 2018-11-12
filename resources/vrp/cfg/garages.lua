@@ -108,7 +108,7 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",0,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",0,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",0,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    ["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    --["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
     ["hdfb"] = {"Harley Davidson Fat Boy Lo Vintage",0,"<img src='https://i.imgur.com/LDkSGxN.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["hdkn"] = {"Harley-Davidson Knucklehead",0,"<img src='https://i.imgur.com/nKe5THQ.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["ke400"] = {"Kawasaki Eliminator 400SE by gosuke",0,"<img src='https://i.imgur.com/PFXN8qE.jpg'/><br/>CAPACIDADE:10kg<br/>"},
@@ -211,7 +211,7 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",45000,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",600000,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",1500000,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    ["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    --["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
     ["718"] = {"Porsche 718 Boxster",1500000,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"}
     },
     ["REVENDA MOTOS"] = {
@@ -303,12 +303,12 @@ cfg.garage_types = {
 	["cuban800"] = {"Western Cuban 800 ",4000000, "<img src='' /><br/>CAPACIDADE: 500kg|LOTAÇÃO: PILOTO + 1 PASSAGEIRO"}
 	},
 	["MARINA"] = {
-	_config = {blipid=371,blipcolor=47,vtype="airplane",buy=true},
+	_config = {blipid=371,blipcolor=47,vtype="boats",buy=true},
 	["seashark"] = {"Speedophile Seashark <br/>JetSki",12000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
 	["jetmax"] = {"Shitzu Jetmax",200000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
   	},
     ["Aluguel Jetsky"] = {
-    _config = {vtype="airplane",buy=true},
+    _config = {blipid=471,blipcolor=57,vtype="airplane",buy=true},
     ["seashark"] = {"JetSky 1",15000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
     ["seashark3"] = {"JetSky 3",15000, "<img src='https://i.imgur.com/MWwNoFe.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
     },   
@@ -344,10 +344,10 @@ cfg.garages = {
 	--{"GARAGEM",151.99737548828,-1309.5081787109,29.202308654785}, -- GARAGEM PABLETE
 	--{"GARAGEM",497.71151733398,-1335.3879394531,29.327247619629}, -- GARAGEM CARRIJO
 	{"GARAGEM",1220.6368408203,2710.6381835938,38.005794525146},
-    {"GARAGEM",447.73132324218,-995.88702392578,25.779796600342}, -- GARAGEM DP
+    {"GARAGEM",459.01055908204,-1014.8786621094,28.22044998169}, -- GARAGEM DP
     {"GARAGEM",323.5057067871,-1478.1837158204,29.162942886352}, -- GARAGEM SAMU
 	--{"GARAGEM",1930.3410644531,3745.3630371094,32.30867767334},
-    {"GARAGEM",1046.4252929688,-789.7318725586,57.989654541016}, -- GARAGEM PRAÇA 2
+    {"GARAGEM",1046.4252929688,-789.7318725586,58.001654541016}, -- GARAGEM PRAÇA 2
 	{"GARAGEM",-138.35879516602,6353.3129882813,31.487783432007},
 	{"GARAGEM",-297.95516967773,-991.01470947266,31.080604553223},
 	{"GARAGEM",41.892395019531,-869.02374267578,30.000281799316},
@@ -373,7 +373,7 @@ cfg.garages = {
     {"GARAGEM",-232.66966247559,-1166.4450683594,22.500797149658},
 	{"GARAGEM",-795.96862792969,304.84030151367,85.700485229492},
 	{"GARAGEM",1728.5637207031,3313.8908691406,41.223480224609},
-    {"Aluguel Jetsky",1100.9748535156,-556.74517822266,55.736450195312}, -- Aluguel jetsky
+    {"Aluguel Jetsky",1100.9748535156,-556.74517822266,56.100450195312}, -- Aluguel jetsky
 	{"Bicicletário",-989.34674072266,-2751.9240722656,20.169269561768}, -- BICICLETÁRIO
 	{"Lixão",1065.9232177734,-2468.2780761719,28.742719650269},
 	{"CORREIOS S/A",68.724258422852,119.7261428833,79.242874084473},
