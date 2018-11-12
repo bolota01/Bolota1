@@ -19,9 +19,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["sidearms"] = {
@@ -34,9 +34,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["submachineguns"] = {
@@ -49,9 +49,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["rifles"] = {
@@ -64,9 +64,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["heavymachineguns"] = {
@@ -79,9 +79,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["snipers"] = {
@@ -94,9 +94,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["carabines"] = {
@@ -109,9 +109,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["shotguns"] = {
@@ -124,9 +124,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["explosives"] = {
@@ -139,9 +139,14 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
+  },
+
+  ["Loja de Paraquedas"] = {
+    _config = {blipid=94,blipcolor=50},
+    ["GADGET_PARACHUTE"] = {"Paraquedas",2000,0,""}
   },
 
   ["basic"] = {
@@ -154,9 +159,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   }
 }
 
@@ -166,6 +171,7 @@ cfg.gunshops = {
   {"melees", 1692.41, 3758.22, 34.7053},
   {"sidearms", 252.696, -48.2487, 69.941},
   {"carabines", 844.299, -1033.26, 28.1949},
+  {"Loja de Paraquedas", 501.35134887695,5595.5263671875,795.90059179688},
   {"rifles", -331.624, 6082.46, 31.4548},
   {"submachineguns", -664.147, -935.119, 21.8292},
   {"sidearms", -1305.45056152344,-394.0068359375,36.6957740783691},

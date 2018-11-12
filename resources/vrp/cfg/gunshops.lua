@@ -11,18 +11,17 @@ local cfg = {}
 cfg.gunshop_types = {
   [""] = {
     _config = {blipid=110,blipcolor=75},
-    ["WEAPON_BOTTLE"] = {"Garrafa",600,0,""},
-    ["WEAPON_BAT"] = {"Taco de beisebol",1500,0,""},
+    ["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
+    ["WEAPON_BAT"] = {"Taco de Beisebol",1500,0,""},
     ["WEAPON_HAMMER"] = {"Martelo",1500,0,""},
     ["WEAPON_GOLFCLUB"] = {"Taco de Golf",1500,0,""},
-    ["WEAPON_POOLCUE"] = {"Taco de Sinuca",1500,0,""},
+    ["WEAPON_SWITCHBLADE"] = {"Canivete",1500,0,""},
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
-    ["WEAPON_KNUCKLE"] = {"Soco-Ingles",1000,0,""},
+    ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,15,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,30,""},
-    ["WEAPON_ASSAULTRIFLE"] = {"Ak-47",150000,50,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
   ["Loja da Biqueira"] = {
     _config = {blipid=110,blipcolor=75},
