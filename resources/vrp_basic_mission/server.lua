@@ -12,6 +12,8 @@ vRP = Proxy.getInterface("vRP")
 vRPclient = Tunnel.getInterface("vRP","vRP_basic_mission")
 Mclient = Tunnel.getInterface("vRP_basic_mission","vRP_basic_mission")
 
+local tasks_pendent = {}
+
 function task_mission()
   -- REPAIR
   for k,v in pairs(cfg.repair) do -- each repair perm def
@@ -32,19 +34,25 @@ function task_mission()
             local step = {
               text = lang.repair({v.title}).."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
-                if vRP.tryGetInventoryItem({user_id,"repairkit",1,false}) then
-                  vRPclient.playAnim(player,{false,{task="WORLD_HUMAN_WELDING"},false})
-                  SetTimeout(15000, function()
-                    vRP.nextMissionStep({player})
-					vRP.giveInventoryItem({user_id,"repairkit",1,false})
-                    vRPclient.stopAnim(player,{false})
+                if tasks_pendent[user_id] == nil then
+                  if vRP.tryGetInventoryItem({user_id,"repairkit",1,false}) then
+                    vRPclient.playAnim(player,{false,{task="WORLD_HUMAN_WELDING"},false})
+                    tasks_pendent[user_id] = true
+                    SetTimeout(15000, function()
+                      tasks_pendent[user_id] = nil
+                      vRP.nextMissionStep({player})
+                      --vRP.giveInventoryItem({user_id,"repairkit",1,false})
+                      vRPclient.stopAnim(player,{false})
 
-                    -- last step
-                    if i == v.steps then
-                      vRP.giveMoney({user_id,v.reward})
-                      vRPclient.notify(player,{glang.money.received({v.reward})})
-                    end
-                  end)
+                      -- last step
+                      if i == v.steps then
+                        vRP.giveMoney({user_id,v.reward})
+                        vRPclient.notify(player,{glang.money.received({v.reward})})
+                      end
+                    end)
+                  end
+                else
+                  vRPclient.notify(player, {"A tarefa ainda está em andamento!"})
                 end
               end,
               position = v.positions[math.random(1,#v.positions)]
@@ -78,18 +86,24 @@ function task_mission()
             local step = {
               text = v.title.."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
-                if vRP.tryGetInventoryItem({user_id,"bank_money",1,true}) then
-                  vRPclient.playAnim(player,{false,{task="CODE_HUMAN_POLICE_INVESTIGATE"},false})
-                  SetTimeout(15000, function()
-                    vRP.nextMissionStep({player})
-                    vRPclient.stopAnim(player,{false})
+                if tasks_pendent[user_id] == nil then
+                  if vRP.tryGetInventoryItem({user_id,"bank_money",1,true}) then
+                    tasks_pendent[user_id] = true
+                    vRPclient.playAnim(player,{false,{task="CODE_HUMAN_POLICE_INVESTIGATE"},false})
+                    SetTimeout(15000, function()
+                      tasks_pendent[user_id] = nil
+                      vRP.nextMissionStep({player})
+                      vRPclient.stopAnim(player,{false})
 
-                    -- last step
-                    if i == v.steps then
-                      vRP.giveMoney({user_id,v.reward})
-                      vRPclient.notify(player,{glang.money.received({v.reward})})
-                    end
-                  end)
+                      -- last step
+                      if i == v.steps then
+                        vRP.giveMoney({user_id,v.reward})
+                        vRPclient.notify(player,{glang.money.received({v.reward})})
+                      end
+                    end)
+                  end
+                else
+                  vRPclient.notify(player, {"A tarefa ainda está em andamento!"})
                 end
               end,
               position = v.positions[math.random(1,#v.positions)]
