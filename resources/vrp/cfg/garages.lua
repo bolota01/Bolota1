@@ -232,7 +232,7 @@ cfg.garage_types = {
     },
 	["Transportador de Valores"] = {
 	_config = {blipid=67,blipcolor=3,vtype="car",permissions={"bankdriver.vehicle"},buy=true},
-	["stockade"] = {"Carro Forte",0,"<img src='https://i.imgur.com/T2coJe2.png'/><br/"}
+	["stockade"] = {"Carro Forte",0,"<img src='https://i.imgur.com/T2coJe2.png'/><br/>CAPACIDADE:90kg<br/>"}
 	},
 	["VIP BRONZE"] = {
 	_config = {vtype="car",permissions={"garagem.vipbronze"},buy=true},
@@ -308,7 +308,7 @@ cfg.garage_types = {
 	["jetmax"] = {"Shitzu Jetmax",200000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
   	},
     ["Aluguel Jetsky"] = {
-    _config = {blipid=471,blipcolor=57,vtype="airplane",buy=true},
+    _config = {blipid=371,blipcolor=57,vtype="boats",buy=true},
     ["seashark"] = {"JetSky 1",15000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
     ["seashark3"] = {"JetSky 3",15000, "<img src='https://i.imgur.com/MWwNoFe.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
     },   
