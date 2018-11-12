@@ -98,7 +98,9 @@ cfg.vehicle_chest_weights = {
   ["ke400"] = 10,
   ["yss"] = 10,
   ["718"] = 30,
-  ["trash"] = 100
+  ["trash"] = 100,
+  ["stockade"] = 90,
+  ["blista"] = 60
 }
 
 return cfg
