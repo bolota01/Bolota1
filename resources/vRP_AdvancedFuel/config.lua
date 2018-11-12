@@ -57,5 +57,5 @@ text_y = 0.792
 
 electricityPrice = 1 -- NOT RANOMED !!
 petrolCanPrice = 250
-randomPrice = true --Random the price of each stations
-price = 25 --If random price is on False, set the price here for 1 liter
+randomPrice = false --Random the price of each stations
+price = 5 --If random price is on False, set the price here for 1 liter
