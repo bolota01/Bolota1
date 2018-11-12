@@ -22,7 +22,7 @@ cfg.blips = false -- enable blips
 
 cfg.seconds = 300 -- seconds to rob
 
-cfg.cooldown = 360 -- time between robbaries
+cfg.cooldown = 600 -- time between robbaries
 
 cfg.cops = 2 -- minimum cops online
 cfg.permission = "holdup.police" -- permission given to cops
