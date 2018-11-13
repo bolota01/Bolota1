@@ -54,13 +54,6 @@ cfg.static_menu_types = {
 	    "coronel.weapons"
 	  }
 	},
-	["police_weapons_federal"] = {
-      title = "Arsenal", 
-      blipcolor = 0,
-	  permissions = {
-	    "policiafederal.weapons"
-	  }
-	},
 	["police_weapons_aguia"] = {
       title = "Arsenal Águia", 
       blipcolor = 0,
@@ -104,7 +97,6 @@ cfg.static_menus = {
   {"police_weapons", 461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons_coronel", 461.46166992188,-981.07891845703,30.689590454102},
   {"police_weapons_capitao", 461.46166992188,-981.07891845703,30.689590454102},
-  {"police_weapons_federal", 459.84631347656,-979.43682861328,30.68959236145},
   {"police_weapons_aguia", 459.12884521484,-983.08721923828,30.689588546753},
   {"samu_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
   {"medico_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
