@@ -152,7 +152,7 @@ local itemtr_laboratoryarmasfinal = {
     name="Oficina de armas", -- menu name
     permissions = {"build.gun"}, -- you can add permissions
     r=0,g=255,b=0, -- color
-    max_units=10,
+    max_units=5,
 	units_per_minute=1,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
@@ -168,10 +168,10 @@ local itemtr_laboratoryarmasfinal = {
     },
     ["Fabricar Arma"] = { -- action name
         description="Contruindo arma.", -- action description
-        in_money=1500, -- money taken per unit
+        in_money=10500, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
-          ["assaultrifle_parts"] = 1
+          ["assaultrifle_parts"] = 5
         }, -- items taken per unit
         products={ -- items given per unit
           ["wbody|WEAPON_ASSAULTRIFLE"] = 1
@@ -179,7 +179,7 @@ local itemtr_laboratoryarmasfinal = {
     },
     ["Fabricar Munição de pistola"] = { -- action name
         description = "Fabricando munição.", -- action description
-        in_money=0, -- money taken per unit
+        in_money=250, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={}, -- items taken per unit
         products={
@@ -188,7 +188,7 @@ local itemtr_laboratoryarmasfinal = {
     },
     ["Fabricar Munição de SMG"] = { -- action name
         description = "Fabricando munição.", -- action description
-        in_money=0, -- money taken per unit
+        in_money=400, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={}, -- items taken per unit
         products={
@@ -197,7 +197,7 @@ local itemtr_laboratoryarmasfinal = {
     },
     ["Fabricar Munição de rifle"] = { -- action name
         description = "Fabricando munição.", -- action description
-        in_money=0, -- money taken per unit
+        in_money=700, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={}, -- items taken per unit
         products={
@@ -543,9 +543,9 @@ cfg.slot_types = {
       {"entry",997.58605957031,-3200.5446777344,-36.393684387207},
       {"chest",1012.0529174804,-3202.4477539062,-38.993144989014, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1002.0233154297,-3194.8701171875,-38.993156433105},
-    {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656},
+    {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
-    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
     }
   },
   ["galpaoMACONHA"] = {
@@ -553,9 +553,9 @@ cfg.slot_types = {
       {"entry",1065.3881835938,-3183.4870605469,-39.163551330566},
       {"chest",1040.1483154296,-3194.4418945312,-37.992839813232, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1060.2242431641,-3181.9777832031,-39.164844512939},
-    {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749},
+    {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
-    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
     }
   },
   --[[["galpaoCOMUM1"] = {
@@ -580,9 +580,9 @@ cfg.slot_types = {
       {"entry",1088.573852539,-3188.13671875,-38.993476867676},
       {"chest",1099.634399414,-3194.421875,-38.993469238282, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1087.2431640625,-3197.9440917968,-38.993469238282},
-    {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282},
+    {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
-    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
     }
   }
   --[["galpaoLAVAGEM"] = {
