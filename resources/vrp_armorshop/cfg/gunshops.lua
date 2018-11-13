@@ -39,6 +39,21 @@ cfg.gunshop_types = {
     ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
+  ["Loja da Polícia"] = {
+    _config = {blipid=110,blipcolor=75,permissions={"policiafederal.weapons"}},
+    --["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
+    --["WEAPON_BAT"] = {"Taco de Beisebol",1500,0,""},
+    --["WEAPON_HAMMER"] = {"Martelo",1500,0,""},
+    --["WEAPON_GOLFCLUB"] = {"Taco de Golf",1500,0,""},
+    --["WEAPON_SWITCHBLADE"] = {"Canivete",1500,0,""},
+    --["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
+    --["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
+    --["WEAPON_KNIFE"] = {"Faca",1500,0,""},
+    --["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
+    ["ARMOR"] = {"Colete",0,0,""}
+    --["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
+  },
+
   --[[["submachineguns"] = {
     _config = {blipid=110,blipcolor=75},
     ["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
@@ -170,6 +185,7 @@ cfg.gunshop_types = {
 cfg.gunshops = {
   {"Loja de Armas 01", 1693.6977539063,3759.8000488281,34.70531463623},
   {"Loja de Armas 02", 251.91516113281,-49.788932800293,69.941070556641},
+  {"Loja da Polícia", 459.84631347656,-979.43682861328,30.68959236145},
   --{"carabines", 844.299, -1033.26, 28.1949},
   {"Loja de Paraquedas", 501.35134887695,5595.5263671875,795.90059179688},
   {"Loja de Armas 03", -330.2470703125,6083.9926757813,31.454767227173},
