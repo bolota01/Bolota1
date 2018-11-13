@@ -127,7 +127,7 @@ local itemtr_laboratorydirtymoney = {
     }
 }
 
-local itemtr_laboratoryarmas = {
+--[[local itemtr_laboratoryarmas = {
 	name="Laboratório", -- menu name
 	permissions = {"galpao.armas"},
 	r=0,g=255,b=0, -- color
@@ -146,7 +146,7 @@ local itemtr_laboratoryarmas = {
         }
     }
     }
-}
+}- ]]
 
 local itemtr_laboratoryarmasfinal = {
     name="Oficina de armas", -- menu name
@@ -157,7 +157,16 @@ local itemtr_laboratoryarmasfinal = {
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
-      ["Fabricar Arma"] = { -- action name
+    ["Coletar peça Rifle"] = { -- action name
+        description = "Coletando peça", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["assaultrifle_parts"] = 1
+      }
+    },
+    ["Fabricar Arma"] = { -- action name
         description="Contruindo arma.", -- action description
         in_money=1500, -- money taken per unit
         out_money=0, -- money earned per unit
@@ -388,11 +397,11 @@ cfg.slot_types = {
   },
   ["plantation_flat_2"] = {
     {
-      {"entry",2453.3798828125,4970.5024414063,46.810581207275},
-      {"chest",2432.1650390625,4963.0649414063,46.936447143555, _config = {weight=3000}},
-      {"wardrobe",2442.6887207031,4971.50390625,46.810600280762}
-      --{"gametable",2456.3798828125,4982.4672851563,46.810009002686}
-      --{"itemtr", _config = itemtr_laboratory, 2433.2919921875,4968.62109375,42.347625732422}
+      {"entry",-262.67794799804,-713.70104980468,71.032752990722},
+      {"chest",-260.37762451172,-710.27142333984,71.0326461792, _config = {weight=3000}},
+      {"wardrobe",-268.72570800782,-711.02044677734,74.130722045898},
+      {"gametable",-261.9252319336,-706.13092041016,69.073631286622},
+      {"itemtr", _config = itemtr_study, -271.97262573242,-701.15850830078,71.033805847168}
     }
   },
   ["Rich_Home"] = {
@@ -532,28 +541,32 @@ cfg.slot_types = {
   ["galpaoMETA"] = {
     {
       {"entry",997.58605957031,-3200.5446777344,-36.393684387207},
-      {"chest",998.51953125,-3201.1098632813,-38.993125915527, _config = {weight=10000}},
+      {"chest",1012.0529174804,-3202.4477539062,-38.993144989014, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1002.0233154297,-3194.8701171875,-38.993156433105},
-    {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
+    {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656},
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
     }
   },
   ["galpaoMACONHA"] = {
     {
       {"entry",1065.3881835938,-3183.4870605469,-39.163551330566},
-      {"chest",1043.0834960938,-3192.6547851563,-37.905155181885, _config = {weight=10000}},
+      {"chest",1040.1483154296,-3194.4418945312,-37.992839813232, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1060.2242431641,-3181.9777832031,-39.164844512939},
-    {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
+    {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749},
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
     }
   },
-  ["galpaoCOMUM1"] = {
+  --[[["galpaoCOMUM1"] = {
     {
       {"entry",1049.3609619141,-3097.0930175781,-38.99995803833},
       {"chest",1057.7144775391,-3100.5285644531,-38.999935150146, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1049.0549316406,-3100.5158691406,-38.999935150146}
     --{"itemtr", _config = itemtr_laboratory, 1087.8421630859,-3198.7846679688,-38.993469238281}
     }
-  },
-  ["galpaoARMAS"] = {
+  }, - ]]
+  --[[["galpaoARMAS"] = {
     {
       {"entry",992.91564941406,-3097.7041015625,-38.995861053467},
       {"chest",1013.3209838867,-3104.93359375,-38.999862670898, _config = {weight=10000}},
@@ -561,23 +574,25 @@ cfg.slot_types = {
     {"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
     {"itemtr", _config = itemtr_laboratoryarmasfinal, 1003.7243652344,-3111.826171875,-38.999904632568}
     }
-  },
+  }, - ]]
   ["galpaoCOCA"] = {
     {
-      {"entry",1088.0946044922,-3099.3171386719,-38.99995803833},
-      {"chest",1095.1428222656,-3098.7829589844,-38.99995803833, _config = {weight=10000}},
-      {"itemtr", _config = itemtr_study, 1088.3505859375,-3101.4594726563,-38.99995803833},
-    {"itemtr", _config = itemtr_laboratorycocaina, 1100.9782714844,-3101.7268066406,-38.99995803833}
+      {"entry",1088.573852539,-3188.13671875,-38.993476867676},
+      {"chest",1099.634399414,-3194.421875,-38.993469238282, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1087.2431640625,-3197.9440917968,-38.993469238282},
+    {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282},
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    {"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
     }
-  },
-  ["galpaoLAVAGEM"] = {
+  }
+  --[["galpaoLAVAGEM"] = {
     {
       {"entry",756.70123291016,-914.62567138672,25.42293548584},
       {"chest",742.8193359375,-915.62170410156,25.02338218689, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 756.84790039063,-918.20611572266,25.42293548584},
     {"itemtr", _config = itemtr_laboratorydirtymoney, 742.68078613281,-926.21789550781,24.979751586914}
     }
-  }
+  } - ]]
 }
   --["Expensive_flat"] = {
     --{
@@ -782,11 +797,11 @@ cfg.homes = {
     blipid=374,
     blipcolor=11
   },
-  ["Fazenda"] = {
+  ["Apartamento do Prefeito"] = {
     slot = "plantation_flat_2",
-    entry_point = {2452.4807128906,4961.3364257813,45.502922058105},
-    buy_price = 2000000,
-    sell_price = 1400000,
+    entry_point = {-271.71688842774,-694.37475585938,34.276432037354},
+    buy_price = 10000000,
+    sell_price = 8000000,
     max = 1,
     blipid=374,
     blipcolor=11
@@ -865,29 +880,35 @@ cfg.homes = {
   --},
   ["Galpao 01"] = { --Metafetamina
     slot = "galpaoMETA",
-    entry_point = {1454.4614257813,-1651.6026611328,66.99479675293},
+    entry_point = {112.7774887085,-1978.2202148438,20.96291732788},
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
+    blipid=374, 
+    blipcolor=55,
     add_group = "galpaometannfetamina"
   },
   ["Galpao 02"] = { --Maconha
     slot = "galpaoMACONHA",
-    entry_point = {2846.6674804688,4449.4375,48.518280029297},
+    entry_point = {-144.47244262696,-1429.5373535156,30.89368057251},
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
+    blipid=374, 
+    blipcolor=55,
     add_group = "galpaocannabis"
   },
   ["Galpao 03"] = { --Cocaina
     slot = "galpaoCOCA",
-    entry_point = {-1461.5863037109,-382.83508300781,38.745960235596},
+    entry_point = {345.75802612304,-2066.5063476562,20.946607589722},
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
+    blipid=374, 
+    blipcolor=55,
     add_group = "galpaococainna"
-  },
-  ["Galpao 04"] = {
+  }
+  --[[["Galpao 04"] = {
     slot = "galpaoARMAS",
     entry_point = {939.76989746094,-1490.833984375,30.092649459839},
     buy_price = 5000000,
@@ -909,7 +930,7 @@ cfg.homes = {
     sell_price = 3500000,
     max = 1,
     add_group = "galpaodirtymoney"
-  }
+  } - ]]
 }
 
 return cfg
