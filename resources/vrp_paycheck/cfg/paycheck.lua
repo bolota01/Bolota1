@@ -8,7 +8,7 @@ cfg.post = "." -- message that will show after payment
 
 cfg.bank = true -- if true money goes to bank, false goes to wallet
 
-cfg.minutes_paycheck = 30 -- minutes between payment for paycheck
+cfg.minutes_paycheck = 45 -- minutes between payment for paycheck
 cfg.minutes_bill = 60 -- minutes between withdrawal for bill
 
 cfg.paycheck_title_picture = "Banco do Brasil" -- define title for paycheck notification picture
@@ -18,21 +18,22 @@ cfg.bill_picture = "CHAR_MP_MORS_MUTUAL" -- define bill notification picture wan
 
 cfg.paycheck = { -- ["permission"] = paycheck
   --pm
-  ["recruta.paycheck"] = 3000,
-  ["soldado.paycheck"] = 4000,
-  ["cabo.paycheck"] = 5000,
-  ["sargento.paycheck"] = 6000,
-  ["tenente.paycheck"] = 7000,
-  ["capitao.paycheck"] = 8000,
-  ["coronel.paycheck"] = 9000,
-  ["comandantegeral.paycheck"] = 11000,
-  ["aguia.paycheck"] = 10000,
+  ["recruta.paycheck"] = 4000,
+  ["soldado.paycheck"] = 7000,
+  ["cabo.paycheck"] = 9000,
+  ["sargento.paycheck"] = 11000,
+  ["tenente.paycheck"] = 13000,
+  ["capitao.paycheck"] = 15000,
+  ["coronel.paycheck"] = 17000,
+  ["comandantegeral.paycheck"] = 19000,
+  ["aguia.paycheck"] = 13000,
   --samu
-  ["doutor.paycheck"] = 11000,
-  ["medicochefe.paycheck"] = 8000,
-  ["medico.paycheck"] = 6000,
-  ["paramedico.paycheck"] = 5000,
-  ["socorrista.paycheck"] = 3000,
+  ["chefe.paycheck"] = 19000,
+  ["doutor.paycheck"] = 17000,
+  ["medicochefe.paycheck"] = 15000,
+  ["medico.paycheck"] = 13000,
+  ["paramedico.paycheck"] = 9000,
+  ["socorrista.paycheck"] = 5000,
   --legal
   ["correios.paycheck"] = 1000,
   ["minerar.paycheck"] = 1000,
@@ -59,6 +60,7 @@ cfg.bill = { -- ["permission"] = withdrawal
   ["comandantegeral.paycheck"] = 200,
   ["aguia.paycheck"] = 200,
   --samu
+  ["chefe.paycheck"] = 200,
   ["doutor.paycheck"] = 200,
   ["medicochefe.paycheck"] = 200,
   ["medico.paycheck"] = 200,
