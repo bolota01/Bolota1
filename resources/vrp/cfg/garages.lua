@@ -108,7 +108,7 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",0,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",0,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",0,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    --["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    ["z4"] = {"Bmw Z4",0,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
     ["hdfb"] = {"Harley Davidson Fat Boy Lo Vintage",0,"<img src='https://i.imgur.com/LDkSGxN.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["hdkn"] = {"Harley-Davidson Knucklehead",0,"<img src='https://i.imgur.com/nKe5THQ.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["ke400"] = {"Kawasaki Eliminator 400SE by gosuke",0,"<img src='https://i.imgur.com/PFXN8qE.jpg'/><br/>CAPACIDADE:10kg<br/>"},
@@ -211,7 +211,7 @@ cfg.garage_types = {
     ["206"] = {"Peugeot 206",45000,"<img src='https://i.imgur.com/D0cTnjE.png'/><br/>CAPACIDADE:50kg<br/>"},
     ["exemplar"] = {"Audi RS7",600000,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",1500000,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
-    --["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
+    ["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
     ["718"] = {"Porsche 718 Boxster",1500000,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"}
     },
     ["REVENDA MOTOS"] = {
