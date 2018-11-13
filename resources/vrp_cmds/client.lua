@@ -814,6 +814,30 @@ function vRPcmd.capacete19(p)
         end
 end
 
+function vRPcmd.capacete0(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 120, 0) --tira
+        end
+end
+
+function vRPcmd.capacete20(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 88, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
+function vRPcmd.capacete55(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 89, 5, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
 
 function DrawSpecialText(m_text, showtime)
 	SetTextEntry_2("STRING")

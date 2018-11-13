@@ -968,6 +968,27 @@ cfg.commands = {
     end
 	},
 	
+    ["/capacete0"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete0(p)
+    end
+	},
+
+	["/capacete20"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete20(p)
+    end
+	},
+
+	["/capacete55"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.capacete55(p)
+    end
+	},
+
 	["/mascararaposa"] = {
     -- /mask toggles mask on and off
     action = function(p,color,msg)
