@@ -91,17 +91,20 @@ cfg.groups = {
   },
   ["galpaocannabis"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Maconha."}) end},
-    "galpao.maconha"
+    "galpao.maconha",
+    "build.gun"
   },
   ["galpaometannfetamina"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Metanfetamina."}) end},
-    "galpao.meta"
+    "galpao.meta",
+    "build.gun"
   },
   ["galpaococainna"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Cocaina."}) end},
-    "galpao.coca"
+    "galpao.coca",
+    "build.gun"
   },
-  ["galpaodirtymoney"] = {
+  --[[["galpaodirtymoney"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Lavagem."}) end},
     "galpao.lavagem"
   },
@@ -109,7 +112,7 @@ cfg.groups = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Armas."}) end},
     "galpao.armas",
     "build.gun"
-  },
+  },- ]]
   -- Polícia  
   ["Recruta"] = {
     _config = { 
@@ -556,6 +559,26 @@ cfg.groups = {
     "-police.seizable" -- negative permission, police can't seize itself, even if another group add the permission
   },
   -- Samu
+    ["Samu Chefe"] = {
+    _config = { gtype = "job" },
+    "emergency.revive",
+    "medico.receita",
+    "ems.farmacia",
+    "player.group.add",
+    "mission.emergency.transfer",
+    "emergency.shop",
+    "emergency_heal",
+    "emergency.service",
+    "bossemergency.service",
+    "emergency.service",
+    "hospital.garagem",
+    "medicoemergency.medkit",
+    "emergency.medkit",
+    "chefe.paycheck",
+    "radar.pass",
+    "coma.caller",
+    "medico.cloakroom"
+  },
     ["Doutor"] = {
     _config = { gtype = "job" },
     "emergency.revive",
