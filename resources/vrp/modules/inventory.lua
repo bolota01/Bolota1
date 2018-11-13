@@ -398,10 +398,7 @@ end
 -- cb_out(idname, amount): called when an item is taken (optional)
 function vRP.openChest(source, name, max_weight, cb_close, cb_in, cb_out)
   local user_id = vRP.getUserId(source)
-  print(source)
-  print(name)
-  print(max_weight)
-  print("valores")
+
   if user_id ~= nil then
     local data = vRP.getUserDataTable(user_id)
     if data.inventory ~= nil then
