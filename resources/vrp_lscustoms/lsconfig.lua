@@ -551,7 +551,7 @@ LSC_Config.prices = {
 ----------Turbo---------
 	[18] = {
 		{ name = "None", mod = 0, price = 0},
-		{ name = "Turbo Tuning", mod = 1, price = 3000},
+		{ name = "Turbo Tuning", mod = 1, price = 10000},
 	},
 	
 -----------Armor-------------
