@@ -886,7 +886,7 @@ cfg.homes = {
     max = 1,
     blipid=374, 
     blipcolor=55,
-    add_group = "galpaometannfetamina"
+    add_group = "Produtor de Metanfetamina"
   },
   ["Galpao 02"] = { --Maconha
     slot = "galpaoMACONHA",
@@ -896,7 +896,7 @@ cfg.homes = {
     max = 1,
     blipid=374, 
     blipcolor=55,
-    add_group = "galpaocannabis"
+    add_group = "Produtor de Maconha"
   },
   ["Galpao 03"] = { --Cocaina
     slot = "galpaoCOCA",
@@ -906,7 +906,7 @@ cfg.homes = {
     max = 1,
     blipid=374, 
     blipcolor=55,
-    add_group = "galpaococainna"
+    add_group = "Produtor de Cocaina"
   }
   --[[["Galpao 04"] = {
     slot = "galpaoARMAS",

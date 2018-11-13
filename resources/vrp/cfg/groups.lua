@@ -90,17 +90,17 @@ cfg.groups = {
     "police.seizable" -- can be seized
   },
   ["Produtor de Maconha"] = {
-    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Maconha."}) end},
+    _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Maconha."}) end},
     "galpao.maconha",
     "build.gun"
   },
   ["Produtor de Metanfetamina"] = {
-    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Metanfetamina."}) end},
+    _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Metanfetamina."}) end},
     "galpao.meta",
     "build.gun"
   },
   ["Produtor de Cocaina"] = {
-    _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Cocaina."}) end},
+    _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Cocaina."}) end},
     "galpao.coca",
     "build.gun"
   },
