@@ -29,7 +29,7 @@ RegisterServerEvent("gun:buysuccess")
 AddEventHandler("gun:buysuccess", function()
 	local user_id = vRP.getUserId({source})
 	local player = vRP.getUserSource({user_id})
-	if vRP.tryPayment({user_id,15000}) then
+	if vRP.tryPayment({user_id,35000}) then
         TriggerClientEvent('gun:EndBuyLicense',player)
 	else
 		vRPclient.notify(player,{"~r~Sem dinheiro o suficiente."})

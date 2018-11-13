@@ -159,7 +159,7 @@ end
 function FireArmsMenu()
     ClearMenu()
     options.menu_title = "Adquirir porte de armas"
-	Menu.addButton("Adquirir porte de armas    R$15000","startbuy",nil)
+	Menu.addButton("Adquirir porte de armas    R$35000","startbuy",nil)
     Menu.addButton("Return","LICENSEMenu",nil) 
 end
 
