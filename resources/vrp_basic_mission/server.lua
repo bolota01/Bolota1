@@ -32,13 +32,14 @@ function task_mission()
           -- build steps
           for i=1,v.steps do
             local step = {
-              text = lang.repair({v.title}).."<br />"..lang.reward({v.reward}),
+              text = v.title.."<br />"..lang.reward({v.reward}),
               onenter = function(player, area)
                 if tasks_pendent[user_id] == nil then
                   if vRP.tryGetInventoryItem({user_id,"repairkit",1,false}) then
-                    vRPclient.playAnim(player,{false,{task="WORLD_HUMAN_WELDING"},false})
+                    --vRPclient.playAnim(player,{false,{task="WORLD_HUMAN_WELDING"},false})
+                    vRPclient.notify(player,{"Entregando as ferramentas, aguarde alguns segundos."})
                     tasks_pendent[user_id] = true
-                    SetTimeout(15000, function()
+                    SetTimeout(8000, function()
                       tasks_pendent[user_id] = nil
                       vRP.nextMissionStep({player})
                       --vRP.giveInventoryItem({user_id,"repairkit",1,false})

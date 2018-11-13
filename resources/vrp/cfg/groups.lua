@@ -675,7 +675,7 @@ cfg.groups = {
     "vehicle.repair",
     "vehicle.replace",
 	"repair.paycheck",
-	"mission.repair.satellite_dishes",
+	--"mission.repair.satellite_dishes",
     "mission.repair.wind_turbines",
     "repair.service",
     "shop.mecanico",

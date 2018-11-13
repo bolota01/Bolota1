@@ -1,6 +1,6 @@
 
 local lang = {
-  repair = "Reparar {1}.",
+  repair = "Entrega.",
   transfer = "Entregar o paciente.",
   reward = "Recompensa: {1} R$.",
   delivery = {
