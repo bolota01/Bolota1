@@ -64,7 +64,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=10,
-    x=1057.7418212891,y=-3196.1962890625,z=-40.161308288574, -- pos
+    x=1840.6926269532,y=5034.16015625,z=56.69303894043, -- pos
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
@@ -85,7 +85,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=1005.6223754883,y=-3195.7946777344,z=-38.9931640625, -- Localização
+    x=2746.0993652344,y=1579.2513427734,z=50.68684387207, -- Localização
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -106,7 +106,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=1005.7634887695,y=-3200.1235351563,z=-38.519580841064, -- pos
+    x=416.17538452148,y=-1833.5423583984,z=28.101583480834, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -129,8 +129,8 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=510.53283691406,y=-1823.2603759766,z=28.502973556519,
-    radius=5, height=3, -- area
+    x=2432.3635253906,y=4970.9584960938,z=42.347606658936,
+    radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
         description="Colher folha de Coca.", -- Descrição do produto a se colher
@@ -150,8 +150,8 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=1095.3823242188,y=-3197.0734863281,z=-38.993465423584, -- pos
-    radius=5, height=4, -- area
+    x=3606.49609375,y=3713.669921875,z=29.689399719238, -- pos
+    radius=3, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
         description="Processar cocaina.", -- action description
