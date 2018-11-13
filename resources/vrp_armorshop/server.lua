@@ -118,7 +118,7 @@ local function build_client_gunshops(source)
           vRP.closeMenu({source})
         end
 
-        vRPclient.addBlip(source,{x,y,z,gcfg.blipid,gcfg.blipcolor,lang.gunshop.title({gtype})})
+        --vRPclient.addBlip(source,{x,y,z,gcfg.blipid,gcfg.blipcolor,lang.gunshop.title({gtype})})
         vRPclient.addMarker(source,{x,y,z-1,0.7,0.7,0.5,0,255,125,125,150})
 
         vRP.setArea({source,"vRP:gunshop"..k,x,y,z,1,1.5,gunshop_enter,gunshop_leave})
