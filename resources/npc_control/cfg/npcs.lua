@@ -20,7 +20,7 @@ cfg = {}
 
 cfg.density = {
 	peds = 0.3,
-	vehicles = 0.3
+	vehicles = 0.1
 }
 
 cfg.peds = { -- these peds wont show up anywhere, they will be removed and their vehicles deleted
@@ -51,7 +51,6 @@ cfg.peds = { -- these peds wont show up anywhere, they will be removed and their
   "g_m_y_ballaorig_01",
   "ballasog",
   "g_m_y_ballasout_01"
-
 }
 
 cfg.noguns = { -- these peds wont have any weapons
