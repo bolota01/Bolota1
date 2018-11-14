@@ -47,8 +47,8 @@ local itemtr_laboratorycannabis = {
 	name="Laboratório", -- menu name
 	permissions = {"galpao.maconha"},
 	r=0,g=255,b=0, -- color
-	max_units=180,
-	units_per_minute=6,
+	max_units=400,
+	units_per_minute=20,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
@@ -68,8 +68,8 @@ local itemtr_laboratorymetanfetamina = {
 	name="Laboratório", -- menu name
 	permissions = {"galpao.meta"},
 	r=0,g=255,b=0, -- color
-	max_units=180,
-	units_per_minute=6,
+	max_units=400,
+	units_per_minute=20,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
@@ -89,8 +89,8 @@ local itemtr_laboratorycocaina = {
 	name="Laboratório", -- menu name
 	permissions = {"galpao.coca"},
 	r=0,g=255,b=0, -- color
-	max_units=180,
-	units_per_minute=6,
+	max_units=400,
+	units_per_minute=20,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
