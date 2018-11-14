@@ -266,6 +266,7 @@ cfg.garage_types = {
 	["police2"] = {"Charger",0, "<img src='https://i.imgur.com/d77pILO.png'/><br/"},
 	["police3"] = {"Ford",0, "<img src='https://i.imgur.com/ShDFECx.png'/><br/"},
 	["sheriff2"] = {"Tahoe",0, "<img src='https://i.imgur.com/BTiIm8i.png'/><br/"},
+    ["riot"] = {"Elite Blindado",0, "<img src='https://i.imgur.com/GmVU7p9.png'/><br/"},
 	["policeb"] = {"Moto FAE",0, "<img src='https://i.imgur.com/jouWJyn.png'/><br/"}
 	},  
   	["Heliponto FAE"] = {
@@ -283,6 +284,7 @@ cfg.garage_types = {
 	["Hospital"] = {
     _config = {vtype="car",blipcolor=4,permissions={"hospital.garagem"},buy=true},
   	["sheriff"] = {"SUV Emergência",0, "<img src='https://i.imgur.com/u3gXrKH.png'/><br/"},
+    ["pranger"] = {"Jeep Emergência",0, "<img src='https://i.imgur.com/Y5d0U4w.png'/><br/"},
 	["ambulance"] = {"Ambulância",0, "<img src='https://i.imgur.com/OFCBAtJ.png'/><br/"}
 	},
 	["CORREIOS S/A"] = {
