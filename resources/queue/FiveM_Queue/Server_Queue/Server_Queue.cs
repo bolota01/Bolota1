@@ -158,7 +158,7 @@ namespace Server
                     return;
                 }
                 string identifier = args[0].ToString();
-                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier);
+                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier || k.Identifiers["xbl"] == identifier || k.Identifiers["live"] == identifier);
                 if (player == null)
                 {
                     Debug.WriteLine($"No matching account in session for {identifier}, use session command to get an identifier.");
@@ -498,7 +498,7 @@ namespace Server
                             {
                                 if (sentLoading.ContainsKey(license) && Players.FirstOrDefault(i => i.Identifiers["license"] == license) != null)
                                 {
-                                    TriggerEvent("fivemqueue: newloading", sentLoading[license]);
+                                    TriggerEvent("Fila: newloading", sentLoading[license]);
                                     sentLoading.TryRemove(license, out Player oldPlayer);
                                 }
                             }
@@ -577,7 +577,7 @@ namespace Server
                         if (!priority.TryGetValue(j.Key, out int oldPriority)) { oldPriority = 0; }
                         if (!reserved.TryGetValue(j.Key, out Reserved oldReserved)) { oldReserved = Reserved.Public; }
                         if (!slotTaken.TryGetValue(j.Key, out Reserved oldSlot)) { oldSlot = Reserved.Public; }
-                        Debug.WriteLine($"| {j.Key} | {j.Value} | {player?.Identifiers["steam"]} | {oldPriority} | {oldReserved} | {oldSlot} | {player?.Handle} | {player?.Name} |");
+                        Debug.WriteLine($"| {j.Key} | {j.Value} | {player?.Identifiers["license"]} | {oldPriority} | {oldReserved} | {oldSlot} | {player?.Handle} | {player?.Name} |");
                     });
                 }
                 else
@@ -592,7 +592,7 @@ namespace Server
                         if (!priority.TryGetValue(j.Key, out int oldPriority)) { oldPriority = 0; }
                         if (!reserved.TryGetValue(j.Key, out Reserved oldReserved)) { oldReserved = Reserved.Public; }
                         if (!slotTaken.TryGetValue(j.Key, out Reserved oldSlot)) { oldSlot = Reserved.Public; }
-                        temp = new { License = j.Key, State = j.Value, Steam = player?.Identifiers["steam"], Priority = oldPriority, Reserved = oldReserved, ReservedUsed = oldSlot, Handle = player?.Handle, Name = player?.Name };
+                        temp = new { License = j.Key, State = j.Value, Steam = player?.Identifiers["license"], Priority = oldPriority, Reserved = oldReserved, ReservedUsed = oldSlot, Handle = player?.Handle, Name = player?.Name };
                         sessionReturn.Add(temp);
                     });
                     Player requested = Players.FirstOrDefault(k => k.Handle == source.ToString());
@@ -727,8 +727,10 @@ namespace Server
                 deferrals.update($"{messages["Gathering"]}");
                 string license = source.Identifiers["license"];
                 string steam = source.Identifiers["steam"];
+                string xbl = source.Identifiers["xbl"];
+                string live = source.Identifiers["live"];
                 if (license == null) { deferrals.done($"{messages["License"]}"); return; }
-                if (steam == null) { deferrals.done($"{messages["Steam"]}"); return; }
+               // if (steam == null) { deferrals.done($"{messages["Steam"]}"); return; }
 
                 bool banned = false;
                 if (Server_Banned.accounts.Exists(k => k.License == license && k.Steam == steam))
@@ -984,7 +986,7 @@ namespace Server
                 string identifier = args[0].ToString();
                 int priority = int.Parse(args[1].ToString());
                 if (priority <= 0 || priority > 100) { priority = 100; }
-                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier);
+                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier || k.Identifiers["xbl"] == identifier || k.Identifiers["live"] == identifier);
                 if (player != null)
                 {
                     PriorityAccount account = new PriorityAccount(player.Identifiers["license"], player.Identifiers["steam"], priority);
@@ -996,7 +998,7 @@ namespace Server
                     }
                     string path = $"{directory}/{account.License}-{account.Steam}.json";
                     File.WriteAllText(path, JsonConvert.SerializeObject(account));
-                    Debug.WriteLine($"{identifier} was granted priority.");
+                    Debug.WriteLine($"{identifier} foi garantida prioridade.");
                 }
                 else
                 {
@@ -1129,7 +1131,7 @@ namespace Server
                 string identifier = args[0].ToString();
                 int reserve = int.Parse(args[1].ToString());
                 if (reserve <= 0 || reserve > 3) { Debug.WriteLine($"This command requires two arguments. <Steam> OR <License> AND <Reserved> (1, 2, or 3)"); return; }
-                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier);
+                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier || k.Identifiers["xbl"] == identifier || k.Identifiers["live"] == identifier);
                 if (player != null)
                 {
                     ReservedAccount account = new ReservedAccount(player.Identifiers["license"], player.Identifiers["steam"], (Reserved)reserve);
@@ -1266,7 +1268,7 @@ namespace Server
                     return;
                 }
                 string identifier = args[0].ToString();
-                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier);
+                Player player = Players.FirstOrDefault(k => k.Identifiers["license"] == identifier || k.Identifiers["steam"] == identifier || k.Identifiers["live"] == identifier || k.Identifiers["xbl"] == identifier);
                 if (player != null)
                 {
                     BannedAccount account = new BannedAccount(player.Identifiers["license"], player.Identifiers["steam"]);
@@ -1332,7 +1334,7 @@ namespace Server
                 newblacklist.RemoveAll(k => k.License == account.License || k.Steam == account.Steam);
                 path = $"resources/{Server_Queue.resourceName}/JSON/offlinebans.json";
                 File.WriteAllText(path, JsonConvert.SerializeObject(newblacklist));
-                Debug.WriteLine($"{account.License}-{account.Steam} was auto banned.");
+                Debug.WriteLine($"{account.License}-{account.Steam} foi automaticamente banida.");
             }
             catch (Exception)
             {

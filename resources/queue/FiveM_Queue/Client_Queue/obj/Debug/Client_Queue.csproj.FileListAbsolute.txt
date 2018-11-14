@@ -1,0 +1,9 @@
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\bin\Debug\Client_Queue.net.dll
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\bin\Debug\Client_Queue.net.pdb
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\bin\Debug\Client.CitizenFX.Core.dll
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\bin\Debug\Newtonsoft.Json.dll
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\obj\Debug\Client_Queue.csprojResolveAssemblyReference.cache
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\obj\Debug\Client_Queue.csproj.CoreCompileInputs.cache
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\obj\Debug\Client_Queue.csproj.CopyComplete
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\obj\Debug\Client_Queue.net.dll
+C:\Users\linki\Documents\projects\Bolota1\resources\FiveM_Queue\FiveM_Queue\Client_Queue\obj\Debug\Client_Queue.net.pdb
