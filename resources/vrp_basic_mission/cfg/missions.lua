@@ -557,7 +557,7 @@ cfg.delivery = {
     chance = 3,
     title = "Entrega especial",
     items = {
-      ["metanfetamina"] = {10,20,400}
+      ["metanfetamina"] = {10,20,360}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -586,7 +586,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de cristal",
     items = {
-      ["metanfetamina"] = {10,20,340}
+      ["metanfetamina"] = {10,20,290}
     }
   },  
   ["entrega.tartaruga"] = {
