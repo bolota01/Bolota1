@@ -472,6 +472,7 @@ cfg.groups = {
     "police.easy_fine",
     "police.easy_cuff",
     "police.drag",
+    "aguia.garagem",
     "policiafederal.weapons",
     "player.group.add",
     "coronel.door",
