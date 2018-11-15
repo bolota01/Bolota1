@@ -268,7 +268,17 @@ cfg.garage_types = {
 	["sheriff2"] = {"Tahoe",0, "<img src='https://i.imgur.com/BTiIm8i.png'/><br/"},
     ["riot"] = {"Elite Blindado",0, "<img src='https://i.imgur.com/GmVU7p9.png'/><br/"},
 	["policeb"] = {"Moto FAE",0, "<img src='https://i.imgur.com/jouWJyn.png'/><br/"}
-	},  
+	},
+    ["Garagem ADMIN"] = {
+    _config = {vtype="car",permissions={"admin.garagem"},buy=true},
+    ["mesa3"] = {"Mesa 3",0, "<img src='https://i.imgur.com/4C9436E.png'/><br/"},
+    ["trophytruck"] = {"Trophytruck",0, "<img src='https://i.imgur.com/lDPMX1U.png'/><br/"},
+    ["bus"] = {"Bus",0, "<img src='https://i.imgur.com/Pppx0bL.png'/><br/"},
+    ["coach"] = {"Coach",0, "<img src='https://i.imgur.com/xmpU98F.png'/><br/"},
+    ["tourbus"] = {"Tourbus",0, "<img src='https://i.imgur.com/RjuhnCh.png'/><br/"},
+    ["wastelander"] = {"Wastelander",0, "<img src='https://i.imgur.com/7r7oGlx.png'/><br/"},
+    ["kuruma2"] = {"Kuruma 2",0, "<img src='https://i.imgur.com/ovV4UiU.png'/><br/"}
+    },  
   	["Heliponto FAE"] = {
 	_config = {vtype="helicopters",blipcolor=4,permissions={"aguia.garagem"},buy=true},
 	["polmav"] = {"Águia FAE",0, "<img src='https://i.imgur.com/faxY7BN.png'/><br/"}
@@ -343,7 +353,7 @@ cfg.garages = {
 	{"GARAGEM",-378.77001953125,-110.93278503418,38.697410583496},
 	{"GARAGEM",-580.55767822266,316.67123413086,84.783363342285},
 	{"GARAGEM",1404.8968505859,1118.7971191406,114.83769226074}, -- GARAGEM FAZENDA DE LUXO
-	--{"GARAGEM",151.99737548828,-1309.5081787109,29.202308654785}, -- GARAGEM PABLETE
+	{"Garagem ADMIN",239.40335083008,-774.94201660156,30.698120117188}, -- GARAGEM ADMIN
 	--{"GARAGEM",497.71151733398,-1335.3879394531,29.327247619629}, -- GARAGEM CARRIJO
 	{"GARAGEM",1220.6368408203,2710.6381835938,38.005794525146},
     {"GARAGEM",452.92663574218,-1014.6912841796,28.461595535278}, -- GARAGEM DP
