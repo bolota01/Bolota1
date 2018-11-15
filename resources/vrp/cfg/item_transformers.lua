@@ -85,7 +85,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=2746.0993652344,y=1579.2513427734,z=50.68684387207, -- Localização
+    x=-1112.0493164063,y=4935.6567382813,z=218.37593078613, -- Localização
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
