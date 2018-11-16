@@ -48,7 +48,7 @@ local itemtr_laboratorycannabis = {
 	permissions = {"galpao.maconha"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=20,
+	units_per_minute=13,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
@@ -69,7 +69,7 @@ local itemtr_laboratorymetanfetamina = {
 	permissions = {"galpao.meta"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=20,
+	units_per_minute=13,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
@@ -90,7 +90,7 @@ local itemtr_laboratorycocaina = {
 	permissions = {"galpao.coca"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=20,
+	units_per_minute=13,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
 	radius=1.1, height=1.5, -- area
 	recipes = {
@@ -584,15 +584,17 @@ cfg.slot_types = {
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
     --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
     }
-  }
-  --[["galpaoLAVAGEM"] = {
+  },
+  ["galpaoMOTOS"] = {
     {
-      {"entry",756.70123291016,-914.62567138672,25.42293548584},
-      {"chest",742.8193359375,-915.62170410156,25.02338218689, _config = {weight=10000}},
-      {"itemtr", _config = itemtr_study, 756.84790039063,-918.20611572266,25.42293548584},
-    {"itemtr", _config = itemtr_laboratorydirtymoney, 742.68078613281,-926.21789550781,24.979751586914}
+      {"entry",980.90057373046,-102.19834899902,74.845077514648},
+      {"chest",986.95623779296,-92.579788208008,74.84561920166, _config = {weight=5000}},
+      {"wardrobe",983.44830322266,-91.934448242188,74.851440429688},
+      {"gametable",977.5849609375,-94.778701782226,74.868118286132},
+      {"itemtr", _config = itemtr_study, 1049.7749023438,-3100.5776367188,-38.999942779542},
+      {"itemtr", _config = itemtr_laboratoryarmasfinal, 1057.1618652344,-3106.2719726562,-38.999942779542}
     }
-  } - ]]
+  }
 }
   --["Expensive_flat"] = {
     --{
@@ -922,15 +924,15 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1
-  },
+  } 
   ["Galpao 06"] = {
-    slot = "galpaoLAVAGEM",
-    entry_point = {758.97644042969,-914.66522216797,25.432731628418},
+    slot = "galpaoMOTOS",
+    entry_point = {982.30645751954,-103.41355895996,74.848724365234},
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
     add_group = "galpaodirtymoney"
-  } - ]]
+  }- ]]
 }
 
 return cfg
