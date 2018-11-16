@@ -78,6 +78,7 @@ cfg.groups = {
   ["user"] = {
     "player.phone",
 	"player.loot",
+    "tartaruga.cloakroom",
 	"player.store_armor",
 	"player.fix_haircut",
     "player.player_menu",
