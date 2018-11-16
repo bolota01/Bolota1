@@ -586,7 +586,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de cristal",
     items = {
-      ["metanfetamina"] = {10,20,3400}
+      ["metanfetamina"] = {10,20,340}
     }
   },  
   ["entrega.tartaruga"] = {
