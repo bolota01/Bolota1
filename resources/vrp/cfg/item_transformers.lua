@@ -297,6 +297,27 @@ cfg.item_transformers = {
       }
     }
   },
+-- Advogado
+  {
+    name="Processos",
+    permissions = {"processos.advogado"},
+    r=0,g=200,b=0, ---cores
+    max_units=1000,
+    units_per_minute=100,
+    x=-1911.6207275391,y=-573.35174560547,z=19.097230911255, -- coordenas mudas aqui
+    radius=2.5, height=1.5, -- area
+    recipes = {
+      ["Entregar processos"] = { -- action name
+        description="Entregando processos", -- action description
+        in_money=0, -- money taken per unit
+        out_money=1100, -- money earned per unit
+        reagents={
+          ["processos"] = 1
+        }, -- items taken per unit
+        products={}, -- items given per unit
+      }
+    }
+  },
 -- Taxi
   {
     name="Central do Taxista",
@@ -433,7 +454,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=1, -- unidades maximas do item
     units_per_minute=1, -- unidades que o transformador ganha de volta por minuto
-    x=-1911.6207275391,y=-573.35174560547,z=19.097230911255, -- pos
+    x=-1905.237915039,y=-571.14428710938,z=19.097219467164, -- pos
     radius=1.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Pegar Carteira OAB"] = { -- action name
