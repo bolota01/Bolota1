@@ -21,6 +21,7 @@ cfg.items = {
   ["casco_tartaruga"] = {"Casco de Tartaruga", "", nil, 2.00},
   -- Advogado
   ["oab"] = {"OAB", "Carteira de Advogado.", nil, 0.01}, -- no choices
+  ["processos"] = {"Processos", "Pasta com alguns processos.", nil, 0.75}, -- no choices
   --Chave da Polícia
   ["key_pd_boss"] = {"🔑 Captain room", "", nil, 0.01},
   ["key_lspd"] = {"🔑 LSPD", "", nil, 0.01},
