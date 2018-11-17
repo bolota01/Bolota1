@@ -44,6 +44,7 @@ cfg.list = {
   [44] = {offset = -1.2, mystatus = false, hash = 1245831483, x = -794.99041748047, y = 181.97880554199, z = 72.835273742676, locked = true, key = "key_grove_house", permission="grove.doors", name = "Mansão 01", pair = 43},
   [45] = {offset = -1.2, mystatus = false, hash = -1081024910, x = 722.44061279297, y = -924.34283447266, z = 26.658725738525, locked = true, key = "key_grove_house", permission="grove.doors", name = "Lavagem"},
   [46] = {offset = -1.2, mystatus = false, hash = -1726331785, x = 758.4296875, y = -914.50543212891, z = 25.382110595703, locked = true, key = "key_grove_house", permission="grove.doors", name = "Lavagem"},
+  [47] = {offset = -1.2, mystatus = false, hash = 190770132, x = 981.79406738281, y = -102.70471954346, z = 74.848731994629, locked = true, key = "key_grove_house", permission="grove.doors", name = "Club de Motos"},
   --- Hospital
   [24] = { offset = -1.2, mystatus = false, hash = 1653893025, x = 271.666, y = -1360.943, z = 24.19323, locked = true, key = "key_medic", permission="emergency.service2", name = "Sala de Troca de Roupas"},
   [47] = { offset = -1.2, mystatus = false, hash = 1653893025, x = 265.62805175781, y = -1362.6926269531, z = 24.537788391113, locked = true, key = "key_medic", permission="emergency.service2", name = "Sala de Troca de Roupas"},

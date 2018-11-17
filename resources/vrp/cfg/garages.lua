@@ -276,6 +276,7 @@ cfg.garage_types = {
     ["bus"] = {"Bus",0, "<img src='https://i.imgur.com/Pppx0bL.png'/><br/"},
     ["coach"] = {"Coach",0, "<img src='https://i.imgur.com/xmpU98F.png'/><br/"},
     ["tourbus"] = {"Tourbus",0, "<img src='https://i.imgur.com/RjuhnCh.png'/><br/"},
+    ["insurgent2"] = {"Insurgent",0, "<img src='https://i.imgur.com/OFvwbIV.png'/><br/"},
     ["wastelander"] = {"Wastelander",0, "<img src='https://i.imgur.com/7r7oGlx.png'/><br/"},
     ["kuruma2"] = {"Kuruma 2",0, "<img src='https://i.imgur.com/ovV4UiU.png'/><br/"}
     },  
@@ -312,13 +313,20 @@ cfg.garage_types = {
 	["luxor"] = {"Buckingham Luxor",8500000, "<img src='' /><br/>CAPACIDADE: 3000kg|LOTAÇÃO: PILOTO + 9 PASSAGEIROS"},
 	["mammatus"] = {"JoBuilt Mammatus",5000000, "<img src='' /><br/>CAPACIDADE: 1000kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"},
 	["microlight"] = {"Nagasaki Ultralight",2000000, "<img src='' /><br/>CAPACIDADE: 100kg|LOTAÇÃO: PILOTO APENAS"},
-	["cuban800"] = {"Western Cuban 800 ",4000000, "<img src='' /><br/>CAPACIDADE: 500kg|LOTAÇÃO: PILOTO + 1 PASSAGEIRO"}
+	["cuban800"] = {"Western Cuban 800 ",4000000, "<img src='' /><br/>CAPACIDADE: 500kg|LOTAÇÃO: PILOTO + 1 PASSAGEIRO"},
+    ["havok"] = {"Nagasaki Havok",5000000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: APENAS O PILOTO"},
+    ["volatus"] = {"Buckingham Volatus",12000000, "<img src='' /><br/>CAPACIDADE: 1000kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"},
+    ["supervolito"] = {"Buckingham SuperVolito",7000000, "<img src='' /><br/>CAPACIDADE: 750kg|LOTAÇÃO: PILOTO + 3 PASSAGEIROS"}
 	},
 	["MARINA"] = {
-	_config = {blipid=371,blipcolor=47,vtype="boats",buy=true},
-	["seashark"] = {"Speedophile Seashark <br/>JetSki",12000, "<img src='' /><br/>CAPACIDADE: 50kg|LOTAÇÃO: PILOTO + PASSAGEIRO"},
-	["jetmax"] = {"Shitzu Jetmax",200000, "<img src='' /><br/>CAPACIDADE: 300kg|LOTAÇÃO: PILOTO + PASSAGEIRO"}
-  	},
+    _config = {blipid=404,blipcolor=74,vtype="boats",buy=true},
+    ["marquis"] = {"Marquis",8000000, "<img src='https://i.imgur.com/4HFqUcT.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["speeder2"] = {"Speeder 2",3000000, "<img src='https://i.imgur.com/U4fheU7.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["toro2"] = {"Toro 2",5000000, "<img src='https://i.imgur.com/7mXjbLh.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["tropic2"] = {"Tropic 2",2000000, "<img src='https://i.imgur.com/OFBUwSv.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["suntrap"] = {"Suntrap",500000, "<img src='https://i.imgur.com/nqneiDv.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
+    ["jetmax"] = {"Shitzu Jetmax",800000, "<img src='https://i.imgur.com/VPZ1yF1.png' /><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"}
+    },
     ["Aluguel Jetsky"] = {
     _config = {blipid=371,blipcolor=57,vtype="boats",buy=true},
     ["seashark"] = {"JetSky 1",15000, "<img src='https://i.imgur.com/IVZiWXW.png'/><br/>LOTAÇÃO: PILOTO + PASSAGEIRO"},
@@ -344,6 +352,11 @@ cfg.garages = {
 	--{"VIP PRATA",-45.049365997314,-1112.65234375,26.435815811157},
 	--{"VIP BRONZE",-45.049365997314,-1112.65234375,26.435815811157},
 	--{"VIP DIAMANTE",-45.049365997314,-1112.65234375,26.435815811157},
+    {"MARINA",-1602.1171875,5260.16015625,-0.8945220541954},
+    {"MARINA",-793.11785888672,-1500.982421875,-0.87460612654686},
+    {"MARINA",-724.40466308594,-1443.502319336,5.000524520874},
+    {"HELIPORTO",-45.049365997314,-1112.65234375,26.435815811157},
+    {"AEROPORTO",-1145.8037109375,-2864.7062988282,13.946009635926},
     {"REVENDA CARROS",727.74688720703,-2993.1923828125,-38.999897003174},
     {"REVENDA MOTOS",733.28344726563,-2992.7177734375,-38.999897003174},
 	{"VENDA CARROS",-48.059623718262,-1096.3872070313,26.422353744507}, --CONCESSIONÁRIA PADRÃO
