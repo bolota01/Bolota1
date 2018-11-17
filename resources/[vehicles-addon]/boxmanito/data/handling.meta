@@ -4,7 +4,7 @@
   <HandlingData>
     <Item type="CHandlingData">
       <handlingName>718</handlingName>
-      <fMass value="1800.000000" />
+      <fMass value="2000.000000" />
       <fInitialDragCoeff value="8.25000" />
       <fDownforceModifier value="1.5" />
       <fPercentSubmerged value="85.000000" />
@@ -12,7 +12,7 @@
       <vecInertiaMultiplier x="1.000000" y="1.600000" z="1.700000" />
       <fDriveBiasFront value="0.300000" />
       <nInitialDriveGears value="6" />
-      <fInitialDriveForce value="0.350000" />
+      <fInitialDriveForce value="0.450000" />
       <fDriveInertia value="1.000000" />
       <fClutchChangeRateScaleUpShift value="9.000000" />
       <fClutchChangeRateScaleDownShift value="9.000000" />
