@@ -107,16 +107,69 @@ cfg.groups = {
     "galpao.coca",
     "build.gun"
   },
-  --[[["galpaodirtymoney"] = {
+  ["galpaodirtymoney"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Lavagem."}) end},
-    "galpao.lavagem"
+    "galpao.lavagem",
+    "build.gun"
   },
-  ["galpaofabricadearma"] = {
+  --[[["galpaofabricadearma"] = {
     _config = {onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Armas."}) end},
     "galpao.armas",
     "build.gun"
   },- ]]
-  -- Polícia  
+  -- Polícia
+  ["Delegada"] = {
+    _config = { 
+      gtype = "job",
+      onjoin = function(player) vRPclient.setCop(player,{true}) end,
+      onspawn = function(player) vRPclient.setCop(player,{true}) end,
+      onleave = function(player) vRPclient.setCop(player,{false}) end
+    },
+    "player.list",
+    "police.easy_jail",
+    "police.easy_unjail",
+    "police.easy_fine",
+    "police.easy_cuff",
+    "police.drag",
+    "policiafederal.weapons",
+    "player.group.add",
+    "police.menu_interaction",
+    "mission.police.patrol",
+    "mission.police.transfer",
+    "police.door",
+    "apreender.veiculo",
+    "police.multas",
+    "police.cmd_plate",
+    "coronel.door",
+    "boss_lspd.pc",
+    "police.menu",
+    "pm.cloakroom",
+    "police.pc",
+    "police.weapon_search",
+    "radar.pass",
+    --"holdup.police",
+    "pm.garagem",
+    "police.handcuff",
+    "police.putinveh",
+    "police.getoutveh",
+    "police.check",
+    "police.service",
+    "police.wanted",
+    "police.license",
+    "police.licensearm",
+    "mission.delegada",
+    --"bank.police",
+    "police.seize.weapons",
+    "police.seize.items",
+    "police.jail",
+    "police.fine",
+    "police.announce",
+    "police.askid",
+    "delegada.paycheck",
+    "recruta.weapons",
+    "-police.store_weapons",
+    "-police.seizable" -- negative permission, police can't seize itself, even if another group add the permission
+  },  
   ["Recruta"] = {
     _config = { 
       gtype = "job",
@@ -736,6 +789,7 @@ cfg.groups = {
   ["Advogado"] = {
     _config = { gtype = "job" },
     "carteira.oab",
+    "processos.advogado",
     "advogado.paycheck",
     "advogado.entrega"
   },
