@@ -521,7 +521,52 @@ function task_mission()
       end
     end
   end
-  
+    -- DELEGADA
+  for k,v in pairs(cfg.delegada) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Coletando provas..."})
+                  --SetTimeout(5000, function()
+                    vRP.nextMissionStep({player})
+					Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveBankMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Investigação concluída!"})
+					else
+                      vRPclient.notify(player,{"Provas coletas! Vá para o próximo local!"})
+                    end
+                  end
+              }
+              position = v.positions[math.random(1,#v.positions)]
+            
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
   -- UBER
   for k,v in pairs(cfg.UBER) do -- each repair perm def
     -- add missions to users

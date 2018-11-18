@@ -654,7 +654,7 @@ cfg.carjack = {
 -- EMERGENCY
   cfg.emergency = {
   ["mission.emergency.transfer"] = {
-    chance = 9,
+    chance = 7,
     title = "Transferência de Paciente",
     steps = 2,
     positions = {
@@ -663,9 +663,10 @@ cfg.carjack = {
   {359.166778564453,-594.0615234375,28.3070049285889},
   {-452.108215332031,-341.380340576172,34.0251846313477},
   {-868.521179199219,-297.945251464844,39.3625373840332},
+  {294.52673339844,-583.79425048828,43.171550750732},
   {-681.840637207031,292.777496337891,81.8317031860352}
     },
-    reward = 1000
+    reward = 2000
   }
 }
 
@@ -853,7 +854,7 @@ cfg.police = {
 }
 
 --Delegada
-cfg.police = {
+cfg.delegada = {
   ["mission.delegada"] = { -- permissao
     chance = 1, -- quantidade de lados do dado 1
     title = "Investigação Criminal", -- nome
