@@ -95,7 +95,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
 	while true do
 		local pos = GetEntityCoords(GetPlayerPed(-1), true)
 		local pos2 = nil
@@ -113,7 +113,7 @@ Citizen.CreateThread(function()
 		end
 		Citizen.Wait(0)
 	end
-end)
+end)]]
 
 if cfg.blips then -- blip settings
   Citizen.CreateThread(function()
@@ -161,9 +161,9 @@ Citizen.CreateThread(function()
 		end
 
 		if robbing then
-		    SetPlayerWantedLevel(PlayerId(), 4, 0)
-            SetPlayerWantedLevelNow(PlayerId(), 0)
-			
+		    --[[SetPlayerWantedLevel(PlayerId(), 4, 0)
+            SetPlayerWantedLevelNow(PlayerId(), 0)]]
+
 			bank_drawTxt(0.66, 1.44, 1.0,1.0,0.4, "Roubo a Banco em Andamento: falta ~r~" .. secondsRemaining .. "~w~ segundos restantes para concluir o Assalto", 255, 255, 255, 255)
 			
 			local pos2 = banks[bank].position

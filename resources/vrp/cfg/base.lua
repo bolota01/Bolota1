@@ -4,9 +4,9 @@ local cfg = {}
 -- mysql credentials
 cfg.db = {
   host = "127.0.0.1:3306",
-  database = "vrp",
+  database = "fivem",
   user = "root",
-  password = "g849516203"
+  password = "teste"
 }
 
 cfg.save_interval = 10 -- seconds

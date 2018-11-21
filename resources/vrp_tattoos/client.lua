@@ -32,21 +32,27 @@ function vRPts.setTattoos(data)
   ClearPedDecorations(GetPlayerPed(-1))
 	if data then
 		custom = data
-	end
+  end
+  
+  setTattoos()
 end
 
 function vRPts.addTattoo(tattoo,store,price)
   ClearPedDecorations(GetPlayerPed(-1))
 	if tattoo and store then
 	  custom[tattoo] = {store,price}
-	end
+  end
+  
+  setTattoos()
 end
 
 function vRPts.delTattoo(tattoo)
   ClearPedDecorations(GetPlayerPed(-1))
 	if tattoo then
 	  custom[tattoo] = nil
-	end
+  end
+  
+  setTattoos()
 end
 
 function vRPts.getTattoos()
@@ -56,20 +62,26 @@ end
 function vRPts.cleanPlayer()
   ClearPedDecorations(GetPlayerPed(-1))
   custom = {}
+
+  setTattoos()
 end
 
-Citizen.CreateThread(function()
+function setTattos()
+  if custom then
+    local ped = GetPlayerPed(-1)
+    -- parts
+    for k,v in pairs(custom) do
+      ApplyPedOverlay(ped, GetHashKey(v[1]), GetHashKey(k))
+    end
+  end
+end
+
+--[[Citizen.CreateThread(function()
   while true do
     Citizen.Wait(500)
     while not IsPedModel(GetPlayerPed(-1), "mp_m_freemode_01") and not IsPedModel(GetPlayerPed(-1),"mp_f_freemode_01") do
       Citizen.Wait(1)
     end
-    if custom then
-      local ped = GetPlayerPed(-1)
-      -- parts
-      for k,v in pairs(custom) do
-		    ApplyPedOverlay(GetPlayerPed(-1), GetHashKey(v[1]), GetHashKey(k))
-      end
-    end
+    setTattoos()
   end
-end)
+end)]]

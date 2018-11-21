@@ -515,7 +515,7 @@ function saveCharData()
 	end
 
 	TriggerServerEvent('saveCharacter', superString, barber, superString ~= oldsuperstring)
-	TriggerServerEvent('hc:showPlayer')
+	--TriggerServerEvent('hc:showPlayer')
 
 	running = false
 end
@@ -594,7 +594,7 @@ AddEventHandler('openBarberShop',function ()
 end)
 
 AddEventHandler('playerSpawned',function(spawn)
-	TriggerServerEvent('hc:hidePlayer')
+	--TriggerServerEvent('hc:hidePlayer')
 
 	if firstSpawn then
 		TriggerServerEvent('selectCharacter')
@@ -606,11 +606,10 @@ end)
 
 RegisterNetEvent('customization')
 AddEventHandler('customization', function()
-	if canClose then
+	--[[if canClose then
 		TriggerServerEvent('hc:showPlayer')
 		TriggerEvent("stopHide")
-	end
-
+	end]]
 	Citizen.CreateThread(function()
 		updateCharacter()
 	end)

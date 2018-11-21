@@ -15,11 +15,10 @@ AddEventHandler("vRP:playerSpawn",function(user_id,source,first_spawn)
   end
 end)
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   Citizen.Wait(500)
   TriggerClientEvent('vrpdoorsystem:load', -1, cfg.list)
-end)
-
+end)]]
 
 RegisterServerEvent('vrpdoorsystem:open')
 AddEventHandler('vrpdoorsystem:open', function(id)

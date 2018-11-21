@@ -20,5 +20,5 @@ files {
     'html/font/roboto-condensed.ttf',
     'html/font/roboto-regular.ttf',
     'html/css/style.css',
-    'html/img/spritesheet.png'
+    --'html/img/spritesheet.png'
 }

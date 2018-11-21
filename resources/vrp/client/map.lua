@@ -66,7 +66,7 @@ local named_markers = {}
 -- add a circular marker to the game map
 -- return marker id
 function tvRP.addMarker(x,y,z,sx,sy,sz,r,g,b,a,visible_distance)
-  local marker = {x=x,y=y,z=z,sx=sx,sy=sy,sz=sz,r=r,g=g,b=b,a=a,visible_distance=visible_distance}
+  local marker = {x=x,y=y,z=z,sx=sx,sy=sy,sz=sz,r=r,g=g,b=b,a=a,visible_distance=(visible_distance*visible_distance)}
 
 
   -- default values
@@ -87,7 +87,7 @@ function tvRP.addMarker(x,y,z,sx,sy,sz,r,g,b,a,visible_distance)
   marker.sy = marker.sy+0.001
   marker.sz = marker.sz+0.001
 
-  if marker.visible_distance == nil then marker.visible_distance = 150 end
+  if marker.visible_distance == nil then marker.visible_distance = 22500 end
 
   local id = marker_ids:gen()
   markers[id] = marker
@@ -128,7 +128,7 @@ Citizen.CreateThread(function()
 
     for k,v in pairs(markers) do
       -- check visibility
-      if Vdist2(v.x,v.y,v.z,px,py,pz) < (v.visible_distance*v.visible_distance) then
+      if Vdist2(v.x,v.y,v.z,px,py,pz) < v.visible_distance then
         DrawMarker(23,v.x,v.y,v.z,0,0,0,0,0,0,v.sx,v.sy,v.sz,v.r,v.g,v.b,v.a,0,0,0,0)
       end
     end

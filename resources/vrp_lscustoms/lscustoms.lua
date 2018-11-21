@@ -274,7 +274,7 @@ local function DriveInGarage()
 		AddMod(14,LSCMenu.categories,"HORN", "Horn", "Custom air horns.",true)
 		AddMod(15,LSCMenu.categories,"SUSPENSION","Suspension","Upgrade to a sports oriented suspension setup.",true)
 		AddMod(16,LSCMenu.categories,"ARMOR","Armor","Protect your car's occupants with military spec composite body panels.",true)
-		AddMod(18, LSCMenu.categories, "TURBO", "Turbo", "Reduced lag turbocharger.",false)
+		--AddMod(18, LSCMenu.categories, "TURBO", "Turbo", "Reduced lag turbocharger.",false)
 		
 		if chassis then
 			LSCMenu.categories:addSubMenu("CHASSIS", "Chassis",nil, true)
@@ -350,8 +350,8 @@ local function DriveInGarage()
 		end
 
 		
-		respray = LSCMenu.categories:addSubMenu("RESPRAY", "Respray", "Transforms vehicle appearance.",true)
-			pcol = respray:addSubMenu("PRIMARY COLORS", "Primary color",  nil,true)
+		respray = LSCMenu.categories:addSubMenu("RESPRAY", "Pintar", "Transforms vehicle appearance.",true)
+			pcol = respray:addSubMenu("PRIMARY COLORS", "Cor primária",  nil,true)
 				pcol:addSubMenu("CHROME", "Chrome", nil,true)
 				for n, c in pairs(LSC_Config.prices.chrome.colors) do
 					local btn = pcol.Chrome:addPurchase(c.name,LSC_Config.prices.chrome.price)btn.colorindex = c.colorindex
@@ -359,7 +359,7 @@ local function DriveInGarage()
 						btn.purchased = true
 					end
 				end
-				pcol:addSubMenu("CLASSIC", "Classic", nil,true)
+				pcol:addSubMenu("CLASSIC", "Clássico", nil,true)
 				for n, c in pairs(LSC_Config.prices.classic.colors) do
 					local btn = pcol.Classic:addPurchase(c.name,LSC_Config.prices.classic.price)btn.colorindex = c.colorindex
 					if btn.colorindex == myveh.color[1] then
@@ -373,21 +373,21 @@ local function DriveInGarage()
 						btn.purchased = true
 					end
 				end
-				pcol:addSubMenu("METALLIC", "Metallic", nil,true)
+				pcol:addSubMenu("METALLIC", "Metálico", nil,true)
 				for n, c in pairs(LSC_Config.prices.metallic.colors) do
 					local btn = pcol.Metallic:addPurchase(c.name,LSC_Config.prices.metallic.price)btn.colorindex = c.colorindex
 					if btn.colorindex == myveh.color[1] and myveh.extracolor[1] == myveh.color[2] then
 						btn.purchased = true
 					end
 				end
-				pcol:addSubMenu("METALS", "Metals", nil,true)
+				pcol:addSubMenu("METALS", "Metal", nil,true)
 				for n, c in pairs(LSC_Config.prices.metal.colors) do
 					local btn = pcol.Metals:addPurchase(c.name,LSC_Config.prices.metal.price)btn.colorindex = c.colorindex
 					if btn.colorindex == myveh.color[1] then
 						btn.purchased = true
 					end
 				end
-			scol = respray:addSubMenu("SECONDARY COLORS", "Secondary color", nil,true)
+			scol = respray:addSubMenu("SECONDARY COLORS", "Cor secundária", nil,true)
 				scol:addSubMenu("CHROME", "Chrome", nil,true)
 				for n, c in pairs(LSC_Config.prices.chrome2.colors) do
 					local btn = scol.Chrome:addPurchase(c.name,LSC_Config.prices.chrome2.price)btn.colorindex = c.colorindex
@@ -395,7 +395,7 @@ local function DriveInGarage()
 						btn.purchased = true
 					end
 				end
-				scol:addSubMenu("CLASSIC", "Classic", nil,true)
+				scol:addSubMenu("CLASSIC", "Clássico", nil,true)
 				for n, c in pairs(LSC_Config.prices.classic2.colors) do
 					local btn = scol.Classic:addPurchase(c.name,LSC_Config.prices.classic2.price)btn.colorindex = c.colorindex
 					if btn.colorindex == myveh.color[2] then
@@ -409,7 +409,7 @@ local function DriveInGarage()
 						btn.purchased = true
 					end
 				end
-				scol:addSubMenu("METALLIC", "Metallic", nil,true)
+				scol:addSubMenu("METALLIC", "Metálico", nil,true)
 				for n, c in pairs(LSC_Config.prices.metallic2.colors) do
 					local btn = scol.Metallic:addPurchase(c.name,LSC_Config.prices.metallic2.price)btn.colorindex = c.colorindex
 					if btn.colorindex == myveh.color[2] and myveh.extracolor[1] == btn.colorindex then
@@ -425,14 +425,14 @@ local function DriveInGarage()
 				end
 		
 		
-		LSCMenu.categories:addSubMenu("WHEELS", "Wheels", "Custom rims, tires and colors.",true)
+		LSCMenu.categories:addSubMenu("WHEELS", "Rodas", "Custom rims, tires and colors.",true)
 			wtype = LSCMenu.categories.Wheels:addSubMenu("WHEEL TYPE", "Wheel type", "Custom rims in all styles and sizes.",true)
 				if IsThisModelABike(GetEntityModel(veh)) then
-					fwheels = wtype:addSubMenu("FRONT WHEEL", "Front wheel", nil,true)
+					fwheels = wtype:addSubMenu("FRONT WHEEL", "Rodas da frente", nil,true)
 						for n, w in pairs(LSC_Config.prices.frontwheel) do
 							btn = fwheels:addPurchase(w.name,w.price)btn.wtype = w.wtype btn.modtype = 23 btn.mod = w.mod
 						end
-					bwheels = wtype:addSubMenu("BACK WHEEL", "Back wheel", nil,true)
+					bwheels = wtype:addSubMenu("BACK WHEEL", "Rodas traseiras", nil,true)
 						for n, w in pairs(LSC_Config.prices.backwheel) do
 							btn = bwheels:addPurchase(w.name,w.price)btn.wtype = w.wtype btn.modtype = 24 btn.mod = w.mod
 						end
@@ -467,17 +467,17 @@ local function DriveInGarage()
 						end
 				end
 					
-		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL COLOR", "Wheel color", "Custom wheel colors.",true)
+		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL COLOR", "Cor da roda", "Custom wheel colors.",true)
 			for n, c in pairs(LSC_Config.prices.wheelcolor.colors) do
 				local btn = m:addPurchase(c.name,LSC_Config.prices.wheelcolor.price)btn.colorindex = c.colorindex
 			end
 		
-		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL ACCESSORIES", "Wheel accessories", "Bulletproof tires and custom burnout smoke.",true)
+		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL ACCESSORIES", "Acessórios da roda", "Bulletproof tires and custom burnout smoke.",true)
 			for n, mod in pairs(LSC_Config.prices.wheelaccessories) do
 				local btn = m:addPurchase(mod.name,mod.price)btn.smokecolor = mod.smokecolor
 			end
 		
-		m = LSCMenu.categories:addSubMenu("WINDOWS", "Windows", "A selection of tinted windows.",true)	
+		m = LSCMenu.categories:addSubMenu("WINDOWS", "Janelas", "A selection of tinted windows.",true)	
 			btn = m:addPurchase("None")btn.tint = false
 			for n, tint in pairs(LSC_Config.prices.windowtint) do
 				btn = m:addPurchase(tint.name,tint.price)btn.tint = tint.tint
@@ -659,10 +659,10 @@ Citizen.CreateThread(function()
 												currentgarage = i
 												DriveInGarage()
 											else
-												drawTxt("Press ~b~ENTER~w~ to enter ~b~Los Santos Customs ",4,1,0.5,0.8,1.0,255,255,255,255)
+												drawTxt("Pressione ~b~ENTER~w~ para entrar na ~b~Los Santos Customs ",4,1,0.5,0.8,1.0,255,255,255,255)
 											end
 										else
-											drawTxt("~r~Locked, please wait",4,1,0.5,0.8,1.0,255,255,255,255)
+											drawTxt("~r~Aguarde, no momento está atendendo outro jogador.",4,1,0.5,0.8,1.0,255,255,255,255)
 										end
 									else
 										if IsControlJustPressed(1,201) then
@@ -671,11 +671,11 @@ Citizen.CreateThread(function()
 											currentgarage = i
 											DriveInGarage()
 										else
-											drawTxt("Press ~b~ENTER~w~ to enter ~b~Los Santos Customs ",4,1,0.5,0.8,1.0,255,255,255,255)
+											drawTxt("Pressione ~b~ENTER~w~ para entrar na ~b~Los Santos Customs ",4,1,0.5,0.8,1.0,255,255,255,255)
 										end
 									end
 								else
-									drawTxt("~r~This vehicle can't be upgraded",4,1,0.5,0.8,1.0,255,255,255,255)
+									drawTxt("~r~Este veículo não pode ser customizado!",4,1,0.5,0.8,1.0,255,255,255,255)
 								end
 							end
 						else
@@ -692,7 +692,7 @@ Citizen.CreateThread(function()
 											currentgarage = i
 											DriveInGarage()
 										else
-											drawTxt("~r~Locked, please wait",4,1,0.5,0.8,1.0,255,255,255,255)
+											drawTxt("~r~Aguarde, no momento está atendendo outro jogador.",4,1,0.5,0.8,1.0,255,255,255,255)
 										end
 									else
 										inside = true
@@ -701,7 +701,7 @@ Citizen.CreateThread(function()
 										DriveInGarage()
 									end
 								else
-									drawTxt("~r~This vehicle can't be upgraded",4,1,0.5,0.8,1.0,255,255,255,255)
+									drawTxt("~r~Este veículo não pode ser customizado!",4,1,0.5,0.8,1.0,255,255,255,255)
 								end
 							end
 						end

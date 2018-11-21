@@ -51,7 +51,7 @@ function searchIdDoor()
 end
 
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function()
   while true do
     Citizen.Wait(1)
     if IsControlJustPressed(table.unpack(LockHotkey)) then
@@ -61,37 +61,45 @@ Citizen.CreateThread(function()
       end
     end
   end
-end)
+end)]]
 
 
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
     local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
+    local distance = 0
+    local pressed = IsControlJustPressed(table.unpack(LockHotkey))
+  
     for k,v in pairs(doors) do
+      distance = Vdist2(x,y,z,v.x,v.y,v.z)
       if Vdist2(x,y,z,v.x,v.y,v.z) < 101 then
-          local door = GetClosestObjectOfType(v.x,v.y,v.z, 1.0, v.hash, false, false, false)
-          if door ~= 0 then
-            SetEntityCanBeDamaged(door, false)
-            if v.locked == false then
+        local door = GetClosestObjectOfType(v.x,v.y,v.z, 1.0, v.hash, false, false, false)
+        if door ~= 0 then
+          if distance < 2.27 and pressed then
+            TriggerServerEvent("vrpdoorsystem:open", k)
+          end
+
+          SetEntityCanBeDamaged(door, false)
+          if v.locked == false then
+            NetworkRequestControlOfEntity(door)
+            FreezeEntityPosition(door, false)
+
+            if v["txtX"] ~= nil then
+              DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~g~Aberta")
+            end
+          else
+            local locked, heading = GetStateOfClosestDoorOfType(v.hash, v.x,v.y,v.z, locked, heading)
+            if heading > -0.02 and heading < 0.02 then
               NetworkRequestControlOfEntity(door)
-              FreezeEntityPosition(door, false)
+              FreezeEntityPosition(door, true)
 
               if v["txtX"] ~= nil then
-                DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~g~Aberta")
-              end
-            else
-              local locked, heading = GetStateOfClosestDoorOfType(v.hash, v.x,v.y,v.z, locked, heading)
-              if heading > -0.02 and heading < 0.02 then
-                NetworkRequestControlOfEntity(door)
-                FreezeEntityPosition(door, true)
-
-                if v["txtX"] ~= nil then
-                  DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~r~Fechada")
-                end
+                DrawText3d(v["txtX"], v["txtY"], v["txtZ"], "~b~Porta ~r~Fechada")
               end
             end
           end
+        end
       end
     end
   end

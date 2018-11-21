@@ -20,7 +20,7 @@ farm1[0] = {["x"] = -260.94696044922,["y"]= -964.64227294922,["z"]= 32.951438903
 local farm2 = {}
 farm2[0] = {["x"] = -803.37982177734,["y"]= -223.99125671387,["z"]= 37.225769042969} -- next point
 
-Citizen.CreateThread(function ()
+--[[Citizen.CreateThread(function ()
     while true do
         Citizen.Wait(0)
         --DrawMarker(31, -260.94696044922,-964.64227294922,32.951438903809-1.0001, 0, 0, 0, 0, 0, 0, 1.0001,1.0001,1.0001, 0, 0, 200, 155, 0, 0, 0, 0, 0, 0, 0)
@@ -29,7 +29,7 @@ Citizen.CreateThread(function ()
             --DrawText3DTag(farm1[0]["x"], farm1[0]["y"], farm1[0]["z"], "~b~Guizao ~s~Teste")
             --DrawText3DTag(farm2[0]["x"], farm2[0]["y"], farm2[0]["z"] , "~b~farm2  ~r~farm2") --next point
     end
-end)
+end)]]
 
 function DrawText3DTag(x,y,z, text) 
     local onScreen,_x,_y=World3dToScreen2d(x,y,z)

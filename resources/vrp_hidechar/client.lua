@@ -60,16 +60,8 @@ function onHideUpdate()
             end
         end
 
-        if IsEntityVisible(playerOwner) then
-            --SetLocalPlayerVisibleLocally(1)
-            SetPlayerInvincible(GetPlayerIndex(),true)
-        end
-
-        Citizen.Wait(0)
+        Citizen.Wait(1)
     end
-
-    --SetLocalPlayerVisibleLocally(0)
-    SetPlayerInvincible(GetPlayerIndex(),false)
 end
     
 
