@@ -43,7 +43,7 @@ function vRPts.addTattoo(tattoo,store,price)
 	  custom[tattoo] = {store,price}
   end
   
-  setTattoos()
+  setTattoos(0)
 end
 
 function vRPts.delTattoo(tattoo)
@@ -52,7 +52,7 @@ function vRPts.delTattoo(tattoo)
 	  custom[tattoo] = nil
   end
   
-  setTattoos()
+  setTattoos(0)
 end
 
 function vRPts.getTattoos()
@@ -63,7 +63,7 @@ function vRPts.cleanPlayer()
   ClearPedDecorations(GetPlayerPed(-1))
   custom = {}
 
-  setTattoos()
+  setTattoos(0)
 end
 
 function setTattos(time)
