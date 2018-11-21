@@ -97,7 +97,7 @@ function vRPts.openTattooshop(source, shop)
         else
           vRPclient.notify(source, {lang.money.not_enough()})
           -- revert changes
-          TSclient.setTattoos(source, {old_custom})
+          TSclient.setTattoos(source, {old_custom, 0})
         end
       end)
     end
@@ -148,7 +148,7 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
     vRP.getUData({user_id,"vRP:tattoos", function(data)
       if data ~= "" then
         local tattoos = json.decode(data)
-        TSclient.setTattoos(mySource, {tattoos})
+        TSclient.setTattoos(mySource, {tattoos, 5000})
       end
     end})
   end

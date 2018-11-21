@@ -66,14 +66,18 @@ function vRPts.cleanPlayer()
   setTattoos()
 end
 
-function setTattos()
-  if custom then
-    local ped = GetPlayerPed(-1)
-    -- parts
-    for k,v in pairs(custom) do
-      ApplyPedOverlay(ped, GetHashKey(v[1]), GetHashKey(k))
+function setTattos(time)
+  local _time = time or 0
+  Citizen.CreateThread(function()
+    Citizen.Wait(_time)
+    if custom then
+      local ped = GetPlayerPed(-1)
+      -- parts
+      for k,v in pairs(custom) do
+        ApplyPedOverlay(ped, GetHashKey(v[1]), GetHashKey(k))
+      end
     end
-  end
+  end)
 end
 
 --[[Citizen.CreateThread(function()
