@@ -70,16 +70,19 @@ Citizen.CreateThread(function()
     local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
     local distance = 0
     local pressed = IsControlJustPressed(table.unpack(LockHotkey))
+    local hashlocked = nil
   
     for k,v in pairs(doors) do
       distance = Vdist2(x,y,z,v.x,v.y,v.z)
-      if Vdist2(x,y,z,v.x,v.y,v.z) < 101 then
+      if distance < 101 then
+
+        if distance < 2.27 and pressed and hashlocked ~= v.hash then
+          hashlocked = v.hash
+          TriggerServerEvent("vrpdoorsystem:open", k)
+        end
+      
         local door = GetClosestObjectOfType(v.x,v.y,v.z, 1.0, v.hash, false, false, false)
         if door ~= 0 then
-          if distance < 2.27 and pressed then
-            TriggerServerEvent("vrpdoorsystem:open", k)
-          end
-
           SetEntityCanBeDamaged(door, false)
           if v.locked == false then
             NetworkRequestControlOfEntity(door)

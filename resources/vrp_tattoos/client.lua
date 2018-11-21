@@ -28,13 +28,13 @@ vRP = Proxy.getInterface("vRP")
 
 local custom = {}
 
-function vRPts.setTattoos(data)
+function vRPts.setTattoos(data, time)
   ClearPedDecorations(GetPlayerPed(-1))
 	if data then
 		custom = data
   end
   
-  setTattoos()
+  setTattoos(time)
 end
 
 function vRPts.addTattoo(tattoo,store,price)
