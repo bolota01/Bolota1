@@ -67,7 +67,7 @@ cfg.repair = {
       {721.13458251954,-1089.5694580078,22.248336791992},
       {-666.79125976562,-2378.74609375,13.882237434388}
     },
-    reward = 1100
+    reward = 1300
   }
 }
 cfg.correio = {
@@ -136,7 +136,7 @@ cfg.correio = {
       {-1526.26147460938,-281.718872070313,48.8207893676758},
       {-1570.37072753906,-288.545227050781,47.8205915222168}
     },
-    reward = 1100
+    reward = 1300
   }
 }
 cfg.bankdriver = {
@@ -186,7 +186,7 @@ cfg.bankdriver = {
       {526.46704101563,-160.64918518066,57.066177368164},
       {-845.22045898438,-340.73037719727,38.680240631104}
     },
-    reward = 1100
+    reward = 1300
   },
   ["mission.bankdriver.moneybank2"] = {
     chance = 1,
@@ -201,7 +201,7 @@ cfg.bankdriver = {
     {-351.534,-49.529,49.042},
     {241.727,220.706,106.286}
     },
-    reward = 1100
+    reward = 1300
   }  
 }
 
@@ -222,7 +222,7 @@ cfg.prostituta = {
     {-1416.60266113281, -527.608276367188, 31.2453346252441},
     {-647.495849609375, 41.0316467285156, 39.6100006103516}
     },
-    reward = 1100
+    reward = 1300
   }
 }
 
@@ -517,8 +517,8 @@ cfg.delivery = {
     title = "Entrega de comida",
     chance = 1,
     items = {
-      ["pizza"] = {7,20,60},
-      ["gocagola"] = {7,20,30}
+      ["pizza"] = {7,20,70},
+      ["gocagola"] = {7,20,40}
     }
   },
   ["mission.delivery.diamante"] ={
@@ -526,7 +526,7 @@ cfg.delivery = {
     title = "Venda os diamantes",
     chance = 1,
     items = {
-      ["diamante"] = {7,20,225}
+      ["diamante"] = {7,20,240}
     }
   },    
   ["mission.delivery.weed"] = {
@@ -654,7 +654,7 @@ cfg.carjack = {
 -- EMERGENCY
   cfg.emergency = {
   ["mission.emergency.transfer"] = {
-    chance = 7,
+    chance = 6,
     title = "Transferência de Paciente",
     steps = 2,
     positions = {
@@ -741,7 +741,7 @@ cfg.UBER = {
     {-1033.44,-2730.24,19.6868},
     {-1018.67,-2732,13.2687}
   },
-    reward = 1100
+    reward = 1300
   }
 }
 
@@ -819,7 +819,7 @@ cfg.gari = {
     text = "Vá para a lixeira.",
     positions = gari_localizacoes,
     steps = 1,
-    reward = 1100
+    reward = 1300
   }  
 }
   
@@ -834,7 +834,7 @@ cfg.police = {
   {854.080261230469,-1280.93505859375,26.1412010192871},
   {452.274810791016,-996.933715820313,25.4266204833984}
     },
-    reward = 1000
+    reward = 1100
   },
   ["mission.police.patrol"] = {
     chance = 9,
@@ -849,14 +849,14 @@ cfg.police = {
   {219.737426757813,205.291076660156,105.063316345215},
   {152.946182250977,-1029.80944824219,28.8697566986084}
     },
-    reward = 1000 
+    reward = 1100 
   }
 }
 
 --Delegada
 cfg.delegada = {
   ["mission.delegada"] = { -- permissao
-    chance = 1, -- quantidade de lados do dado 1
+    chance = 3, -- quantidade de lados do dado 1
     title = "Investigação Criminal", -- nome
     text = "Vá até o local para investigar um caso.",
     steps = 3,
@@ -907,7 +907,7 @@ cfg.advogado = {
       {224.53601074219,-441.89312744141,45.246925354004},
       {-2223.0473632813,304.02770996094,184.5983581543}
     },
-    reward = 1100
+    reward = 1300
   }
 }    
 return cfg

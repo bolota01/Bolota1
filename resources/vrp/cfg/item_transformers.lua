@@ -289,7 +289,7 @@ cfg.item_transformers = {
       ["Reciclar Lixo"] = { -- action name
         description="Reciclando o Lixo", -- action description
         in_money=0, -- money taken per unit
-        out_money=1100, -- money earned per unit
+        out_money=1300, -- money earned per unit
         reagents={
           ["saco_lixo"] = 1
         }, -- items taken per unit
@@ -310,7 +310,7 @@ cfg.item_transformers = {
       ["Entregar processos"] = { -- action name
         description="Entregando processos", -- action description
         in_money=0, -- money taken per unit
-        out_money=1100, -- money earned per unit
+        out_money=1300, -- money earned per unit
         reagents={
           ["processos"] = 1
         }, -- items taken per unit
@@ -331,7 +331,7 @@ cfg.item_transformers = {
       ["Receber pagamento de recibos"] = { -- action name
         description="Pagando Recibos", -- action description
         in_money=0, -- money taken per unit
-        out_money=1100, -- money earned per unit
+        out_money=1300, -- money earned per unit
         reagents={
           ["recibo_corrida"] = 1
         }, -- items taken per unit
