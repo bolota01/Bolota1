@@ -66,7 +66,7 @@ function vRPts.cleanPlayer()
   setTattoos(0)
 end
 
-function setTattos(time)
+function setTattoos(time)
   local _time = time or 0
   Citizen.CreateThread(function()
     Citizen.Wait(_time)
