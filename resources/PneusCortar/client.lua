@@ -1,20 +1,25 @@
+local allowedWeapons = {"WEAPON_KNIFE", "WEAPON_BOTTLE", "WEAPON_DAGGER", "WEAPON_HATCHET", "WEAPON_MACHETE", "WEAPON_SWITCHBLADE"}
+local flexAllowed = {}
+local animDict = "melee@knife@streamed_core_fps"
+local animName = "ground_attack_on_spot"
+
 Citizen.CreateThread(function()
+	for i = 1, #allowedWeapons do
+		flexAllowed[GetHashKey(allowedWeapons[i])] = true
+	end
+
 	while true do
-		local allowedWeapons = {"WEAPON_KNIFE", "WEAPON_BOTTLE", "WEAPON_DAGGER", "WEAPON_HATCHET", "WEAPON_MACHETE", "WEAPON_SWITCHBLADE"}
 		local player = PlayerId()
 		local plyPed = GetPlayerPed(player)
-		local vehicle = GetClosestVehicleToPlayer()
-		local animDict = "melee@knife@streamed_core_fps"
-		local animName = "ground_attack_on_spot"
-		if vehicle ~= 0 then
-			if CanUseWeapon(allowedWeapons) then
+
+		if CanUseWeapon() then
+			local vehicle = GetClosestVehicleToPlayer()
+			if vehicle ~= 0 then
 				local closestTire = GetClosestVehicleTire(vehicle)
 				if closestTire ~= nil then
-					
 					if IsVehicleTyreBurst(vehicle, closestTire.tireIndex, 0) == false then
 						Draw3DText(closestTire.bonePos.x, closestTire.bonePos.y, closestTire.bonePos.z, tostring("~r~[E] Furar Pneu"))
 						if IsControlJustPressed(1, 38) then
-
 							RequestAnimDict(animDict)
 							while not HasAnimDictLoaded(animDict) do
 								Citizen.Wait(100)
@@ -35,16 +40,11 @@ Citizen.CreateThread(function()
 	end
 end)
 
-function CanUseWeapon(allowedWeapons)
+function CanUseWeapon()
 	local player = PlayerId()
 	local plyPed = GetPlayerPed(player)
 	local plyCurrentWeapon = GetSelectedPedWeapon(plyPed)
-	for a = 1, #allowedWeapons do
-		if GetHashKey(allowedWeapons[a]) == plyCurrentWeapon then
-			return true
-		end
-	end
-	return false
+	return flexAllowed[plyCurrentWeapon] ~= nil
 end
 
 function GetClosestVehicleToPlayer()

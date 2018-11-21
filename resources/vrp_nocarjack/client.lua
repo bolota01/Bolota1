@@ -15,7 +15,7 @@ end
 Citizen.CreateThread(function()
     while true do
 	-- gets if player is entering vehicle
-			if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId())) and not trying then
+			if not trying and DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId())) then
 				trying = true
 
 				SetTimeout(500, unlock)

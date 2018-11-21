@@ -18,7 +18,7 @@
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(1) 
+        Citizen.Wait(100) 
 		
         for ped in EnumeratePeds() do
             if DoesEntityExist(ped) then
@@ -33,7 +33,9 @@ Citizen.CreateThread(function()
 						end
 					end
 				end
-				for i,model in pairs(cfg.noguns) do
+
+				SetPedDropsWeaponsWhenDead(ped,false) 
+				--[[for i,model in pairs(cfg.noguns) do
 					if (GetEntityModel(ped) == GetHashKey(model)) then
 						RemoveAllPedWeapons(ped, true)
 					end
@@ -42,21 +44,10 @@ Citizen.CreateThread(function()
 					if (GetEntityModel(ped) == GetHashKey(model)) then
 						SetPedDropsWeaponsWhenDead(ped,false) 
 					end
-				end
+				end]]
 			end
 		end
-		--[[ WORK IN PROGESS // DOES NOT WORK
-        for veh in EnumerateVehicles() do
-            if DoesEntityExist(veh) then
-				for i,model in pairs(cfg.vehs) do
-					if (GetEntityModel(veh) == GetHashKey(model)) then
-						SetEntityAsNoLongerNeeded(veh)
-						SetEntityCoords(veh,10000,10000,10000,1,0,0,1)
-					end
-				end
-			end
-		end
-		]]
+
     end
 end)
 

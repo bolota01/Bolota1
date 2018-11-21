@@ -1,4 +1,6 @@
-Citizen.CreateThread(function()
+
+local function tick()
   TriggerEvent("vRP:MySQL_tick")
-  Citizen.Wait(100)
-end)
+  SetTimeout(10, tick)
+end
+tick()

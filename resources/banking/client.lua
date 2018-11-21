@@ -132,7 +132,7 @@ end
 if enableBankingGui then
   Citizen.CreateThread(function()
     while true do
-      Citizen.Wait(0)
+      Citizen.Wait(500)
       if(IsNearBank() or IsNearATM()) then
         if (atBank == false) then
           TriggerEvent('chatMessage', "", {255, 255, 255}, "Pressione 'E' para acessar o banco");
@@ -147,12 +147,13 @@ if enableBankingGui then
               bankOpen = false
             else
               openGui()
+              run_task_bank()
               bankOpen = true
             end
           end
       	end
       else
-        if(atmOpen or bankOpen) then
+        if bankOpen then
           closeGui()
         end
         atBank = false
@@ -164,9 +165,9 @@ if enableBankingGui then
 end
 
 -- Disable controls while GUI open
-Citizen.CreateThread(function()
-  while true do
-    if bankOpen or atmOpen then
+function run_task_bank()
+  Citizen.CreateThread(function()
+    while bankOpen do
       local ply = GetPlayerPed(-1)
       local active = true
       DisableControlAction(0, 1, active) -- LookLeftRight
@@ -175,10 +176,10 @@ Citizen.CreateThread(function()
       DisablePlayerFiring(ply, true) -- Disable weapon firing
       DisableControlAction(0, 142, active) -- MeleeAttackAlternate
       DisableControlAction(0, 106, active) -- VehicleMouseControlOverride
+      Citizen.Wait(0)
     end
-    Citizen.Wait(0)
-  end
-end)
+  end)
+end
 
 -- NUI Callback Methods
 RegisterNUICallback('close', function(data, cb)
@@ -232,8 +233,7 @@ function IsNearATM()
   local ply = GetPlayerPed(-1)
   local plyCoords = GetEntityCoords(ply, 0)
   for _, item in pairs(atms) do
-    local distance = Vdist2(item.x, item.y, item.z,  plyCoords["x"], plyCoords["y"], plyCoords["z"])
-    if(distance < 9) then
+    if Vdist2(item.x, item.y, item.z,  plyCoords["x"], plyCoords["y"], plyCoords["z"]) < 9 then
       return true
     end
   end
@@ -254,8 +254,7 @@ function IsNearBank()
   local ply = GetPlayerPed(-1)
   local plyCoords = GetEntityCoords(ply, 0)
   for _, item in pairs(banks) do
-    local distance = Vdist2(item.x, item.y, item.z,  plyCoords["x"], plyCoords["y"], plyCoords["z"])
-    if(distance < 9.1) then
+    if Vdist2(item.x, item.y, item.z,  plyCoords["x"], plyCoords["y"], plyCoords["z"]) < 9.1 then
       return true
     end
   end
