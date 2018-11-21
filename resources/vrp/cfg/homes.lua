@@ -886,8 +886,8 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    blipid=374, 
-    blipcolor=55,
+    --blipid=374, 
+    --blipcolor=55,
     add_group = "Produtor de Metanfetamina"
   },
   ["Galpao 02"] = { --Maconha
@@ -896,8 +896,8 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    blipid=374, 
-    blipcolor=55,
+    --blipid=374, 
+    --blipcolor=55,
     add_group = "Produtor de Maconha"
   },
   ["Galpao 03"] = { --Cocaina
@@ -906,8 +906,8 @@ cfg.homes = {
     buy_price = 5000000,
     sell_price = 3500000,
     max = 1,
-    blipid=374, 
-    blipcolor=55,
+    --blipid=374, 
+    --blipcolor=55,
     add_group = "Produtor de Cocaina"
   }
   --[[["Galpao 04"] = {
