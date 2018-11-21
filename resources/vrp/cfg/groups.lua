@@ -134,8 +134,8 @@ cfg.groups = {
     "policiafederal.weapons",
     "player.group.add",
     "police.menu_interaction",
-    "mission.police.patrol",
-    "mission.police.transfer",
+    --"mission.police.patrol",
+    --"mission.police.transfer",
     "police.door",
     "apreender.veiculo",
     "police.multas",
@@ -882,11 +882,11 @@ cfg.groups = {
   },
   -- VIP
   ["vipdima"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~b~VIP Dima."}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~b~VIP Diamante."}) end},
   "garagem.vipdima",
   },
   ["vipgold"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~y~VIP Gold."}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~y~VIP Ouro."}) end},
   "garagem.vipgold",
   },   
   ["vipprata"] = {
