@@ -6,6 +6,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(100)
 	end
     local handsup = false
+    local time = 0
 
 	while true do
         Citizen.Wait(time)
