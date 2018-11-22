@@ -139,7 +139,7 @@ end)
 function onTryingToEnterVehicle(playerPed, plyPos, street1, street2)
     if isTryingVehicle then
         origin = true
-        --DecorSetInt(playerPed, "IsOutlaw", 2)
+        DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -163,7 +163,7 @@ end
 function onPedInMelee(playerPed, plyPos, street1, street2)
     if isMeleeCombat then 
         origin = true
-        --DecorSetInt(playerPed, "IsOutlaw", 2)
+        DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -184,7 +184,7 @@ end
 function onPedShotting(playerPed, plyPos, street1, street2)
     if isShotting then
         origin = true
-        --DecorSetInt(playerPed, "IsOutlaw", 2)
+        DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -227,7 +227,7 @@ Citizen.CreateThread( function()
     end
 end)
 
---[[
+
 Citizen.CreateThread(function()
     while true do
         Wait(500)
@@ -270,4 +270,3 @@ Citizen.CreateThread( function()
         end
     end
 end)
-]]
