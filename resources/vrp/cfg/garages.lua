@@ -242,7 +242,16 @@ cfg.garage_types = {
     ["rs7"] = {"Audi RS7",600000,"<img src='https://i.imgur.com/gARIsvK.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["urus2018"] = {"Lamborghini Urus",1500000,"<img src='https://i.imgur.com/1FHViFb.png'/><br/>CAPACIDADE:60kg<br/>"},
     ["z4"] = {"Bmw Z4",550000,"<img src='https://i.imgur.com/7C0Qb4q.png'/><br/>CAPACIDADE:45kg<br/>"},
-    ["718"] = {"Porsche 718 Boxster",1500000,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"}
+    ["718"] = {"Porsche 718 Boxster",1500000,"<img src='https://i.imgur.com/ZYce59W.jpg'/><br/>CAPACIDADE:30kg<br/>"},
+    ["acs8"] = {"BMW I8",2000000,"<img src='https://i.imgur.com/eEuWjRg.png'/<br/>CAPACIDADE:30kg<br/>"},
+    ["rs318"] = {"AUDI RS03",550000,"<img src='https://i.imgur.com/11tveTi.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["cooperworks"] = {"MiniCooper",150000,"<img src='https://i.imgur.com/8CpGqM7.png'/<br/>CAPACIDADE:40kg<br/>"},
+    ["panamera17turbo"] = {"Porsche Panamera",1300000,"<img src='https://i.imgur.com/avAs7H6.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["bbentayga"] = {"Bentley Bentayga",1700000,"<img src='https://i.imgur.com/GGsuhtv.png'/<br/>CAPACIDADE:80kg<br/>"},
+    ["dk350z"] = {"Nissan 350z",600000,"<img src='https://i.imgur.com/qO0pfgY.png'/<br/>CAPACIDADE:30kg<br/>"},
+    ["4c"] = {"Alpha Romeo 4C",450000,"<img src='https://i.imgur.com/JpyWdZY.png'/<br/>CAPACIDADE:30kg<br/>"},
+    ["twizy"] = {"Renault Twizy",75000,"<img src='https://i.imgur.com/1lrq6Gp.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["laferrari"] = {"Ferrari Aperta",7000000,"<img src='https://i.imgur.com/RaLzcSh.png'/<br/>CAPACIDADE:30kg<br/>"}
     },
     ["REVENDA MOTOS"] = {
     _config = {vtype="car",radius=5.1,buy=true},
@@ -254,6 +263,7 @@ cfg.garage_types = {
     ["hornet"] = {"Hornet",120000,"<img src='https://i.imgur.com/M9lkoAT.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["r6"] = {"Yamaha R6",350000,"<img src='https://i.imgur.com/jYdjtU5.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["r1"] = {"Yamaha r1",550000,"<img src='https://i.imgur.com/9YHc2fw.png'/><br/>CAPACIDADE:10kg<br/>"},
+    ["hbb"] = {"Harley Davidson Fat Boy",400000,"<img src='https://i.imgur.com/q4jxm5v.png'/<br/>CAPACIDADE:10kg<br/>"},
     --["xj6"] = {"Yamaha XJ6",100000,"<img src='https://i.imgur.com/9lta3M9.png'/><br/>CAPACIDADE:10kg<br/>"},
     ["hdfb"] = {"Harley Davidson Fat Boy Lo Vintage",380000,"<img src='https://i.imgur.com/LDkSGxN.jpg'/><br/>CAPACIDADE:10kg<br/>"},
     ["hdkn"] = {"Harley-Davidson Knucklehead",350000,"<img src='https://i.imgur.com/nKe5THQ.jpg'/><br/>CAPACIDADE:10kg<br/>"},
