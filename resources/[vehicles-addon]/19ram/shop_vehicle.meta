@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ShopVehicleDataArray>
+	<Vehicles>
+		<Item>
+			<lockHash>CU_VEH_bagged19ram</lockHash>
+			<modelNameHash>bagged19ram</modelNameHash>
+			<cost value="100"/>
+			<textLabel>bagged19ram</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_MINIVAN2</lockHash>
+			<modelNameHash>minivan2</modelNameHash>
+			<cost value="100"/>
+			<textLabel>MINIVAN2</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_SABREGT2</lockHash>
+			<modelNameHash>sabregt2</modelNameHash>
+			<cost value="100"/>
+			<textLabel>SABREGT2</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_SLAMVAN3</lockHash>
+			<modelNameHash>slamvan3</modelNameHash>
+			<cost value="100"/>
+			<textLabel>SLAMVAN3</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_TORNADO5</lockHash>
+			<modelNameHash>tornado5</modelNameHash>
+			<cost value="100"/>
+			<textLabel>TORNADO5</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_VIRGO2</lockHash>
+			<modelNameHash>virgo2</modelNameHash>
+			<cost value="100"/>
+			<textLabel>VIRGO2</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_VEH_VIRGO3</lockHash>
+			<modelNameHash>virgo3</modelNameHash>
+			<cost value="100"/>
+			<textLabel>VIRGO3</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+	</Vehicles>	
+</ShopVehicleDataArray>
