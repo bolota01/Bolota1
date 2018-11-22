@@ -203,7 +203,7 @@ function onPedShotting(playerPed, plyPos, street1, street2)
 end
 
 Citizen.CreateThread(function()
-    while true
+    while true do
         Citizen.Wait(0)
         playerPed = GetPlayerPed(-1)
         isTryingVehicle = IsPedTryingToEnterALockedVehicle(playerPed) or IsPedJacking(playerPed)

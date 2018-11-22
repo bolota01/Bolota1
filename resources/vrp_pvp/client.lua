@@ -14,13 +14,14 @@ end
 
 function set_blips()
     Citizen.CreateThread(function()
+        Citizen.Wait(0)
         for _, v in pairs(blips) do
             drawBlipWithoutFill(v["x"],v["y"],v["z"],v["size"])
         end
     end)
 end
 
-RegisterClientEvent("pvp:markers")
+RegisterNetEvent("pvp:markers")
 AddEventHandler("pvp:markers", function()
     set_blips()
 end)
