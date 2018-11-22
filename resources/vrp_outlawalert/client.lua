@@ -12,7 +12,12 @@ local blipJackingTime = 15 -- in second
 local origin = false --Don't touche it
 local timing = timer * 60000 --Don't touche it
 
-GetPlayerName()
+local isTryingVehicle = false
+local isMeleeCombat = false
+local isShotting = false
+local playerPed = nil
+local plyPos = nil
+
 RegisterNetEvent('outlawNotify')
 AddEventHandler('outlawNotify', function(alert)
     if not origin then
@@ -132,9 +137,9 @@ end)
 12- Clear blue]]
 
 function onTryingToEnterVehicle(playerPed, plyPos, street1, street2)
-    if IsPedTryingToEnterALockedVehicle(playerPed) or IsPedJacking(playerPed) then
+    if isTryingVehicle then
         origin = true
-        DecorSetInt(playerPed, "IsOutlaw", 2)
+        --DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -156,9 +161,9 @@ function onTryingToEnterVehicle(playerPed, plyPos, street1, street2)
 end
 
 function onPedInMelee(playerPed, plyPos, street1, street2)
-    if IsPedInMeleeCombat(playerPed) and DoesEntityExist(GetMeleeTargetForPed(playerPed)) then 
+    if isMeleeCombat then 
         origin = true
-        DecorSetInt(playerPed, "IsOutlaw", 2)
+        --DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -177,9 +182,9 @@ function onPedInMelee(playerPed, plyPos, street1, street2)
 end
 
 function onPedShotting(playerPed, plyPos, street1, street2)
-    if IsPedShooting(playerPed) then
+    if isShotting then
         origin = true
-        DecorSetInt(playerPed, "IsOutlaw", 2)
+        --DecorSetInt(playerPed, "IsOutlaw", 2)
         local male = IsPedMale(playerPed)
         if male then
             sex = "Homem"
@@ -197,14 +202,24 @@ function onPedShotting(playerPed, plyPos, street1, street2)
     end
 end
 
+Citizen.CreateThread(function()
+    while true
+        Citizen.Wait(0)
+        playerPed = GetPlayerPed(-1)
+        isTryingVehicle = IsPedTryingToEnterALockedVehicle(playerPed) or IsPedJacking(playerPed)
+        isMeleeCombat = IsPedInMeleeCombat(playerPed) and DoesEntityExist(GetMeleeTargetForPed(playerPed))
+        isShotting = IsPedShooting(playerPed)
+    end
+end)
+
 Citizen.CreateThread( function()
     while true do
-        Wait(0)
-        local plyPos = GetEntityCoords(GetPlayerPed(-1),  true)
+        Citizen.Wait(0)
+        plyPos = GetEntityCoords(GetPlayerPed(-1),  true)
+
         local s1, s2 = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, plyPos.x, plyPos.y, plyPos.z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
         local street1 = GetStreetNameFromHashKey(s1)
         local street2 = GetStreetNameFromHashKey(s2)
-        local playerPed = GetPlayerPed(-1)
 
         onTryingToEnterVehicle(playerPed, plyPos, street1, street2)
         onPedInMelee(playerPed, plyPos, street1, street2)
@@ -212,6 +227,7 @@ Citizen.CreateThread( function()
     end
 end)
 
+--[[
 Citizen.CreateThread(function()
     while true do
         Wait(500)
@@ -254,3 +270,4 @@ Citizen.CreateThread( function()
         end
     end
 end)
+]]
