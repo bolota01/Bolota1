@@ -1,14 +1,23 @@
 local currentlyTowedVehicle = nil
 
+local cars = {
+	GetHashKey('flatbed')
+}
+
 RegisterNetEvent('pv:tow')
 AddEventHandler('pv:tow', function()
 	
 	local playerped = GetPlayerPed(-1)
 	local vehicle = GetVehiclePedIsIn(playerped, true)
+	local isVehicleTow = false
 	
-	local towmodel = GetHashKey('flatbed')
-	local isVehicleTow = IsVehicleModel(vehicle, towmodel)
-			
+	for i = 1, #cars do
+		if IsVehicleModel(vehicle, cars[i]) then
+			isVehicleTow = true
+			break
+		end
+	end
+
 	if isVehicleTow then
 	
 		local coordA = GetEntityCoords(playerped, 1)
