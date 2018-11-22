@@ -262,11 +262,11 @@ cfg.garage_types = {
     },
     ["REVENDA MOTOS DE TRILHA"] = {
     _config = {vtype="car",radius=3.1,buy=true},
-    ["exc530"] = {"KTM 530",0,"<img src='https://i.imgur.com/ncqaESA.png'/<br/>CAPACIDADE:10kg<br/>"},
-    ["sxfredbull"] = {"KTM RedBull",0,"<img src='https://i.imgur.com/W9Tb1kp.png'/<br/>CAPACIDADE:10kg<br/>"},
-    ["sxfwilvo"] = {"KTM Wilvo",0,"<img src='https://i.imgur.com/QAq6T1B.png'/<br/>CAPACIDADE:10kg<br/>"},
-    ["sxfmarchetti"] = {"KTM Marchetti",0,"<img src='https://i.imgur.com/8Xu6pc8.png'/<br/>CAPACIDADE:10kg<br/>"},
-    ["rmz250"] = {"Suzuki 250",0,"<img src='https://i.imgur.com/5RwVkEe.png'/<br/>CAPACIDADE:10kg<br/>"}
+    ["exc530"] = {"KTM 530",50000,"<img src='https://i.imgur.com/ncqaESA.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["sxfredbull"] = {"KTM RedBull",50000,"<img src='https://i.imgur.com/W9Tb1kp.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["sxfwilvo"] = {"KTM Wilvo",50000,"<img src='https://i.imgur.com/QAq6T1B.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["sxfmarchetti"] = {"KTM Marchetti",50000,"<img src='https://i.imgur.com/8Xu6pc8.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["rmz250"] = {"Suzuki 250",50000,"<img src='https://i.imgur.com/5RwVkEe.png'/<br/>CAPACIDADE:10kg<br/>"}
     },
     ["REVENDA CARROS LOWRIDER"] = {
     _config = {vtype="car",radius=3.1,buy=true},
@@ -291,12 +291,21 @@ cfg.garage_types = {
     },
     ["VIP PRATA"] = {
     _config = {vtype="car",permissions={"garagem.vipprata"},buy=true},
+    ["rcf"] = {"Lexus RCF",500000,"<img src='https://i.imgur.com/UJhwI06.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["19ram"] = {"Dodge Ram Donk",900000,"<img src='https://i.imgur.com/MfQnmjf.png'/<br/>CAPACIDADE:120kg<br/>"},
+    ["titan17"] = {"Nissan Titan",1000000,"<img src='https://i.imgur.com/myk9EBV.png'/<br/>CAPACIDADE:230kg<br/>"},
     ["panigale"] = {"Ducati Panigale1299",1000000,"<img src='https://i.imgur.com/wcXQUBM.png'/<br/>CAPACIDADE:10kg<br/>"},
     ["mi8"] = {"BMW I8",2000000,"<img src='https://i.imgur.com/OQvXYSa.png'/<br/>CAPACIDADE:30kg<br/>"},
     ["ar8lb"] = {"Audi R8",2250000,"<img src='https://i.imgur.com/oywtAMJ.png'/<br/>CAPACIDADE:30kg<br/>"}
     },
     ["VIP GOLD"] = {
     _config = {vtype="car",permissions={"garagem.vipgold"},buy=true},
+    ["rcf"] = {"Lexus RCF",500000,"<img src='https://i.imgur.com/UJhwI06.png'/<br/>CAPACIDADE:50kg<br/>"},
+    ["19ram"] = {"Dodge Ram Donk",900000,"<img src='https://i.imgur.com/MfQnmjf.png'/<br/>CAPACIDADE:120kg<br/>"},
+    ["titan17"] = {"Nissan Titan",1000000,"<img src='https://i.imgur.com/myk9EBV.png'/<br/>CAPACIDADE:230kg<br/>"},
+    ["panigale"] = {"Ducati Panigale1299",1000000,"<img src='https://i.imgur.com/wcXQUBM.png'/<br/>CAPACIDADE:10kg<br/>"},
+    ["mi8"] = {"BMW I8",2000000,"<img src='https://i.imgur.com/OQvXYSa.png'/<br/>CAPACIDADE:30kg<br/>"},
+    ["ar8lb"] = {"Audi R8",2250000,"<img src='https://i.imgur.com/oywtAMJ.png'/<br/>CAPACIDADE:30kg<br/>"},
     ["gt17"] = {"Ford GT",3700000,"<img src='https://i.imgur.com/fazDch1.png'/<br/>CAPACIDADE:30kg<br/>"},
     ["jp12"] = {"Jeep Wrangler",600000,"<img src='https://i.imgur.com/FvkS2ak.png'/<br/>CAPACIDADE:150kg<br/>"},
     ["senna"] = {"McLaren Senna",7000000,"<img src='https://i.imgur.com/0xWGwdL.png'/<br/>CAPACIDADE:30kg<br/>"},
@@ -407,8 +416,8 @@ cfg.garage_types = {
 }
 
 cfg.garages = {
-	--{"VIP GOLD",-45.049365997314,-1112.65234375,26.435815811157},
-	--{"VIP PRATA",-45.049365997314,-1112.65234375,26.435815811157},
+	{"VIP GOLD",731.55047607422,-2984.5466308594,-38.999866485596},
+	{"VIP PRATA",731.55047607422,-2984.5466308594,-38.999866485596},
 	{"VIP BRONZE",731.55047607422,-2984.5466308594,-38.999866485596},
 	--{"VIP DIAMANTE",-45.049365997314,-1112.65234375,26.435815811157},
     {"MARINA",-1602.1171875,5260.16015625,-1.7945220541954},
