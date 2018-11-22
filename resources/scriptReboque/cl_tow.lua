@@ -1,7 +1,9 @@
 local currentlyTowedVehicle = nil
 
 local cars = {
-	GetHashKey('flatbed')
+	GetHashKey('flatbed'),
+	GetHashKey('flatbed2'),
+	GetHashKey('flatbed3')
 }
 
 RegisterNetEvent('pv:tow')
