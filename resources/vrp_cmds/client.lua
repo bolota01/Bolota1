@@ -642,6 +642,13 @@ mask = not mask
 end
 end
 
+function vRPcmd.mascara100(p)
+mask = not mask
+        if mask then
+            SetPedComponentVariation(GetPlayerPed(-1), 1, 51, 5, 2) --coloca
+end
+end
+
 function vRPcmd.mascararaposa(p)
 mask = not mask
         if mask then

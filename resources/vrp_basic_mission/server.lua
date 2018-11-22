@@ -192,7 +192,7 @@ function task_mission()
                 if tasks_pendent[user_id] == nil then
                   if vRP.tryGetInventoryItem({user_id,"encomenda",1,true}) then
                     tasks_pendent[user_id] = true
-                    SetTimeout(1000, function()
+                    SetTimeout(4000, function()
                       tasks_pendent[user_id] = nil
                     vRPclient.notify(player,{"Entregando as encomendas, aguarde alguns segundos."})
                       vRP.nextMissionStep({player})
@@ -472,7 +472,7 @@ function task_mission()
                   tasks_pendent[user_id] = true
                   Mclient.freezePedVehicle(player,{true})
                   vRPclient.notify(player,{"Aguarde alguns segundos."})
-                  SetTimeout(5000, function()
+                  SetTimeout(10000, function()
                     tasks_pendent[user_id] = nil
                     vRP.nextMissionStep({player})
 					          Mclient.freezePedVehicle(player,{false})
@@ -484,6 +484,112 @@ function task_mission()
                       vRPclient.notify(player,{"Por enquanto é isso!"})
 				          	else
                       vRPclient.notify(player,{"Tudo bom! Vá para o próximo local!"})
+                    end
+                  end)
+                else
+                  vRPclient.notify(player, {"A tarefa ainda está em andamento!"})
+                end
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
+  
+  -- DELEGADA
+  for k,v in pairs(cfg.delegada) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                if tasks_pendent[user_id] == nil then
+                  tasks_pendent[user_id] = true
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Recolhendo fichas criminais..."})
+                  SetTimeout(10000, function()
+                    tasks_pendent[user_id] = nil
+                    vRP.nextMissionStep({player})
+					          Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveBankMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Todas as fichas criminais foram coletadas!"})
+				          	else
+                      vRPclient.notify(player,{"Fichas criminais coletadas! Vá para o próximo local!"})
+                    end
+                  end)
+                else
+                  vRPclient.notify(player, {"A tarefa ainda está em andamento!"})
+                end
+              end,
+              position = v.positions[math.random(1,#v.positions)]
+            }
+
+            table.insert(mdata.steps, step)
+          end
+
+          vRP.startMission({player,mdata})
+        end
+      end
+    end
+  end
+
+  -- ADVOGADO
+  for k,v in pairs(cfg.advogado) do -- each repair perm def
+    -- add missions to users
+    local users = vRP.getUsersByPermission({k})
+    for l,w in pairs(users) do
+      local user_id = w
+      local player = vRP.getUserSource({user_id})
+      if not vRP.hasMission({player}) then
+        if math.random(1,v.chance) == 1 then -- chance check
+          -- build mission
+          local mdata = {}
+          mdata.name = v.title
+          mdata.steps = {}
+
+          -- build steps
+          for i=1,v.steps do
+            local step = {
+              text = v.text.."<br />"..lang.reward({v.reward}),
+              onenter = function(player, area)
+                if tasks_pendent[user_id] == nil then
+                  tasks_pendent[user_id] = true
+                  Mclient.freezePedVehicle(player,{true})
+                  vRPclient.notify(player,{"Recolhendo os processos."})
+                  SetTimeout(5000, function()
+                    tasks_pendent[user_id] = nil
+                    vRP.nextMissionStep({player})
+                    Mclient.freezePedVehicle(player,{false})
+
+                    -- last step
+                    if i == v.steps then
+                      vRP.giveBankMoney({user_id,v.reward})
+                      vRPclient.notify(player,{glang.money.received({v.reward})})
+                      vRPclient.notify(player,{"Todos os processos foram coletados!"})
+                    else
+                      vRPclient.notify(player,{"Processos coletados! Vá para o próximo local!"})
                     end
                   end)
                 else

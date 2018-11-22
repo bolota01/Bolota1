@@ -839,6 +839,13 @@ cfg.commands = {
     end
 	},
 	
+	["/mascara100"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.mascara100(p)
+    end
+	},
+	
 	["/mascaraurso"] = {
     -- /mask toggles mask on and off
     action = function(p,color,msg)

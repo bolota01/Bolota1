@@ -19,7 +19,7 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,30,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""}
     --["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
@@ -34,9 +34,9 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,30,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,70,""}
   },
 
   ["Loja da Polícia"] = {
@@ -81,7 +81,7 @@ cfg.gunshop_types = {
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
     --["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     --["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
+    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,70,""}
   },
 
   --[[["heavymachineguns"] = {
@@ -154,14 +154,14 @@ cfg.gunshop_types = {
     --["ARMOR"] = {"Colete a prova de balas",10000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,30,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""}
     --["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
   ["Loja de Paraquedas"] = {
     _config = {blipid=94,blipcolor=50},
-    ["GADGET_PARACHUTE"] = {"Paraquedas",2000,0,""}
+    ["GADGET_PARACHUTE"] = {"Paraquedas",250,0,""}
   },
 
   ["Loja de Armas 06"] = {
@@ -174,7 +174,7 @@ cfg.gunshop_types = {
     ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
     ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
     ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
+    ["WEAPON_PISTOL"] = {"Pistola",30000,30,""},
     ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""}
     --["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   }
