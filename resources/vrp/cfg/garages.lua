@@ -279,7 +279,7 @@ cfg.garage_types = {
     ["rmz250"] = {"Suzuki 250",50000,"<img src='https://i.imgur.com/5RwVkEe.png'/<br/>CAPACIDADE:10kg<br/>"}
     },
     ["REVENDA CARROS LOWRIDER"] = {
-    _config = {vtype="car",radius=3.1,buy=true},
+    _config = {blipid=225,blipcolor=32,vtype="car",radius=3.1,buy=true},
     ["Chino2"] = {"Chino 2 ",140000,"<img src='https://i.imgur.com/5LjJr7o.png'/<br/>CAPACIDADE:30kg<br/>"},
     ["Faction2"] = {"Faction 2",135000,"<img src='https://i.imgur.com/sxUfMMk.png'/<br/>CAPACIDADE:30kg<br/>"},
     ["Moonbeam2"] = {"Moonbeam 2",120000,"<img src='https://i.imgur.com/4Acb1PB.png'/<br/>CAPACIDADE:70kg<br/>"},
@@ -442,6 +442,8 @@ cfg.garages = {
 	{"VENDA MOTOS",-43.407386779785,-1097.8394775391,26.422336578369}, --CONCESSIONÁRIA PADRÃO
 	{"GARAGEM",-2530.109375,2334.3012695313,33.059906005859},
 	{"GARAGEM",2579.7250976563,428.08618164063,108.4556427002},
+    {"GARAGEM",-637.83758544922,57.154930114746,43.942531585693},
+    {"GARAGEM",-1459.0517578125,-496.35546875,32.93896484375},
 	{"GARAGEM",-378.77001953125,-110.93278503418,38.697410583496},
 	{"GARAGEM",-580.55767822266,316.67123413086,84.783363342285},
 	{"GARAGEM",1404.8968505859,1118.7971191406,114.83769226074}, -- GARAGEM FAZENDA DE LUXO
