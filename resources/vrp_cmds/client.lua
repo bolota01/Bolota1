@@ -642,18 +642,41 @@ mask = not mask
 end
 end
 
-function vRPcmd.mascara100(p)
+function vRPcmd.mascararaposa(p)
+mask = not mask
+        if mask then
+            SetPedComponentVariation(GetPlayerPed(-1), 1, 18, 0, 1) --coloca
+end
+end
+
+function vRPcmd.mascaravagos(p)
+mask = not mask
+        if mask then
+            SetPedComponentVariation(GetPlayerPed(-1), 1, 51, 8, 2) --coloca
+end
+end
+
+function vRPcmd.mascaraballas(p)
+mask = not mask
+        if mask then
+            SetPedComponentVariation(GetPlayerPed(-1), 1, 51, 6, 2) --coloca
+end
+end
+
+function vRPcmd.mascaragrove(p)
 mask = not mask
         if mask then
             SetPedComponentVariation(GetPlayerPed(-1), 1, 51, 5, 2) --coloca
 end
 end
 
-function vRPcmd.mascararaposa(p)
-mask = not mask
+function vRPcmd.gado(p)
+    mask = not mask
         if mask then
-            SetPedComponentVariation(GetPlayerPed(-1), 1, 18, 0, 1) --coloca
-end
+            SetPedPropIndex(GetPlayerPed(-1), 0, 106, 20, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
 end
 
 function vRPcmd.capacete1(p)

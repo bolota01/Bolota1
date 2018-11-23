@@ -839,13 +839,6 @@ cfg.commands = {
     end
 	},
 	
-	["/mascara100"] = {
-    -- /mask toggles mask on and off
-    action = function(p,color,msg)
-        CMDclient.mascara100(p)
-    end
-	},
-	
 	["/mascaraurso"] = {
     -- /mask toggles mask on and off
     action = function(p,color,msg)
@@ -857,6 +850,34 @@ cfg.commands = {
     -- /mask toggles mask on and off
     action = function(p,color,msg)
         CMDclient.mascaracoruja(p)
+    end
+	},
+
+	["/mascaravagos"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.mascaravagos(p)
+    end
+	},
+
+	["/mascaraballas"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.mascaraballas(p)
+    end
+	},
+
+	["/mascaragrove"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.mascaragrove(p)
+    end
+	},
+
+	["/gado"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.gado(p)
     end
 	},
 
