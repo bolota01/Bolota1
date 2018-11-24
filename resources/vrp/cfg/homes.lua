@@ -48,9 +48,9 @@ local itemtr_laboratorycannabis = {
 	permissions = {"galpao.maconha"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=13,
+	units_per_minute=30,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
-	radius=1.1, height=1.5, -- area
+	radius=4, height=4, -- area
 	recipes = {
 	["Coletar Maconha"] = { -- action name
         description = "Coletando Maconha", -- action description
@@ -69,9 +69,9 @@ local itemtr_laboratorymetanfetamina = {
 	permissions = {"galpao.meta"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=13,
+	units_per_minute=30,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
-	radius=1.1, height=1.5, -- area
+	radius=4, height=4, -- area
 	recipes = {
 	["Coletar Metanfetamina"] = { -- action name
         description = "Coletando Metanfetamina", -- action description
@@ -90,9 +90,9 @@ local itemtr_laboratorycocaina = {
 	permissions = {"galpao.coca"},
 	r=0,g=255,b=0, -- color
 	max_units=400,
-	units_per_minute=13,
+	units_per_minute=30,
 	x=0,y=0,z=0, -- pos (doesn't matter as home component)
-	radius=1.1, height=1.5, -- area
+	radius=4, height=4, -- area
 	recipes = {
 	["Coletar Cocaina"] = { -- action name
         description = "Coletando Cocaina", -- action description
@@ -543,7 +543,23 @@ cfg.slot_types = {
       {"entry",997.58605957031,-3200.5446777344,-36.393684387207},
       {"chest",1012.0529174804,-3202.4477539062,-38.993144989014, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1002.0233154297,-3194.8701171875,-38.993156433105},
-    {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
+      {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
+    },
+    {
+      {"entry",997.58605957031,-3200.5446777344,-36.393684387207},
+      {"chest",1012.0529174804,-3202.4477539062,-38.993144989014, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1002.0233154297,-3194.8701171875,-38.993156433105},
+      {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
+    },
+    {
+      {"entry",997.58605957031,-3200.5446777344,-36.393684387207},
+      {"chest",1012.0529174804,-3202.4477539062,-38.993144989014, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1002.0233154297,-3194.8701171875,-38.993156433105},
+      {"itemtr", _config = itemtr_laboratorymetanfetamina, 1016.647644043,-3200.3547363281,-38.993225097656}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
     --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1016.9944458008,-3196.1655273438,-38.99314880371}
     }
@@ -553,7 +569,23 @@ cfg.slot_types = {
       {"entry",1065.3881835938,-3183.4870605469,-39.163551330566},
       {"chest",1040.1483154296,-3194.4418945312,-37.992839813232, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1060.2242431641,-3181.9777832031,-39.164844512939},
-    {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
+      {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
+    },
+    {
+      {"entry",1065.3881835938,-3183.4870605469,-39.163551330566},
+      {"chest",1040.1483154296,-3194.4418945312,-37.992839813232, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1060.2242431641,-3181.9777832031,-39.164844512939},
+      {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
+    },
+    {
+      {"entry",1065.3881835938,-3183.4870605469,-39.163551330566},
+      {"chest",1040.1483154296,-3194.4418945312,-37.992839813232, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1060.2242431641,-3181.9777832031,-39.164844512939},
+      {"itemtr", _config = itemtr_laboratorycannabis, 1034.650390625,-3205.5732421875,-38.17663192749}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
     --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1044.2384033204,-3195.0256347656,-38.15864944458}
     }
@@ -580,7 +612,23 @@ cfg.slot_types = {
       {"entry",1088.573852539,-3188.13671875,-38.993476867676},
       {"chest",1099.634399414,-3194.421875,-38.993469238282, _config = {weight=10000}},
       {"itemtr", _config = itemtr_study, 1087.2431640625,-3197.9440917968,-38.993469238282},
-    {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282}
+      {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
+    },
+    {
+      {"entry",1088.573852539,-3188.13671875,-38.993476867676},
+      {"chest",1099.634399414,-3194.421875,-38.993469238282, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1087.2431640625,-3197.9440917968,-38.993469238282},
+      {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282}
+    --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
+    --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
+    },
+    {
+      {"entry",1088.573852539,-3188.13671875,-38.993476867676},
+      {"chest",1099.634399414,-3194.421875,-38.993469238282, _config = {weight=10000}},
+      {"itemtr", _config = itemtr_study, 1087.2431640625,-3197.9440917968,-38.993469238282},
+      {"itemtr", _config = itemtr_laboratorycocaina, 1092.6346435546,-3196.669921875,-38.993469238282}
     --{"itemtr", _config = itemtr_laboratoryarmas, 999.10992431641,-3111.8117675781,-38.99987411499},
     --{"itemtr", _config = itemtr_laboratoryarmasfinal, 1100.3233642578,-3198.30078125,-38.993465423584}
     }
