@@ -95,16 +95,22 @@ cfg.groups = {
   ["Produtor de Maconha"] = {
     _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Maconha."}) end},
     "galpao.maconha",
+    "mission.delivery.weed",
+    "mission.delivery.pot",
     "build.gun"
   },
   ["Produtor de Metanfetamina"] = {
     _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Metanfetamina."}) end},
     "galpao.meta",
+    "mission.delivery.metanfetamina",
+    "mission.delivery.pot3",
     "build.gun"
   },
   ["Produtor de Cocaina"] = {
     _config = {gtype = "job",onjoin = function(player) vRPclient.notify(player,{"Você é agora o dono do ~r~Galpão de Cocaina."}) end},
     "galpao.coca",
+    "mission.delivery.cocaina",
+    "mission.delivery.pot2",
     "build.gun"
   },
   ["galpaodirtymoney"] = {
