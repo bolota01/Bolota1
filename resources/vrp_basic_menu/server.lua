@@ -183,12 +183,23 @@ police_weapons_federal["Equip"] = {function(player,choice)
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
--- Polícia Militar Águia
-local police_weapons_aguia = {}
-police_weapons_aguia["Equip"] = {function(player,choice)
+-- Atirador Aguia FAE
+local police_weapons_atiradoraguia = {}
+police_weapons_atiradoraguia["Equip"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
     ["WEAPON_SNIPERRIFLE"] = {ammo=200},
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+    ["GADGET_PARACHUTE"] = {ammo=5},
+    ["WEAPON_SMG"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Piloto Aguia FAE
+local police_weapons_pilotoaguia = {}
+police_weapons_pilotoaguia["Equip"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SMG"] = {ammo=200},
+    ["GADGET_PARACHUTE"] = {ammo=5},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
   }, true})
   BMclient.setArmour(player,{100,true})
@@ -989,7 +1000,8 @@ vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- equipamentos da 
 vRP.addStaticMenuChoices({"police_weapons_capitao", police_weapons_capitao}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons_coronel", police_weapons_coronel}) -- equipamentos da polícia
 vRP.addStaticMenuChoices({"police_weapons_federal", police_weapons_federal}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons_aguia", police_weapons_aguia}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_atiradoraguia", police_weapons_atiradoraguia}) -- equipamentos da polícia AGUIA
+vRP.addStaticMenuChoices({"police_weapons_pilotoaguia", police_weapons_pilotoaguia}) -- equipamentos da polícia AGUIA
 vRP.addStaticMenuChoices({"samu_emergency_medkit", samu_emergency_medkit}) -- equipamentos do samu
 vRP.addStaticMenuChoices({"medico_emergency_medkit", medico_emergency_medkit}) -- equipamentos do samu
 vRP.addStaticMenuChoices({"emergency_medkit", emergency_medkit}) -- pills and medkits
