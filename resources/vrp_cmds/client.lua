@@ -679,6 +679,15 @@ function vRPcmd.gado(p)
         end
 end
 
+function vRPcmd.aguia1(p)
+    mask = not mask
+        if mask then
+            SetPedPropIndex(GetPlayerPed(-1), 0, 115, 0, 1) --coloca
+        else
+            SetPedPropIndex(GetPlayerPed(-1), 0, 8, 0) --tira
+        end
+end
+
 function vRPcmd.capacete1(p)
     mask = not mask
         if mask then
