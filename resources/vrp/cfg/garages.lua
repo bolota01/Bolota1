@@ -420,11 +420,11 @@ cfg.garage_types = {
 	["towtruck2"] = {"Guincho",0, "<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
   	},
     ["Garagem Jornal"] = {
-    _config = {vtype="car",blipid=135,blipcolor=72,permissions={"jornal.garagem"},buy=true},
+    _config = {vtype="car",permissions={"jornal.garagem"},buy=true},
     ["rumpo"] = {"Van Reportagem",0,"<img src='https://i.imgur.com/xcEGIgQ.png'/<br/>"}
     },
     ["Heliponto Jornal"] = {
-    _config = {vtype="car",blipid=135,blipcolor=72,permissions={"jornal.garagem"},buy=true},
+    _config = {vtype="car",permissions={"jornal.garagem"},buy=true},
     ["supervolito"] = {"Helicóptero Reportagem",0, "<img src='https://i.imgur.com/tOyjLQS.png'/><br/"}
     },   
   	["Motoboy"] = {
