@@ -894,6 +894,7 @@ cfg.groups = {
     "advogado.paycheck",
     "advogado.entrega"
   },
+  --Garota de Programa
   ["Garota de Programa"] = {
     _config = { gtype = "job" },
     "mission.prostituta",
@@ -909,6 +910,37 @@ cfg.groups = {
     "bankdriver.paycheck",
     "tvalores.uniforme",
     "bankdriver.money"
+  },
+  --Jornal
+  ["Estagiário"] = {
+    _config = { gtype = "job" },
+    "mission.jornal",
+    "jornal.garagem",
+    "estagiario.paycheck"
+  },
+  ["Editor-Assistente"] = {
+    _config = { gtype = "job" },
+    "mission.jornal",
+    "jornal.garagem",
+    "editor.paycheck"
+  },
+  ["Jornalista"] = {
+    _config = { gtype = "job" },
+    "mission.jornal",
+    "jornal.garagem",
+    "jornalista.paycheck"
+  },
+  ["Redator"] = {
+    _config = { gtype = "job" },
+    "mission.jornal",
+    "jornal.garagem",
+    "redator.paycheck"
+  },
+  ["Redator-Chefe"] = {
+    _config = { gtype = "job" },
+    "mission.jornal",
+    "jornal.garagem",
+    "redatorchefe.paycheck"
   },
   -- Empregos Ilegais
   ["Ladrão de Carros"] = {
