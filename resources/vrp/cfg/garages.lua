@@ -418,7 +418,15 @@ cfg.garage_types = {
     ["flatbed3"] = {"Reboque 3",0,"<img src=''/<br/>"},
     --["raptortow"] = {"Guincho",0,"<img src=''/<br/>"},
 	["towtruck2"] = {"Guincho",0, "<img src='https://i.imgur.com/QPRYEEE.png'/><br/"}
-  	},   
+  	},
+    ["Garagem Jornal"] = {
+    _config = {vtype="car",blipid=135,blipcolor=72,permissions={"jornal.garagem"},buy=true},
+    ["rumpo"] = {"Van Reportagem",0,"<img src='https://i.imgur.com/xcEGIgQ.png'/<br/>"}
+    },
+    ["Heliponto Jornal"] = {
+    _config = {vtype="car",blipid=135,blipcolor=72,permissions={"jornal.garagem"},buy=true},
+    ["supervolito"] = {"Helicóptero Reportagem",0, "<img src='https://i.imgur.com/tOyjLQS.png'/><br/"}
+    },   
   	["Motoboy"] = {
 	_config = {vtype="bike",blipid=226,blipcolor=4,permissions={"delivery.garagem"},buy=true},
 	["enduro"] = {"Honda CG Fan 150",0, "<img src=''/><br/"}
@@ -448,7 +456,8 @@ cfg.garages = {
 	{"GARAGEM",-580.55767822266,316.67123413086,84.783363342285},
 	{"GARAGEM",1404.8968505859,1118.7971191406,114.83769226074}, -- GARAGEM FAZENDA DE LUXO
 	{"Garagem ADMIN",239.40335083008,-774.94201660156,30.698120117188}, -- GARAGEM ADMIN
-	--{"GARAGEM",497.71151733398,-1335.3879394531,29.327247619629}, -- GARAGEM CARRIJO
+	{"Garagem Jornal",-557.07232666016,-929.02874755859,23.862382888794}, -- GARAGEM JORNAL
+    {"Heliponto Jornal",-583.48797607422,-930.75244140625,36.833549499512}, -- HELIPONTO JORNAL
 	{"GARAGEM",1220.6368408203,2710.6381835938,38.005794525146},
     {"GARAGEM",452.92663574218,-1014.6912841796,28.461595535278}, -- GARAGEM DP
     {"GARAGEM",-305.0393371582,-705.91033935546,29.6421585083}, -- GARAGEM GUI
