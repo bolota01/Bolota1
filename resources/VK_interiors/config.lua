@@ -56,6 +56,16 @@ INTERIORS = {
     [32] = {id = 32, x = -1902.6004638672, y = -573.19598388672, z = 19.097215652466,  name = "Entrar", destination = {33}},
     [33] = {id = 33, x = -1899.1215820313, y = -562.33374023438, z = 11.803235054016,  name = "Sair", destination = {32}},
 	
+    -- JORNAL
+    [34] = {id = 34, x = -598.96307373047, y = -929.75952148438, z = 23.863361358643,  name = "Sair do Jornal", destination = {35}},
+    [35] = {id = 35, x = -75.973991394043, y = -826.90893554688, z = 243.38600158691,  name = "Entrar no Jornal", destination = {34}},
+
+    [36] = {id = 36, x = -78.49006652832, y = -829.89251708984, z = 243.38600158691,  name = "Voltar para o Jornal", destination = {37}},
+    [37] = {id = 37, x = -569.23400878906, y = -927.70739746094, z = 36.833545684814,  name = "Ir para o Heliponto", destination = {36}},
+
+    [38] = {id = 38, x = -589.65148925781, y = -911.71612548828, z = 23.875717163086,  name = "Ir para Garagem", destination = {39}},
+    [39] = {id = 39, x = -77.981475830078, y = -833.75463867188, z = 243.38583374023,  name = "Voltar para o Jornal", destination = {38}},
+
     -- ESTAÇAO 1
     [500] = {id = 500, x = 275.54281616211, y = -1207.3439941406, z = 38.902141571045,  name = "ESTAÇÃO PRAÇA", destination = {501}},
     [501] = {id = 501, x = -1091.2283935547, y = -2718.8210449219, z = -7.4101343154907,  name = "ESTAÇÃO AEROPORTO", destination = {500}},
