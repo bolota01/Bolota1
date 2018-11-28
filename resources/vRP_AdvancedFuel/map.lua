@@ -7,45 +7,45 @@ local blipNameFuelHeli = settings[lang].heliFuelStation
 ================================================= COORDS =================================================
 ]]--
 local blips = {
-    {name=blipNameFuel, id=361, x=49.4187,   y=2778.793,  z=58.043},
-    {name=blipNameFuel, id=361, x=263.894,   y=2606.463,  z=44.983},
+    --{name=blipNameFuel, id=361, x=49.4187,   y=2778.793,  z=58.043},
+    --{name=blipNameFuel, id=361, x=263.894,   y=2606.463,  z=44.983},
     {name=blipNameFuel, id=361, x=1039.958,  y=2671.134,  z=39.550},
-    {name=blipNameFuel, id=361, x=1207.260,  y=2660.175,  z=37.899},
+    --{name=blipNameFuel, id=361, x=1207.260,  y=2660.175,  z=37.899},
     {name=blipNameFuel, id=361, x=2539.685,  y=2594.192,  z=37.944},
     {name=blipNameFuel, id=361, x=2679.858,  y=3263.946,  z=55.240},
     {name=blipNameFuel, id=361, x=2005.055,  y=3773.887,  z=32.403},
     {name=blipNameFuel, id=361, x=1687.156,  y=4929.392,  z=42.078},
     {name=blipNameFuel, id=361, x=1701.314,  y=6416.028,  z=32.763},
     {name=blipNameFuel, id=361, x=179.857,   y=6602.839,  z=31.868},
-    {name=blipNameFuel, id=361, x=-94.4619,  y=6419.594,  z=31.489},
+    --{name=blipNameFuel, id=361, x=-94.4619,  y=6419.594,  z=31.489},
     {name=blipNameFuel, id=361, x=-2554.996, y=2334.40,  z=33.078},
     {name=blipNameFuel, id=361, x=-1800.375, y=803.661,  z=138.651},
     {name=blipNameFuel, id=361, x=-1437.622, y=-276.747,  z=46.207},
     {name=blipNameFuel, id=361, x=-2096.243, y=-320.286,  z=13.168},
-    {name=blipNameFuel, id=361, x=-724.619, y=-935.1631,  z=19.213},
+    --{name=blipNameFuel, id=361, x=-724.619, y=-935.1631,  z=19.213},
     {name=blipNameFuel, id=361, x=-526.019, y=-1211.003,  z=18.184},
-    {name=blipNameFuel, id=361, x=-70.2148, y=-1761.792,  z=29.534},
+    --{name=blipNameFuel, id=361, x=-70.2148, y=-1761.792,  z=29.534},
     {name=blipNameFuel, id=361, x=265.648,  y=-1261.309,  z=29.292},
     {name=blipNameFuel, id=361, x=819.653,  y=-1028.846,  z=26.403},
-    {name=blipNameFuel, id=361, x=1208.951, y= -1402.567, z=35.224},
+    --{name=blipNameFuel, id=361, x=1208.951, y= -1402.567, z=35.224},
     {name=blipNameFuel, id=361, x=1181.381, y= -330.847,  z=69.316},
     {name=blipNameFuel, id=361, x=620.843,  y= 269.100,  z=103.089},
     {name=blipNameFuel, id=361, x=2581.321, y=362.039, z=108.468},
 
     --------- BOATS ---------
-    {name=blipNameFuelBoat, id=427, x=-802.513, y=-1504.675,z=1.305},
-    {name=blipNameFuelBoat, id=427,x=7.313,y=-2777.435,z=3.451},
-    {name=blipNameFuelBoat, id=427,x=1326.863,y=4218.219,z=33.55},
-    {name=blipNameFuelBoat, id=427,x=1110.512,y=-648.981,z=60.389},
+    --{name=blipNameFuelBoat, id=427, x=-802.513, y=-1504.675,z=1.305},
+    --{name=blipNameFuelBoat, id=427,x=7.313,y=-2777.435,z=3.451},
+    --{name=blipNameFuelBoat, id=427,x=1326.863,y=4218.219,z=33.55},
+    --{name=blipNameFuelBoat, id=427,x=1110.512,y=-648.981,z=60.389},
 
     --------- AVIONS ---------
-    {name = blipNameFuelAvions, id=251,x=2133.268,y=4783.649,z=40.97},
-    {name = blipNameFuelAvions, id=251,x=1731.302,y=3310.969,z=41.224},
-    {name = blipNameFuelAvions, id=251,x=-1229.625,y=-2877.264,z=13.945},
+    --{name = blipNameFuelAvions, id=251,x=2133.268,y=4783.649,z=40.97},
+    --{name = blipNameFuelAvions, id=251,x=1731.302,y=3310.969,z=41.224},
+    --{name = blipNameFuelAvions, id=251,x=-1229.625,y=-2877.264,z=13.945},
 
     --------- Helicopters ---------
-    {name = blipNameFuelHeli, id=43,x=1770.241,y=3239.716,z=42.127},
-    {name = blipNameFuelHeli, id=43,x=-1112.407,y=-2883.893,z=13.946},
+    --{name = blipNameFuelHeli, id=43,x=1770.241,y=3239.716,z=42.127},
+    --{name = blipNameFuelHeli, id=43,x=-1112.407,y=-2883.893,z=13.946},
 }
 
 
