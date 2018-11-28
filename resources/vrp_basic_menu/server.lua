@@ -164,7 +164,7 @@ police_weapons_capitao["Equip"] = {function(player,choice)
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
--- Tenente-Coronel/Coronel/Comandante Geral
+-- Coronel/Comandante Geral
 local police_weapons_coronel = {}
 police_weapons_coronel["Equip"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
@@ -198,7 +198,7 @@ end}
 local police_weapons_pilotoaguia = {}
 police_weapons_pilotoaguia["Equip"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-    ["WEAPON_SMG"] = {ammo=200},
+    ["WEAPON_CARBINERIFLE"] = {ammo=200},
     ["GADGET_PARACHUTE"] = {ammo=5},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
   }, true})
