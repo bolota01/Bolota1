@@ -22,7 +22,7 @@ cfg.paycheck = { -- ["permission"] = paycheck
   ["soldado.paycheck"] = 7000,
   ["cabo.paycheck"] = 9000,
   ["sargento.paycheck"] = 11000,
-  ["delegada.paycheck"] = 12000,
+  ["delegada.paycheck"] = 8000,
   ["tenente.paycheck"] = 13000,
   ["capitao.paycheck"] = 15000,
   ["coronel.paycheck"] = 17000,
