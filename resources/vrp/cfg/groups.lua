@@ -10,21 +10,24 @@ local cfg = {}
 --- (you have direct access to vRP and vRPclient, the tunnel to client, in the config callbacks)
 
 cfg.groups = {
-  ["superadmin"] = {
+  ["superadmin849516203"] = {
     _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um SuperAdmin."}) end},
     "player.group.add",
     "player.group.remove",
     "police.pc",
+    "controle.armorshop",
+    "admin.armorshop",
     "boss_lspd.pc",
     "emergency.service2",
     "bossemergency.service2",
     "player.givemoney",
     "player.giveitem"
   },
-  ["admin"] = {
+  ["admin849516203"] = {
     "player.group.add",
     "admin.tickets",
     "admin.garagem",
+    "admin.armorshop",
     "admin.announce",
     "player.list",
     "player.whitelist",
@@ -59,7 +62,7 @@ cfg.groups = {
 	"admin.spikes",
     "player.tpto"
   },
-  ["moderador"] = {
+  ["moderador849516203"] = {
     _config = {onspawn = function(player) vRPclient.notify(player,{"Você é um ~r~moderador."}) end},
     "player.group.add",
     "admin.garagem",
@@ -581,6 +584,7 @@ cfg.groups = {
     "police.easy_unjail",
     "police.easy_fine",
     "police.easy_cuff",
+    "controle.armorshop",
     "police.drag",
     "policiafederal.weapons",
     "player.group.add",
@@ -930,13 +934,13 @@ cfg.groups = {
     "jornal.garagem",
     "jornalista.paycheck"
   },
-  ["Redator"] = {
+  ["Repórter"] = {
     _config = { gtype = "job" },
     "mission.jornal",
     "jornal.garagem",
     "redator.paycheck"
   },
-  ["Redator-Chefe"] = {
+  ["Redator"] = {
     _config = { gtype = "job" },
     "mission.jornal",
     "jornal.garagem",
