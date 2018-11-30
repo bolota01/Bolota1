@@ -52,18 +52,18 @@ cfg.holdups = { -- list of stores
 		nameofstore = "Twenty Four Seven. (Little Seoul)",
 		lastrobbed = 0
 	},
-	["southlossantos_gasstop"] = {
+	--[[["southlossantos_gasstop"] = {
 		position = { ['x'] = 28.7538948059082, ['y'] = -1339.8212890625, ['z'] = 29.4970436096191 },
 		reward = 5000 + math.random(30000,50000),
 		nameofstore = "Limited LTD Gas Stop. (South Los Santos)",
 		lastrobbed = 0
-	},
-	["southlossantos_twentyfourseven"] = {
+	},- ]]
+	--[[["southlossantos_twentyfourseven"] = {
 		position = { ['x'] = -43.1531448364258, ['y'] = -1748.75244140625, ['z'] = 29.4209976196289 },
 		reward = 5000 + math.random(30000,50000),
 		nameofstore = "Twenty Four Seven. (South Los Santos)",
 		lastrobbed = 0
-	},
+	},- ]]
 	["vinewood_twentyfourseven"] = {
 		position = { ['x'] = 378.030487060547, ['y'] = 332.944427490234, ['z'] = 103.566375732422 },
 		reward = 5000 + math.random(30000,50000),
