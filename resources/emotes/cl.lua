@@ -46,6 +46,8 @@ local emotes = {
     ['motor2'] = "PROP_HUMAN_BUM_BIN",
     ['churrasco'] = "PROP_HUMAN_BBQ",
     ['cafe'] = "WORLD_HUMAN_AA_COFFEE",
+    ["esperar"] = "WORLD_HUMAN_HANG_OUT_STREET",
+    ["esperar2"] = "WORLD_HUMAN_HIKER_STANDING",
     ['implorar'] = "WORLD_HUMAN_BUM_FREEWAY",
     ['celular'] = "WORLD_HUMAN_STAND_MOBILE"
 }

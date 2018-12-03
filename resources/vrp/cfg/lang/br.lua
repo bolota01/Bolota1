@@ -310,7 +310,7 @@ local lang = {
     }
   },
   emotes = {
-    title = "Animações +18",
+    title = "Animações",
     clear = {
       title = "> Parar",
       description = "Parar todas as ações do personagem."
