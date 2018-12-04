@@ -1,4 +1,7 @@
 -- more emotes available at https://pastebin.com/6mrYTdQv
+
+vRP = Proxy.getInterface("vRP")
+
 local emotes = {
     ['fumar1'] = "WORLD_HUMAN_SMOKING",
     ['fumar2'] = "WORLD_HUMAN_AA_SMOKE",
@@ -47,7 +50,8 @@ local emotes = {
     ['churrasco'] = "PROP_HUMAN_BBQ",
     ['cafe'] = "WORLD_HUMAN_AA_COFFEE",
     ['implorar'] = "WORLD_HUMAN_BUM_FREEWAY",
-    ['celular'] = "WORLD_HUMAN_STAND_MOBILE"
+    ['celular'] = "WORLD_HUMAN_STAND_MOBILE",
+    ['dança2'] = {false,{{"mini@strip_club@lap_dance@ld_girl_a_song_a_p1","ld_girl_a_song_a_p1_f",1}},false}
 }
 
 --[[------------------------------------------------------------------------------------------------
@@ -73,6 +77,7 @@ local emotePlaying = IsPedActiveInScenario(GetPlayerPed(-1)) -- Registering whet
 
 function cancelEmote() -- Cancels the emote slowly
     ClearPedTasks(GetPlayerPed(-1))
+    vRP.stopAnim()
     emotePlaying = false
 end
 function cancelEmoteNow() -- Cancels the emote immediately
@@ -119,8 +124,13 @@ end
 
 AddEventHandler("emote:invoke", function(name)
     if emotes[name] ~= nil then -- Checking if the name is in the dictionary
-        if playEmote(emotes[name]) then -- Playing the emote from the dictionary
-            drawNotification("Playing the emote \""..name.."\"")
+        if type(emotes[name]) ~= "table" then
+            if playEmote(emotes[name]) then -- Playing the emote from the dictionary
+                drawNotification("Playing the emote \""..name.."\"")
+            end
+        else
+            vRP.playAnim(emotes[name])
+            emotePlaying = true
         end
     else
         TriggerEvent("chatMessage", "ERROR", {255,0,0}, "Comando emote inválido") -- Saying if the name wasn't in the dictionary
