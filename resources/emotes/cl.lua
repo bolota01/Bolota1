@@ -53,7 +53,23 @@ local emotes = {
     ["esperar2"] = "WORLD_HUMAN_HIKER_STANDING",
     ['implorar'] = "WORLD_HUMAN_BUM_FREEWAY",
     ['celular'] = "WORLD_HUMAN_STAND_MOBILE",
-    ['dança2'] = {false,{{"mini@strip_club@lap_dance@ld_girl_a_song_a_p1","ld_girl_a_song_a_p1_f",1}},false}
+    ['dança2'] = {false,{{"mini@strip_club@lap_dance@ld_girl_a_song_a_p1","ld_girl_a_song_a_p1_f",1}},false},
+    ['dança3'] = {false,{{"rcmnigel1bnmt_1b","dance_intro_tyler",1},{"rcmnigel1bnmt_1b","dance_loop_tyler",1}},false},
+    ['dança4'] = {false,{{"mini@strip_club@private_dance@part2","priv_dance_p2",1}},false},
+    ['dança5'] = {false,{{"mini@strip_club@private_dance@part3","priv_dance_p3",1}},false},
+    ['creu'] = {false,{{"anim@mp_player_intcelebrationfemale@air_shagging","air_shagging",1}},true},
+    ['chup1'] = {false,{{"oddjobs@towing","m_blow_job_loop",1}},false},
+    ['chup2'] = {false,{{"oddjobs@towing","f_blow_job_loop",1}},false},
+    ['sexo1'] = {false,{{"mini@prostitutes@sexlow_veh","low_car_sex_loop_player",1}},false},
+    ['sexo2'] = {false,{{"mini@prostitutes@sexlow_veh","low_car_sex_loop_female",1}},false},
+    ['punheta'] = {true,{{"mp_player_int_upperwank","mp_player_int_wank_01",1}},true},
+    ['cu1'] = {false,{{"rcmpaparazzo_2","shag_loop_poppy",2}},true},
+    ['cu2'] = {false,{{"rcmpaparazzo_2","shag_loop_a",2}},true},
+    ['beijo'] = {true,{{"mp_ped_interaction","kisses_guy_a",1}},false},
+    ['peito'] = {false,{{"mini@strip_club@backroom@","stripper_b_backroom_idle_b",1}},false},
+    ['blz'] = {true,{{"mp_action","thanks_male_06",1}},false},
+    ['dj'] = {false,{{"anim@mp_player_intcelebrationmale@dj","dj",1}},true},
+    ['rock'] = {false,{{"anim@mp_player_intcelebrationmale@air_guitar","air_guitar",1}},true}
 }
 
 --[[------------------------------------------------------------------------------------------------
