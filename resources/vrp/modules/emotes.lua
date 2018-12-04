@@ -15,7 +15,7 @@ end
 
 -- add emotes menu to main menu
 
-vRP.registerMenuBuilder("main", function(add, data)
+--[[vRP.registerMenuBuilder("main", function(add, data)
   local choices = {}
   choices[lang.emotes.title()] = {function(player, choice)
     -- build emotes menu
@@ -41,4 +41,4 @@ vRP.registerMenuBuilder("main", function(add, data)
     vRP.openMenu(player,menu)
   end}
   add(choices)
-end)
+end)]]
