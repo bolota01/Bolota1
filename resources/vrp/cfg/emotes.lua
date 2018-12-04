@@ -41,7 +41,7 @@ cfg.emotes = {
   --["TESTE 05"] = {false, {task="PROP_HUMAN_MOVIE_STUDIO_LIGHT"}, false},
  -- ["Impaciente"] = {false, {task="WORLD_HUMAN_STAND_IMPATIENT"}, false},
  -- ["Mexer no celular"] = {false, {task="WORLD_HUMAN_STAND_MOBILE"}, false},
- -- ["Dançar 2"] = {false, {task="WORLD_HUMAN_STRIP_WATCH_STAND"}, false},
+  ["Dançar 2"] = {false, {task="WORLD_HUMAN_STRIP_WATCH_STAND"}, false},
   --["Deitar 1"] = {false, {task="WORLD_HUMAN_SUNBATHE_BACK"}, false},
  -- ["Deitar 2"] = {false, {task="WORLD_HUMAN_SUNBATHE"}, false},
   --["Escutar coracao"] = {false,{{"mini@safe_cracking","idle_base",1}},false},
@@ -50,6 +50,13 @@ cfg.emotes = {
  -- ["Controlar Multidão"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},
  -- ["Investigar"] = {false, {task="CODE_HUMAN_POLICE_INVESTIGATE"}, false},
  -- ["Fazer Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false},
+  ["Dançar"] = {
+    false, {
+      {"rcmnigel1bnmt_1b","dance_intro_tyler",1},
+      {"rcmnigel1bnmt_1b","dance_loop_tyler",1}
+    }, false
+  },
+  ["Creu"] = {false,{{"anim@mp_player_intcelebrationfemale@air_shagging","air_shagging",1}},true},
   ["Chupeta H Carro"] = {false,{{"oddjobs@towing","m_blow_job_loop",1}},false},
   ["Chupeta M Carro"] = {false,{{"oddjobs@towing","f_blow_job_loop",1}},false},
   ["Sexo H"] = {false,{{"mini@prostitutes@sexlow_veh","low_car_sex_loop_player",1}},false},

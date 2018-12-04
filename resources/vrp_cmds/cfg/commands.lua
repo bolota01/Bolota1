@@ -881,6 +881,13 @@ cfg.commands = {
     end
 	},
 
+	["/aguia1"] = {
+    -- /mask toggles mask on and off
+    action = function(p,color,msg)
+        CMDclient.aguia1(p)
+    end
+	},
+
 	["/capacete1"] = {
     -- /mask toggles mask on and off
     action = function(p,color,msg)

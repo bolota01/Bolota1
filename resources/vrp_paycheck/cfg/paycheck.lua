@@ -22,7 +22,7 @@ cfg.paycheck = { -- ["permission"] = paycheck
   ["soldado.paycheck"] = 7000,
   ["cabo.paycheck"] = 9000,
   ["sargento.paycheck"] = 11000,
-  ["delegada.paycheck"] = 12000,
+  ["delegada.paycheck"] = 8000,
   ["tenente.paycheck"] = 13000,
   ["capitao.paycheck"] = 15000,
   ["coronel.paycheck"] = 17000,
@@ -35,6 +35,12 @@ cfg.paycheck = { -- ["permission"] = paycheck
   ["medico.paycheck"] = 13000,
   ["paramedico.paycheck"] = 9000,
   ["socorrista.paycheck"] = 5000,
+  --jornal
+  ["estagiario.paycheck"] = 3000,
+  ["editor.paycheck"] = 5000,
+  ["jornalista.paycheck"] = 7000,
+  ["redator.paycheck"] = 9000,
+  ["redatorchefe.paycheck"] = 11000,
   --legal
   ["correios.paycheck"] = 1000,
   ["minerar.paycheck"] = 1000,
@@ -68,6 +74,12 @@ cfg.bill = { -- ["permission"] = withdrawal
   ["medico.paycheck"] = 200,
   ["paramedico.paycheck"] = 200,
   ["socorrista.paycheck"] = 200,
+  --jornal
+  ["estagiario.paycheck"] = 200,
+  ["editor.paycheck"] = 200,
+  ["jornalista.paycheck"] = 200,
+  ["redator.paycheck"] = 200,
+  ["redatorchefe.paycheck"] = 200,
   --legal
   ["correios.paycheck"] = 200,
   ["minerar.paycheck"] = 200,

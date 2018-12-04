@@ -91,6 +91,15 @@ local function ch_unwhitelist(player,choice)
   end
 end
 
+local function ch_revive_stn(player,choice) -- Admin Revive By Sul6an
+  local user_id = vRP.getUserId(player)
+  if user_id ~= nil then
+    vRP.prompt(player,"Revive:","",function(player,user_id) 
+      vRPclient.varyHealth(user_id, {50})
+    end)
+  end
+end
+
 local function ch_addgroup(player,choice)
   local user_id = vRP.getUserId(player)
   if user_id ~= nil and vRP.hasPermission(user_id,"player.group.add") then
@@ -379,6 +388,9 @@ vRP.registerMenuBuilder("main", function(add, data)
         end
         if vRP.hasPermission(user_id,"player.givemoney") then
           menu["@Dinheiro"] = {ch_givemoney}
+        end
+        if vRP.hasPermission(user_id,"player.revive") then
+          menu["@Admin Revive"] = {ch_revive_stn}
         end
         if vRP.hasPermission(user_id,"player.giveitem") then
           menu["@Item"] = {ch_giveitem}

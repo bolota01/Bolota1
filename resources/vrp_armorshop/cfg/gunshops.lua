@@ -40,34 +40,38 @@ cfg.gunshop_types = {
   },
 
   ["Loja da Polícia"] = {
-    _config = {blipid=110,blipcolor=75,permissions={"policiafederal.weapons"}},
-    --["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
-    --["WEAPON_BAT"] = {"Taco de Beisebol",1500,0,""},
-    --["WEAPON_HAMMER"] = {"Martelo",1500,0,""},
-    --["WEAPON_GOLFCLUB"] = {"Taco de Golf",1500,0,""},
-    --["WEAPON_SWITCHBLADE"] = {"Canivete",1500,0,""},
-    --["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
-    --["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
+    _config = {blipid=110,blipcolor=75,permissions={"controle.armorshop"}},
+    ["WEAPON_COMBATPISTOL"] = {"Pistola de Combate",1,1,""},
+    ["WEAPON_NIGHTSTICK"] = {"Cacetete",1,0,""},
+    ["WEAPON_STUNGUN"] = {"Arma de Choque",1,0,""},
+    ["WEAPON_SMG"] = {"Submetralhadora",1,1,""},
+    ["WEAPON_CARBINERIFLE"] = {"Carabina",1,1,""},
+    ["WEAPON_SPECIALCARBINE"] = {"Carabina Especial",1,1,""},
+    ["WEAPON_SNIPERRIFLE"] = {"Sniper",1,1,""},
     --["WEAPON_KNIFE"] = {"Faca",1500,0,""},
     --["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["ARMOR"] = {"Colete",0,0,""}
     --["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
   },
 
-  --[[["submachineguns"] = {
-    _config = {blipid=110,blipcolor=75},
-    ["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
-    ["WEAPON_BAT"] = {"Taco de Beisebol",1500,0,""},
-    ["WEAPON_HAMMER"] = {"Martelo",1500,0,""},
-    ["WEAPON_GOLFCLUB"] = {"Taco de Golf",1500,0,""},
-    ["WEAPON_SWITCHBLADE"] = {"Canivete",1500,0,""},
-    ["WEAPON_WRENCH"] = {"Chave Inglesa",1000,0,""},
-    ["WEAPON_KNUCKLE"] = {"Soco-Inglês",1000,0,""},
-    ["WEAPON_KNIFE"] = {"Faca",1500,0,""},
-    ["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
-    ["WEAPON_FLASHLIGHT"] = {"Lanterna",1000,0,""},
-    ["WEAPON_MICROSMG"] = {"Micro Uzi",60000,300,""}
-  },- ]]
+  ["Loja Admin"] = {
+    _config = {blipid=110,blipcolor=75,permissions={"admin.armorshop"}},
+    ["WEAPON_DAGGER"] = {"Adaga",1,0,""},
+    ["WEAPON_MACHETE"] = {"Facão",1,0,""},
+    ["WEAPON_APPISTOL"] = {"Pistola App",1,1,""},
+    ["WEAPON_PISTOL50"] = {"Pistola 50",1,1,""},
+    ["WEAPON_SNSPISTOL"] = {"Pistola Sns",1,1,""},
+    ["WEAPON_HEAVYPISTOL"] = {"Pistola Heavy",1,1,""},
+    ["WEAPON_VINTAGEPISTOL"] = {"Pistola Vintage",1,1,""},
+    ["WEAPON_MARKSMANPISTOL"] = {"Pistola Marksman",1,1,""},
+    ["WEAPON_REVOLVER"] = {"Revólver",1,1,""},
+    ["WEAPON_ASSAULTSMG"] = {"Assault Smg",1,1,""},
+    ["WEAPON_COMBATPDW"] = {"Combat Pdw",1,1,""},
+    ["WEAPON_MACHINEPISTOL"] = {"Machine Pistol",1,1,""},
+    ["WEAPON_ADVANCEDRIFLE"] = {"Advanced Rifle",1,1,""},
+    ["WEAPON_BULLPUPRIFLE"] = {"Bull Pup Rifle",1,1,""},
+    ["WEAPON_RAILGUN"] = {"Rail Gun",1,1,""}
+  },
 
   ["Loja de Armas 03"] = {
     _config = {blipid=110,blipcolor=75},
@@ -185,7 +189,8 @@ cfg.gunshop_types = {
 cfg.gunshops = {
   {"Loja de Armas 01", 1693.6977539063,3759.8000488281,34.70531463623},
   {"Loja de Armas 02", 251.91516113281,-49.788932800293,69.941070556641},
-  {"Loja da Polícia", 459.84631347656,-979.43682861328,30.68959236145},
+  {"Loja da Polícia", 461.46166992188,-981.07891845703,30.689590454102},
+  {"Loja Admin", -77.116828918457,-825.8935546875,284.99993896484},
   --{"carabines", 844.299, -1033.26, 28.1949},
   {"Loja de Paraquedas", 501.35134887695,5595.5263671875,795.90059179688},
   {"Loja de Armas 03", -330.2470703125,6083.9926757813,31.454767227173},
