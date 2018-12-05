@@ -11,7 +11,19 @@ vRPclient = Tunnel.getInterface("vRP","vRP_chests")
 -- name = if you have multiple chests with same access you need to set different name, or the chests with same access will containt same items.
 local chests = {}
 chests = {
-	{"bau.policia", 459.12884521484,-983.08721923828,30.689588546753, "Baú da Polícia"}
+    {"1", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"2", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"3", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"4", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"5", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"43", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"493", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"276", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"135", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"820", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"134", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"907", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"},
+	{"180", 459.12884521484, -983.08721923828, 30.689588546753, "Baú da Polícia"}
 	--{"1", -2361.0776367188,3243.5947265625,92.903678894043, "Owner's Chest"},
 	--{"none", 1438.2683105469,1146.2396240234,114.32404327393}
 }
@@ -25,7 +37,7 @@ local function create_pleschest(owner_access, x, y, z, player, name)
 		local user_id = vRP.getUserId({player})
 		if user_id ~= nil then
 			if owner_access == "none" or user_id == tonumber(owner_access) or vRP.hasGroup({user_id, owner_access}) or vRP.hasPermission({user_id, owner_access}) then
-				vRP.openChest({player, "static:"..owner_access..":"..namex, 200, nil, nil, nil})
+				vRP.openChest({player, "static:"..owner_access..":"..namex, 500, nil, nil, nil})
 			end
 		end
 	end
