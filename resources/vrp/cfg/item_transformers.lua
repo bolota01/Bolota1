@@ -447,6 +447,134 @@ cfg.item_transformers = {
         }
       }
     }
+  },
+  {
+    name="Armamento FAE", -- menu name
+    permissions = {"fabrica.armas"}, -- you can add permissions
+    r=0,g=148,b=255, -- color
+    max_units=500,
+    units_per_minute=100,
+    x=461.46166992188,y=-981.07891845703,z=30.689590454102, -- pos (doesn't matter as home component)
+    radius=1, height=1, -- area
+    recipes = {
+    ["Combat Pistol"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_COMBATPISTOL"] = 10
+        }
+    },
+    ["Pistola de Choque"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_STUNGUN"] = 10
+        }
+    },
+    ["Cassetete"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_NIGHTSTICK"] = 10
+        }
+    },
+    ["SMG"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_SMG"] = 10
+        }
+    },
+    ["Carabina"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_CARBINERIFLE"] = 10
+        }
+    },
+    ["Carabina Especial"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_SPECIALCARBINE"] = 10
+        }
+    },
+    ["Sniper"] = { -- action name
+        description="Contruindo arma.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={ -- items given per unit
+          ["wbody|WEAPON_SNIPERRIFLE"] = 10
+        }
+    },
+    ["Paraquedas"] = { -- action name
+        description = "Fabricando paraquedas.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wbody|GADGET_PARACHUTE"] = 5
+        }
+    },
+    ["Munição de pistola"] = { -- action name
+        description = "Fabricando munição.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wammo|WEAPON_COMBATPISTOL"] = 1000
+        }
+    },
+    ["Munição de SMG"] = { -- action name
+        description = "Fabricando munição.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wammo|WEAPON_SMG"] = 1000
+        }
+    },
+    ["Munição de Carabina"] = { -- action name
+        description = "Fabricando munição.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wammo|WEAPON_CARBINERIFLE"] = 1000
+        }
+    },
+    ["Munição de Carabina Especial"] = { -- action name
+        description = "Fabricando munição.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wammo|WEAPON_SPECIALCARBINE"] = 1000
+        }
+    },
+    ["Munição de Sniper"] = { -- action name
+        description = "Fabricando munição.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={}, -- items taken per unit
+        products={
+          ["wammo|WEAPON_SNIPERRIFLE"] = 1000
+        }
+      }
+    }
   },  
   {
     name="OAB", -- menu name

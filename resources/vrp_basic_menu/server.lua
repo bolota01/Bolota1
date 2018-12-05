@@ -124,83 +124,72 @@ end, "Ativar função do servidor."}
 
 --police weapons // comment out the weapons if you dont want to give weapons.
 -- Colete pra geral
-local police_weapons_colete = {}
-police_weapons_colete["Kit Colete"] = {function(player,choice)
+local police_weapons_pistol = {}
+police_weapons_pistol["Combat Pistol"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-      ["WEAPON_COMBATPISTOL"] = {ammo=200},
-	}, true})
-	BMclient.setArmour(player,{100,true})
-end}
--- Recruta
-local recruta_weapons = {}
-recruta_weapons["Equip"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
-    ["WEAPON_STUNGUN"] = {ammo=200},
     ["WEAPON_COMBATPISTOL"] = {ammo=200},
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
--- Soldado/Cabo/Sargento/Subtenente
-local police_weapons = {}
-police_weapons["Equip"] = {function(player,choice)
+-- Recruta
+local police_weapons_choque = {}
+police_weapons_choque["Arma de Choque"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-    ["WEAPON_SMG"] = {ammo=200},
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
     ["WEAPON_STUNGUN"] = {ammo=200},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
 -- Tenente/Capitão/Major
-local police_weapons_capitao = {}
-police_weapons_capitao["Equip"] = {function(player,choice)
+local police_weapons_cassetete = {}
+police_weapons_cassetete["Cassetete"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_NIGHTSTICK"] = {ammo=200},
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Soldado/Cabo/Sargento/Subtenente
+local police_weapons_smg = {}
+police_weapons_smg["SMG"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
     ["WEAPON_SMG"] = {ammo=200},
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Tenente/Capitão/Major
+local police_weapons_carabina = {}
+police_weapons_carabina["Carabina"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
     ["WEAPON_CARBINERIFLE"] = {ammo=200},
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
-    ["WEAPON_STUNGUN"] = {ammo=200},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Tenente/Capitão/Major
+local police_weapons_carabinaesp = {}
+police_weapons_carabinaesp["Carabina Especial"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SPECIALCARBINE"] = {ammo=200},
+  }, true})
+  BMclient.setArmour(player,{100,true})
+end}
+-- Tenente/Capitão/Major
+local police_weapons_sniper = {}
+police_weapons_sniper["Sniper"] = {function(player,choice)
+    vRPclient.giveWeapons(player,{{
+    ["WEAPON_SNIPERRIFLE"] = {ammo=200},
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
 -- Coronel/Comandante Geral
-local police_weapons_coronel = {}
-police_weapons_coronel["Equip"] = {function(player,choice)
+local police_weapons_comandante = {}
+police_weapons_comandante["Comandante"] = {function(player,choice)
     vRPclient.giveWeapons(player,{{
-    ["WEAPON_SMG"] = {ammo=200},
-    ["WEAPON_SPECIALCARBINE"] = {ammo=200},
-    ["WEAPON_NIGHTSTICK"] = {ammo=200},
-    ["WEAPON_STUNGUN"] = {ammo=200},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
-  }, true})
-  BMclient.setArmour(player,{100,true})
-end}
--- Polícia Federal
-local police_weapons_federal = {}
-police_weapons_federal["Equip"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-  }, true})
-  BMclient.setArmour(player,{100,true})
-end}
--- Atirador Aguia FAE
-local police_weapons_atiradoraguia = {}
-police_weapons_atiradoraguia["Equip"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-    ["WEAPON_SNIPERRIFLE"] = {ammo=200},
-    ["GADGET_PARACHUTE"] = {ammo=5},
-    ["WEAPON_SMG"] = {ammo=200},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
-  }, true})
-  BMclient.setArmour(player,{100,true})
-end}
--- Piloto Aguia FAE
-local police_weapons_pilotoaguia = {}
-police_weapons_pilotoaguia["Equip"] = {function(player,choice)
-    vRPclient.giveWeapons(player,{{
-    ["WEAPON_CARBINERIFLE"] = {ammo=200},
-    ["GADGET_PARACHUTE"] = {ammo=5},
-    ["WEAPON_COMBATPISTOL"] = {ammo=200},
+    ["WEAPON_COMBATPISTOL"] = {ammo=6000},
+    ["WEAPON_NIGHTSTICK"] = {ammo=6000},
+    ["WEAPON_STUNGUN"] = {ammo=6000},
+    ["WEAPON_SMG"] = {ammo=6000},
+    ["WEAPON_CARBINERIFLE"] = {ammo=6000},
+    ["WEAPON_SPECIALCARBINE"] = {ammo=6000},
+    ["WEAPON_SNIPERRIFLE"] = {ammo=6000},
   }, true})
   BMclient.setArmour(player,{100,true})
 end}
@@ -995,13 +984,14 @@ end,
 
 -- ADD STATIC MENU CHOICES // STATIC MENUS NEED TO BE ADDED AT vRP/cfg/gui.lua
 --vRP.addStaticMenuChoices({"police_weapons_colete", police_weapons_colete}) -- police gear
-vRP.addStaticMenuChoices({"recruta_weapons", recruta_weapons}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons", police_weapons}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons_capitao", police_weapons_capitao}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons_coronel", police_weapons_coronel}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons_federal", police_weapons_federal}) -- equipamentos da polícia
-vRP.addStaticMenuChoices({"police_weapons_atiradoraguia", police_weapons_atiradoraguia}) -- equipamentos da polícia AGUIA
-vRP.addStaticMenuChoices({"police_weapons_pilotoaguia", police_weapons_pilotoaguia}) -- equipamentos da polícia AGUIA
+vRP.addStaticMenuChoices({"police_weapons_pistol", police_weapons_pistol}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_choque", police_weapons_choque}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_cassetete", police_weapons_cassetete}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_smg", police_weapons_smg}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_carabina", police_weapons_carabina}) -- equipamentos da polícia
+vRP.addStaticMenuChoices({"police_weapons_carabinaesp", police_weapons_carabinaesp}) -- equipamentos da polícia AGUIA
+vRP.addStaticMenuChoices({"police_weapons_sniper", police_weapons_sniper}) -- equipamentos da polícia AGUIA
+vRP.addStaticMenuChoices({"police_weapons_comandante", police_weapons_comandante}) -- equipamentos da polícia AGUIA
 vRP.addStaticMenuChoices({"samu_emergency_medkit", samu_emergency_medkit}) -- equipamentos do samu
 vRP.addStaticMenuChoices({"medico_emergency_medkit", medico_emergency_medkit}) -- equipamentos do samu
 vRP.addStaticMenuChoices({"emergency_medkit", emergency_medkit}) -- pills and medkits

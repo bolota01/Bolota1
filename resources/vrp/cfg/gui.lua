@@ -26,46 +26,60 @@ body{
 -- list of static menu types (map of name => {.title,.blipid,.blipcolor,.permissions (optional)})
 -- static menus are menu with choices defined by vRP.addStaticMenuChoices(name, choices)
 cfg.static_menu_types = {
-   ["recruta_weapons"] = {
+   ["police_weapons_pistol"] = {
       title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
-	    "recruta.weapons"
+	    "comandante.weapons"
 	  }
 	},
-   ["police_weapons"] = {
+   ["police_weapons_choque"] = {
       title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
-	    "pm.weapons"
+	    "comandante.weapons"
 	  }
 	},
-	["police_weapons_capitao"] = {
+	["police_weapons_cassetete"] = {
       title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
-	    "capitao.weapons"
+	    "comandante.weapons"
 	  }
 	},
-	["police_weapons_coronel"] = {
+	["police_weapons_smg"] = {
       title = "Arsenal", 
       blipcolor = 0,
 	  permissions = {
-	    "coronel.weapons"
+	    "comandante.weapons"
 	  }
 	},
-	["police_weapons_pilotoaguia"] = {
+	["police_weapons_carabina"] = {
       title = "Arsenal Águia", 
       blipcolor = 0,
 	  permissions = {
-	    "pilotoaguia.weapons"
+	    "comandante.weapons"
 	  }
 	},
-	["police_weapons_atiradoraguia"] = {
+	["police_weapons_carabinaesp"] = {
       title = "Arsenal Águia", 
       blipcolor = 0,
 	  permissions = {
-	    "atiradoraguia.weapons"
+	    "comandante.weapons"
+	  }
+	},
+	["police_weapons_sniper"] = {
+      title = "Arsenal Águia", 
+      blipcolor = 0,
+	  permissions = {
+	    "comandante.weapons"
+	  }
+	},
+	["police_weapons_comandante"] = {
+      title = "Arsenal Águia", 
+      blipcolor = 0,
+	  permissions = {
+	    "comandante.weapons"
 	  }
 	},
    ["emergency_heal"] = {
@@ -100,12 +114,14 @@ cfg.static_menu_types = {
 
 -- list of static menu points
 cfg.static_menus = {
-  --{"recruta_weapons",461.46166992188,-981.07891845703,30.689590454102},
-  --{"police_weapons", 461.46166992188,-981.07891845703,30.689590454102},
-  --{"police_weapons_coronel", 461.46166992188,-981.07891845703,30.689590454102},
-  --{"police_weapons_capitao", 461.46166992188,-981.07891845703,30.689590454102},
-  --{"police_weapons_pilotoaguia", 459.12884521484,-983.08721923828,30.689588546753},
-  --{"police_weapons_atiradoraguia", 459.12884521484,-983.08721923828,30.689588546753},
+  --{"police_weapons_pistol", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_choque", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_cassetete", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_smg", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_carabina", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_carabinaesp", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_sniper", 458.81771850586,-979.31848144532,30.689580917358},
+  --{"police_weapons_comandante", 458.81771850586,-979.31848144532,30.689580917358},
   {"samu_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
   {"medico_emergency_medkit", 266.36947631836,-1364.599609375,24.537786483765},
   {"emergency_medkit", 268.22784423828,-1364.8872070313,24.537782669067}

@@ -41,13 +41,13 @@ cfg.gunshop_types = {
 
   ["Loja da Polícia"] = {
     _config = {blipid=110,blipcolor=75,permissions={"controle.armorshop"}},
-    ["WEAPON_COMBATPISTOL"] = {"Pistola de Combate",1,1,""},
-    ["WEAPON_NIGHTSTICK"] = {"Cacetete",1,0,""},
-    ["WEAPON_STUNGUN"] = {"Arma de Choque",1,0,""},
-    ["WEAPON_SMG"] = {"Submetralhadora",1,1,""},
-    ["WEAPON_CARBINERIFLE"] = {"Carabina",1,1,""},
-    ["WEAPON_SPECIALCARBINE"] = {"Carabina Especial",1,1,""},
-    ["WEAPON_SNIPERRIFLE"] = {"Sniper",1,1,""},
+    ["WEAPON_COMBATPISTOL"] = {"Pistola de Combate",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"Cacetete",0,0,""},
+    ["WEAPON_STUNGUN"] = {"Arma de Choque",0,0,""},
+    ["WEAPON_SMG"] = {"Submetralhadora",0,0,""},
+    ["WEAPON_CARBINERIFLE"] = {"Carabina",0,0,""},
+    ["WEAPON_SPECIALCARBINE"] = {"Carabina Especial",0,0,""},
+    ["WEAPON_SNIPERRIFLE"] = {"Sniper",0,0,""},
     --["WEAPON_KNIFE"] = {"Faca",1500,0,""},
     --["WEAPON_PISTOL"] = {"Pistola",30000,150,""},
     ["ARMOR"] = {"Colete",0,0,""}
@@ -168,6 +168,12 @@ cfg.gunshop_types = {
     ["GADGET_PARACHUTE"] = {"Paraquedas",250,0,""}
   },
 
+  ["Loja de Paraquedas FAE"] = {
+    _config = {blipid=94,blipcolor=50,permissions={"aguia.paraquedas"}},
+    ["GADGET_PARACHUTE"] = {"Paraquedas",0,0,""},
+    ["ARMOR"] = {"Colete",0,0,""}
+  },
+
   ["Loja de Armas 06"] = {
     _config = {blipid=110,blipcolor=75},
     --["WEAPON_BOTTLE"] = {"Garrafa Quebrada",600,0,""},
@@ -189,10 +195,11 @@ cfg.gunshop_types = {
 cfg.gunshops = {
   {"Loja de Armas 01", 1693.6977539063,3759.8000488281,34.70531463623},
   {"Loja de Armas 02", 251.91516113281,-49.788932800293,69.941070556641},
-  {"Loja da Polícia", 461.46166992188,-981.07891845703,30.689590454102},
+  --{"Loja da Polícia", 461.46166992188,-981.07891845703,30.689590454102},
   {"Loja Admin", -77.116828918457,-825.8935546875,284.99993896484},
   --{"carabines", 844.299, -1033.26, 28.1949},
   {"Loja de Paraquedas", 501.35134887695,5595.5263671875,795.90059179688},
+  {"Loja de Paraquedas FAE", 455.76733398438,-979.58923339844,30.689582824707},
   {"Loja de Armas 03", -330.2470703125,6083.9926757813,31.454767227173},
   --{"submachineguns", -664.147, -935.119, 21.8292},
   --{"sidearms", -1305.45056152344,-394.0068359375,36.6957740783691},
