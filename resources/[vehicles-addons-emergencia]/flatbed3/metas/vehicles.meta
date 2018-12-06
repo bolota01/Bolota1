@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <CVehicleModelInfo__InitDataList>
-	<residentTxd>vehshare</residentTxd>
-	<residentAnims />
-	<InitDatas>
-	
-	<Item>
+  <residentTxd>vehshare</residentTxd>
+  <residentAnims />
+  <InitDatas>
+    <Item>
       <modelName>flatbed3</modelName>
       <txdName>flatbed3</txdName>
       <handlingId>FLATBED</handlingId>
-      <gameName>flatbed3</gameName>
+      <gameName>FLATBED</gameName>
       <vehicleMakeName>MTL</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>
@@ -17,7 +15,7 @@
       <animConvRoofName>null</animConvRoofName>
       <animConvRoofWindowsAffected />
       <ptfxAssetName>null</ptfxAssetName>
-      <audioNameHash>Flatbed</audioNameHash>
+      <audioNameHash>FLATBED</audioNameHash>
       <layout>LAYOUT_TRUCK</layout>
       <coverBoundOffsets>FLATBED_COVER_OFFSET_INFO</coverBoundOffsets>
       <explosionInfo>EXPLOSION_INFO_TRUCK</explosionInfo>
@@ -83,11 +81,11 @@
       <frequency value="10" />
       <swankness>SWANKNESS_1</swankness>
       <maxNum value="999" />
-      <flags>FLAG_BIG FLAG_CAN_HONK_WHEN_FLEEING FLAG_AVOID_TURNS FLAG_EXTRAS_REQUIRE FLAG_PEDS_CAN_STAND_ON_TOP FLAG_DONT_SPAWN_IN_CARGEN FLAG_USE_FAT_INTERIOR_LIGHT FLAG_IS_BULKY FLAG_BLOCK_FROM_ATTRACTOR_SCENARIO FLAG_CANNOT_TAKE_COVER_WHEN_STOOD_ON FLAG_HAS_LIVERY</flags>
+      <flags>FLAG_BIG FLAG_CAN_HONK_WHEN_FLEEING FLAG_AVOID_TURNS FLAG_EXTRAS_REQUIRE FLAG_PEDS_CAN_STAND_ON_TOP FLAG_DONT_SPAWN_IN_CARGEN FLAG_USE_FAT_INTERIOR_LIGHT FLAG_IS_BULKY FLAG_BLOCK_FROM_ATTRACTOR_SCENARIO FLAG_CANNOT_TAKE_COVER_WHEN_STOOD_ON FLAG_HAS_LIVERY FLAG_EXTRAS_ONLY_BREAK_WHEN_DESTROYED</flags>
       <type>VEHICLE_TYPE_CAR</type>
       <plateType>VPT_FRONT_PLATES</plateType>
 	  <dashboardType>VDT_TRUCK</dashboardType>
-      <vehicleClass>VC_INDUSTRIAL</vehicleClass>
+      <vehicleClass>VC_UTILITY</vehicleClass>
       <wheelType>VWT_SPORT</wheelType>
       <trailers />
       <additionalTrailers />
@@ -98,7 +96,9 @@
         </Item>
       </drivers>
       <extraIncludes />
-      <doorsWithCollisionWhenClosed />
+      <doorsWithCollisionWhenClosed>
+        <Item>VEH_EXT_BONNET</Item>
+      </doorsWithCollisionWhenClosed>
       <driveableDoors />
       <bumpersNeedToCollideWithMap value="true" />
       <needsRopeTexture value="false" />
@@ -117,12 +117,11 @@
         <Item>TRUCK_PACKER_FRONT_RIGHT</Item>
       </firstPersonDrivebyData>
     </Item>
-	
-	
-	</InitDatas>
-	
-	<txdRelationships>
+  </InitDatas>
+  <txdRelationships>
+    <Item>
+      <parent>vehshare_truck</parent>
+      <child>flatbed3</child>
+    </Item>
   </txdRelationships>
-  
-</CVehicleModelInfo__InitDataList>
-	
+</CVehicleModelInfo__InitDataList>	
