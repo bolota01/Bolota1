@@ -64,7 +64,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=10,
-    x=1416.890991211,y=6359.9204101562,z=24.001054763794, -- pos
+    x=2338.7138671875,y=2570.3640136718,z=47.722942352294, -- pos
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
@@ -85,7 +85,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=1442.9324951172,y=6332.1811523438,z=23.981889724732, -- Localização
+    x=2355.3735351562,y=2565.4265136718,z=46.667694091796, -- Localização
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -129,7 +129,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=1509.888305664,y=6326.3076171875,z=24.607110977172,
+    x=2357.1677246094,y=2608.8100585938,z=46.670501708984,
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
