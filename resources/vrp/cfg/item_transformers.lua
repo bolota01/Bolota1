@@ -64,7 +64,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- color
     max_units=200,
     units_per_minute=10,
-    x=1840.6926269532,y=5034.16015625,z=56.69303894043, -- pos
+    x=1416.890991211,y=6359.9204101562,z=24.001054763794, -- pos
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- action name
@@ -85,7 +85,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=-1112.0493164063,y=4935.6567382813,z=218.37593078613, -- Localização
+    x=1442.9324951172,y=6332.1811523438,z=23.981889724732, -- Localização
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -106,7 +106,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=416.17538452148,y=-1833.5423583984,z=28.101583480834, -- pos
+    x=1196.4412841796,y=-3253.5224609375,z=7.0951805114746, -- pos
     radius=2.5, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -129,7 +129,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor
     max_units=200,
     units_per_minute=10,
-    x=2432.3635253906,y=4970.9584960938,z=42.347606658936,
+    x=1509.888305664,y=6326.3076171875,z=24.607110977172,
     radius=3, height=1.5, -- area
     recipes = {
       ["Colher"] = { -- Nome da ação
@@ -150,7 +150,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=3606.49609375,y=3713.669921875,z=29.689399719238, -- pos
+    x=1183.5405273438,y=-3162.4265136718,z=7.1287307739258, -- pos
     radius=3, height=1.5, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
@@ -603,7 +603,7 @@ cfg.item_transformers = {
     r=0,g=200,b=0, -- cor do menu
     max_units=200, -- unidades maximas do item
     units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=443.82019042969,y=-1737.138671875,z=29.220277786255, -- pos
+    x=1183.1293945312,y=-3303.7890625,z=6.9168581962586, -- pos
     radius=5, height=3, -- area
     recipes = { -- items do menu
       ["Processar"] = { -- action name
