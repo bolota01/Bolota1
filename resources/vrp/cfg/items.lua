@@ -34,13 +34,13 @@ cfg.items = {
   ["papelao"] = {"Pedaço de Papelão", "Papelão velho para reciclagem.", nil, 10.000}, -- no choices
   ["latinha_vazia"] = {"Latinha de Alumínio", "Lata de alumínio para reciclagem.", nil, 0.0145}, -- no choices
   ["pet_vazia"] = {"Garrafa PET 2L", "Garrafa pet vazia para reciclagem.", nil, 0.047}, -- no choices
-  ["saco_lixo"] = {"Saco de Lixo", "Saco cheio de lixo.", nil, 1.50}, -- no choices
+  ["saco_lixo"] = {"Saco de Lixo", "Saco cheio de lixo.", nil, 15.50}, -- no choices
   -- Taxista
-  ["recibo_corrida"] = {"Recibo de Corrida", "Recibo de pagamento de viagem de táxi.", nil, 0,01},
+  ["recibo_corrida"] = {"Recibo de Corrida", "Recibo de pagamento de viagem de táxi.", nil, 1,01},
   -- Malote Bancário
-  ["bank_money"] = {"Malote de Dinheiro", "$.", nil, 1.000}, -- no choices
+  ["bank_money"] = {"Malote de Dinheiro", "$.", nil, 13.50}, -- no choices
 --CORREIOS
-  ["encomenda"] = {"Encomendas", "Certamenta é alguma coisa comprada desses sites da china.", nil, 5.00}, -- no choices
+  ["encomenda"] = {"Encomendas", "Certamenta é alguma coisa comprada desses sites da china.", nil, 11.50}, -- no choices
   -- Receita médica
   ["receitam"] = {"Receita Médica", "Receita passada por um médico para uso de medicamento restrito.", nil, 0.01}, -- no choices
   --TRAFICANTE DE ÓRGÃOS
