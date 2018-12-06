@@ -517,8 +517,8 @@ cfg.delivery = {
     title = "Entrega de comida",
     chance = 1,
     items = {
-      ["pizza"] = {7,20,70},
-      ["gocagola"] = {7,20,40}
+      ["pizza"] = {7,13,70},
+      ["gocagola"] = {7,13,40}
     }
   },
   ["mission.delivery.diamante"] ={
@@ -526,14 +526,14 @@ cfg.delivery = {
     title = "Venda os diamantes",
     chance = 1,
     items = {
-      ["diamante"] = {7,20,240}
+      ["diamante"] = {7,13,240}
     }
   },    
   ["mission.delivery.weed"] = {
     chance = 3,
     title = "Entrega especial",
     items = {
-      ["cannabis"] = {10,20,400}
+      ["cannabis"] = {5,12,400}
     },
     positions = {
 	    {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -545,7 +545,7 @@ cfg.delivery = {
     chance = 3,
     title = "Entrega especial",
     items = {
-      ["cocaina"] = {10,20,400}
+      ["cocaina"] = {5,12,400}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -557,7 +557,7 @@ cfg.delivery = {
     chance = 3,
     title = "Entrega especial",
     items = {
-      ["metanfetamina"] = {10,20,400}
+      ["metanfetamina"] = {5,12,400}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -570,7 +570,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de erva",
     items = {
-      ["cannabis"] = {10,20,340}
+      ["cannabis"] = {5,12,340}
     }
   },
   ["mission.delivery.pot2"] = {
@@ -578,7 +578,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de 'coca'",
     items = {
-      ["cocaina"] = {10,20,340}
+      ["cocaina"] = {5,12,340}
     }
   },
   ["mission.delivery.pot3"] = {
@@ -586,7 +586,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de cristal",
     items = {
-      ["metanfetamina"] = {10,20,340}
+      ["metanfetamina"] = {5,12,340}
     }
   },  
   ["entrega.tartaruga"] = {
@@ -603,7 +603,7 @@ cfg.delivery = {
     positions = clonecards_positions,
     title = "Entrega de cartões clonados",
     items = {
-      ["clonedcards"] = {10,20,390}
+      ["clonedcards"] = {10,16,390}
     }
   },
   ["mission.delivery.smg"] = {
