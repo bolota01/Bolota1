@@ -530,10 +530,10 @@ cfg.delivery = {
     }
   },    
   ["mission.delivery.weed"] = {
-    chance = 3,
+    chance = 2,
     title = "Entrega especial",
     items = {
-      ["cannabis"] = {5,12,400}
+      ["cannabis"] = {7,16,400}
     },
     positions = {
 	    {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -542,10 +542,10 @@ cfg.delivery = {
 	  }
   },
   ["mission.delivery.cocaina"] = {
-    chance = 3,
+    chance = 2,
     title = "Entrega especial",
     items = {
-      ["cocaina"] = {5,12,400}
+      ["cocaina"] = {7,16,400}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -554,10 +554,34 @@ cfg.delivery = {
     }
   },
   ["mission.delivery.metanfetamina"] = {
-    chance = 3,
+    chance = 2,
     title = "Entrega especial",
     items = {
-      ["metanfetamina"] = {5,12,400}
+      ["metanfetamina"] = {7,16,400}
+    },
+    positions = {
+      {-1172.09387207031,-1571.91198730469,4.66362237930298},
+      {127.275039672852,-1283.83703613281,29.278923034668},
+      {-88.0348663330078,-83.0567474365234,57.8084182739258}
+    }
+  },
+  ["mission.delivery.lsd"] = {
+    chance = 2,
+    title = "Entrega especial",
+    items = {
+      ["lsd"] = {7,16,200}
+    },
+    positions = {
+      {-1172.09387207031,-1571.91198730469,4.66362237930298},
+      {127.275039672852,-1283.83703613281,29.278923034668},
+      {-88.0348663330078,-83.0567474365234,57.8084182739258}
+    }
+  },
+  ["mission.delivery.crack"] = {
+    chance = 2,
+    title = "Entrega especial",
+    items = {
+      ["pedradecrack"] = {7,16,200}
     },
     positions = {
       {-1172.09387207031,-1571.91198730469,4.66362237930298},
@@ -570,7 +594,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de erva",
     items = {
-      ["cannabis"] = {5,12,340}
+      ["cannabis"] = {7,16,340}
     }
   },
   ["mission.delivery.pot2"] = {
@@ -578,7 +602,7 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de 'coca'",
     items = {
-      ["cocaina"] = {5,12,340}
+      ["cocaina"] = {7,16,340}
     }
   },
   ["mission.delivery.pot3"] = {
@@ -586,7 +610,23 @@ cfg.delivery = {
     positions = drogas_delivery_positions,
     title = "Entrega de cristal",
     items = {
-      ["metanfetamina"] = {5,12,340}
+      ["metanfetamina"] = {7,16,340}
+    }
+  },
+  ["mission.delivery.pot4"] = {
+    chance = 1,
+    positions = drogas_delivery_positions,
+    title = "Entrega de LSD",
+    items = {
+      ["lsd"] = {7,16,170}
+    }
+  },
+  ["mission.delivery.pot5"] = {
+    chance = 1,
+    positions = drogas_delivery_positions,
+    title = "Entrega de crack",
+    items = {
+      ["pedradecrack"] = {7,16,170}
     }
   },  
   ["entrega.tartaruga"] = {

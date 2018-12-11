@@ -14,6 +14,10 @@ cfg.items = {
   ["toclonecards"] = {"Cartão Clonável", "Para clonar.", nil, 0.50}, -- no choices
   ["clonedcards"] = {"Cartão clonado", "Para vender.", nil, 0.50}, -- no choices
   ["cannabis"] = {"Maconha", "Processada.", nil, 1.00}, -- no choices
+  ["acidolisergico"] = {"Ácido Lisérgico", "Ácido para processamento de LSD.", nil, 1.00}, -- no choices
+  ["lsd"] = {"Cápsulas de LSD", "LSD pronto para uso.", nil, 1.00}, -- no choices
+  ["sulfatodecoca"] = {"Sulfato de cocaína", "Ingrediente principal para criação do Crack.", nil, 1.00}, -- no choices
+  ["pedradecrack"] = {"Pedra de Crack", "Pedra de Crack pronta para uso.", nil, 1.00}, -- no choices
   -- Tartaruga
   ["rede"] = {"Rede", "Para pescar Tartaruga", nil, 0.50},
   ["Tartaruga"] = {"Tartaruga", ".", nil, 5.00},

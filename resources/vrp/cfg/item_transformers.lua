@@ -58,6 +58,8 @@ cfg.item_transformers = {
       }
     }
   },
+  --[[
+  -- CAMPO DE MACONHA
   {
     name="Campo de Ervas", -- menu name
     permissions = {"harvest.weed"}, -- you can add permissions
@@ -74,6 +76,29 @@ cfg.item_transformers = {
         reagents={}, -- items taken per unit
         products={ -- items given per unit
           ["weed"] = 1
+        }
+      }
+    }
+  },
+  -- PROCESSO DE MACONHA
+  {
+    name="Processamento de Ervas", -- menu name
+    permissions = {"process.weed"}, -- you can add permissions
+    r=0,g=200,b=0, -- cor do menu
+    max_units=200, -- unidades maximas do item
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
+    x=1183.1293945312,y=-3303.7890625,z=6.9168581962586, -- pos
+    radius=5, height=3, -- area
+    recipes = { -- items do menu
+      ["Processar"] = { -- action name
+        description="Processar Maconha.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={  -- items taken per unit
+          ["weed"] = 1
+        },
+        products={ -- items given per unit
+          ["cannabis"] = 2
         }
       }
     }
@@ -162,6 +187,94 @@ cfg.item_transformers = {
 	    },
         products={ -- items given per unit
           ["cocaina"] = 2
+        }
+      }
+    }
+  },]]
+    -- SINTETIZAÇÃO DE LSD   
+  {
+    name="Coleta de LSD", -- Nome do menu
+    permissions = {"harvest.lsd"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=200,
+    units_per_minute=10,
+    x=2355.3735351562,y=2565.4265136718,z=46.667694091796, -- Localização
+    radius=3, height=1.5, -- area
+    recipes = {
+      ["Sintetizar"] = { -- Nome da ação
+        description="Sintetizando Ácido Lisérgico.", -- Descrição do produto a se colher
+        in_money=0, -- Dinheiro dado por unidade
+        out_money=0, -- Dinheiro ganho por unidade
+        reagents={}, -- Itens colhidos por unidade
+        products={ -- Nome do produto fornecido por unidade
+          ["acidolisergico"] = 1
+        }
+      }
+    }
+  },  
+  -- PROCESSAR LSD
+  {
+    name="Processamento LSD", -- menu name
+    permissions = {"process.lsd"}, -- you can add permissions
+    r=0,g=200,b=0, -- cor do menu
+    max_units=200, -- unidades maximas do item
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
+    x=1196.4412841796,y=-3253.5224609375,z=7.0951805114746, -- pos
+    radius=2.5, height=1.5, -- area
+    recipes = { -- items do menu
+      ["Processar"] = { -- action name
+        description="Realizando processo de adição redutiva de Dietilamina.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={  -- items taken per unit
+          ["acidolisergico"] = 1
+        },
+        products={ -- items given per unit
+          ["lsd"] = 2,
+        }
+      }
+    }
+  },
+  -- COLETA DE CRACK   
+  {
+    name="Coleta de crack", -- Nome do menu
+    permissions = {"harvest.crack"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=200,
+    units_per_minute=10,
+    x=2357.1677246094,y=2608.8100585938,z=46.670501708984,
+    radius=3, height=1.5, -- area
+    recipes = {
+      ["Extrair"] = { -- Nome da ação
+        description="Extraindo sulfato de cocaína.", -- Descrição do produto a se colher
+        in_money=0, -- Dinheiro dado por unidade
+        out_money=0, -- Dinheiro ganho por unidade
+        reagents={}, -- Itens colhidos por unidade
+        products={ -- Nome do produto fornecido por unidade
+          ["sulfatodecoca"] = 1
+        }
+      }
+    }
+  },
+  -- PROCESSO DE CRACK
+  {
+    name="Processamento de crack", -- menu name
+    permissions = {"process.crack"}, -- you can add permissions
+    r=0,g=200,b=0, -- cor do menu
+    max_units=200, -- unidades maximas do item
+    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
+    x=1183.5405273438,y=-3162.4265136718,z=7.1287307739258, -- pos
+    radius=3, height=1.5, -- area
+    recipes = { -- items do menu
+      ["Processar"] = { -- action name
+        description="Realizando a mistura de sulfato de cocaína com bicarbonato de sódio.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={  -- items taken per unit
+          ["sulfatodecoca"] = 1
+      },
+        products={ -- items given per unit
+          ["pedradecrack"] = 2
         }
       }
     }
@@ -593,28 +706,6 @@ cfg.item_transformers = {
         },
         products={ -- items given per unit
           ["oab"] = 1
-        }
-      }
-    }
-  },  
-  {
-    name="Processamento de Ervas", -- menu name
-    permissions = {"process.weed"}, -- you can add permissions
-    r=0,g=200,b=0, -- cor do menu
-    max_units=200, -- unidades maximas do item
-    units_per_minute=10, -- unidades que o transformador ganha de volta por minuto
-    x=1183.1293945312,y=-3303.7890625,z=6.9168581962586, -- pos
-    radius=5, height=3, -- area
-    recipes = { -- items do menu
-      ["Processar"] = { -- action name
-        description="Processar Maconha.", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={  -- items taken per unit
-          ["weed"] = 1
-		    },
-        products={ -- items given per unit
-		      ["cannabis"] = 2
         }
       }
     }

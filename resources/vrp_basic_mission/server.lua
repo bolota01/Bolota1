@@ -254,7 +254,7 @@ function task_mission()
                 if amount > 0 then -- check if not done
                   if vRP.tryGetInventoryItem({user_id,idname,amount,true}) then
                     local reward = v.items[idname][3]*amount
-	                 if k == "mission.delivery.pot" or k == "entrega.tartaruga" or k== "mission.delivery.cartoes" or k=="mission.delivery.pot2" or k=="mission.delivery.weed" or k=="mission.delivery.cocaina" or k== "mission.delivery.metanfetamina" or k=="mission.delivery.pot3" or k == "mission.delivery.card" or k=="vender.drogas.maconha" or k=="vender.drogas.cocaina" or k=="vender.drogas.metanfetamina" then
+	                 if k == "mission.delivery.pot" or k == "entrega.tartaruga" or k== "mission.delivery.cartoes" or k=="mission.delivery.pot2" or k=="mission.delivery.weed" or k=="mission.delivery.cocaina" or k== "mission.delivery.metanfetamina" or k=="mission.delivery.pot3" or k == "mission.delivery.card" or k=="mission.delivery.lsd" or k=="mission.delivery.pot4" or k=="mission.delivery.crack" or k=="mission.delivery.pot5" or k=="vender.drogas.maconha" or k=="vender.drogas.cocaina" or k=="vender.drogas.metanfetamina" then
 					  vRP.giveInventoryItem({user_id,"dirty_money",reward,true})
                       vRPclient.notify(player,{"Você recebeu ~r~$ ".. reward .."~w~ de dinheiro sujo pelo seu trabalho."})
                       vRPclient.notify(player,{"~h~Aguarde um minuto para um novo serviço."})

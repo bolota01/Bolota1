@@ -980,27 +980,32 @@ cfg.groups = {
   },
   ["Traficante de Maconha"] = {
     _config = { gtype = "job" },
-	"harvest.weed",
-    "venda.weed",
-	"process.weed",
 	"mission.delivery.weed",
 	"mission.delivery.pot"
   },
   ["Traficante de Metanfetamina"] = {
     _config = { gtype = "job" },
-	"harvest.metanfetamina",
-	"process.metanfetamina",
-    "venda.todos",
 	"mission.delivery.metanfetamina",
 	"mission.delivery.pot3"
   },  
   ["Traficante de Cocaina"] = {
     _config = { gtype = "job" },
-	"process.cocaina",
-	"harvest.cocaina",
-    "venda.cocaina",
 	"mission.delivery.cocaina",
 	"mission.delivery.pot2"
+  },
+  ["Traficante de LSD"] = {
+    _config = { gtype = "job" },
+    "harvest.lsd",
+    "process.lsd",
+    "mission.delivery.lsd",
+    "mission.delivery.pot4"
+  },  
+  ["Traficante de Crack"] = {
+    _config = { gtype = "job" },
+    "harvest.crack",
+    "process.crack",
+    "mission.delivery.crack",
+    "mission.delivery.pot5"
   },  
   ["Traficante de Tartaruga"] = {
     _config = { gtype = "job" },
@@ -1094,6 +1099,8 @@ cfg.selectors = {
 	 --"Ladrão de Carros",
 	 "Traficante de Metanfetamina",
 	 "Traficante de Maconha",
+     "Traficante de LSD",
+     "Traficante de Crack",
 	 "Traficante de Tartaruga",
 	 "Traficante de Cocaina",	
 	 "Hacker"
